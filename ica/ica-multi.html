@@ -132,7 +132,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Your Name Here</a> 
+      <a href="../">Zhijun He</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -1167,204 +1167,207 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">---</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="an">title:</span><span class="co"> "Multivariate Viz"</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="co">---</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="fu">## Purpose</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a></span>
-<span id="cb15-7"><a href="#cb15-7"></a>This document comprehensively explores multivariate visualization techniques using education and SAT score data from U.S. states.</span>
-<span id="cb15-8"><a href="#cb15-8"></a>We investigate the relationships between SAT scores, educational spending, teacher salaries, and participation rates across different states through statistical analysis and visualization.</span>
-<span id="cb15-9"><a href="#cb15-9"></a>We aim to uncover meaningful patterns and potential causal relationships in educational outcomes while highlighting the importance of considering confounding variables in educational data analysis.</span>
-<span id="cb15-10"><a href="#cb15-10"></a></span>
-<span id="cb15-11"><a href="#cb15-11"></a><span class="fu">## Environment Setup</span></span>
-<span id="cb15-12"><a href="#cb15-12"></a></span>
-<span id="cb15-13"><a href="#cb15-13"></a><span class="in">```{r setup}</span></span>
-<span id="cb15-14"><a href="#cb15-14"></a><span class="in">#| label: setup</span></span>
-<span id="cb15-15"><a href="#cb15-15"></a><span class="in">library(tidyverse)</span></span>
-<span id="cb15-16"><a href="#cb15-16"></a></span>
-<span id="cb15-17"><a href="#cb15-17"></a><span class="in">education &lt;- read.csv("https://mac-stat.github.io/data/sat.csv")</span></span>
-<span id="cb15-18"><a href="#cb15-18"></a><span class="in">```</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="an">editor:</span><span class="co"> </span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="co">  markdown: </span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="co">    wrap: sentence</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="co">---</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a></span>
+<span id="cb15-8"><a href="#cb15-8"></a><span class="fu">## Purpose</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a></span>
+<span id="cb15-10"><a href="#cb15-10"></a>This document comprehensively explores multivariate visualization techniques using education and SAT score data from U.S. states.</span>
+<span id="cb15-11"><a href="#cb15-11"></a>We investigate the relationships between SAT scores, educational spending, teacher salaries, and participation rates across different states through statistical analysis and visualization.</span>
+<span id="cb15-12"><a href="#cb15-12"></a>We aim to uncover meaningful patterns and potential causal relationships in educational outcomes while highlighting the importance of considering confounding variables in educational data analysis.</span>
+<span id="cb15-13"><a href="#cb15-13"></a></span>
+<span id="cb15-14"><a href="#cb15-14"></a><span class="fu">## Environment Setup</span></span>
+<span id="cb15-15"><a href="#cb15-15"></a></span>
+<span id="cb15-16"><a href="#cb15-16"></a><span class="in">```{r setup}</span></span>
+<span id="cb15-17"><a href="#cb15-17"></a><span class="in">#| label: setup</span></span>
+<span id="cb15-18"><a href="#cb15-18"></a><span class="in">library(tidyverse)</span></span>
 <span id="cb15-19"><a href="#cb15-19"></a></span>
-<span id="cb15-20"><a href="#cb15-20"></a><span class="fu">## Exercise 1: SAT Scores Distribution</span></span>
-<span id="cb15-21"><a href="#cb15-21"></a></span>
-<span id="cb15-22"><a href="#cb15-22"></a><span class="fu">### Part a: Visualizing SAT Score Distribution</span></span>
-<span id="cb15-23"><a href="#cb15-23"></a></span>
-<span id="cb15-24"><a href="#cb15-24"></a><span class="in">```{r sat-distribution}</span></span>
-<span id="cb15-25"><a href="#cb15-25"></a><span class="in">#| label: sat-distribution</span></span>
+<span id="cb15-20"><a href="#cb15-20"></a><span class="in">education &lt;- read.csv("https://mac-stat.github.io/data/sat.csv")</span></span>
+<span id="cb15-21"><a href="#cb15-21"></a><span class="in">```</span></span>
+<span id="cb15-22"><a href="#cb15-22"></a></span>
+<span id="cb15-23"><a href="#cb15-23"></a><span class="fu">## Exercise 1: SAT Scores Distribution</span></span>
+<span id="cb15-24"><a href="#cb15-24"></a></span>
+<span id="cb15-25"><a href="#cb15-25"></a><span class="fu">### Part a: Visualizing SAT Score Distribution</span></span>
 <span id="cb15-26"><a href="#cb15-26"></a></span>
-<span id="cb15-27"><a href="#cb15-27"></a><span class="in">ggplot(education, aes(x = sat)) +</span></span>
-<span id="cb15-28"><a href="#cb15-28"></a><span class="in">  geom_histogram(binwidth = 30, fill = "steelblue", color = "white") +</span></span>
-<span id="cb15-29"><a href="#cb15-29"></a><span class="in">  labs(title = "Distribution of State SAT Scores",</span></span>
-<span id="cb15-30"><a href="#cb15-30"></a><span class="in">       x = "SAT Score",</span></span>
-<span id="cb15-31"><a href="#cb15-31"></a><span class="in">       y = "Count")</span></span>
-<span id="cb15-32"><a href="#cb15-32"></a><span class="in">```</span></span>
-<span id="cb15-33"><a href="#cb15-33"></a></span>
-<span id="cb15-34"><a href="#cb15-34"></a><span class="fu">### Part b: Distribution Analysis</span></span>
-<span id="cb15-35"><a href="#cb15-35"></a></span>
-<span id="cb15-36"><a href="#cb15-36"></a>The SAT score distribution reveals several key insights about educational outcomes across states.</span>
-<span id="cb15-37"><a href="#cb15-37"></a>The scores range from approximately 850 to 1120 points, demonstrating substantial variation in performance.</span>
-<span id="cb15-38"><a href="#cb15-38"></a>A notable bimodal pattern emerges with distinct peaks around 900 and 1050 points, reflecting fundamental differences between states where SAT serves as the primary college entrance exam versus those favoring the ACT.</span>
-<span id="cb15-39"><a href="#cb15-39"></a>States with higher SAT participation rates typically exhibit lower average scores due to their more diverse testing population, while states with lower participation rates often show higher averages due to a more selective testing pool.</span>
-<span id="cb15-40"><a href="#cb15-40"></a></span>
-<span id="cb15-41"><a href="#cb15-41"></a><span class="fu">## Exercise 2: SAT Scores vs. Spending</span></span>
-<span id="cb15-42"><a href="#cb15-42"></a></span>
-<span id="cb15-43"><a href="#cb15-43"></a><span class="fu">### Part a: Expenditure and Salary Relationships</span></span>
-<span id="cb15-44"><a href="#cb15-44"></a></span>
-<span id="cb15-45"><a href="#cb15-45"></a><span class="in">```{r spending-relationships}</span></span>
-<span id="cb15-46"><a href="#cb15-46"></a><span class="in">#| label: spending-relationships</span></span>
-<span id="cb15-47"><a href="#cb15-47"></a><span class="in">p1 &lt;- ggplot(education, aes(x = expend, y = sat)) +</span></span>
-<span id="cb15-48"><a href="#cb15-48"></a><span class="in">  geom_point(alpha = 0.6) +</span></span>
-<span id="cb15-49"><a href="#cb15-49"></a><span class="in">  geom_smooth(method = "lm", se = FALSE, color = "red") +</span></span>
-<span id="cb15-50"><a href="#cb15-50"></a><span class="in">  labs(title = "SAT Scores vs. Per Pupil Expenditure",</span></span>
-<span id="cb15-51"><a href="#cb15-51"></a><span class="in">       subtitle = "Examining Direct Investment Impact",</span></span>
-<span id="cb15-52"><a href="#cb15-52"></a><span class="in">       x = "Per Pupil Expenditure (thousands $)", </span></span>
-<span id="cb15-53"><a href="#cb15-53"></a><span class="in">       y = "SAT Score") +</span></span>
-<span id="cb15-54"><a href="#cb15-54"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-55"><a href="#cb15-55"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
-<span id="cb15-56"><a href="#cb15-56"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
-<span id="cb15-57"><a href="#cb15-57"></a></span>
-<span id="cb15-58"><a href="#cb15-58"></a><span class="in">p2 &lt;- ggplot(education, aes(x = salary, y = sat)) +</span></span>
-<span id="cb15-59"><a href="#cb15-59"></a><span class="in">  geom_point(alpha = 0.6) +</span></span>
-<span id="cb15-60"><a href="#cb15-60"></a><span class="in">  geom_smooth(method = "lm", se = FALSE, color = "red") +</span></span>
-<span id="cb15-61"><a href="#cb15-61"></a><span class="in">  labs(title = "SAT Scores vs. Teacher Salary",</span></span>
-<span id="cb15-62"><a href="#cb15-62"></a><span class="in">       subtitle = "Investigating Teacher Compensation Effects",</span></span>
-<span id="cb15-63"><a href="#cb15-63"></a><span class="in">       x = "Teacher Salary (thousands $)",</span></span>
-<span id="cb15-64"><a href="#cb15-64"></a><span class="in">       y = "SAT Score") +</span></span>
-<span id="cb15-65"><a href="#cb15-65"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-66"><a href="#cb15-66"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
-<span id="cb15-67"><a href="#cb15-67"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
-<span id="cb15-68"><a href="#cb15-68"></a></span>
-<span id="cb15-69"><a href="#cb15-69"></a><span class="in">p1</span></span>
-<span id="cb15-70"><a href="#cb15-70"></a><span class="in">p2</span></span>
-<span id="cb15-71"><a href="#cb15-71"></a><span class="in">```</span></span>
-<span id="cb15-72"><a href="#cb15-72"></a></span>
-<span id="cb15-73"><a href="#cb15-73"></a><span class="fu">### Part b: Analysis of Relationships</span></span>
-<span id="cb15-74"><a href="#cb15-74"></a></span>
-<span id="cb15-75"><a href="#cb15-75"></a>The relationship between educational investment and SAT performance presents an intriguing paradox.</span>
-<span id="cb15-76"><a href="#cb15-76"></a>Both per-pupil expenditure and teacher salary demonstrate unexpected negative correlations with SAT scores, contrary to what one might intuitively expect.</span>
-<span id="cb15-77"><a href="#cb15-77"></a>This counterintuitive pattern strongly suggests the presence of confounding variables, particularly participation rates and regional differences in testing preferences.</span>
-<span id="cb15-78"><a href="#cb15-78"></a>States that invest more in education often have higher SAT participation rates, which typically results in lower average scores due to a more diverse testing population.</span>
-<span id="cb15-79"><a href="#cb15-79"></a></span>
-<span id="cb15-80"><a href="#cb15-80"></a><span class="fu">## Exercise 3: Trivariate Relationship</span></span>
-<span id="cb15-81"><a href="#cb15-81"></a></span>
-<span id="cb15-82"><a href="#cb15-82"></a><span class="in">```{r trivariate}</span></span>
-<span id="cb15-83"><a href="#cb15-83"></a><span class="in">#| label: trivariate</span></span>
-<span id="cb15-84"><a href="#cb15-84"></a><span class="in">ggplot(education, aes(x = salary, y = sat, color = expend)) +</span></span>
-<span id="cb15-85"><a href="#cb15-85"></a><span class="in">  geom_point(size = 3, alpha = 0.7) +</span></span>
-<span id="cb15-86"><a href="#cb15-86"></a><span class="in">  scale_color_gradient(low = "lightblue", high = "darkblue") +</span></span>
-<span id="cb15-87"><a href="#cb15-87"></a><span class="in">  labs(title = "SAT Scores vs. Teacher Salary, Colored by Expenditure",</span></span>
-<span id="cb15-88"><a href="#cb15-88"></a><span class="in">       subtitle = "Exploring Three-Way Relationships in Educational Metrics",</span></span>
-<span id="cb15-89"><a href="#cb15-89"></a><span class="in">       x = "Teacher Salary (thousands $)",</span></span>
-<span id="cb15-90"><a href="#cb15-90"></a><span class="in">       y = "SAT Score", </span></span>
-<span id="cb15-91"><a href="#cb15-91"></a><span class="in">       color = "Per Pupil\nExpenditure") +</span></span>
-<span id="cb15-92"><a href="#cb15-92"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-93"><a href="#cb15-93"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
-<span id="cb15-94"><a href="#cb15-94"></a><span class="in">        plot.subtitle = element_text(size = 12),</span></span>
-<span id="cb15-95"><a href="#cb15-95"></a><span class="in">        legend.position = "right")</span></span>
-<span id="cb15-96"><a href="#cb15-96"></a><span class="in">```</span></span>
-<span id="cb15-97"><a href="#cb15-97"></a></span>
-<span id="cb15-98"><a href="#cb15-98"></a><span class="fu">## Exercise 4: Discretized Expenditure</span></span>
-<span id="cb15-99"><a href="#cb15-99"></a></span>
-<span id="cb15-102"><a href="#cb15-102"></a><span class="in">```{r}</span></span>
-<span id="cb15-103"><a href="#cb15-103"></a><span class="co">#| label: discretized-expenditure</span></span>
-<span id="cb15-104"><a href="#cb15-104"></a>education <span class="sc">%&gt;%</span></span>
-<span id="cb15-105"><a href="#cb15-105"></a>  <span class="fu">mutate</span>(<span class="at">expend_group =</span> <span class="fu">cut</span>(expend, </span>
-<span id="cb15-106"><a href="#cb15-106"></a>                           <span class="at">breaks =</span> <span class="fu">quantile</span>(expend, <span class="at">probs =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)),</span>
-<span id="cb15-107"><a href="#cb15-107"></a>                           <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Below Median"</span>, <span class="st">"Above Median"</span>),</span>
-<span id="cb15-108"><a href="#cb15-108"></a>                           <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb15-109"><a href="#cb15-109"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> salary, <span class="at">y =</span> sat, <span class="at">color =</span> expend_group)) <span class="sc">+</span> </span>
-<span id="cb15-110"><a href="#cb15-110"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span> </span>
-<span id="cb15-111"><a href="#cb15-111"></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb15-112"><a href="#cb15-112"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"steelblue"</span>, <span class="st">"darkred"</span>)) <span class="sc">+</span></span>
-<span id="cb15-113"><a href="#cb15-113"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"SAT Scores vs Teacher Salary by Expenditure Level"</span>,</span>
-<span id="cb15-114"><a href="#cb15-114"></a>       <span class="at">x =</span> <span class="st">"Teacher Salary (thousands $)"</span>,</span>
-<span id="cb15-115"><a href="#cb15-115"></a>       <span class="at">y =</span> <span class="st">"SAT Score"</span>,</span>
-<span id="cb15-116"><a href="#cb15-116"></a>       <span class="at">color =</span> <span class="st">"Expenditure"</span>) <span class="sc">+</span></span>
-<span id="cb15-117"><a href="#cb15-117"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb15-118"><a href="#cb15-118"></a><span class="in">```</span></span>
-<span id="cb15-119"><a href="#cb15-119"></a></span>
-<span id="cb15-120"><a href="#cb15-120"></a>By discretizing states into expenditure groups, we observe distinct patterns in the relationship between teacher salaries and SAT scores.</span>
-<span id="cb15-121"><a href="#cb15-121"></a>States with higher expenditure levels consistently show higher teacher salaries but generally lower SAT scores.</span>
-<span id="cb15-122"><a href="#cb15-122"></a>The slope of the relationship between salary and SAT scores differs between expenditure groups, suggesting that the impact of teacher compensation on student performance varies depending on overall educational investment levels.</span>
-<span id="cb15-123"><a href="#cb15-123"></a>This variation might reflect differences in resource allocation efficiency or underlying socioeconomic factors that influence educational outcomes.</span>
-<span id="cb15-124"><a href="#cb15-124"></a></span>
-<span id="cb15-125"><a href="#cb15-125"></a><span class="fu">## Exercise 5: Participation Rate Impact</span></span>
-<span id="cb15-126"><a href="#cb15-126"></a></span>
-<span id="cb15-127"><a href="#cb15-127"></a><span class="fu">### Part a: Participation Rate Distribution</span></span>
-<span id="cb15-128"><a href="#cb15-128"></a></span>
-<span id="cb15-129"><a href="#cb15-129"></a><span class="in">```{r participation-distribution}</span></span>
-<span id="cb15-130"><a href="#cb15-130"></a><span class="in">#| label: participation-distribution</span></span>
-<span id="cb15-131"><a href="#cb15-131"></a><span class="in">ggplot(education, aes(x = fracCat)) +</span></span>
-<span id="cb15-132"><a href="#cb15-132"></a><span class="in">  geom_bar(fill = "steelblue", alpha = 0.7) +</span></span>
-<span id="cb15-133"><a href="#cb15-133"></a><span class="in">  labs(title = "Distribution of SAT Participation Rates",</span></span>
-<span id="cb15-134"><a href="#cb15-134"></a><span class="in">       subtitle = "Showing Variation in Testing Population Across States",</span></span>
-<span id="cb15-135"><a href="#cb15-135"></a><span class="in">       x = "Participation Rate Category",</span></span>
-<span id="cb15-136"><a href="#cb15-136"></a><span class="in">       y = "Count") +</span></span>
-<span id="cb15-137"><a href="#cb15-137"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-138"><a href="#cb15-138"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
-<span id="cb15-139"><a href="#cb15-139"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
-<span id="cb15-140"><a href="#cb15-140"></a><span class="in">```</span></span>
-<span id="cb15-141"><a href="#cb15-141"></a></span>
-<span id="cb15-142"><a href="#cb15-142"></a><span class="fu">### Part b: Score Distribution by Participation</span></span>
-<span id="cb15-143"><a href="#cb15-143"></a></span>
-<span id="cb15-144"><a href="#cb15-144"></a><span class="in">```{r participation-scores}</span></span>
-<span id="cb15-145"><a href="#cb15-145"></a><span class="in">#| label: participation-scores</span></span>
-<span id="cb15-146"><a href="#cb15-146"></a><span class="in">p3 &lt;- ggplot(education, aes(x = fracCat, y = sat)) +</span></span>
-<span id="cb15-147"><a href="#cb15-147"></a><span class="in">  geom_boxplot(fill = "steelblue", alpha = 0.5) +</span></span>
-<span id="cb15-148"><a href="#cb15-148"></a><span class="in">  labs(title = "SAT Scores by Participation Rate",</span></span>
-<span id="cb15-149"><a href="#cb15-149"></a><span class="in">       subtitle = "Examining Score Distributions Across Participation Levels",</span></span>
-<span id="cb15-150"><a href="#cb15-150"></a><span class="in">       x = "Participation Rate Category",</span></span>
-<span id="cb15-151"><a href="#cb15-151"></a><span class="in">       y = "SAT Score") +</span></span>
-<span id="cb15-152"><a href="#cb15-152"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-153"><a href="#cb15-153"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
-<span id="cb15-154"><a href="#cb15-154"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
-<span id="cb15-155"><a href="#cb15-155"></a></span>
-<span id="cb15-156"><a href="#cb15-156"></a><span class="in">p4 &lt;- ggplot(education, aes(x = fracCat, y = sat)) +</span></span>
-<span id="cb15-157"><a href="#cb15-157"></a><span class="in">  geom_violin(fill = "steelblue", alpha = 0.3) +</span></span>
-<span id="cb15-158"><a href="#cb15-158"></a><span class="in">  geom_jitter(width = 0.1, alpha = 0.5) +</span></span>
-<span id="cb15-159"><a href="#cb15-159"></a><span class="in">  labs(title = "SAT Score Distribution by Participation Rate",</span></span>
-<span id="cb15-160"><a href="#cb15-160"></a><span class="in">       subtitle = "Detailed View of Score Patterns with Individual State Data",</span></span>
-<span id="cb15-161"><a href="#cb15-161"></a><span class="in">       x = "Participation Rate Category",</span></span>
-<span id="cb15-162"><a href="#cb15-162"></a><span class="in">       y = "SAT Score") +</span></span>
-<span id="cb15-163"><a href="#cb15-163"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-164"><a href="#cb15-164"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
-<span id="cb15-165"><a href="#cb15-165"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
-<span id="cb15-166"><a href="#cb15-166"></a></span>
-<span id="cb15-167"><a href="#cb15-167"></a><span class="in">p3</span></span>
-<span id="cb15-168"><a href="#cb15-168"></a><span class="in">p4</span></span>
-<span id="cb15-169"><a href="#cb15-169"></a><span class="in">```</span></span>
-<span id="cb15-170"><a href="#cb15-170"></a></span>
-<span id="cb15-171"><a href="#cb15-171"></a>The relationship between participation rates and SAT scores shows a clear inverse pattern.</span>
-<span id="cb15-172"><a href="#cb15-172"></a>In states with low participation rates, SAT-takers are predominantly high-achieving students specifically targeting selective colleges.</span>
-<span id="cb15-173"><a href="#cb15-173"></a>Conversely, states with high participation rates include a broader spectrum of academic achievement levels, naturally leading to lower average scores but potentially providing a more representative measure of overall educational outcomes.</span>
-<span id="cb15-174"><a href="#cb15-174"></a>This pattern is particularly evident in the violin plot, which reveals the changing shape and spread of score distributions across participation categories.</span>
-<span id="cb15-175"><a href="#cb15-175"></a></span>
-<span id="cb15-176"><a href="#cb15-176"></a><span class="fu">### Part c: Expenditure and Participation Relationship</span></span>
-<span id="cb15-177"><a href="#cb15-177"></a></span>
-<span id="cb15-178"><a href="#cb15-178"></a><span class="in">```{r expenditure-participation}</span></span>
-<span id="cb15-179"><a href="#cb15-179"></a><span class="in">#| label: expenditure-participation</span></span>
-<span id="cb15-180"><a href="#cb15-180"></a><span class="in">ggplot(education, aes(x = expend, y = sat, color = fracCat)) +</span></span>
-<span id="cb15-181"><a href="#cb15-181"></a><span class="in">  geom_point(alpha = 0.7) +</span></span>
-<span id="cb15-182"><a href="#cb15-182"></a><span class="in">  geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +</span></span>
-<span id="cb15-183"><a href="#cb15-183"></a><span class="in">  labs(title = "SAT vs. Expenditure by Participation Rate",</span></span>
-<span id="cb15-184"><a href="#cb15-184"></a><span class="in">       subtitle = "Examining Simpson's Paradox in Educational Outcomes",</span></span>
-<span id="cb15-185"><a href="#cb15-185"></a><span class="in">       x = "Per Pupil Expenditure (thousands $)",</span></span>
-<span id="cb15-186"><a href="#cb15-186"></a><span class="in">       y = "SAT Score",</span></span>
-<span id="cb15-187"><a href="#cb15-187"></a><span class="in">       color = "Participation Rate") +</span></span>
-<span id="cb15-188"><a href="#cb15-188"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-189"><a href="#cb15-189"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
-<span id="cb15-190"><a href="#cb15-190"></a><span class="in">        plot.subtitle = element_text(size = 12),</span></span>
-<span id="cb15-191"><a href="#cb15-191"></a><span class="in">        legend.position = "right")</span></span>
-<span id="cb15-192"><a href="#cb15-192"></a><span class="in">```</span></span>
-<span id="cb15-193"><a href="#cb15-193"></a></span>
-<span id="cb15-194"><a href="#cb15-194"></a><span class="fu">### Part d: Simpson's Paradox Analysis</span></span>
-<span id="cb15-195"><a href="#cb15-195"></a></span>
-<span id="cb15-196"><a href="#cb15-196"></a>The relationship between educational spending and SAT scores presents a classic example of Simpson's Paradox, highlighting the critical importance of considering participation rates in educational outcome analysis.</span>
-<span id="cb15-197"><a href="#cb15-197"></a>While the aggregate data shows a negative correlation between spending and SAT scores, examining the relationship within each participation rate category reveals a positive correlation between spending and scores.</span>
-<span id="cb15-198"><a href="#cb15-198"></a>This paradox occurs because states with higher educational spending typically have higher participation rates, which naturally correlates with lower average scores due to the broader testing population.</span>
-<span id="cb15-199"><a href="#cb15-199"></a></span>
-<span id="cb15-200"><a href="#cb15-200"></a>The participation rate serves as a crucial confounding variable that explains the seemingly counterintuitive negative relationship in the aggregate data.</span>
-<span id="cb15-201"><a href="#cb15-201"></a>This finding demonstrates how aggregate statistics can mask more nuanced relationships in educational data and emphasizes the importance of controlling for participation rates when evaluating the effectiveness of educational spending.</span>
-<span id="cb15-202"><a href="#cb15-202"></a>Understanding this paradox is essential for policymakers and educators in making informed decisions about resource allocation and interpreting educational outcome data accurately.</span>
+<span id="cb15-27"><a href="#cb15-27"></a><span class="in">```{r sat-distribution}</span></span>
+<span id="cb15-28"><a href="#cb15-28"></a><span class="in">#| label: sat-distribution</span></span>
+<span id="cb15-29"><a href="#cb15-29"></a></span>
+<span id="cb15-30"><a href="#cb15-30"></a><span class="in">ggplot(education, aes(x = sat)) +</span></span>
+<span id="cb15-31"><a href="#cb15-31"></a><span class="in">  geom_histogram(binwidth = 30, fill = "steelblue", color = "white") +</span></span>
+<span id="cb15-32"><a href="#cb15-32"></a><span class="in">  labs(title = "Distribution of State SAT Scores",</span></span>
+<span id="cb15-33"><a href="#cb15-33"></a><span class="in">       x = "SAT Score",</span></span>
+<span id="cb15-34"><a href="#cb15-34"></a><span class="in">       y = "Count")</span></span>
+<span id="cb15-35"><a href="#cb15-35"></a><span class="in">```</span></span>
+<span id="cb15-36"><a href="#cb15-36"></a></span>
+<span id="cb15-37"><a href="#cb15-37"></a><span class="fu">### Part b: Distribution Analysis</span></span>
+<span id="cb15-38"><a href="#cb15-38"></a></span>
+<span id="cb15-39"><a href="#cb15-39"></a>The SAT score distribution reveals several key insights about educational outcomes across states.</span>
+<span id="cb15-40"><a href="#cb15-40"></a>The scores range from approximately 850 to 1120 points, demonstrating substantial variation in performance.</span>
+<span id="cb15-41"><a href="#cb15-41"></a>A notable bimodal pattern emerges with distinct peaks around 900 and 1050 points, reflecting fundamental differences between states where SAT serves as the primary college entrance exam versus those favoring the ACT.</span>
+<span id="cb15-42"><a href="#cb15-42"></a>States with higher SAT participation rates typically exhibit lower average scores due to their more diverse testing population, while states with lower participation rates often show higher averages due to a more selective testing pool.</span>
+<span id="cb15-43"><a href="#cb15-43"></a></span>
+<span id="cb15-44"><a href="#cb15-44"></a><span class="fu">## Exercise 2: SAT Scores vs. Spending</span></span>
+<span id="cb15-45"><a href="#cb15-45"></a></span>
+<span id="cb15-46"><a href="#cb15-46"></a><span class="fu">### Part a: Expenditure and Salary Relationships</span></span>
+<span id="cb15-47"><a href="#cb15-47"></a></span>
+<span id="cb15-48"><a href="#cb15-48"></a><span class="in">```{r spending-relationships}</span></span>
+<span id="cb15-49"><a href="#cb15-49"></a><span class="in">#| label: spending-relationships</span></span>
+<span id="cb15-50"><a href="#cb15-50"></a><span class="in">p1 &lt;- ggplot(education, aes(x = expend, y = sat)) +</span></span>
+<span id="cb15-51"><a href="#cb15-51"></a><span class="in">  geom_point(alpha = 0.6) +</span></span>
+<span id="cb15-52"><a href="#cb15-52"></a><span class="in">  geom_smooth(method = "lm", se = FALSE, color = "red") +</span></span>
+<span id="cb15-53"><a href="#cb15-53"></a><span class="in">  labs(title = "SAT Scores vs. Per Pupil Expenditure",</span></span>
+<span id="cb15-54"><a href="#cb15-54"></a><span class="in">       subtitle = "Examining Direct Investment Impact",</span></span>
+<span id="cb15-55"><a href="#cb15-55"></a><span class="in">       x = "Per Pupil Expenditure (thousands $)", </span></span>
+<span id="cb15-56"><a href="#cb15-56"></a><span class="in">       y = "SAT Score") +</span></span>
+<span id="cb15-57"><a href="#cb15-57"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-58"><a href="#cb15-58"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
+<span id="cb15-59"><a href="#cb15-59"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
+<span id="cb15-60"><a href="#cb15-60"></a></span>
+<span id="cb15-61"><a href="#cb15-61"></a><span class="in">p2 &lt;- ggplot(education, aes(x = salary, y = sat)) +</span></span>
+<span id="cb15-62"><a href="#cb15-62"></a><span class="in">  geom_point(alpha = 0.6) +</span></span>
+<span id="cb15-63"><a href="#cb15-63"></a><span class="in">  geom_smooth(method = "lm", se = FALSE, color = "red") +</span></span>
+<span id="cb15-64"><a href="#cb15-64"></a><span class="in">  labs(title = "SAT Scores vs. Teacher Salary",</span></span>
+<span id="cb15-65"><a href="#cb15-65"></a><span class="in">       subtitle = "Investigating Teacher Compensation Effects",</span></span>
+<span id="cb15-66"><a href="#cb15-66"></a><span class="in">       x = "Teacher Salary (thousands $)",</span></span>
+<span id="cb15-67"><a href="#cb15-67"></a><span class="in">       y = "SAT Score") +</span></span>
+<span id="cb15-68"><a href="#cb15-68"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-69"><a href="#cb15-69"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
+<span id="cb15-70"><a href="#cb15-70"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
+<span id="cb15-71"><a href="#cb15-71"></a></span>
+<span id="cb15-72"><a href="#cb15-72"></a><span class="in">p1</span></span>
+<span id="cb15-73"><a href="#cb15-73"></a><span class="in">p2</span></span>
+<span id="cb15-74"><a href="#cb15-74"></a><span class="in">```</span></span>
+<span id="cb15-75"><a href="#cb15-75"></a></span>
+<span id="cb15-76"><a href="#cb15-76"></a><span class="fu">### Part b: Analysis of Relationships</span></span>
+<span id="cb15-77"><a href="#cb15-77"></a></span>
+<span id="cb15-78"><a href="#cb15-78"></a>The relationship between educational investment and SAT performance presents an intriguing paradox.</span>
+<span id="cb15-79"><a href="#cb15-79"></a>Both per-pupil expenditure and teacher salary demonstrate unexpected negative correlations with SAT scores, contrary to what one might intuitively expect.</span>
+<span id="cb15-80"><a href="#cb15-80"></a>This counterintuitive pattern strongly suggests the presence of confounding variables, particularly participation rates and regional differences in testing preferences.</span>
+<span id="cb15-81"><a href="#cb15-81"></a>States that invest more in education often have higher SAT participation rates, which typically results in lower average scores due to a more diverse testing population.</span>
+<span id="cb15-82"><a href="#cb15-82"></a></span>
+<span id="cb15-83"><a href="#cb15-83"></a><span class="fu">## Exercise 3: Trivariate Relationship</span></span>
+<span id="cb15-84"><a href="#cb15-84"></a></span>
+<span id="cb15-85"><a href="#cb15-85"></a><span class="in">```{r trivariate}</span></span>
+<span id="cb15-86"><a href="#cb15-86"></a><span class="in">#| label: trivariate</span></span>
+<span id="cb15-87"><a href="#cb15-87"></a><span class="in">ggplot(education, aes(x = salary, y = sat, color = expend)) +</span></span>
+<span id="cb15-88"><a href="#cb15-88"></a><span class="in">  geom_point(size = 3, alpha = 0.7) +</span></span>
+<span id="cb15-89"><a href="#cb15-89"></a><span class="in">  scale_color_gradient(low = "lightblue", high = "darkblue") +</span></span>
+<span id="cb15-90"><a href="#cb15-90"></a><span class="in">  labs(title = "SAT Scores vs. Teacher Salary, Colored by Expenditure",</span></span>
+<span id="cb15-91"><a href="#cb15-91"></a><span class="in">       subtitle = "Exploring Three-Way Relationships in Educational Metrics",</span></span>
+<span id="cb15-92"><a href="#cb15-92"></a><span class="in">       x = "Teacher Salary (thousands $)",</span></span>
+<span id="cb15-93"><a href="#cb15-93"></a><span class="in">       y = "SAT Score", </span></span>
+<span id="cb15-94"><a href="#cb15-94"></a><span class="in">       color = "Per Pupil\nExpenditure") +</span></span>
+<span id="cb15-95"><a href="#cb15-95"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-96"><a href="#cb15-96"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
+<span id="cb15-97"><a href="#cb15-97"></a><span class="in">        plot.subtitle = element_text(size = 12),</span></span>
+<span id="cb15-98"><a href="#cb15-98"></a><span class="in">        legend.position = "right")</span></span>
+<span id="cb15-99"><a href="#cb15-99"></a><span class="in">```</span></span>
+<span id="cb15-100"><a href="#cb15-100"></a></span>
+<span id="cb15-101"><a href="#cb15-101"></a><span class="fu">## Exercise 4: Discretized Expenditure</span></span>
+<span id="cb15-102"><a href="#cb15-102"></a></span>
+<span id="cb15-105"><a href="#cb15-105"></a><span class="in">```{r}</span></span>
+<span id="cb15-106"><a href="#cb15-106"></a><span class="co">#| label: discretized-expenditure</span></span>
+<span id="cb15-107"><a href="#cb15-107"></a>education <span class="sc">%&gt;%</span></span>
+<span id="cb15-108"><a href="#cb15-108"></a>  <span class="fu">mutate</span>(<span class="at">expend_group =</span> <span class="fu">cut</span>(expend, </span>
+<span id="cb15-109"><a href="#cb15-109"></a>                           <span class="at">breaks =</span> <span class="fu">quantile</span>(expend, <span class="at">probs =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)),</span>
+<span id="cb15-110"><a href="#cb15-110"></a>                           <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Below Median"</span>, <span class="st">"Above Median"</span>),</span>
+<span id="cb15-111"><a href="#cb15-111"></a>                           <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb15-112"><a href="#cb15-112"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> salary, <span class="at">y =</span> sat, <span class="at">color =</span> expend_group)) <span class="sc">+</span> </span>
+<span id="cb15-113"><a href="#cb15-113"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span> </span>
+<span id="cb15-114"><a href="#cb15-114"></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb15-115"><a href="#cb15-115"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"steelblue"</span>, <span class="st">"darkred"</span>)) <span class="sc">+</span></span>
+<span id="cb15-116"><a href="#cb15-116"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"SAT Scores vs Teacher Salary by Expenditure Level"</span>,</span>
+<span id="cb15-117"><a href="#cb15-117"></a>       <span class="at">x =</span> <span class="st">"Teacher Salary (thousands $)"</span>,</span>
+<span id="cb15-118"><a href="#cb15-118"></a>       <span class="at">y =</span> <span class="st">"SAT Score"</span>,</span>
+<span id="cb15-119"><a href="#cb15-119"></a>       <span class="at">color =</span> <span class="st">"Expenditure"</span>) <span class="sc">+</span></span>
+<span id="cb15-120"><a href="#cb15-120"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb15-121"><a href="#cb15-121"></a><span class="in">```</span></span>
+<span id="cb15-122"><a href="#cb15-122"></a></span>
+<span id="cb15-123"><a href="#cb15-123"></a>By discretizing states into expenditure groups, we observe distinct patterns in the relationship between teacher salaries and SAT scores.</span>
+<span id="cb15-124"><a href="#cb15-124"></a>States with higher expenditure levels consistently show higher teacher salaries but generally lower SAT scores.</span>
+<span id="cb15-125"><a href="#cb15-125"></a>The slope of the relationship between salary and SAT scores differs between expenditure groups, suggesting that the impact of teacher compensation on student performance varies depending on overall educational investment levels.</span>
+<span id="cb15-126"><a href="#cb15-126"></a>This variation might reflect differences in resource allocation efficiency or underlying socioeconomic factors that influence educational outcomes.</span>
+<span id="cb15-127"><a href="#cb15-127"></a></span>
+<span id="cb15-128"><a href="#cb15-128"></a><span class="fu">## Exercise 5: Participation Rate Impact</span></span>
+<span id="cb15-129"><a href="#cb15-129"></a></span>
+<span id="cb15-130"><a href="#cb15-130"></a><span class="fu">### Part a: Participation Rate Distribution</span></span>
+<span id="cb15-131"><a href="#cb15-131"></a></span>
+<span id="cb15-132"><a href="#cb15-132"></a><span class="in">```{r participation-distribution}</span></span>
+<span id="cb15-133"><a href="#cb15-133"></a><span class="in">#| label: participation-distribution</span></span>
+<span id="cb15-134"><a href="#cb15-134"></a><span class="in">ggplot(education, aes(x = fracCat)) +</span></span>
+<span id="cb15-135"><a href="#cb15-135"></a><span class="in">  geom_bar(fill = "steelblue", alpha = 0.7) +</span></span>
+<span id="cb15-136"><a href="#cb15-136"></a><span class="in">  labs(title = "Distribution of SAT Participation Rates",</span></span>
+<span id="cb15-137"><a href="#cb15-137"></a><span class="in">       subtitle = "Showing Variation in Testing Population Across States",</span></span>
+<span id="cb15-138"><a href="#cb15-138"></a><span class="in">       x = "Participation Rate Category",</span></span>
+<span id="cb15-139"><a href="#cb15-139"></a><span class="in">       y = "Count") +</span></span>
+<span id="cb15-140"><a href="#cb15-140"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-141"><a href="#cb15-141"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
+<span id="cb15-142"><a href="#cb15-142"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
+<span id="cb15-143"><a href="#cb15-143"></a><span class="in">```</span></span>
+<span id="cb15-144"><a href="#cb15-144"></a></span>
+<span id="cb15-145"><a href="#cb15-145"></a><span class="fu">### Part b: Score Distribution by Participation</span></span>
+<span id="cb15-146"><a href="#cb15-146"></a></span>
+<span id="cb15-147"><a href="#cb15-147"></a><span class="in">```{r participation-scores}</span></span>
+<span id="cb15-148"><a href="#cb15-148"></a><span class="in">#| label: participation-scores</span></span>
+<span id="cb15-149"><a href="#cb15-149"></a><span class="in">p3 &lt;- ggplot(education, aes(x = fracCat, y = sat)) +</span></span>
+<span id="cb15-150"><a href="#cb15-150"></a><span class="in">  geom_boxplot(fill = "steelblue", alpha = 0.5) +</span></span>
+<span id="cb15-151"><a href="#cb15-151"></a><span class="in">  labs(title = "SAT Scores by Participation Rate",</span></span>
+<span id="cb15-152"><a href="#cb15-152"></a><span class="in">       subtitle = "Examining Score Distributions Across Participation Levels",</span></span>
+<span id="cb15-153"><a href="#cb15-153"></a><span class="in">       x = "Participation Rate Category",</span></span>
+<span id="cb15-154"><a href="#cb15-154"></a><span class="in">       y = "SAT Score") +</span></span>
+<span id="cb15-155"><a href="#cb15-155"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-156"><a href="#cb15-156"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
+<span id="cb15-157"><a href="#cb15-157"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
+<span id="cb15-158"><a href="#cb15-158"></a></span>
+<span id="cb15-159"><a href="#cb15-159"></a><span class="in">p4 &lt;- ggplot(education, aes(x = fracCat, y = sat)) +</span></span>
+<span id="cb15-160"><a href="#cb15-160"></a><span class="in">  geom_violin(fill = "steelblue", alpha = 0.3) +</span></span>
+<span id="cb15-161"><a href="#cb15-161"></a><span class="in">  geom_jitter(width = 0.1, alpha = 0.5) +</span></span>
+<span id="cb15-162"><a href="#cb15-162"></a><span class="in">  labs(title = "SAT Score Distribution by Participation Rate",</span></span>
+<span id="cb15-163"><a href="#cb15-163"></a><span class="in">       subtitle = "Detailed View of Score Patterns with Individual State Data",</span></span>
+<span id="cb15-164"><a href="#cb15-164"></a><span class="in">       x = "Participation Rate Category",</span></span>
+<span id="cb15-165"><a href="#cb15-165"></a><span class="in">       y = "SAT Score") +</span></span>
+<span id="cb15-166"><a href="#cb15-166"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-167"><a href="#cb15-167"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
+<span id="cb15-168"><a href="#cb15-168"></a><span class="in">        plot.subtitle = element_text(size = 12))</span></span>
+<span id="cb15-169"><a href="#cb15-169"></a></span>
+<span id="cb15-170"><a href="#cb15-170"></a><span class="in">p3</span></span>
+<span id="cb15-171"><a href="#cb15-171"></a><span class="in">p4</span></span>
+<span id="cb15-172"><a href="#cb15-172"></a><span class="in">```</span></span>
+<span id="cb15-173"><a href="#cb15-173"></a></span>
+<span id="cb15-174"><a href="#cb15-174"></a>The relationship between participation rates and SAT scores shows a clear inverse pattern.</span>
+<span id="cb15-175"><a href="#cb15-175"></a>In states with low participation rates, SAT-takers are predominantly high-achieving students specifically targeting selective colleges.</span>
+<span id="cb15-176"><a href="#cb15-176"></a>Conversely, states with high participation rates include a broader spectrum of academic achievement levels, naturally leading to lower average scores but potentially providing a more representative measure of overall educational outcomes.</span>
+<span id="cb15-177"><a href="#cb15-177"></a>This pattern is particularly evident in the violin plot, which reveals the changing shape and spread of score distributions across participation categories.</span>
+<span id="cb15-178"><a href="#cb15-178"></a></span>
+<span id="cb15-179"><a href="#cb15-179"></a><span class="fu">### Part c: Expenditure and Participation Relationship</span></span>
+<span id="cb15-180"><a href="#cb15-180"></a></span>
+<span id="cb15-181"><a href="#cb15-181"></a><span class="in">```{r expenditure-participation}</span></span>
+<span id="cb15-182"><a href="#cb15-182"></a><span class="in">#| label: expenditure-participation</span></span>
+<span id="cb15-183"><a href="#cb15-183"></a><span class="in">ggplot(education, aes(x = expend, y = sat, color = fracCat)) +</span></span>
+<span id="cb15-184"><a href="#cb15-184"></a><span class="in">  geom_point(alpha = 0.7) +</span></span>
+<span id="cb15-185"><a href="#cb15-185"></a><span class="in">  geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +</span></span>
+<span id="cb15-186"><a href="#cb15-186"></a><span class="in">  labs(title = "SAT vs. Expenditure by Participation Rate",</span></span>
+<span id="cb15-187"><a href="#cb15-187"></a><span class="in">       subtitle = "Examining Simpson's Paradox in Educational Outcomes",</span></span>
+<span id="cb15-188"><a href="#cb15-188"></a><span class="in">       x = "Per Pupil Expenditure (thousands $)",</span></span>
+<span id="cb15-189"><a href="#cb15-189"></a><span class="in">       y = "SAT Score",</span></span>
+<span id="cb15-190"><a href="#cb15-190"></a><span class="in">       color = "Participation Rate") +</span></span>
+<span id="cb15-191"><a href="#cb15-191"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-192"><a href="#cb15-192"></a><span class="in">  theme(plot.title = element_text(size = 14, face = "bold"),</span></span>
+<span id="cb15-193"><a href="#cb15-193"></a><span class="in">        plot.subtitle = element_text(size = 12),</span></span>
+<span id="cb15-194"><a href="#cb15-194"></a><span class="in">        legend.position = "right")</span></span>
+<span id="cb15-195"><a href="#cb15-195"></a><span class="in">```</span></span>
+<span id="cb15-196"><a href="#cb15-196"></a></span>
+<span id="cb15-197"><a href="#cb15-197"></a><span class="fu">### Part d: Simpson's Paradox Analysis</span></span>
+<span id="cb15-198"><a href="#cb15-198"></a></span>
+<span id="cb15-199"><a href="#cb15-199"></a>The relationship between educational spending and SAT scores presents a classic example of Simpson's Paradox, highlighting the critical importance of considering participation rates in educational outcome analysis.</span>
+<span id="cb15-200"><a href="#cb15-200"></a>While the aggregate data shows a negative correlation between spending and SAT scores, examining the relationship within each participation rate category reveals a positive correlation between spending and scores.</span>
+<span id="cb15-201"><a href="#cb15-201"></a>This paradox occurs because states with higher educational spending typically have higher participation rates, which naturally correlates with lower average scores due to the broader testing population.</span>
+<span id="cb15-202"><a href="#cb15-202"></a></span>
+<span id="cb15-203"><a href="#cb15-203"></a>The participation rate serves as a crucial confounding variable that explains the seemingly counterintuitive negative relationship in the aggregate data.</span>
+<span id="cb15-204"><a href="#cb15-204"></a>This finding demonstrates how aggregate statistics can mask more nuanced relationships in educational data and emphasizes the importance of controlling for participation rates when evaluating the effectiveness of educational spending.</span>
+<span id="cb15-205"><a href="#cb15-205"></a>Understanding this paradox is essential for policymakers and educators in making informed decisions about resource allocation and interpreting educational outcome data accurately.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
