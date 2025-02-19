@@ -1,6 +1,5 @@
 ---
-title: "Spatial Visualization"
-format: html
+title: "Spatial Visualization Analysis"
 ---
 
 ## Initial Setup
@@ -17,6 +16,7 @@ pacman::p_load(
   tidyverse,    # Data manipulation
   leaflet,      # Interactive maps
   gplots,       # Color utilities
+  ggthemes,    # Link to theme_map
   rnaturalearth, # Geographic data
   rnaturalearthdata,
   sf,           # Simple features
@@ -57,7 +57,7 @@ tryCatch({
 ```{r leaflet_basic}
 #| message: false
 #| warning: false
-
+#| execute: false 
 leaflet(data = fave_places) |> 
   addTiles() |> 
   addMarkers() |>
@@ -103,8 +103,6 @@ A basic coordinate plot shows global Starbucks distribution without map context.
 
 ```{r basic_scatter}
 #| message: false
-#| fig.width = 10
-#| fig.height = 6
 
 ggplot(starbucks, aes(x = Longitude, y = Latitude)) +
   geom_point(alpha = 0.2, size = 0.2) +
@@ -122,8 +120,6 @@ Adding a proper map background improves geographical context.
 
 ```{r world_map}
 #| message: false
-#| fig.width = 12
-#| fig.height = 8
 
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
@@ -153,8 +149,6 @@ Zooming in on North America provides better regional detail.
 
 ```{r north_america}
 #| message: false
-#| fig.width = 12
-#| fig.height = 8
 
 starbucks_na <- starbucks |> 
   filter(Country %in% c('CA', 'MX', 'US'))
@@ -187,8 +181,6 @@ Focusing on specific states with county boundaries.
 
 ```{r midwest}
 #| message: false
-#| fig.width = 10
-#| fig.height = 8
 
 midwest_boundaries <- st_as_sf(
   maps::map("state",
@@ -221,8 +213,6 @@ Creating density contours to show concentration patterns.
 
 ```{r contours}
 #| message: false
-#| fig.width = 12
-#| fig.height = 8
 
 ggplot(na_states) + 
   geom_sf() + 
@@ -247,8 +237,8 @@ Creating a choropleth map of 2020 election results by state.
 
 ```{r state_election}
 #| message: false
-#| fig.width = 12
-#| fig.height = 8
+#| fig.width:  12
+#| fig.height: 8
 
 elections_by_state <- elections_by_state |>
   filter(state_abbr != "DC") |>
@@ -286,8 +276,8 @@ Analyzing demographic patterns at the county level.
 
 ```{r county_analysis}
 #| message: false
-#| fig.width = 12
-#| fig.height = 24
+#| fig.width: 12
+#| fig.height: 24
 
 elections_by_counties <- elections_by_counties |>
   select(state_name, state_abbr, county_name, county_fips,
