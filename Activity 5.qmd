@@ -1,8 +1,15 @@
 ---
-title: "Multivariate Viz"
-editor: 
-  markdown: 
-    wrap: sentence
+title: "Multivariate-Activity 5:Analyzing the SAT Scores"
+author: "Zhijun He"
+date: "2024-02-05"
+format: 
+  html:
+    self-contained: true
+    toc: true
+execute:
+  echo: true
+  warning: false
+  message: false
 ---
 
 ## Purpose

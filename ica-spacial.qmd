@@ -1,5 +1,5 @@
 ---
-title: "Spatial Visualization"
+title: "Spatial Visualization Analysis"
 format: html
 ---
 
