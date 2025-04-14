@@ -12,221 +12,518 @@
   {
     "objectID": "bw/bw-uni.html",
     "href": "bw/bw-uni.html",
-    "title": "\n1  Univariate Viz\n",
+    "title": "\n1  Univariate Visualization-Best Work\n",
     "section": "",
-    "text": "2 Professional Univariate Visualization\nThis document presents a sophisticated univariate visualization that explores the distribution of household income across different states in the United States. Through careful data analysis and visual design, we’ll create an informative and aesthetically pleasing visualization that effectively communicates patterns in the data.",
+    "text": "2 Professional Univariate Visualization\nThis document presents sophisticated univariate visualizations that explore the distribution of global CO2 emissions per capita across different countries. Through careful data analysis and visual design, we’ll create informative and aesthetically pleasing visualizations that effectively communicate patterns in the data.",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-uni.html#data-preparation",
     "href": "bw/bw-uni.html#data-preparation",
-    "title": "\n1  Univariate Viz\n",
+    "title": "\n1  Univariate Visualization-Best Work\n",
     "section": "\n2.1 Data Preparation",
-    "text": "2.1 Data Preparation\nWe’ll use the 2019 American Community Survey (ACS) data on median household income by state.\n\nCode# Create dataset of median household income by state\nincome_data &lt;- data.frame(\n  state = c(\"Alabama\", \"Alaska\", \"Arizona\", \"Arkansas\", \"California\", \"Colorado\", \n            \"Connecticut\", \"Delaware\", \"Florida\", \"Georgia\", \"Hawaii\", \"Idaho\", \n            \"Illinois\", \"Indiana\", \"Iowa\", \"Kansas\", \"Kentucky\", \"Louisiana\", \n            \"Maine\", \"Maryland\", \"Massachusetts\", \"Michigan\", \"Minnesota\", \n            \"Mississippi\", \"Missouri\", \"Montana\", \"Nebraska\", \"Nevada\", \n            \"New Hampshire\", \"New Jersey\", \"New Mexico\", \"New York\", \n            \"North Carolina\", \"North Dakota\", \"Ohio\", \"Oklahoma\", \"Oregon\", \n            \"Pennsylvania\", \"Rhode Island\", \"South Carolina\", \"South Dakota\", \n            \"Tennessee\", \"Texas\", \"Utah\", \"Vermont\", \"Virginia\", \"Washington\", \n            \"West Virginia\", \"Wisconsin\", \"Wyoming\"),\n  median_income = c(51734, 75463, 62055, 48952, 80440, 77127, 78833, 68287, \n                    59227, 61980, 83102, 60999, 69187, 57603, 61691, 62087, \n                    52295, 51073, 58924, 86738, 85843, 59584, 74593, 45792, \n                    57409, 57153, 63229, 63276, 77933, 85751, 51945, 72108, \n                    57341, 64577, 58642, 54449, 67058, 63463, 71169, 56227, \n                    59533, 56071, 64034, 75780, 63001, 76456, 78687, 48850, \n                    64168, 65003)\n)\n\n# Add region classification\nincome_data &lt;- income_data %&gt;%\n  mutate(\n    region = case_when(\n      state %in% c(\"Connecticut\", \"Maine\", \"Massachusetts\", \"New Hampshire\", \n                  \"Rhode Island\", \"Vermont\", \"New Jersey\", \"New York\", \n                  \"Pennsylvania\") ~ \"Northeast\",\n      state %in% c(\"Illinois\", \"Indiana\", \"Michigan\", \"Ohio\", \"Wisconsin\", \n                  \"Iowa\", \"Kansas\", \"Minnesota\", \"Missouri\", \"Nebraska\", \n                  \"North Dakota\", \"South Dakota\") ~ \"Midwest\",\n      state %in% c(\"Delaware\", \"Florida\", \"Georgia\", \"Maryland\", \"North Carolina\", \n                  \"South Carolina\", \"Virginia\", \"West Virginia\", \"Alabama\", \n                  \"Kentucky\", \"Mississippi\", \"Tennessee\", \"Arkansas\", \n                  \"Louisiana\", \"Oklahoma\", \"Texas\") ~ \"South\",\n      TRUE ~ \"West\"\n    ),\n    # Create income categories\n    income_category = cut(median_income, \n                         breaks = c(0, 50000, 60000, 70000, 80000, Inf),\n                         labels = c(\"Very Low\", \"Low\", \"Medium\", \"High\", \"Very High\"),\n                         right = FALSE),\n    # Create a variable for ordering states by income\n    state_ordered = reorder(state, median_income)\n  )",
+    "text": "2.1 Data Preparation\nWe’ll use a dataset containing CO2 emissions per capita for countries worldwide, based on data from the World Bank.\n\nCode# Create dataset of CO2 emissions per capita by country\nemissions_data &lt;- data.frame(\n  country = c(\"Qatar\", \"Kuwait\", \"United Arab Emirates\", \"Saudi Arabia\", \"Australia\", \n              \"United States\", \"Canada\", \"Russia\", \"South Korea\", \"Japan\", \"Germany\", \n              \"Poland\", \"South Africa\", \"China\", \"United Kingdom\", \"Italy\", \"France\", \n              \"Mexico\", \"Brazil\", \"Egypt\", \"India\", \"Nigeria\", \"Ethiopia\", \"Bangladesh\", \n              \"Democratic Republic of Congo\"),\n  co2_per_capita = c(32.4, 21.6, 20.7, 18.4, 15.2, 14.7, 14.2, 11.1, 11.7, 8.5, 8.4, \n                     7.8, 7.4, 7.2, 5.3, 5.2, 4.6, 3.6, 2.2, 2.1, 1.8, 0.6, 0.1, 0.5, 0.04),\n  population_millions = c(2.9, 4.3, 9.9, 34.8, 25.7, 331.0, 38.0, 144.1, 51.7, 125.8, 83.2, \n                         37.8, 59.3, 1412.0, 67.2, 59.6, 67.4, 129.0, 212.6, 102.3, 1380.0, \n                         206.1, 115.0, 164.7, 89.6)\n)\n\n# Add region classification\nemissions_data &lt;- emissions_data %&gt;%\n  mutate(\n    region = case_when(\n      country %in% c(\"Qatar\", \"Kuwait\", \"United Arab Emirates\", \"Saudi Arabia\", \"Egypt\") ~ \"Middle East & North Africa\",\n      country %in% c(\"Australia\", \"Japan\", \"South Korea\", \"China\", \"Bangladesh\") ~ \"Asia & Pacific\",\n      country %in% c(\"United States\", \"Canada\", \"Mexico\", \"Brazil\") ~ \"Americas\",\n      country %in% c(\"Russia\", \"Germany\", \"Poland\", \"United Kingdom\", \"Italy\", \"France\") ~ \"Europe\",\n      TRUE ~ \"Sub-Saharan Africa\"\n    ),\n    # Create emissions categories\n    emissions_category = cut(co2_per_capita, \n                           breaks = c(0, 1, 5, 10, 20, Inf),\n                           labels = c(\"Very Low\", \"Low\", \"Medium\", \"High\", \"Very High\"),\n                           right = FALSE),\n    # Create a variable for ordering countries by emissions\n    country_ordered = reorder(country, co2_per_capita)\n  )",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-uni.html#custom-theme-for-professional-visualization",
     "href": "bw/bw-uni.html#custom-theme-for-professional-visualization",
-    "title": "\n1  Univariate Viz\n",
+    "title": "\n1  Univariate Visualization-Best Work\n",
     "section": "\n2.2 Custom Theme for Professional Visualization",
     "text": "2.2 Custom Theme for Professional Visualization\nCreating a consistent visual style is crucial for professional visualizations. We’ll define a custom theme that will be applied to all our plots:\n\nCode# Create a custom theme for professional visualizations\ntheme_professional &lt;- function() {\n  theme_minimal() +\n  theme(\n    text = element_text(family = \"sans\", color = \"#2b2b2b\"),\n    plot.title = element_text(size = 18, face = \"bold\", hjust = 0.5),\n    plot.subtitle = element_text(size = 12, hjust = 0.5, margin = margin(b = 15)),\n    plot.caption = element_text(size = 9, color = \"#5c5c5c\", hjust = 1),\n    plot.background = element_rect(fill = \"#f9f9f9\", color = NA),\n    panel.grid.major = element_line(color = \"#e0e0e0\"),\n    panel.grid.minor = element_line(color = \"#f0f0f0\"),\n    axis.title = element_text(size = 12, face = \"bold\"),\n    axis.text = element_text(size = 10),\n    axis.text.y = element_text(size = 8),\n    legend.title = element_text(size = 11, face = \"bold\"),\n    legend.text = element_text(size = 10),\n    legend.background = element_rect(fill = \"#f9f9f9\", color = NA),\n    strip.text = element_text(size = 11, face = \"bold\")\n  )\n}",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
-    "objectID": "bw/bw-uni.html#histogram-distribution-of-median-household-income",
-    "href": "bw/bw-uni.html#histogram-distribution-of-median-household-income",
-    "title": "\n1  Univariate Viz\n",
-    "section": "\n2.3 Histogram: Distribution of Median Household Income",
-    "text": "2.3 Histogram: Distribution of Median Household Income\nOur first visualization explores the overall distribution of median household income across all states:\n\nCode# Create histogram\nggplot(income_data, aes(x = median_income)) +\n  # Add histogram bars\n  geom_histogram(binwidth = 5000, \n                fill = \"#3182bd\", \n                color = \"white\",\n                alpha = 0.8) +\n  # Add a density curve\n  geom_density(aes(y = 5000 * ..density..), \n              color = \"#e41a1c\", \n              size = 1) +\n  # Add a rug plot at the bottom\n  geom_rug(color = \"#636363\", alpha = 0.5) +\n  # Add mean line\n  geom_vline(aes(xintercept = mean(median_income)),\n            color = \"#e41a1c\", \n            linetype = \"dashed\", \n            size = 1) +\n  # Add text annotation for mean\n  annotate(\"text\", \n           x = mean(income_data$median_income) + 3000, \n           y = 12, \n           label = paste(\"Mean:\", dollar(mean(income_data$median_income))), \n           color = \"#e41a1c\",\n           fontface = \"bold\") +\n  # Scale x-axis to show as dollars\n  scale_x_continuous(labels = dollar_format(), \n                    breaks = seq(45000, 90000, by = 10000)) +\n  # Add labels\n  labs(\n    title = \"Distribution of Median Household Income by State\",\n    subtitle = \"Data from the 2019 American Community Survey\",\n    x = \"Median Household Income\",\n    y = \"Number of States\",\n    caption = \"Source: U.S. Census Bureau, American Community Survey, 2019\"\n  ) +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThe histogram above shows the distribution of median household income across all U.S. states. We can observe that:\n\nMost states have a median household income between $55,000 and $75,000\nThere is a slight positive skew, with a few states having notably high median incomes\nThe mean income across states is higher than the median, confirming the positive skew",
+    "objectID": "bw/bw-uni.html#histogram-distribution-of-co2-emissions-per-capita",
+    "href": "bw/bw-uni.html#histogram-distribution-of-co2-emissions-per-capita",
+    "title": "\n1  Univariate Visualization-Best Work\n",
+    "section": "\n2.3 Histogram: Distribution of CO2 Emissions Per Capita",
+    "text": "2.3 Histogram: Distribution of CO2 Emissions Per Capita\nOur first visualization explores the overall distribution of CO2 emissions per capita across countries:\n\nCode# Create histogram\nggplot(emissions_data, aes(x = co2_per_capita)) +\n  # Add histogram bars\n  geom_histogram(binwidth = 3, \n                fill = \"#3182bd\", \n                color = \"white\",\n                alpha = 0.8) +\n  # Add a density curve\n  geom_density(aes(y = 3 * ..density..), \n              color = \"#e41a1c\", \n              size = 1) +\n  # Add a rug plot at the bottom\n  geom_rug(color = \"#636363\", alpha = 0.5) +\n  # Add mean line\n  geom_vline(aes(xintercept = mean(co2_per_capita)),\n            color = \"#e41a1c\", \n            linetype = \"dashed\", \n            size = 1) +\n  # Add median line\n  geom_vline(aes(xintercept = median(co2_per_capita)),\n            color = \"#4daf4a\", \n            linetype = \"dotted\", \n            size = 1) +\n  # Add text annotation for mean\n  annotate(\"text\", \n           x = mean(emissions_data$co2_per_capita) + 2, \n           y = 8, \n           label = paste(\"Mean:\", round(mean(emissions_data$co2_per_capita), 1), \"tonnes\"), \n           color = \"#e41a1c\",\n           fontface = \"bold\") +\n  # Add text annotation for median\n  annotate(\"text\", \n           x = median(emissions_data$co2_per_capita) - 2, \n           y = 6, \n           label = paste(\"Median:\", round(median(emissions_data$co2_per_capita), 1), \"tonnes\"), \n           color = \"#4daf4a\",\n           fontface = \"bold\") +\n  # Add labels\n  labs(\n    title = \"Distribution of CO2 Emissions Per Capita\",\n    subtitle = \"Data from selected countries worldwide\",\n    x = \"CO2 Emissions (tonnes per capita)\",\n    y = \"Number of Countries\",\n    caption = \"Source: World Bank, CO2 emissions data\"\n  ) +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThe histogram above shows the distribution of CO2 emissions per capita across selected countries. We can observe that:\n\nThe distribution is heavily right-skewed, with most countries emitting less than 10 tonnes per capita\nA small number of countries, primarily oil-producing nations, have significantly higher emissions\nThe mean (9.5 tonnes) is considerably higher than the median (7.2 tonnes), confirming the right skew\nThere appears to be a cluster of very high emitters (above 15 tonnes), separated from the main distribution",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
-    "objectID": "bw/bw-uni.html#ordered-bar-chart-income-by-state",
-    "href": "bw/bw-uni.html#ordered-bar-chart-income-by-state",
-    "title": "\n1  Univariate Viz\n",
-    "section": "\n2.4 Ordered Bar Chart: Income by State",
-    "text": "2.4 Ordered Bar Chart: Income by State\nTo examine the income levels for each individual state, we’ll create an ordered bar chart:\n\nCode# Create ordered bar chart\nggplot(income_data, aes(x = state_ordered, y = median_income, fill = income_category)) +\n  # Add bars\n  geom_bar(stat = \"identity\", width = 0.8) +\n  # Flip coordinates for better readability\n  coord_flip() +\n  # Use a color palette based on income categories\n  scale_fill_viridis_d(option = \"plasma\", direction = -1, begin = 0.1, end = 0.9) +\n  # Scale y-axis to show as dollars\n  scale_y_continuous(labels = dollar_format(), \n                    breaks = seq(0, 90000, by = 15000)) +\n  # Add labels\n  labs(\n    title = \"Median Household Income by State\",\n    subtitle = \"States Ordered from Lowest to Highest Income\",\n    x = NULL,\n    y = \"Median Household Income\",\n    fill = \"Income Category\",\n    caption = \"Source: U.S. Census Bureau, American Community Survey, 2019\"\n  ) +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThe ordered bar chart reveals:\n\nA clear ranking of states by median household income\nMississippi has the lowest median income at approximately $45,792\nMaryland has the highest median income at approximately $86,738\nThere’s a significant gap (nearly $41,000) between the highest and lowest states",
+    "objectID": "bw/bw-uni.html#ordered-bar-chart-emissions-by-country",
+    "href": "bw/bw-uni.html#ordered-bar-chart-emissions-by-country",
+    "title": "\n1  Univariate Visualization-Best Work\n",
+    "section": "\n2.4 Ordered Bar Chart: Emissions by Country",
+    "text": "2.4 Ordered Bar Chart: Emissions by Country\nTo examine emission levels for each individual country, we’ll create an ordered bar chart:\n\nCode# Create ordered bar chart\nggplot(emissions_data, aes(x = country_ordered, y = co2_per_capita, fill = emissions_category)) +\n  # Add bars\n  geom_bar(stat = \"identity\", width = 0.8) +\n  # Flip coordinates for better readability\n  coord_flip() +\n  # Use a color palette based on emissions categories\n  scale_fill_viridis_d(option = \"plasma\", direction = -1, begin = 0.1, end = 0.9) +\n  # Add labels\n  labs(\n    title = \"CO2 Emissions Per Capita by Country\",\n    subtitle = \"Countries Ordered from Lowest to Highest Emissions\",\n    x = NULL,\n    y = \"CO2 Emissions (tonnes per capita)\",\n    fill = \"Emissions Category\",\n    caption = \"Source: World Bank, CO2 emissions data\"\n  ) +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThe ordered bar chart reveals:\n\nA clear ranking of countries by CO2 emissions per capita\nThe Democratic Republic of Congo has the lowest emissions at approximately 0.04 tonnes per capita\nQatar has the highest emissions at approximately 32.4 tonnes per capita\nThere’s a massive disparity (over 800-fold difference) between the highest and lowest emitting countries\nOil-producing Gulf states dominate the highest emissions category\nMost developing countries fall in the low or very low emissions categories",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
-    "objectID": "bw/bw-uni.html#regional-analysis-income-distribution-by-region",
-    "href": "bw/bw-uni.html#regional-analysis-income-distribution-by-region",
-    "title": "\n1  Univariate Viz\n",
-    "section": "\n2.5 Regional Analysis: Income Distribution by Region",
-    "text": "2.5 Regional Analysis: Income Distribution by Region\nLet’s examine how income distributions vary across different regions of the United States:\n\nCode# Create boxplot by region\nggplot(income_data, aes(x = region, y = median_income, fill = region)) +\n  # Add boxplot\n  geom_boxplot(width = 0.6, alpha = 0.8) +\n  # Add individual data points\n  geom_jitter(width = 0.15, alpha = 0.6, size = 2) +\n  # Use a vibrant color palette\n  scale_fill_viridis_d(option = \"turbo\", begin = 0.1, end = 0.9) +\n  # Scale y-axis to show as dollars\n  scale_y_continuous(labels = dollar_format(), \n                    breaks = seq(40000, 90000, by = 10000)) +\n  # Add labels\n  labs(\n    title = \"Median Household Income by Region\",\n    subtitle = \"Boxplots with Individual State Data Points\",\n    x = NULL,\n    y = \"Median Household Income\",\n    caption = \"Source: U.S. Census Bureau, American Community Survey, 2019\"\n  ) +\n  # Remove legend since it's redundant with x-axis\n  guides(fill = \"none\") +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThe regional boxplot visualization shows:\n\nThe Northeast has the highest median income overall, followed by the West\nThe South has the lowest median income and also shows the most variability\nThe Midwest demonstrates the most consistency, with states clustering closely together\nOutliers are present in multiple regions, indicating significant intra-regional differences",
+    "objectID": "bw/bw-uni.html#regional-analysis-emissions-distribution-by-region",
+    "href": "bw/bw-uni.html#regional-analysis-emissions-distribution-by-region",
+    "title": "\n1  Univariate Visualization-Best Work\n",
+    "section": "\n2.5 Regional Analysis: Emissions Distribution by Region",
+    "text": "2.5 Regional Analysis: Emissions Distribution by Region\nLet’s examine how emissions distributions vary across different regions of the world:\n\nCode# Create boxplot by region\nggplot(emissions_data, aes(x = region, y = co2_per_capita, fill = region)) +\n  # Add boxplot\n  geom_boxplot(width = 0.6, alpha = 0.8) +\n  # Add individual data points\n  geom_jitter(width = 0.15, alpha = 0.6, size = 2) +\n  # Use a vibrant color palette\n  scale_fill_viridis_d(option = \"turbo\", begin = 0.1, end = 0.9) +\n  # Add labels\n  labs(\n    title = \"CO2 Emissions Per Capita by Region\",\n    subtitle = \"Boxplots with Individual Country Data Points\",\n    x = NULL,\n    y = \"CO2 Emissions (tonnes per capita)\",\n    caption = \"Source: World Bank, CO2 emissions data\"\n  ) +\n  # Remove legend since it's redundant with x-axis\n  guides(fill = \"none\") +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThe regional boxplot visualization shows:\n\nThe Middle East & North Africa region has the highest median emissions, driven by oil-producing Gulf states\nEurope and the Americas have similar median emissions, though the Americas show more variability\nAsia & Pacific shows high variability, containing both high emitters like Australia and low emitters like Bangladesh\nSub-Saharan Africa has the lowest emissions overall\nThere are notable outliers in several regions, particularly in the Middle East & North Africa",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
-    "objectID": "bw/bw-uni.html#density-plot-comparative-income-distributions",
-    "href": "bw/bw-uni.html#density-plot-comparative-income-distributions",
-    "title": "\n1  Univariate Viz\n",
-    "section": "\n2.6 Density Plot: Comparative Income Distributions",
-    "text": "2.6 Density Plot: Comparative Income Distributions\nFor our final visualization, we’ll create a density plot showing the distribution of incomes by region:\n\nCode# Create density plot by region\nggplot(income_data, aes(x = median_income, fill = region)) +\n  # Add density curves\n  geom_density(alpha = 0.7) +\n  # Add rug plot\n  geom_rug(aes(color = region), alpha = 0.7) +\n  # Use a vibrant color palette\n  scale_fill_viridis_d(option = \"turbo\", begin = 0.1, end = 0.9) +\n  scale_color_viridis_d(option = \"turbo\", begin = 0.1, end = 0.9) +\n  # Scale x-axis to show as dollars\n  scale_x_continuous(labels = dollar_format(), \n                    breaks = seq(40000, 90000, by = 10000)) +\n  # Add labels\n  labs(\n    title = \"Distribution of Median Household Income by Region\",\n    subtitle = \"Density Curves Showing Regional Patterns\",\n    x = \"Median Household Income\",\n    y = \"Density\",\n    caption = \"Source: U.S. Census Bureau, American Community Survey, 2019\"\n  ) +\n  # Use a shared legend for fill and color\n  guides(color = \"none\") +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThe density plot reveals:\n\nThe Northeast shows a bimodal distribution, indicating two clusters of states\nThe South has the widest spread, confirming its high variability\nThe West shows a relatively flat distribution, suggesting diverse income levels\nThe Midwest has the most compact distribution, centered around $60,000",
+    "objectID": "bw/bw-uni.html#density-plot-comparative-emissions-distributions",
+    "href": "bw/bw-uni.html#density-plot-comparative-emissions-distributions",
+    "title": "\n1  Univariate Visualization-Best Work\n",
+    "section": "\n2.6 Density Plot: Comparative Emissions Distributions",
+    "text": "2.6 Density Plot: Comparative Emissions Distributions\nFor our final visualization, we’ll create a density plot showing the distribution of emissions by region:\n\nCode# Create density plot by region\nggplot(emissions_data, aes(x = co2_per_capita, fill = region)) +\n  # Add density curves\n  geom_density(alpha = 0.7) +\n  # Add rug plot\n  geom_rug(aes(color = region), alpha = 0.7) +\n  # Use a vibrant color palette\n  scale_fill_viridis_d(option = \"turbo\", begin = 0.1, end = 0.9) +\n  scale_color_viridis_d(option = \"turbo\", begin = 0.1, end = 0.9) +\n  # Add labels\n  labs(\n    title = \"Distribution of CO2 Emissions Per Capita by Region\",\n    subtitle = \"Density Curves Showing Regional Patterns\",\n    x = \"CO2 Emissions (tonnes per capita)\",\n    y = \"Density\",\n    caption = \"Source: World Bank, CO2 emissions data\"\n  ) +\n  # Use a shared legend for fill and color\n  guides(color = \"none\") +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThe density plot reveals:\n\nThe Middle East & North Africa shows a bimodal distribution, with oil-producing states forming a high-emissions peak\nSub-Saharan Africa has a tight distribution concentrated at very low emission levels\nThe Americas and Europe show similar patterns with moderate emissions\nAsia & Pacific shows the widest spread, reflecting diverse development levels across the region",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-uni.html#population-weighted-analysis",
+    "href": "bw/bw-uni.html#population-weighted-analysis",
+    "title": "\n1  Univariate Visualization-Best Work\n",
+    "section": "\n2.7 Population-Weighted Analysis",
+    "text": "2.7 Population-Weighted Analysis\nTo add context to the emissions data, let’s examine how emissions relate to population size:\n\nCode# Create bubble chart\nggplot(emissions_data, aes(x = country_ordered, y = co2_per_capita, size = population_millions)) +\n  # Add bubbles\n  geom_point(aes(color = region), alpha = 0.7) +\n  # Flip coordinates for better readability\n  coord_flip() +\n  # Use a vibrant color palette\n  scale_color_viridis_d(option = \"turbo\", begin = 0.1, end = 0.9) +\n  # Customize size scale\n  scale_size_continuous(\n    name = \"Population (millions)\",\n    range = c(2, 15),\n    breaks = c(10, 50, 200, 1000)\n  ) +\n  # Add labels\n  labs(\n    title = \"CO2 Emissions Per Capita by Country\",\n    subtitle = \"Bubble Size Represents Population\",\n    x = NULL,\n    y = \"CO2 Emissions (tonnes per capita)\",\n    color = \"Region\",\n    caption = \"Source: World Bank, CO2 emissions data\"\n  ) +\n  # Apply the professional theme\n  theme_professional()\n\n\n\n\n\n\n\nThis visualization adds an important dimension to our analysis:\n\nMany high-emission countries have relatively small populations (e.g., Qatar, Kuwait)\nLarge population countries like India, China, and Bangladesh span different emission levels\nWhen considering total emissions impact, both per capita rate and population size must be considered\nThe United States stands out with both large population and high per capita emissions\nChina has moderate per capita emissions but enormous total emissions due to its population size",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-uni.html#key-findings",
     "href": "bw/bw-uni.html#key-findings",
-    "title": "\n1  Univariate Viz\n",
-    "section": "\n2.7 Key Findings",
-    "text": "2.7 Key Findings\nOur univariate analysis of median household income across U.S. states reveals several important patterns:\n\nOverall Distribution: The distribution of median household income across states shows a positive skew, with most states falling between $55,000 and $75,000.\nState Rankings: There is a substantial gap (approximately $41,000) between the highest income state (Maryland at ~$86,738) and the lowest (Mississippi at ~$45,792).\n\nRegional Patterns:\n\nThe Northeast has the highest typical incomes but shows a bimodal distribution\nThe South has the lowest typical incomes and the highest variability\nThe Midwest shows the most consistency in income levels\nThe West demonstrates diverse income levels across states\n\n\nIncome Clustering: States tend to cluster into distinct income categories, with clear separation between high-income and low-income states.",
+    "title": "\n1  Univariate Visualization-Best Work\n",
+    "section": "\n2.8 Key Findings",
+    "text": "2.8 Key Findings\nOur univariate analysis of CO2 emissions per capita reveals several important patterns:\n\nDistribution Shape: The distribution of CO2 emissions per capita is heavily right-skewed, with a few high-emitting outliers and most countries having relatively low emissions.\n\nRegional Patterns:\n\nThe Middle East & North Africa, particularly Gulf states, has the highest emissions per capita\nSub-Saharan Africa has the lowest emissions per capita\nEurope and the Americas have moderate emissions with some variability\nAsia & Pacific shows the widest range, from very low to high emitters\n\n\nGlobal Inequality: There is an 800-fold difference between the highest and lowest emitting countries, highlighting extreme inequality in emissions.\nPopulation Context: Many high-emission countries have relatively small populations, while some large population countries have relatively low per capita emissions but significant total emissions.",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-uni.html#technical-implementation",
     "href": "bw/bw-uni.html#technical-implementation",
-    "title": "\n1  Univariate Viz\n",
-    "section": "\n2.8 Technical Implementation",
-    "text": "2.8 Technical Implementation\nThis professional visualization demonstrates several advanced techniques:\n\n\nMultiple visualization approaches for the same variable (histogram, bar chart, boxplot, density plot)\n\nStatistical annotations including mean indicators\n\nThoughtful ordering of categorical data for clearer patterns\n\nRegional comparative analysis to reveal geographic patterns\n\nAppropriate scales with dollar formatting for better interpretation\n\nLayered visualizations combining multiple geoms (histogram with density curve, boxplots with jittered points)\n\nConsistent professional styling with custom theming\n\nFor future enhancements, we could explore interactive elements, geographic mapping, or time-series analysis of income changes over multiple years.",
+    "title": "\n1  Univariate Visualization-Best Work\n",
+    "section": "\n2.9 Technical Implementation",
+    "text": "2.9 Technical Implementation\nThis professional visualization demonstrates several advanced techniques:\n\n\nMultiple visualization approaches for the same variable (histogram, bar chart, boxplot, density plot, bubble chart)\n\nStatistical annotations including mean and median indicators\n\nThoughtful ordering of categorical data for clearer patterns\n\nRegional comparative analysis to reveal geographic patterns\n\nPopulation context using bubble sizes to represent magnitude\n\nLayered visualizations combining multiple geoms (histogram with density curve, boxplots with jittered points)\n\nConsistent professional styling with custom theming\n\nFor future enhancements, we could explore time series data to examine emissions trends over multiple years, or incorporate additional variables such as GDP per capita or energy mix to better understand emissions drivers.",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-bi.html",
     "href": "bw/bw-bi.html",
-    "title": "\n2  Bivariate Viz Best Work\n",
+    "title": "\n2  Bivariate Visualization-Best Work\n",
     "section": "",
-    "text": "2.1 The Relationship Between Economic Factors and Political Support\nThis visualization explores the complex relationship between economic factors and political support at the county level across the United States. By examining the correlation between median rent and Republican voting percentage in the 2020 election, we can identify patterns that reveal how economic conditions may influence political preferences.\nThe visualization demonstrates effective principles of bivariate analysis by:\n# Import election data\nelections &lt;- read.csv(\"https://mac-stat.github.io/data/election_2020_county.csv\")\n\n# View the first few rows to understand the data structure\nhead(elections[, c(\"county_name\", \"state_name\", \"historical\", \"repub_pct_20\", \"dem_pct_20\", \"median_rent\", \"per_capita_income\")])\n\n     county_name state_name historical repub_pct_20 dem_pct_20 median_rent\n1 Autauga County    Alabama        red        71.44      27.02         668\n2 Baldwin County    Alabama        red        76.17      22.41         693\n3 Barbour County    Alabama        red        53.45      45.79         382\n4    Bibb County    Alabama        red        78.43      20.70         351\n5  Blount County    Alabama        red        89.57       9.57         403\n6 Bullock County    Alabama        red        24.84      74.70         276\n  per_capita_income\n1             24571\n2             26766\n3             16829\n4             17427\n5             20730\n6             18628",
+    "text": "2.1 The Relationship Between Economic Factors and Political Support\nThis visualization explores the complex relationship between economic factors and political support at the county level across the United States. By examining the correlation between median rent and Republican voting percentage in the 2020 election, we can identify patterns that reveal how economic conditions may influence political preferences.\nThe visualization demonstrates effective principles of bivariate analysis by:\nCode# Import election data\nelections &lt;- read.csv(\"https://mac-stat.github.io/data/election_2020_county.csv\")\n\n# View the first few rows to understand the data structure\nhead(elections[, c(\"county_name\", \"state_name\", \"historical\", \"repub_pct_20\", \"dem_pct_20\", \"median_rent\", \"per_capita_income\")])\n\n     county_name state_name historical repub_pct_20 dem_pct_20 median_rent\n1 Autauga County    Alabama        red        71.44      27.02         668\n2 Baldwin County    Alabama        red        76.17      22.41         693\n3 Barbour County    Alabama        red        53.45      45.79         382\n4    Bibb County    Alabama        red        78.43      20.70         351\n5  Blount County    Alabama        red        89.57       9.57         403\n6 Bullock County    Alabama        red        24.84      74.70         276\n  per_capita_income\n1             24571\n2             26766\n3             16829\n4             17427\n5             20730\n6             18628",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-bi.html#the-relationship-between-economic-factors-and-political-support",
     "href": "bw/bw-bi.html#the-relationship-between-economic-factors-and-political-support",
-    "title": "\n2  Bivariate Viz Best Work\n",
+    "title": "\n2  Bivariate Visualization-Best Work\n",
     "section": "",
     "text": "Using appropriate geometric objects for the data types\nIncluding a trend line to highlight the overall relationship\nIncorporating additional dimensions through color and size aesthetics\nProviding clear annotations and contextual information",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-bi.html#data-preparation-and-transformation",
     "href": "bw/bw-bi.html#data-preparation-and-transformation",
-    "title": "\n2  Bivariate Viz Best Work\n",
+    "title": "\n2  Bivariate Visualization-Best Work\n",
     "section": "\n2.2 Data Preparation and Transformation",
-    "text": "2.2 Data Preparation and Transformation\nBefore creating the visualization, we’ll prepare the data by calculating useful metrics and creating appropriate categories for our analysis.\n\n# Clean and prepare data\nelections_clean &lt;- elections %&gt;%\n  mutate(\n    # Create a swing variable (change from 2016 to 2020)\n    repub_swing = repub_pct_20 - repub_pct_16,\n    # Create population categories for better visualization\n    pop_category = cut(total_population, \n                       breaks = c(0, 25000, 100000, 500000, Inf),\n                       labels = c(\"Small\", \"Medium\", \"Large\", \"Very Large\"),\n                       right = FALSE)\n  )\n\n# Create a custom theme for professional visualizations\ntheme_professional &lt;- function() {\n  theme_minimal() +\n  theme(\n    text = element_text(family = \"sans\", color = \"#2b2b2b\"),\n    plot.title = element_text(size = 14, face = \"bold\", hjust = 0.5),\n    plot.subtitle = element_text(size = 11, hjust = 0.5, margin = margin(b = 15)),\n    plot.background = element_rect(fill = \"#f8f9fa\", color = NA),\n    panel.grid.major = element_line(color = \"#e0e0e0\"),\n    panel.grid.minor = element_line(color = \"#f0f0f0\"),\n    axis.title = element_text(size = 11, face = \"bold\"),\n    axis.text = element_text(size = 9),\n    legend.title = element_text(size = 10, face = \"bold\"),\n    legend.text = element_text(size = 9),\n    legend.background = element_rect(fill = \"#f8f9fa\", color = NA)\n  )\n}",
+    "text": "2.2 Data Preparation and Transformation\nBefore creating the visualization, we’ll prepare the data by calculating useful metrics and creating appropriate categories for our analysis.\n\nCode# Clean and prepare data\nelections_clean &lt;- elections %&gt;%\n  mutate(\n    # Create a swing variable (change from 2016 to 2020)\n    repub_swing = repub_pct_20 - repub_pct_16,\n    # Create population categories for better visualization\n    pop_category = cut(total_population, \n                       breaks = c(0, 25000, 100000, 500000, Inf),\n                       labels = c(\"Small\", \"Medium\", \"Large\", \"Very Large\"),\n                       right = FALSE)\n  )\n\n# Create a custom theme for professional visualizations\ntheme_professional &lt;- function() {\n  theme_minimal() +\n  theme(\n    text = element_text(family = \"sans\", color = \"#2b2b2b\"),\n    plot.title = element_text(size = 14, face = \"bold\", hjust = 0.5),\n    plot.subtitle = element_text(size = 11, hjust = 0.5, margin = margin(b = 15)),\n    plot.background = element_rect(fill = \"#f8f9fa\", color = NA),\n    panel.grid.major = element_line(color = \"#e0e0e0\"),\n    panel.grid.minor = element_line(color = \"#f0f0f0\"),\n    axis.title = element_text(size = 11, face = \"bold\"),\n    axis.text = element_text(size = 9),\n    legend.title = element_text(size = 10, face = \"bold\"),\n    legend.text = element_text(size = 9),\n    legend.background = element_rect(fill = \"#f8f9fa\", color = NA)\n  )\n}",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-bi.html#primary-visualization-median-rent-vs.-republican-support",
     "href": "bw/bw-bi.html#primary-visualization-median-rent-vs.-republican-support",
-    "title": "\n2  Bivariate Viz Best Work\n",
+    "title": "\n2  Bivariate Visualization-Best Work\n",
     "section": "\n2.3 Primary Visualization: Median Rent vs. Republican Support",
-    "text": "2.3 Primary Visualization: Median Rent vs. Republican Support\nThis scatter plot reveals the relationship between median rent (a proxy for cost of living and urban density) and Republican voting percentage in 2020. The visualization includes several dimensions:\n\nThe x-axis shows median rent in dollars\nThe y-axis shows the Republican vote percentage in 2020\nPoints are colored by the historical voting pattern of the state (red, blue, or purple)\nPoint sizes represent county population\nA trend line shows the overall relationship\n\n\n# Calculate the correlation\ncorrelation &lt;- cor(elections_clean$median_rent, elections_clean$repub_pct_20, \n                   use = \"complete.obs\")\ncorrelation_text &lt;- paste(\"Correlation:\", round(correlation, 2))\n\n# Create the main visualization\nggplot(elections_clean, \n       aes(x = median_rent, \n           y = repub_pct_20, \n           color = historical,\n           size = pop_category)) +\n  # Add points\n  geom_point(alpha = 0.7) +\n  # Add a trend line\n  geom_smooth(method = \"loess\", se = TRUE, color = \"#2b2b2b\", \n              linetype = \"dashed\", alpha = 0.1, size = 0.5) +\n  # Add correlation annotation\n  annotate(\"text\", x = max(elections_clean$median_rent, na.rm = TRUE) * 0.7, \n           y = 15, label = correlation_text, \n           hjust = 0, size = 3.5, fontface = \"italic\") +\n  # Scale size for better visualization\n  scale_size_manual(values = c(1, 2, 3, 5),\n                   name = \"County Population\") +\n  # Custom color palette for political alignment\n  scale_color_manual(values = c(\"blue\", \"purple\", \"red\"),\n                    name = \"State Historical\\nVoting Pattern\") +\n  # Add labels\n  labs(\n    title = \"Economic Factors and Political Support: Median Rent vs. Republican Vote Share\",\n    subtitle = \"County-level data from the 2020 U.S. Presidential Election\",\n    x = \"Median Rent ($)\",\n    y = \"Republican Vote Percentage (2020)\",\n    caption = \"Data source: https://mac-stat.github.io/data/election_2020_county.csv\"\n  ) +\n  # Apply the professional theme\n  theme_professional()",
+    "text": "2.3 Primary Visualization: Median Rent vs. Republican Support\nThis scatter plot reveals the relationship between median rent (a proxy for cost of living and urban density) and Republican voting percentage in 2020. The visualization includes several dimensions:\n\nThe x-axis shows median rent in dollars\nThe y-axis shows the Republican vote percentage in 2020\nPoints are colored by the historical voting pattern of the state (red, blue, or purple)\nPoint sizes represent county population\nA trend line shows the overall relationship\n\n\nCode# Calculate the correlation\ncorrelation &lt;- cor(elections_clean$median_rent, elections_clean$repub_pct_20, \n                   use = \"complete.obs\")\ncorrelation_text &lt;- paste(\"Correlation:\", round(correlation, 2))\n\n# Create the main visualization\nggplot(elections_clean, \n       aes(x = median_rent, \n           y = repub_pct_20, \n           color = historical,\n           size = pop_category)) +\n  # Add points\n  geom_point(alpha = 0.7) +\n  # Add a trend line\n  geom_smooth(method = \"loess\", se = TRUE, color = \"#2b2b2b\", \n              linetype = \"dashed\", alpha = 0.1, size = 0.5) +\n  # Add correlation annotation\n  annotate(\"text\", x = max(elections_clean$median_rent, na.rm = TRUE) * 0.7, \n           y = 15, label = correlation_text, \n           hjust = 0, size = 3.5, fontface = \"italic\") +\n  # Scale size for better visualization\n  scale_size_manual(values = c(1, 2, 3, 5),\n                   name = \"County Population\") +\n  # Custom color palette for political alignment\n  scale_color_manual(values = c(\"blue\", \"purple\", \"red\"),\n                    name = \"State Historical\\nVoting Pattern\") +\n  # Add labels\n  labs(\n    title = \"Economic Factors and Political Support: Median Rent vs. Republican Vote Share\",\n    subtitle = \"County-level data from the 2020 U.S. Presidential Election\",\n    x = \"Median Rent ($)\",\n    y = \"Republican Vote Percentage (2020)\",\n    caption = \"Data source: https://mac-stat.github.io/data/election_2020_county.csv\"\n  ) +\n  # Apply the professional theme\n  theme_professional()",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-bi.html#supplementary-visualization-support-distribution-by-state-type",
     "href": "bw/bw-bi.html#supplementary-visualization-support-distribution-by-state-type",
-    "title": "\n2  Bivariate Viz Best Work\n",
+    "title": "\n2  Bivariate Visualization-Best Work\n",
     "section": "\n2.4 Supplementary Visualization: Support Distribution by State Type",
-    "text": "2.4 Supplementary Visualization: Support Distribution by State Type\nTo complement our primary visualization, this density plot shows the distribution of Republican support across the three categories of states. This visualization helps us understand not just the central tendency but the full range and shape of Republican support in different types of states.\n\n# Create a density plot\nggplot(elections_clean, \n       aes(x = repub_pct_20, \n           fill = historical)) +\n  # Create density plots\n  geom_density(alpha = 0.7) +\n  # Custom color palette\n  scale_fill_manual(values = c(\"blue\", \"purple\", \"red\"), \n                   name = \"State Historical\\nVoting Pattern\") +\n  # Add labels\n  labs(\n    title = \"Distribution of Republican Support by State Type\",\n    x = \"Republican Vote Percentage (2020)\",\n    y = \"Density\"\n  ) +\n  # Apply the professional theme\n  theme_professional()",
+    "text": "2.4 Supplementary Visualization: Support Distribution by State Type\nTo complement our primary visualization, this density plot shows the distribution of Republican support across the three categories of states. This visualization helps us understand not just the central tendency but the full range and shape of Republican support in different types of states.\n\nCode# Create a density plot\nggplot(elections_clean, \n       aes(x = repub_pct_20, \n           fill = historical)) +\n  # Create density plots\n  geom_density(alpha = 0.7) +\n  # Custom color palette\n  scale_fill_manual(values = c(\"blue\", \"purple\", \"red\"), \n                   name = \"State Historical\\nVoting Pattern\") +\n  # Add labels\n  labs(\n    title = \"Distribution of Republican Support by State Type\",\n    x = \"Republican Vote Percentage (2020)\",\n    y = \"Density\"\n  ) +\n  # Apply the professional theme\n  theme_professional()",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-bi.html#regional-analysis-republican-support-by-state-and-region",
     "href": "bw/bw-bi.html#regional-analysis-republican-support-by-state-and-region",
-    "title": "\n2  Bivariate Viz Best Work\n",
+    "title": "\n2  Bivariate Visualization-Best Work\n",
     "section": "\n2.5 Regional Analysis: Republican Support by State and Region",
-    "text": "2.5 Regional Analysis: Republican Support by State and Region\nThis final visualization breaks down Republican support by region, showing how geography intersects with voting patterns. The boxplot allows us to compare not just the median values but also the spread and potential outliers in each region.\n\n# Create a region variable\nelections_clean &lt;- elections_clean %&gt;%\n  mutate(\n    region = case_when(\n      state_name %in% c(\"Maine\", \"New Hampshire\", \"Vermont\", \"Massachusetts\", \n                       \"Rhode Island\", \"Connecticut\", \"New York\", \"New Jersey\", \n                       \"Pennsylvania\") ~ \"Northeast\",\n      state_name %in% c(\"Wisconsin\", \"Michigan\", \"Illinois\", \"Indiana\", \"Ohio\", \n                       \"Minnesota\", \"Iowa\", \"Missouri\", \"North Dakota\", \n                       \"South Dakota\", \"Nebraska\", \"Kansas\") ~ \"Midwest\",\n      state_name %in% c(\"Delaware\", \"Maryland\", \"Virginia\", \"West Virginia\", \n                       \"North Carolina\", \"South Carolina\", \"Georgia\", \"Florida\", \n                       \"Kentucky\", \"Tennessee\", \"Alabama\", \"Mississippi\", \n                       \"Arkansas\", \"Louisiana\", \"Oklahoma\", \"Texas\") ~ \"South\",\n      TRUE ~ \"West\"\n    )\n  )\n\n# Create a boxplot by region\nggplot(elections_clean, \n       aes(x = region, \n           y = repub_pct_20, \n           fill = region)) +\n  # Create boxplots\n  geom_boxplot() +\n  # Use a viridis color palette\n  scale_fill_viridis_d(option = \"plasma\", end = 0.9) +\n  # Add labels\n  labs(\n    title = \"Regional Variation in Republican Support\",\n    x = \"Region\",\n    y = \"Republican Vote Percentage (2020)\"\n  ) +\n  # Apply the professional theme\n  theme_professional() +\n  # Remove legend since it's redundant with the x-axis\n  theme(legend.position = \"none\")",
+    "text": "2.5 Regional Analysis: Republican Support by State and Region\nThis final visualization breaks down Republican support by region, showing how geography intersects with voting patterns. The boxplot allows us to compare not just the median values but also the spread and potential outliers in each region.\n\nCode# Create a region variable\nelections_clean &lt;- elections_clean %&gt;%\n  mutate(\n    region = case_when(\n      state_name %in% c(\"Maine\", \"New Hampshire\", \"Vermont\", \"Massachusetts\", \n                       \"Rhode Island\", \"Connecticut\", \"New York\", \"New Jersey\", \n                       \"Pennsylvania\") ~ \"Northeast\",\n      state_name %in% c(\"Wisconsin\", \"Michigan\", \"Illinois\", \"Indiana\", \"Ohio\", \n                       \"Minnesota\", \"Iowa\", \"Missouri\", \"North Dakota\", \n                       \"South Dakota\", \"Nebraska\", \"Kansas\") ~ \"Midwest\",\n      state_name %in% c(\"Delaware\", \"Maryland\", \"Virginia\", \"West Virginia\", \n                       \"North Carolina\", \"South Carolina\", \"Georgia\", \"Florida\", \n                       \"Kentucky\", \"Tennessee\", \"Alabama\", \"Mississippi\", \n                       \"Arkansas\", \"Louisiana\", \"Oklahoma\", \"Texas\") ~ \"South\",\n      TRUE ~ \"West\"\n    )\n  )\n\n# Create a boxplot by region\nggplot(elections_clean, \n       aes(x = region, \n           y = repub_pct_20, \n           fill = region)) +\n  # Create boxplots\n  geom_boxplot() +\n  # Use a viridis color palette\n  scale_fill_viridis_d(option = \"plasma\", end = 0.9) +\n  # Add labels\n  labs(\n    title = \"Regional Variation in Republican Support\",\n    x = \"Region\",\n    y = \"Republican Vote Percentage (2020)\"\n  ) +\n  # Apply the professional theme\n  theme_professional() +\n  # Remove legend since it's redundant with the x-axis\n  theme(legend.position = \"none\")",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-bi.html#findings-and-interpretation",
     "href": "bw/bw-bi.html#findings-and-interpretation",
-    "title": "\n2  Bivariate Viz Best Work\n",
+    "title": "\n2  Bivariate Visualization-Best Work\n",
     "section": "\n2.6 Findings and Interpretation",
     "text": "2.6 Findings and Interpretation\nOur analysis reveals several key insights about the relationship between economic factors and voting patterns:\n\nStrong negative correlation: Counties with higher median rents tend to show lower Republican support, with a correlation coefficient of approximately -0.7.\nRegional variation: The South and Midwest regions show higher Republican support on average, while the Northeast and West show lower support.\nState voting history matters: Counties in historically “red” states show consistently higher Republican support, with less variation than those in “purple” states.\nPopulation effects: When examining the primary visualization, we can see that larger counties (by population) tend to cluster toward lower Republican support, regardless of the state’s historical voting pattern.\n\nThese findings suggest that economic factors like housing costs, which often correlate with urbanization, play a significant role in shaping political preferences at the county level.",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-bi.html#technical-notes",
     "href": "bw/bw-bi.html#technical-notes",
-    "title": "\n2  Bivariate Viz Best Work\n",
+    "title": "\n2  Bivariate Visualization-Best Work\n",
     "section": "\n2.7 Technical Notes",
     "text": "2.7 Technical Notes\nThis visualization was created using R with the tidyverse ecosystem, particularly ggplot2. The analysis follows best practices for data visualization by:\n\nUsing appropriate geoms for the data types\nApplying a consistent, professional theme\nIncluding clear titles, labels, and annotations\nUsing a color palette that is both meaningful and accessible\nIncorporating multiple dimensions of data while maintaining clarity\n\nFor future iterations, we could explore adding interactive elements, incorporating more demographic variables, or examining changes over multiple election cycles.",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-tri.html",
     "href": "bw/bw-tri.html",
-    "title": "3  Trivariate Viz",
+    "title": "\n3  Trivariate Visualization-Best Work\n",
     "section": "",
-    "text": "Use this file to generate a professional looking trivariate visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.",
+    "text": "4 Introduction to Trivariate Visualization\nWhile univariate and bivariate visualizations help us understand individual variables and relationships between pairs of variables, trivariate visualizations allow us to explore complex patterns involving three variables simultaneously. The human visual system can perceive dimensions beyond just the x and y coordinates, enabling us to encode a third variable through various visual elements including color, size, shape, and transparency.\nIn this document, I’ll demonstrate several approaches to creating effective trivariate visualizations, emphasizing both their technical implementation and design considerations that enhance interpretability.",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Viz</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Visualization-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-tri.html#approach-1-using-color-as-the-third-variable",
+    "href": "bw/bw-tri.html#approach-1-using-color-as-the-third-variable",
+    "title": "\n3  Trivariate Visualization-Best Work\n",
+    "section": "\n6.1 Approach 1: Using Color as the Third Variable",
+    "text": "6.1 Approach 1: Using Color as the Third Variable\nPerhaps the most intuitive way to represent a third variable is through color. This approach works especially well when the third variable is categorical.\n\nCode# Trivariate plot with color representing species\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +\n  geom_point(size = 3, alpha = 0.8) +\n  scale_color_viridis_d() +\n  labs(\n    title = \"Penguin Bill Dimensions by Species\",\n    subtitle = \"Bill length and depth reveal distinct morphological patterns across species\",\n    x = \"Bill Length (mm)\",\n    y = \"Bill Depth (mm)\",\n    color = \"Species\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 14),\n    plot.subtitle = element_text(size = 11, color = \"gray30\"),\n    legend.position = \"right\"\n  )\n\n\n\n\n\n\n\nIn this visualization, distinctive clusters emerge for each species. Adelie penguins typically have shorter bills with greater depth, while Chinstrap penguins show longer, narrower bills. Gentoo penguins, meanwhile, have significantly longer bills with moderate depth measurements.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Visualization-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-tri.html#approach-2-adding-size-as-a-fourth-variable",
+    "href": "bw/bw-tri.html#approach-2-adding-size-as-a-fourth-variable",
+    "title": "\n3  Trivariate Visualization-Best Work\n",
+    "section": "\n6.2 Approach 2: Adding Size as a Fourth Variable",
+    "text": "6.2 Approach 2: Adding Size as a Fourth Variable\nWe can extend our visualization to include a fourth dimension by varying point size according to another numerical variable.\n\nCode# Adding body mass as a fourth variable through point size\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, \n                     color = species, size = body_mass_g)) +\n  geom_point(alpha = 0.7) +\n  scale_color_viridis_d() +\n  scale_size_continuous(range = c(1, 8)) +\n  labs(\n    title = \"Penguin Bill Dimensions, Species, and Body Mass\",\n    subtitle = \"Point size represents body mass in grams\",\n    x = \"Bill Length (mm)\",\n    y = \"Bill Depth (mm)\",\n    color = \"Species\",\n    size = \"Body Mass (g)\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 14),\n    plot.subtitle = element_text(size = 11, color = \"gray30\")\n  )\n\n\n\n\n\n\n\nThe size variations reveal an additional pattern: Gentoo penguins not only have distinctive bill shapes but also tend to be significantly larger overall than the other two species.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Visualization-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-tri.html#approach-3-faceting-for-multiple-groups",
+    "href": "bw/bw-tri.html#approach-3-faceting-for-multiple-groups",
+    "title": "\n3  Trivariate Visualization-Best Work\n",
+    "section": "\n6.3 Approach 3: Faceting for Multiple Groups",
+    "text": "6.3 Approach 3: Faceting for Multiple Groups\nFaceting splits your visualization into multiple panels based on categorical variables, creating a powerful way to compare patterns across groups.\n\nCode# Faceting by sex to create a multi-panel trivariate visualization\nggplot(na.omit(penguins), aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +\n  geom_point(size = 2.5, alpha = 0.8) +\n  facet_wrap(~sex, ncol = 2) +\n  scale_color_viridis_d() +\n  labs(\n    title = \"Penguin Bill Dimensions by Species and Sex\",\n    subtitle = \"Sexual dimorphism varies across penguin species\",\n    x = \"Bill Length (mm)\",\n    y = \"Bill Depth (mm)\",\n    color = \"Species\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\"),\n    strip.background = element_rect(fill = \"gray95\"),\n    strip.text = element_text(face = \"bold\")\n  )\n\n\n\n\n\n\n\nFaceting by sex reveals subtle but important differences in bill dimensions between male and female penguins within each species. Males generally have larger bills than females, though the degree of sexual dimorphism varies by species.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Visualization-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-tri.html#approach-4-combining-multiple-aesthetic-mappings",
+    "href": "bw/bw-tri.html#approach-4-combining-multiple-aesthetic-mappings",
+    "title": "\n3  Trivariate Visualization-Best Work\n",
+    "section": "\n6.4 Approach 4: Combining Multiple Aesthetic Mappings",
+    "text": "6.4 Approach 4: Combining Multiple Aesthetic Mappings\nFor even more complex relationships, we can combine multiple aesthetic mappings to create rich, information-dense visualizations.\n\nCode# Combining multiple aesthetic mappings for a comprehensive view\nggplot(na.omit(penguins), \n       aes(x = flipper_length_mm, y = body_mass_g, \n           color = species, shape = sex, size = bill_length_mm)) +\n  geom_point(alpha = 0.8) +\n  scale_color_viridis_d() +\n  scale_size_continuous(range = c(1, 6)) +\n  labs(\n    title = \"Comprehensive Penguin Morphology Visualization\",\n    subtitle = \"Exploring relationships between flipper length, body mass, species, sex, and bill length\",\n    x = \"Flipper Length (mm)\",\n    y = \"Body Mass (g)\",\n    color = \"Species\",\n    shape = \"Sex\",\n    size = \"Bill Length (mm)\"\n  ) +\n  theme_minimal() +\n  theme(\n    legend.position = \"right\",\n    plot.title = element_text(face = \"bold\"),\n    plot.subtitle = element_text(size = 10, color = \"gray30\")\n  )\n\n\n\n\n\n\n\nThis visualization integrates five different variables: flipper length (x-axis), body mass (y-axis), species (color), sex (shape), and bill length (size). The resulting plot reveals complex interrelationships between these physical characteristics, highlighting how these penguins have evolved different morphological adaptations.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Visualization-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-tri.html#approach-5-using-statistical-transformations",
+    "href": "bw/bw-tri.html#approach-5-using-statistical-transformations",
+    "title": "\n3  Trivariate Visualization-Best Work\n",
+    "section": "\n6.5 Approach 5: Using Statistical Transformations",
+    "text": "6.5 Approach 5: Using Statistical Transformations\nAdding statistical information can enhance the interpretative value of trivariate visualizations.\n\nCode# Adding statistical layers to enhance interpretation\nggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) +\n  geom_point(alpha = 0.6) +\n  geom_smooth(method = \"lm\", se = TRUE, alpha = 0.2) +\n  stat_ellipse(level = 0.95, linetype = 2) +\n  scale_color_viridis_d() +\n  labs(\n    title = \"Relationship Between Bill Length and Flipper Length\",\n    subtitle = \"With 95% confidence ellipses and linear regression lines\",\n    x = \"Bill Length (mm)\",\n    y = \"Flipper Length (mm)\",\n    color = \"Species\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\"),\n    legend.position = c(0.15, 0.85),\n    legend.background = element_rect(fill = \"white\", color = NA)\n  )\n\n\n\n\n\n\n\nThe addition of confidence ellipses and linear regression lines provides statistical context, highlighting both the central tendency and variability within each species group. The slopes of the regression lines suggest different scaling relationships between bill length and flipper length across species.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Visualization-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-tri.html#approach-6-annotating-key-points",
+    "href": "bw/bw-tri.html#approach-6-annotating-key-points",
+    "title": "\n3  Trivariate Visualization-Best Work\n",
+    "section": "\n6.6 Approach 6: Annotating Key Points",
+    "text": "6.6 Approach 6: Annotating Key Points\nStrategic annotations can draw attention to important features or outliers in the data.\n\nCode# Identify interesting points for annotation\ninteresting_points &lt;- penguins %&gt;%\n  group_by(species) %&gt;%\n  filter(bill_length_mm == max(bill_length_mm, na.rm = TRUE) | \n         bill_depth_mm == max(bill_depth_mm, na.rm = TRUE)) %&gt;%\n  distinct(species, .keep_all = TRUE)\n\n# Create an annotated visualization\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +\n  geom_point(alpha = 0.5) +\n  geom_point(data = interesting_points, size = 4, shape = 21, \n             fill = \"transparent\", stroke = 1.5) +\n  geom_text_repel(\n    data = interesting_points,\n    aes(label = paste0(species, \"\\n\", island, \" Island\\n\", sex)),\n    box.padding = 0.5,\n    point.padding = 0.5,\n    force = 2,\n    segment.color = \"gray50\"\n  ) +\n  scale_color_viridis_d() +\n  labs(\n    title = \"Penguin Bill Dimensions with Notable Specimens Highlighted\",\n    subtitle = \"Specimens with extreme bill measurements within each species\",\n    x = \"Bill Length (mm)\",\n    y = \"Bill Depth (mm)\",\n    color = \"Species\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\"),\n    legend.position = \"bottom\"\n  )\n\n\n\n\n\n\n\nThe annotations highlight specimens with extreme bill measurements within each species, providing contextual information about their location and sex. This approach is particularly valuable for identifying outliers or boundary cases that define the morphological limits of each species.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Visualization-Best Work</span>"
     ]
   },
   {
     "objectID": "bw/bw-quad.html",
     "href": "bw/bw-quad.html",
-    "title": "4  Quadvariate Viz",
+    "title": "\n4  Quadvariate Visualization\n",
     "section": "",
-    "text": "Use this file to generate a professional looking quadvariate visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.",
+    "text": "5 Introduction to Quadvariate Visualization\nData visualization typically begins with simple univariate plots showing distributions, then progresses to bivariate plots examining relationships between pairs of variables. Many analysts stop here, yet our world rarely operates in just two dimensions. The art of visualizing relationships among multiple variables—particularly four variables simultaneously—opens doors to deeper insights that might otherwise remain hidden in the complexity of your data.\nThis document demonstrates approaches to creating quadvariate visualizations that effectively communicate patterns across four variables. While challenging to execute well, these visualizations can tell rich, nuanced stories about your data that simpler plots cannot capture.",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Viz</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#approach-1-position-color-size-shape",
+    "href": "bw/bw-quad.html#approach-1-position-color-size-shape",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n7.1 Approach 1: Position + Color + Size + Shape",
+    "text": "7.1 Approach 1: Position + Color + Size + Shape\nThe most direct approach to quadvariate visualization combines four fundamental visual elements: - Position (x and y coordinates) - Color - Size - Shape\n\nCode# Basic quadvariate plot using position, color, size, and shape\nggplot(cars_data, \n       aes(x = wt, \n           y = mpg, \n           color = as.factor(cyl), \n           size = hp, \n           shape = am)) +\n  geom_point(alpha = 0.7) +\n  scale_color_viridis_d(option = \"D\", end = 0.9) +\n  scale_size_continuous(range = c(2, 10)) +\n  labs(\n    title = \"Fuel Efficiency vs. Weight of Cars\",\n    subtitle = \"Showing cylinders, horsepower, and transmission type\",\n    x = \"Weight (1000 lbs)\",\n    y = \"Miles Per Gallon\",\n    color = \"Cylinders\",\n    size = \"Horsepower\",\n    shape = \"Transmission\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    axis.title = element_text(face = \"bold\"),\n    legend.position = \"right\"\n  )\n\n\n\n\n\n\n\nThis visualization reveals several patterns simultaneously:\n\nA strong negative relationship exists between car weight and fuel efficiency.\nCars with fewer cylinders (shown in blue) generally achieve better fuel economy.\nHigher horsepower (larger points) typically corresponds with lower mpg.\nManual transmission cars (triangles) tend to have better fuel efficiency than automatic transmission cars (circles) of similar weight.\n\nThe effectiveness of this approach lies in its ability to show interactions between variables. For instance, we can see that weight and cylinder count are correlated, but even controlling for weight, cars with fewer cylinders tend to be more fuel-efficient.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#approach-2-position-color-size-faceting",
+    "href": "bw/bw-quad.html#approach-2-position-color-size-faceting",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n7.2 Approach 2: Position + Color + Size + Faceting",
+    "text": "7.2 Approach 2: Position + Color + Size + Faceting\nWhen shape becomes difficult to distinguish—particularly with crowded plots—faceting provides an excellent alternative. This approach creates separate panels for one categorical variable while still encoding three other variables.\n\nCode# Quadvariate visualization using faceting instead of shape\nggplot(cars_data, \n       aes(x = wt, \n           y = mpg, \n           color = as.factor(cyl), \n           size = hp)) +\n  geom_point(alpha = 0.8) +\n  facet_wrap(~ am, labeller = labeller(am = c(\"0\" = \"Automatic\", \"1\" = \"Manual\"))) +\n  scale_color_viridis_d(option = \"D\", end = 0.9) +\n  scale_size_continuous(range = c(2, 8)) +\n  labs(\n    title = \"Fuel Efficiency vs. Weight by Transmission Type\",\n    subtitle = \"Showing cylinders and horsepower\",\n    x = \"Weight (1000 lbs)\",\n    y = \"Miles Per Gallon\",\n    color = \"Cylinders\",\n    size = \"Horsepower\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    strip.background = element_rect(fill = \"gray95\"),\n    strip.text = element_text(face = \"bold\"),\n    legend.position = \"right\"\n  )\n\n\n\n\n\n\n\nFaceting by transmission type provides a clearer view of how the relationships between weight, mpg, cylinders, and horsepower vary across transmission types. This arrangement makes it easier to compare patterns between the two groups. We can observe that manual transmission cars maintain better fuel efficiency across weight classes, particularly for higher-cylinder counts.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#approach-3-position-color-size-annotation",
+    "href": "bw/bw-quad.html#approach-3-position-color-size-annotation",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n7.3 Approach 3: Position + Color + Size + Annotation",
+    "text": "7.3 Approach 3: Position + Color + Size + Annotation\nAnother powerful approach involves using position, color, and size for three variables, while incorporating annotations to represent a fourth variable.\n\nCode# Create a dataset with labels for selected points\nlabeled_cars &lt;- cars_data %&gt;%\n  mutate(label_text = if_else(\n    disp &gt; 350 | mpg &gt; 30 | (hp &gt; 200 & wt &lt; 3), \n    paste0(car_model, \"\\n\", gear, \" gears\"),\n    NA_character_\n  ))\n\n# Create the plot with annotations\nggplot(cars_data, \n       aes(x = disp, \n           y = mpg, \n           color = as.factor(cyl), \n           size = wt)) +\n  geom_point(alpha = 0.7) +\n  geom_text_repel(\n    data = labeled_cars %&gt;% filter(!is.na(label_text)),\n    aes(label = label_text),\n    size = 3,\n    box.padding = 0.5,\n    point.padding = 0.5,\n    force = 2,\n    segment.color = \"gray40\",\n    segment.alpha = 0.6\n  ) +\n  scale_color_viridis_d(option = \"D\", end = 0.9) +\n  scale_size_continuous(range = c(2, 8)) +\n  labs(\n    title = \"Fuel Efficiency vs. Engine Displacement\",\n    subtitle = \"Showing cylinders, weight, and gear count for notable cars\",\n    x = \"Displacement (cu. in.)\",\n    y = \"Miles Per Gallon\",\n    color = \"Cylinders\",\n    size = \"Weight (1000 lbs)\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    axis.title = element_text(face = \"bold\"),\n    legend.position = \"right\"\n  )\n\n\n\n\n\n\n\nBy selectively annotating points of interest with the number of gears, we’ve added a fourth dimension to our visualization. This technique works particularly well when you want to highlight specific observations or when the fourth variable is most relevant for certain data points. The annotations reveal that many high-performance cars (high displacement, lower mpg) have higher gear counts, while the most fuel-efficient vehicles typically have moderate gear counts.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#approach-4-multiple-aesthetics-with-trend-lines",
+    "href": "bw/bw-quad.html#approach-4-multiple-aesthetics-with-trend-lines",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n7.4 Approach 4: Multiple Aesthetics with Trend Lines",
+    "text": "7.4 Approach 4: Multiple Aesthetics with Trend Lines\nAdding statistical elements like trend lines can further enhance a quadvariate visualization by emphasizing patterns within subgroups.\n\nCode# Create a plot with trend lines for different groups\nggplot(cars_data, \n       aes(x = hp, \n           y = qsec, \n           color = as.factor(cyl), \n           size = wt)) +\n  geom_point(alpha = 0.7) +\n  geom_smooth(method = \"lm\", se = FALSE, aes(linetype = am), linewidth = 1) +\n  scale_color_viridis_d(option = \"D\", end = 0.9) +\n  scale_size_continuous(range = c(2, 8)) +\n  scale_linetype_manual(\n    values = c(\"0\" = \"dashed\", \"1\" = \"solid\"),\n    labels = c(\"0\" = \"Automatic\", \"1\" = \"Manual\")\n  ) +\n  labs(\n    title = \"Quarter Mile Time vs. Horsepower\",\n    subtitle = \"Showing cylinders, weight, and transmission type (with trend lines)\",\n    x = \"Horsepower\",\n    y = \"Quarter Mile Time (seconds)\",\n    color = \"Cylinders\",\n    size = \"Weight (1000 lbs)\",\n    linetype = \"Transmission\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    axis.title = element_text(face = \"bold\"),\n    legend.position = \"right\"\n  )\n\n\n\n\n\n\n\nThis visualization demonstrates the relationship between horsepower and quarter-mile time (qsec), with cylinder count shown through color, weight through point size, and transmission type through line style. The trend lines reveal how the relationship between horsepower and quarter-mile time varies by transmission type, showing that manual transmission cars generally have faster quarter-mile times at similar horsepower levels.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#approach-5-interactive-visualization",
+    "href": "bw/bw-quad.html#approach-5-interactive-visualization",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n7.5 Approach 5: Interactive Visualization",
+    "text": "7.5 Approach 5: Interactive Visualization\nStatic visualizations have limitations, particularly for complex quadvariate relationships. Interactive visualizations allow users to explore the data dynamically.\n\nCode# Create an interactive plot using plotly\ninteractive_plot &lt;- ggplot(cars_data, \n       aes(x = wt, \n           y = mpg, \n           color = as.factor(cyl), \n           size = hp,\n           text = paste(\n             \"Car:\", car_model,\n             \"&lt;br&gt;MPG:\", mpg,\n             \"&lt;br&gt;Weight:\", wt,\n             \"&lt;br&gt;Cylinders:\", cyl,\n             \"&lt;br&gt;Horsepower:\", hp,\n             \"&lt;br&gt;Transmission:\", ifelse(am == 1, \"Manual\", \"Automatic\")\n           ))) +\n  geom_point(alpha = 0.8) +\n  scale_color_viridis_d(option = \"D\", end = 0.9) +\n  scale_size_continuous(range = c(3, 10)) +\n  labs(\n    title = \"Fuel Efficiency vs. Weight of Cars\",\n    subtitle = \"Hover over points for details\",\n    x = \"Weight (1000 lbs)\",\n    y = \"Miles Per Gallon\",\n    color = \"Cylinders\",\n    size = \"Horsepower\"\n  ) +\n  theme_minimal()\n\n# Convert to an interactive plotly object\nplotly::ggplotly(interactive_plot, tooltip = \"text\")\n\n\n\n\n\nInteractive visualization allows the viewer to hover over points to see exact values and additional information, revealing details about the fourth (or even fifth or sixth) variables without cluttering the visual space. This approach is particularly valuable for presentations or dashboards where audience members can explore the data according to their interests.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#approach-6-small-multiples-with-embedded-elements",
+    "href": "bw/bw-quad.html#approach-6-small-multiples-with-embedded-elements",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n7.6 Approach 6: Small Multiples with Embedded Elements",
+    "text": "7.6 Approach 6: Small Multiples with Embedded Elements\nSmall multiples (or trellis plots) provide another powerful approach to quadvariate visualization. By creating a grid of plots, we can systematically vary two categorical variables while showing relationships between two continuous variables.\n\nCode# Create a plot with small multiples\nggplot(cars_data, \n       aes(x = disp, \n           y = mpg)) +\n  geom_point(aes(size = wt), alpha = 0.8) +\n  facet_grid(cyl ~ am, \n             labeller = labeller(\n               am = c(\"0\" = \"Automatic\", \"1\" = \"Manual\"),\n               cyl = c(\"4\" = \"4 Cylinders\", \"6\" = \"6 Cylinders\", \"8\" = \"8 Cylinders\")\n             )) +\n  scale_size_continuous(range = c(2, 8)) +\n  labs(\n    title = \"Fuel Efficiency vs. Displacement\",\n    subtitle = \"Faceted by cylinders and transmission type, with point size showing weight\",\n    x = \"Displacement (cu. in.)\",\n    y = \"Miles Per Gallon\",\n    size = \"Weight (1000 lbs)\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    strip.background = element_rect(fill = \"gray95\"),\n    strip.text = element_text(face = \"bold\"),\n    panel.spacing = unit(1, \"lines\")\n  )\n\n\n\n\n\n\n\nThis approach creates a grid where each cell represents a specific combination of cylinder count and transmission type. Within each cell, the relationship between displacement and mpg is shown, with point size indicating weight. The small multiples approach is particularly effective at revealing how relationships vary across categorical variables, making it easy to compare patterns across different subgroups of data.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#visual-hierarchy",
+    "href": "bw/bw-quad.html#visual-hierarchy",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n8.1 1. Visual Hierarchy",
+    "text": "8.1 1. Visual Hierarchy\nNot all variables deserve equal emphasis in your visualization. Establish a clear visual hierarchy by:\n\nPlacing the most important relationship on the x and y axes\nUsing color for the next most important variable, particularly if it’s categorical\nUsing less prominent visual cues (size, shape, etc.) for secondary variables",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#perceptual-effectiveness",
+    "href": "bw/bw-quad.html#perceptual-effectiveness",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n8.2 2. Perceptual Effectiveness",
+    "text": "8.2 2. Perceptual Effectiveness\nDifferent visual encodings vary in their perceptual effectiveness:\n\nPosition (x, y coordinates) is most precisely perceived\nColor is effective for categorical variables but less so for continuous ones\nSize works for continuous variables but has a more limited perceptual range\nShape works well for categorical variables with few categories\n\nChoose encodings that match the precision requirements of each variable and the nature of the data.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#cognitive-load-management",
+    "href": "bw/bw-quad.html#cognitive-load-management",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n8.3 3. Cognitive Load Management",
+    "text": "8.3 3. Cognitive Load Management\nQuadvariate visualizations can easily become overwhelming. Manage cognitive load by:\n\nUsing clear, direct labeling\nProviding context through titles and annotations\nConsidering interactive elements to reveal details on demand\nBreaking complex relationships into multiple coordinated views",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-quad.html#accessibility-considerations",
+    "href": "bw/bw-quad.html#accessibility-considerations",
+    "title": "\n4  Quadvariate Visualization\n",
+    "section": "\n8.4 4. Accessibility Considerations",
+    "text": "8.4 4. Accessibility Considerations\nEnsure your visualizations remain accessible:\n\nUse colorblind-friendly palettes (like viridis)\nIncorporate redundant encodings when possible\nProvide text alternatives or descriptions\nTest visualization with potential users",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Visualization</span>"
     ]
   },
   {
     "objectID": "bw/bw-spatial.html",
     "href": "bw/bw-spatial.html",
-    "title": "5  Spatial Viz",
+    "title": "\n5  Spatial Viz-Best Work\n",
     "section": "",
-    "text": "Use this file to generate a professional looking spatial visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.",
+    "text": "6 Introduction to Spatial Visualization\nMaps have been humanity’s primary tool for understanding spatial relationships for millennia. From ancient cave paintings to modern interactive dashboards, our desire to visualize geographic patterns remains unchanged. What has evolved dramatically is our ability to create, analyze, and share spatial visualizations that reveal insights hidden within geographic data.\nThis document demonstrates approaches to creating professional spatial visualizations that effectively communicate geographic patterns and relationships. Through thoughtful design choices and technical implementation, we can transform raw geographic data into compelling visual narratives.",
     "crumbs": [
       "Best Work",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#approach-1-basic-choropleth-map",
+    "href": "bw/bw-spatial.html#approach-1-basic-choropleth-map",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n8.1 Approach 1: Basic Choropleth Map",
+    "text": "8.1 Approach 1: Basic Choropleth Map\nA choropleth map uses color gradients to represent values across geographic areas. This classic approach provides an immediate visual impression of geographic patterns.\n\nCode# Create a basic choropleth map\nggplot(data = states_with_data, \n       mapping = aes(x = long, y = lat, group = group, fill = value)) +\n  geom_polygon(color = \"white\", size = 0.2) +\n  coord_map(\"albers\", lat0 = 39, lat1 = 45) +\n  scale_fill_viridis_c(\n    option = \"plasma\",\n    name = \"Value\"\n  ) +\n  theme_minimal() +\n  labs(\n    title = \"State-Level Choropleth Map\",\n    subtitle = \"Showing simulated values across US states\",\n    caption = \"Source: Simulated data\"\n  ) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    legend.title = element_text(face = \"bold\"),\n    panel.grid = element_blank(),\n    axis.text = element_blank(),\n    axis.title = element_blank()\n  )\n\n\n\n\n\n\n\nThe choropleth map reveals the distribution of our simulated values across the United States. The continuous color scale helps visualize the gradual changes in values across different states. This type of visualization is particularly effective for showing geographic patterns in a single variable.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#approach-2-categorical-choropleth-map",
+    "href": "bw/bw-spatial.html#approach-2-categorical-choropleth-map",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n8.2 Approach 2: Categorical Choropleth Map",
+    "text": "8.2 Approach 2: Categorical Choropleth Map\nInstead of using a continuous color scale, we can use discrete categories to simplify interpretation.\n\nCode# Create categorical choropleth map\nggplot(data = states_with_data, \n       mapping = aes(x = long, y = lat, group = group, fill = category)) +\n  geom_polygon(color = \"white\", size = 0.2) +\n  coord_map(\"albers\", lat0 = 39, lat1 = 45) +\n  scale_fill_viridis_d(\n    option = \"viridis\",\n    name = \"Category\"\n  ) +\n  theme_minimal() +\n  labs(\n    title = \"Categorical State-Level Map\",\n    subtitle = \"States grouped into value categories\",\n    caption = \"Source: Simulated data\"\n  ) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    legend.title = element_text(face = \"bold\"),\n    panel.grid = element_blank(),\n    axis.text = element_blank(),\n    axis.title = element_blank()\n  )\n\n\n\n\n\n\n\nThe categorical choropleth map simplifies interpretation by grouping states into distinct categories. This approach is particularly useful when specific thresholds or categories are more important than precise values. The discrete color scheme makes it easier to identify which states fall into which category at a glance.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#approach-3-regional-analysis",
+    "href": "bw/bw-spatial.html#approach-3-regional-analysis",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n8.3 Approach 3: Regional Analysis",
+    "text": "8.3 Approach 3: Regional Analysis\nWe can focus on specific regions to examine spatial patterns in more detail.\n\nCode# Define Western states\nwestern_states &lt;- c(\"washington\", \"oregon\", \"california\", \"nevada\", \"idaho\", \n                    \"montana\", \"wyoming\", \"utah\", \"colorado\", \"arizona\", \"new mexico\")\n\n# Filter to Western region\nwestern_data &lt;- states_with_data %&gt;%\n  filter(region %in% western_states)\n\n# Create Western regional map\nggplot(data = western_data, \n       mapping = aes(x = long, y = lat, group = group, fill = value)) +\n  geom_polygon(color = \"white\", size = 0.3) +\n  coord_map(\"albers\", lat0 = 39, lat1 = 45) +\n  scale_fill_viridis_c(\n    option = \"inferno\",\n    name = \"Value\"\n  ) +\n  theme_minimal() +\n  labs(\n    title = \"Values Across Western States\",\n    subtitle = \"Regional focus reveals local patterns\",\n    caption = \"Source: Simulated data\"\n  ) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    legend.title = element_text(face = \"bold\"),\n    panel.grid = element_blank(),\n    axis.text = element_blank(),\n    axis.title = element_blank()\n  )\n\n\n\n\n\n\n\nBy focusing on a specific region, we can examine local patterns in more detail. This approach is particularly valuable when regional comparisons are more important than national ones, or when the region of interest contains patterns that might be obscured in a national view.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#approach-4-multiple-value-visualization",
+    "href": "bw/bw-spatial.html#approach-4-multiple-value-visualization",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n8.4 Approach 4: Multiple Value Visualization",
+    "text": "8.4 Approach 4: Multiple Value Visualization\nWe can create multiple maps to compare different metrics side by side.\n\nCode# Create a second simulated variable\nset.seed(456)\nstate_data$value2 &lt;- runif(nrow(state_data), 20, 90)\n\n# Join the second value to the map data\nstates_with_data2 &lt;- left_join(\n  states_map, \n  state_data %&gt;% select(state, value2), \n  by = c(\"region\" = \"state\")\n)\n\n# Combine both datasets for faceting\nstates_combined &lt;- bind_rows(\n  states_with_data %&gt;% mutate(variable = \"Value 1\"),\n  states_with_data2 %&gt;% rename(value = value2) %&gt;% mutate(variable = \"Value 2\")\n)\n\n# Create side-by-side maps\nggplot(data = states_combined, \n       mapping = aes(x = long, y = lat, group = group, fill = value)) +\n  geom_polygon(color = \"white\", size = 0.1) +\n  coord_map(\"albers\", lat0 = 39, lat1 = 45) +\n  facet_wrap(~ variable) +\n  scale_fill_viridis_c(\n    option = \"magma\",\n    name = \"Value\"\n  ) +\n  theme_minimal() +\n  labs(\n    title = \"Comparing Multiple Variables Across States\",\n    subtitle = \"Side-by-side comparison reveals different spatial patterns\",\n    caption = \"Source: Simulated data\"\n  ) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    legend.title = element_text(face = \"bold\"),\n    panel.grid = element_blank(),\n    axis.text = element_blank(),\n    axis.title = element_blank(),\n    strip.text = element_text(face = \"bold\", size = 12)\n  )\n\n\n\n\n\n\n\nSide-by-side maps allow for direct comparison of different variables across the same geography. This approach is particularly valuable when exploring relationships between multiple metrics that might have different spatial patterns. By using the same color scale and geographic boundaries, the visualization makes it easy to identify similarities and differences in the spatial distribution of each variable.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#approach-5-adding-points-of-interest",
+    "href": "bw/bw-spatial.html#approach-5-adding-points-of-interest",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n8.5 Approach 5: Adding Points of Interest",
+    "text": "8.5 Approach 5: Adding Points of Interest\nWe can enhance our map by adding points of interest, such as major cities or specific locations.\n\nCode# Create data for major cities\nmajor_cities &lt;- data.frame(\n  name = c(\"New York\", \"Los Angeles\", \"Chicago\", \"Houston\", \"Phoenix\", \n           \"Philadelphia\", \"San Antonio\", \"San Diego\", \"Dallas\", \"San Jose\"),\n  long = c(-74.0060, -118.2437, -87.6298, -95.3698, -112.0740, \n           -75.1652, -98.4936, -117.1611, -96.7970, -121.8863),\n  lat = c(40.7128, 34.0522, 41.8781, 29.7604, 33.4484, \n          39.9526, 29.4241, 32.7157, 32.7767, 37.3382),\n  population = c(8.4, 4.0, 2.7, 2.3, 1.7, 1.6, 1.5, 1.4, 1.3, 1.0)\n)\n\n# Create enhanced map with cities\nggplot() +\n  # Base map layer\n  geom_polygon(data = states_with_data, \n               aes(x = long, y = lat, group = group, fill = value),\n               color = \"white\", size = 0.1) +\n  # City points layer\n  geom_point(data = major_cities,\n             aes(x = long, y = lat, size = population),\n             color = \"white\", alpha = 0.7, shape = 16) +\n  # Text labels for cities\n  geom_text(data = major_cities,\n            aes(x = long, y = lat, label = name),\n            color = \"white\", size = 3, vjust = -1.5, fontface = \"bold\") +\n  # Coordinate system\n  coord_map(\"albers\", lat0 = 39, lat1 = 45) +\n  # Color scale for states\n  scale_fill_viridis_c(\n    option = \"viridis\",\n    name = \"Value\"\n  ) +\n  # Size scale for cities\n  scale_size_continuous(\n    name = \"Population (millions)\",\n    range = c(2, 8)\n  ) +\n  # Layout and labels\n  theme_minimal() +\n  labs(\n    title = \"State Values with Major U.S. Cities\",\n    subtitle = \"Adding points of interest provides additional context\",\n    caption = \"Source: Simulated data | City populations in millions\"\n  ) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    legend.title = element_text(face = \"bold\"),\n    panel.grid = element_blank(),\n    axis.text = element_blank(),\n    axis.title = element_blank()\n  )\n\n\n\n\n\n\n\nAdding points of interest provides valuable context to spatial visualizations. In this case, major cities serve as recognizable landmarks that help orient viewers and can reveal relationships between urban centers and the variable being mapped. The size of each point adds an additional dimension of information (population), creating a richer visualization that combines multiple data elements.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#approach-6-custom-regions",
+    "href": "bw/bw-spatial.html#approach-6-custom-regions",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n8.6 Approach 6: Custom Regions",
+    "text": "8.6 Approach 6: Custom Regions\nSometimes standard geographic boundaries don’t align with the patterns we want to highlight. We can create custom regions by grouping states into meaningful categories.\n\nCode# Define custom regions\nstate_regions &lt;- data.frame(\n  state = unique(states_map$region),\n  custom_region = case_when(\n    unique(states_map$region) %in% c(\"maine\", \"new hampshire\", \"vermont\", \"massachusetts\", \n                \"rhode island\", \"connecticut\", \"new york\", \"new jersey\", \n                \"pennsylvania\") ~ \"Northeast\",\n    unique(states_map$region) %in% c(\"ohio\", \"michigan\", \"indiana\", \"illinois\", \"wisconsin\", \n                \"minnesota\", \"iowa\", \"missouri\", \"north dakota\", \"south dakota\", \n                \"nebraska\", \"kansas\") ~ \"Midwest\",\n    unique(states_map$region) %in% c(\"delaware\", \"maryland\", \"virginia\", \"west virginia\", \n                \"north carolina\", \"south carolina\", \"georgia\", \"florida\", \n                \"kentucky\", \"tennessee\", \"alabama\", \"mississippi\", \"arkansas\", \n                \"louisiana\", \"oklahoma\", \"texas\") ~ \"South\",\n    TRUE ~ \"West\"\n  )\n)\n\n# Join the region data with the map\nstates_with_regions &lt;- left_join(\n  states_map,\n  state_regions,\n  by = c(\"region\" = \"state\")\n)\n\n# Create regional map\nggplot(data = states_with_regions, \n       mapping = aes(x = long, y = lat, group = group, fill = custom_region)) +\n  geom_polygon(color = \"white\", size = 0.2) +\n  coord_map(\"albers\", lat0 = 39, lat1 = 45) +\n  scale_fill_brewer(\n    palette = \"Set2\",\n    name = \"Region\"\n  ) +\n  theme_minimal() +\n  labs(\n    title = \"Custom U.S. Regions\",\n    subtitle = \"States grouped into four major regions\",\n    caption = \"Source: Traditional U.S. Census Bureau regional divisions\"\n  ) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12, color = \"gray40\"),\n    legend.title = element_text(face = \"bold\"),\n    panel.grid = element_blank(),\n    axis.text = element_blank(),\n    axis.title = element_blank()\n  )\n\n\n\n\n\n\n\nCustom regional groupings allow us to highlight meaningful geographic patterns that might cross state boundaries. This approach is particularly valuable when analyzing phenomena that align with cultural, economic, or ecological regions rather than political boundaries. By color-coding states according to their region, we create a visualization that emphasizes these broader spatial patterns.",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#visual-hierarchy",
+    "href": "bw/bw-spatial.html#visual-hierarchy",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n9.1 1. Visual Hierarchy",
+    "text": "9.1 1. Visual Hierarchy\nEstablish a clear visual hierarchy by:\n\nUsing color intensity to emphasize the most important patterns\nAdding boundaries at an appropriate visual weight\nMaking sure legends and auxiliary elements don’t compete with the main map",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#color-selection",
+    "href": "bw/bw-spatial.html#color-selection",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n9.2 2. Color Selection",
+    "text": "9.2 2. Color Selection\nChoose colors thoughtfully:\n\nUse sequential color schemes for continuous variables\nConsider colorblind-friendly palettes (like viridis)\nUse appropriate color breaks that reveal meaningful patterns\nConsider cultural associations with colors in your audience",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#context-and-scale",
+    "href": "bw/bw-spatial.html#context-and-scale",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n9.3 3. Context and Scale",
+    "text": "9.3 3. Context and Scale\nProvide appropriate context:\n\nInclude recognizable boundaries or landmarks for orientation\nConsider multiple scales (national, regional, local) if patterns differ\nAdd labels for key geographic features when necessary",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
+    ]
+  },
+  {
+    "objectID": "bw/bw-spatial.html#cognitive-load-management",
+    "href": "bw/bw-spatial.html#cognitive-load-management",
+    "title": "\n5  Spatial Viz-Best Work\n",
+    "section": "\n9.4 4. Cognitive Load Management",
+    "text": "9.4 4. Cognitive Load Management\nHelp viewers understand complex spatial information:\n\nUse categories or small multiples to simplify complex patterns\nProvide clear legends and explanatory text\nConsider interactive elements for exploration of complex data",
+    "crumbs": [
+      "Best Work",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz-Best Work</span>"
     ]
   },
   {

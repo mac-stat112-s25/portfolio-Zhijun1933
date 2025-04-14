@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>1&nbsp; Univariate Viz – COMP/STAT112 Notebook</title>
+<meta name="author" content="Zhijun He">
+<meta name="dcterms.date" content="2025-04-14">
+<title>1&nbsp; Univariate Visualization-Best Work – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-uni.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-uni.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Visualization-Best Work</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,31 +155,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-uni.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Visualization-Best Work</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-bi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Visualization-Best Work</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-tri.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Visualization-Best Work</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-quad.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Visualization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-spatial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz-Best Work</span></span></a>
   </div>
 </li>
       </ul>
@@ -284,20 +286,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
 <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation"><span class="header-section-number">2.1</span> Data Preparation</a></li>
   <li><a href="#custom-theme-for-professional-visualization" id="toc-custom-theme-for-professional-visualization" class="nav-link" data-scroll-target="#custom-theme-for-professional-visualization"><span class="header-section-number">2.2</span> Custom Theme for Professional Visualization</a></li>
-  <li><a href="#histogram-distribution-of-median-household-income" id="toc-histogram-distribution-of-median-household-income" class="nav-link" data-scroll-target="#histogram-distribution-of-median-household-income"><span class="header-section-number">2.3</span> Histogram: Distribution of Median Household Income</a></li>
-  <li><a href="#ordered-bar-chart-income-by-state" id="toc-ordered-bar-chart-income-by-state" class="nav-link" data-scroll-target="#ordered-bar-chart-income-by-state"><span class="header-section-number">2.4</span> Ordered Bar Chart: Income by State</a></li>
-  <li><a href="#regional-analysis-income-distribution-by-region" id="toc-regional-analysis-income-distribution-by-region" class="nav-link" data-scroll-target="#regional-analysis-income-distribution-by-region"><span class="header-section-number">2.5</span> Regional Analysis: Income Distribution by Region</a></li>
-  <li><a href="#density-plot-comparative-income-distributions" id="toc-density-plot-comparative-income-distributions" class="nav-link" data-scroll-target="#density-plot-comparative-income-distributions"><span class="header-section-number">2.6</span> Density Plot: Comparative Income Distributions</a></li>
-  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings"><span class="header-section-number">2.7</span> Key Findings</a></li>
-  <li><a href="#technical-implementation" id="toc-technical-implementation" class="nav-link" data-scroll-target="#technical-implementation"><span class="header-section-number">2.8</span> Technical Implementation</a></li>
+  <li><a href="#histogram-distribution-of-co2-emissions-per-capita" id="toc-histogram-distribution-of-co2-emissions-per-capita" class="nav-link" data-scroll-target="#histogram-distribution-of-co2-emissions-per-capita"><span class="header-section-number">2.3</span> Histogram: Distribution of CO2 Emissions Per Capita</a></li>
+  <li><a href="#ordered-bar-chart-emissions-by-country" id="toc-ordered-bar-chart-emissions-by-country" class="nav-link" data-scroll-target="#ordered-bar-chart-emissions-by-country"><span class="header-section-number">2.4</span> Ordered Bar Chart: Emissions by Country</a></li>
+  <li><a href="#regional-analysis-emissions-distribution-by-region" id="toc-regional-analysis-emissions-distribution-by-region" class="nav-link" data-scroll-target="#regional-analysis-emissions-distribution-by-region"><span class="header-section-number">2.5</span> Regional Analysis: Emissions Distribution by Region</a></li>
+  <li><a href="#density-plot-comparative-emissions-distributions" id="toc-density-plot-comparative-emissions-distributions" class="nav-link" data-scroll-target="#density-plot-comparative-emissions-distributions"><span class="header-section-number">2.6</span> Density Plot: Comparative Emissions Distributions</a></li>
+  <li><a href="#population-weighted-analysis" id="toc-population-weighted-analysis" class="nav-link" data-scroll-target="#population-weighted-analysis"><span class="header-section-number">2.7</span> Population-Weighted Analysis</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings"><span class="header-section-number">2.8</span> Key Findings</a></li>
+  <li><a href="#technical-implementation" id="toc-technical-implementation" class="nav-link" data-scroll-target="#technical-implementation"><span class="header-section-number">2.9</span> Technical Implementation</a></li>
   </ul>
 </li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-uni.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-uni.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Visualization-Best Work</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span>
+<span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Visualization-Best Work</span>
 </h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
@@ -305,7 +308,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zhijun He </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 14, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -314,63 +329,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header><section id="professional-univariate-visualization" class="level1" data-number="2"><h1 data-number="2">
 <span class="header-section-number">2</span> Professional Univariate Visualization</h1>
-<p>This document presents a sophisticated univariate visualization that explores the distribution of household income across different states in the United States. Through careful data analysis and visual design, we’ll create an informative and aesthetically pleasing visualization that effectively communicates patterns in the data.</p>
+<p>This document presents sophisticated univariate visualizations that explore the distribution of global CO2 emissions per capita across different countries. Through careful data analysis and visual design, we’ll create informative and aesthetically pleasing visualizations that effectively communicate patterns in the data.</p>
 <section id="data-preparation" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="data-preparation">
 <span class="header-section-number">2.1</span> Data Preparation</h2>
-<p>We’ll use the 2019 American Community Survey (ACS) data on median household income by state.</p>
+<p>We’ll use a dataset containing CO2 emissions per capita for countries worldwide, based on data from the World Bank.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Create dataset of median household income by state</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>income_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="at">state =</span> <span class="fu">c</span>(<span class="st">"Alabama"</span>, <span class="st">"Alaska"</span>, <span class="st">"Arizona"</span>, <span class="st">"Arkansas"</span>, <span class="st">"California"</span>, <span class="st">"Colorado"</span>, </span>
-<span id="cb1-4"><a href="#cb1-4"></a>            <span class="st">"Connecticut"</span>, <span class="st">"Delaware"</span>, <span class="st">"Florida"</span>, <span class="st">"Georgia"</span>, <span class="st">"Hawaii"</span>, <span class="st">"Idaho"</span>, </span>
-<span id="cb1-5"><a href="#cb1-5"></a>            <span class="st">"Illinois"</span>, <span class="st">"Indiana"</span>, <span class="st">"Iowa"</span>, <span class="st">"Kansas"</span>, <span class="st">"Kentucky"</span>, <span class="st">"Louisiana"</span>, </span>
-<span id="cb1-6"><a href="#cb1-6"></a>            <span class="st">"Maine"</span>, <span class="st">"Maryland"</span>, <span class="st">"Massachusetts"</span>, <span class="st">"Michigan"</span>, <span class="st">"Minnesota"</span>, </span>
-<span id="cb1-7"><a href="#cb1-7"></a>            <span class="st">"Mississippi"</span>, <span class="st">"Missouri"</span>, <span class="st">"Montana"</span>, <span class="st">"Nebraska"</span>, <span class="st">"Nevada"</span>, </span>
-<span id="cb1-8"><a href="#cb1-8"></a>            <span class="st">"New Hampshire"</span>, <span class="st">"New Jersey"</span>, <span class="st">"New Mexico"</span>, <span class="st">"New York"</span>, </span>
-<span id="cb1-9"><a href="#cb1-9"></a>            <span class="st">"North Carolina"</span>, <span class="st">"North Dakota"</span>, <span class="st">"Ohio"</span>, <span class="st">"Oklahoma"</span>, <span class="st">"Oregon"</span>, </span>
-<span id="cb1-10"><a href="#cb1-10"></a>            <span class="st">"Pennsylvania"</span>, <span class="st">"Rhode Island"</span>, <span class="st">"South Carolina"</span>, <span class="st">"South Dakota"</span>, </span>
-<span id="cb1-11"><a href="#cb1-11"></a>            <span class="st">"Tennessee"</span>, <span class="st">"Texas"</span>, <span class="st">"Utah"</span>, <span class="st">"Vermont"</span>, <span class="st">"Virginia"</span>, <span class="st">"Washington"</span>, </span>
-<span id="cb1-12"><a href="#cb1-12"></a>            <span class="st">"West Virginia"</span>, <span class="st">"Wisconsin"</span>, <span class="st">"Wyoming"</span>),</span>
-<span id="cb1-13"><a href="#cb1-13"></a>  <span class="at">median_income =</span> <span class="fu">c</span>(<span class="dv">51734</span>, <span class="dv">75463</span>, <span class="dv">62055</span>, <span class="dv">48952</span>, <span class="dv">80440</span>, <span class="dv">77127</span>, <span class="dv">78833</span>, <span class="dv">68287</span>, </span>
-<span id="cb1-14"><a href="#cb1-14"></a>                    <span class="dv">59227</span>, <span class="dv">61980</span>, <span class="dv">83102</span>, <span class="dv">60999</span>, <span class="dv">69187</span>, <span class="dv">57603</span>, <span class="dv">61691</span>, <span class="dv">62087</span>, </span>
-<span id="cb1-15"><a href="#cb1-15"></a>                    <span class="dv">52295</span>, <span class="dv">51073</span>, <span class="dv">58924</span>, <span class="dv">86738</span>, <span class="dv">85843</span>, <span class="dv">59584</span>, <span class="dv">74593</span>, <span class="dv">45792</span>, </span>
-<span id="cb1-16"><a href="#cb1-16"></a>                    <span class="dv">57409</span>, <span class="dv">57153</span>, <span class="dv">63229</span>, <span class="dv">63276</span>, <span class="dv">77933</span>, <span class="dv">85751</span>, <span class="dv">51945</span>, <span class="dv">72108</span>, </span>
-<span id="cb1-17"><a href="#cb1-17"></a>                    <span class="dv">57341</span>, <span class="dv">64577</span>, <span class="dv">58642</span>, <span class="dv">54449</span>, <span class="dv">67058</span>, <span class="dv">63463</span>, <span class="dv">71169</span>, <span class="dv">56227</span>, </span>
-<span id="cb1-18"><a href="#cb1-18"></a>                    <span class="dv">59533</span>, <span class="dv">56071</span>, <span class="dv">64034</span>, <span class="dv">75780</span>, <span class="dv">63001</span>, <span class="dv">76456</span>, <span class="dv">78687</span>, <span class="dv">48850</span>, </span>
-<span id="cb1-19"><a href="#cb1-19"></a>                    <span class="dv">64168</span>, <span class="dv">65003</span>)</span>
-<span id="cb1-20"><a href="#cb1-20"></a>)</span>
-<span id="cb1-21"><a href="#cb1-21"></a></span>
-<span id="cb1-22"><a href="#cb1-22"></a><span class="co"># Add region classification</span></span>
-<span id="cb1-23"><a href="#cb1-23"></a>income_data <span class="ot">&lt;-</span> income_data <span class="sc">%&gt;%</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-25"><a href="#cb1-25"></a>    <span class="at">region =</span> <span class="fu">case_when</span>(</span>
-<span id="cb1-26"><a href="#cb1-26"></a>      state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Connecticut"</span>, <span class="st">"Maine"</span>, <span class="st">"Massachusetts"</span>, <span class="st">"New Hampshire"</span>, </span>
-<span id="cb1-27"><a href="#cb1-27"></a>                  <span class="st">"Rhode Island"</span>, <span class="st">"Vermont"</span>, <span class="st">"New Jersey"</span>, <span class="st">"New York"</span>, </span>
-<span id="cb1-28"><a href="#cb1-28"></a>                  <span class="st">"Pennsylvania"</span>) <span class="sc">~</span> <span class="st">"Northeast"</span>,</span>
-<span id="cb1-29"><a href="#cb1-29"></a>      state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Illinois"</span>, <span class="st">"Indiana"</span>, <span class="st">"Michigan"</span>, <span class="st">"Ohio"</span>, <span class="st">"Wisconsin"</span>, </span>
-<span id="cb1-30"><a href="#cb1-30"></a>                  <span class="st">"Iowa"</span>, <span class="st">"Kansas"</span>, <span class="st">"Minnesota"</span>, <span class="st">"Missouri"</span>, <span class="st">"Nebraska"</span>, </span>
-<span id="cb1-31"><a href="#cb1-31"></a>                  <span class="st">"North Dakota"</span>, <span class="st">"South Dakota"</span>) <span class="sc">~</span> <span class="st">"Midwest"</span>,</span>
-<span id="cb1-32"><a href="#cb1-32"></a>      state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Delaware"</span>, <span class="st">"Florida"</span>, <span class="st">"Georgia"</span>, <span class="st">"Maryland"</span>, <span class="st">"North Carolina"</span>, </span>
-<span id="cb1-33"><a href="#cb1-33"></a>                  <span class="st">"South Carolina"</span>, <span class="st">"Virginia"</span>, <span class="st">"West Virginia"</span>, <span class="st">"Alabama"</span>, </span>
-<span id="cb1-34"><a href="#cb1-34"></a>                  <span class="st">"Kentucky"</span>, <span class="st">"Mississippi"</span>, <span class="st">"Tennessee"</span>, <span class="st">"Arkansas"</span>, </span>
-<span id="cb1-35"><a href="#cb1-35"></a>                  <span class="st">"Louisiana"</span>, <span class="st">"Oklahoma"</span>, <span class="st">"Texas"</span>) <span class="sc">~</span> <span class="st">"South"</span>,</span>
-<span id="cb1-36"><a href="#cb1-36"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"West"</span></span>
-<span id="cb1-37"><a href="#cb1-37"></a>    ),</span>
-<span id="cb1-38"><a href="#cb1-38"></a>    <span class="co"># Create income categories</span></span>
-<span id="cb1-39"><a href="#cb1-39"></a>    <span class="at">income_category =</span> <span class="fu">cut</span>(median_income, </span>
-<span id="cb1-40"><a href="#cb1-40"></a>                         <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>, <span class="dv">60000</span>, <span class="dv">70000</span>, <span class="dv">80000</span>, <span class="cn">Inf</span>),</span>
-<span id="cb1-41"><a href="#cb1-41"></a>                         <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Very Low"</span>, <span class="st">"Low"</span>, <span class="st">"Medium"</span>, <span class="st">"High"</span>, <span class="st">"Very High"</span>),</span>
-<span id="cb1-42"><a href="#cb1-42"></a>                         <span class="at">right =</span> <span class="cn">FALSE</span>),</span>
-<span id="cb1-43"><a href="#cb1-43"></a>    <span class="co"># Create a variable for ordering states by income</span></span>
-<span id="cb1-44"><a href="#cb1-44"></a>    <span class="at">state_ordered =</span> <span class="fu">reorder</span>(state, median_income)</span>
-<span id="cb1-45"><a href="#cb1-45"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Create dataset of CO2 emissions per capita by country</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>emissions_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="at">country =</span> <span class="fu">c</span>(<span class="st">"Qatar"</span>, <span class="st">"Kuwait"</span>, <span class="st">"United Arab Emirates"</span>, <span class="st">"Saudi Arabia"</span>, <span class="st">"Australia"</span>, </span>
+<span id="cb1-4"><a href="#cb1-4"></a>              <span class="st">"United States"</span>, <span class="st">"Canada"</span>, <span class="st">"Russia"</span>, <span class="st">"South Korea"</span>, <span class="st">"Japan"</span>, <span class="st">"Germany"</span>, </span>
+<span id="cb1-5"><a href="#cb1-5"></a>              <span class="st">"Poland"</span>, <span class="st">"South Africa"</span>, <span class="st">"China"</span>, <span class="st">"United Kingdom"</span>, <span class="st">"Italy"</span>, <span class="st">"France"</span>, </span>
+<span id="cb1-6"><a href="#cb1-6"></a>              <span class="st">"Mexico"</span>, <span class="st">"Brazil"</span>, <span class="st">"Egypt"</span>, <span class="st">"India"</span>, <span class="st">"Nigeria"</span>, <span class="st">"Ethiopia"</span>, <span class="st">"Bangladesh"</span>, </span>
+<span id="cb1-7"><a href="#cb1-7"></a>              <span class="st">"Democratic Republic of Congo"</span>),</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="at">co2_per_capita =</span> <span class="fu">c</span>(<span class="fl">32.4</span>, <span class="fl">21.6</span>, <span class="fl">20.7</span>, <span class="fl">18.4</span>, <span class="fl">15.2</span>, <span class="fl">14.7</span>, <span class="fl">14.2</span>, <span class="fl">11.1</span>, <span class="fl">11.7</span>, <span class="fl">8.5</span>, <span class="fl">8.4</span>, </span>
+<span id="cb1-9"><a href="#cb1-9"></a>                     <span class="fl">7.8</span>, <span class="fl">7.4</span>, <span class="fl">7.2</span>, <span class="fl">5.3</span>, <span class="fl">5.2</span>, <span class="fl">4.6</span>, <span class="fl">3.6</span>, <span class="fl">2.2</span>, <span class="fl">2.1</span>, <span class="fl">1.8</span>, <span class="fl">0.6</span>, <span class="fl">0.1</span>, <span class="fl">0.5</span>, <span class="fl">0.04</span>),</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="at">population_millions =</span> <span class="fu">c</span>(<span class="fl">2.9</span>, <span class="fl">4.3</span>, <span class="fl">9.9</span>, <span class="fl">34.8</span>, <span class="fl">25.7</span>, <span class="fl">331.0</span>, <span class="fl">38.0</span>, <span class="fl">144.1</span>, <span class="fl">51.7</span>, <span class="fl">125.8</span>, <span class="fl">83.2</span>, </span>
+<span id="cb1-11"><a href="#cb1-11"></a>                         <span class="fl">37.8</span>, <span class="fl">59.3</span>, <span class="fl">1412.0</span>, <span class="fl">67.2</span>, <span class="fl">59.6</span>, <span class="fl">67.4</span>, <span class="fl">129.0</span>, <span class="fl">212.6</span>, <span class="fl">102.3</span>, <span class="fl">1380.0</span>, </span>
+<span id="cb1-12"><a href="#cb1-12"></a>                         <span class="fl">206.1</span>, <span class="fl">115.0</span>, <span class="fl">164.7</span>, <span class="fl">89.6</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co"># Add region classification</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>emissions_data <span class="ot">&lt;-</span> emissions_data <span class="sc">%&gt;%</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    <span class="at">region =</span> <span class="fu">case_when</span>(</span>
+<span id="cb1-19"><a href="#cb1-19"></a>      country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Qatar"</span>, <span class="st">"Kuwait"</span>, <span class="st">"United Arab Emirates"</span>, <span class="st">"Saudi Arabia"</span>, <span class="st">"Egypt"</span>) <span class="sc">~</span> <span class="st">"Middle East &amp; North Africa"</span>,</span>
+<span id="cb1-20"><a href="#cb1-20"></a>      country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Australia"</span>, <span class="st">"Japan"</span>, <span class="st">"South Korea"</span>, <span class="st">"China"</span>, <span class="st">"Bangladesh"</span>) <span class="sc">~</span> <span class="st">"Asia &amp; Pacific"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21"></a>      country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"United States"</span>, <span class="st">"Canada"</span>, <span class="st">"Mexico"</span>, <span class="st">"Brazil"</span>) <span class="sc">~</span> <span class="st">"Americas"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22"></a>      country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Russia"</span>, <span class="st">"Germany"</span>, <span class="st">"Poland"</span>, <span class="st">"United Kingdom"</span>, <span class="st">"Italy"</span>, <span class="st">"France"</span>) <span class="sc">~</span> <span class="st">"Europe"</span>,</span>
+<span id="cb1-23"><a href="#cb1-23"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Sub-Saharan Africa"</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a>    ),</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    <span class="co"># Create emissions categories</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a>    <span class="at">emissions_category =</span> <span class="fu">cut</span>(co2_per_capita, </span>
+<span id="cb1-27"><a href="#cb1-27"></a>                           <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="cn">Inf</span>),</span>
+<span id="cb1-28"><a href="#cb1-28"></a>                           <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Very Low"</span>, <span class="st">"Low"</span>, <span class="st">"Medium"</span>, <span class="st">"High"</span>, <span class="st">"Very High"</span>),</span>
+<span id="cb1-29"><a href="#cb1-29"></a>                           <span class="at">right =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb1-30"><a href="#cb1-30"></a>    <span class="co"># Create a variable for ordering countries by emissions</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a>    <span class="at">country_ordered =</span> <span class="fu">reorder</span>(country, co2_per_capita)</span>
+<span id="cb1-32"><a href="#cb1-32"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section><section id="custom-theme-for-professional-visualization" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="custom-theme-for-professional-visualization">
 <span class="header-section-number">2.2</span> Custom Theme for Professional Visualization</h2>
 <p>Creating a consistent visual style is crucial for professional visualizations. We’ll define a custom theme that will be applied to all our plots:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Create a custom theme for professional visualizations</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Create a custom theme for professional visualizations</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>theme_professional <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
 <span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">theme</span>(</span>
@@ -392,145 +394,152 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section><section id="histogram-distribution-of-median-household-income" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="histogram-distribution-of-median-household-income">
-<span class="header-section-number">2.3</span> Histogram: Distribution of Median Household Income</h2>
-<p>Our first visualization explores the overall distribution of median household income across all states:</p>
+</section><section id="histogram-distribution-of-co2-emissions-per-capita" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="histogram-distribution-of-co2-emissions-per-capita">
+<span class="header-section-number">2.3</span> Histogram: Distribution of CO2 Emissions Per Capita</h2>
+<p>Our first visualization explores the overall distribution of CO2 emissions per capita across countries:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Create histogram</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">ggplot</span>(income_data, <span class="fu">aes</span>(<span class="at">x =</span> median_income)) <span class="sc">+</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Create histogram</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">ggplot</span>(emissions_data, <span class="fu">aes</span>(<span class="at">x =</span> co2_per_capita)) <span class="sc">+</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a>  <span class="co"># Add histogram bars</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5000</span>, </span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">3</span>, </span>
 <span id="cb3-5"><a href="#cb3-5"></a>                <span class="at">fill =</span> <span class="st">"#3182bd"</span>, </span>
 <span id="cb3-6"><a href="#cb3-6"></a>                <span class="at">color =</span> <span class="st">"white"</span>,</span>
 <span id="cb3-7"><a href="#cb3-7"></a>                <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
 <span id="cb3-8"><a href="#cb3-8"></a>  <span class="co"># Add a density curve</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="dv">5000</span> <span class="sc">*</span> ..density..), </span>
+<span id="cb3-9"><a href="#cb3-9"></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="dv">3</span> <span class="sc">*</span> ..density..), </span>
 <span id="cb3-10"><a href="#cb3-10"></a>              <span class="at">color =</span> <span class="st">"#e41a1c"</span>, </span>
 <span id="cb3-11"><a href="#cb3-11"></a>              <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb3-12"><a href="#cb3-12"></a>  <span class="co"># Add a rug plot at the bottom</span></span>
 <span id="cb3-13"><a href="#cb3-13"></a>  <span class="fu">geom_rug</span>(<span class="at">color =</span> <span class="st">"#636363"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
 <span id="cb3-14"><a href="#cb3-14"></a>  <span class="co"># Add mean line</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(median_income)),</span>
+<span id="cb3-15"><a href="#cb3-15"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(co2_per_capita)),</span>
 <span id="cb3-16"><a href="#cb3-16"></a>            <span class="at">color =</span> <span class="st">"#e41a1c"</span>, </span>
 <span id="cb3-17"><a href="#cb3-17"></a>            <span class="at">linetype =</span> <span class="st">"dashed"</span>, </span>
 <span id="cb3-18"><a href="#cb3-18"></a>            <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb3-19"><a href="#cb3-19"></a>  <span class="co"># Add text annotation for mean</span></span>
-<span id="cb3-20"><a href="#cb3-20"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, </span>
-<span id="cb3-21"><a href="#cb3-21"></a>           <span class="at">x =</span> <span class="fu">mean</span>(income_data<span class="sc">$</span>median_income) <span class="sc">+</span> <span class="dv">3000</span>, </span>
-<span id="cb3-22"><a href="#cb3-22"></a>           <span class="at">y =</span> <span class="dv">12</span>, </span>
-<span id="cb3-23"><a href="#cb3-23"></a>           <span class="at">label =</span> <span class="fu">paste</span>(<span class="st">"Mean:"</span>, <span class="fu">dollar</span>(<span class="fu">mean</span>(income_data<span class="sc">$</span>median_income))), </span>
-<span id="cb3-24"><a href="#cb3-24"></a>           <span class="at">color =</span> <span class="st">"#e41a1c"</span>,</span>
-<span id="cb3-25"><a href="#cb3-25"></a>           <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
-<span id="cb3-26"><a href="#cb3-26"></a>  <span class="co"># Scale x-axis to show as dollars</span></span>
-<span id="cb3-27"><a href="#cb3-27"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">dollar_format</span>(), </span>
-<span id="cb3-28"><a href="#cb3-28"></a>                    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">45000</span>, <span class="dv">90000</span>, <span class="at">by =</span> <span class="dv">10000</span>)) <span class="sc">+</span></span>
-<span id="cb3-29"><a href="#cb3-29"></a>  <span class="co"># Add labels</span></span>
-<span id="cb3-30"><a href="#cb3-30"></a>  <span class="fu">labs</span>(</span>
-<span id="cb3-31"><a href="#cb3-31"></a>    <span class="at">title =</span> <span class="st">"Distribution of Median Household Income by State"</span>,</span>
-<span id="cb3-32"><a href="#cb3-32"></a>    <span class="at">subtitle =</span> <span class="st">"Data from the 2019 American Community Survey"</span>,</span>
-<span id="cb3-33"><a href="#cb3-33"></a>    <span class="at">x =</span> <span class="st">"Median Household Income"</span>,</span>
-<span id="cb3-34"><a href="#cb3-34"></a>    <span class="at">y =</span> <span class="st">"Number of States"</span>,</span>
-<span id="cb3-35"><a href="#cb3-35"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, American Community Survey, 2019"</span></span>
-<span id="cb3-36"><a href="#cb3-36"></a>  ) <span class="sc">+</span></span>
-<span id="cb3-37"><a href="#cb3-37"></a>  <span class="co"># Apply the professional theme</span></span>
-<span id="cb3-38"><a href="#cb3-38"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-19"><a href="#cb3-19"></a>  <span class="co"># Add median line</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">median</span>(co2_per_capita)),</span>
+<span id="cb3-21"><a href="#cb3-21"></a>            <span class="at">color =</span> <span class="st">"#4daf4a"</span>, </span>
+<span id="cb3-22"><a href="#cb3-22"></a>            <span class="at">linetype =</span> <span class="st">"dotted"</span>, </span>
+<span id="cb3-23"><a href="#cb3-23"></a>            <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a>  <span class="co"># Add text annotation for mean</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, </span>
+<span id="cb3-26"><a href="#cb3-26"></a>           <span class="at">x =</span> <span class="fu">mean</span>(emissions_data<span class="sc">$</span>co2_per_capita) <span class="sc">+</span> <span class="dv">2</span>, </span>
+<span id="cb3-27"><a href="#cb3-27"></a>           <span class="at">y =</span> <span class="dv">8</span>, </span>
+<span id="cb3-28"><a href="#cb3-28"></a>           <span class="at">label =</span> <span class="fu">paste</span>(<span class="st">"Mean:"</span>, <span class="fu">round</span>(<span class="fu">mean</span>(emissions_data<span class="sc">$</span>co2_per_capita), <span class="dv">1</span>), <span class="st">"tonnes"</span>), </span>
+<span id="cb3-29"><a href="#cb3-29"></a>           <span class="at">color =</span> <span class="st">"#e41a1c"</span>,</span>
+<span id="cb3-30"><a href="#cb3-30"></a>           <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb3-31"><a href="#cb3-31"></a>  <span class="co"># Add text annotation for median</span></span>
+<span id="cb3-32"><a href="#cb3-32"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, </span>
+<span id="cb3-33"><a href="#cb3-33"></a>           <span class="at">x =</span> <span class="fu">median</span>(emissions_data<span class="sc">$</span>co2_per_capita) <span class="sc">-</span> <span class="dv">2</span>, </span>
+<span id="cb3-34"><a href="#cb3-34"></a>           <span class="at">y =</span> <span class="dv">6</span>, </span>
+<span id="cb3-35"><a href="#cb3-35"></a>           <span class="at">label =</span> <span class="fu">paste</span>(<span class="st">"Median:"</span>, <span class="fu">round</span>(<span class="fu">median</span>(emissions_data<span class="sc">$</span>co2_per_capita), <span class="dv">1</span>), <span class="st">"tonnes"</span>), </span>
+<span id="cb3-36"><a href="#cb3-36"></a>           <span class="at">color =</span> <span class="st">"#4daf4a"</span>,</span>
+<span id="cb3-37"><a href="#cb3-37"></a>           <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb3-38"><a href="#cb3-38"></a>  <span class="co"># Add labels</span></span>
+<span id="cb3-39"><a href="#cb3-39"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-40"><a href="#cb3-40"></a>    <span class="at">title =</span> <span class="st">"Distribution of CO2 Emissions Per Capita"</span>,</span>
+<span id="cb3-41"><a href="#cb3-41"></a>    <span class="at">subtitle =</span> <span class="st">"Data from selected countries worldwide"</span>,</span>
+<span id="cb3-42"><a href="#cb3-42"></a>    <span class="at">x =</span> <span class="st">"CO2 Emissions (tonnes per capita)"</span>,</span>
+<span id="cb3-43"><a href="#cb3-43"></a>    <span class="at">y =</span> <span class="st">"Number of Countries"</span>,</span>
+<span id="cb3-44"><a href="#cb3-44"></a>    <span class="at">caption =</span> <span class="st">"Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb3-45"><a href="#cb3-45"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-46"><a href="#cb3-46"></a>  <span class="co"># Apply the professional theme</span></span>
+<span id="cb3-47"><a href="#cb3-47"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="bw-uni_files/figure-html/histogram-visualization-1.png" class="img-fluid figure-img" width="3000"></p>
+<figure class="figure"><p><img src="bw-uni_files/figure-html/histogram-visualization-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The histogram above shows the distribution of median household income across all U.S. states. We can observe that:</p>
+<p>The histogram above shows the distribution of CO2 emissions per capita across selected countries. We can observe that:</p>
 <ul>
-<li>Most states have a median household income between $55,000 and $75,000</li>
-<li>There is a slight positive skew, with a few states having notably high median incomes</li>
-<li>The mean income across states is higher than the median, confirming the positive skew</li>
-</ul></section><section id="ordered-bar-chart-income-by-state" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="ordered-bar-chart-income-by-state">
-<span class="header-section-number">2.4</span> Ordered Bar Chart: Income by State</h2>
-<p>To examine the income levels for each individual state, we’ll create an ordered bar chart:</p>
+<li>The distribution is heavily right-skewed, with most countries emitting less than 10 tonnes per capita</li>
+<li>A small number of countries, primarily oil-producing nations, have significantly higher emissions</li>
+<li>The mean (9.5 tonnes) is considerably higher than the median (7.2 tonnes), confirming the right skew</li>
+<li>There appears to be a cluster of very high emitters (above 15 tonnes), separated from the main distribution</li>
+</ul></section><section id="ordered-bar-chart-emissions-by-country" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="ordered-bar-chart-emissions-by-country">
+<span class="header-section-number">2.4</span> Ordered Bar Chart: Emissions by Country</h2>
+<p>To examine emission levels for each individual country, we’ll create an ordered bar chart:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Create ordered bar chart</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">ggplot</span>(income_data, <span class="fu">aes</span>(<span class="at">x =</span> state_ordered, <span class="at">y =</span> median_income, <span class="at">fill =</span> income_category)) <span class="sc">+</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Create ordered bar chart</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">ggplot</span>(emissions_data, <span class="fu">aes</span>(<span class="at">x =</span> country_ordered, <span class="at">y =</span> co2_per_capita, <span class="at">fill =</span> emissions_category)) <span class="sc">+</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a>  <span class="co"># Add bars</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a>  <span class="co"># Flip coordinates for better readability</span></span>
 <span id="cb4-6"><a href="#cb4-6"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a>  <span class="co"># Use a color palette based on income categories</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>  <span class="co"># Use a color palette based on emissions categories</span></span>
 <span id="cb4-8"><a href="#cb4-8"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">begin =</span> <span class="fl">0.1</span>, <span class="at">end =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a>  <span class="co"># Scale y-axis to show as dollars</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">dollar_format</span>(), </span>
-<span id="cb4-11"><a href="#cb4-11"></a>                    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">90000</span>, <span class="at">by =</span> <span class="dv">15000</span>)) <span class="sc">+</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a>  <span class="co"># Add labels</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-14"><a href="#cb4-14"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by State"</span>,</span>
-<span id="cb4-15"><a href="#cb4-15"></a>    <span class="at">subtitle =</span> <span class="st">"States Ordered from Lowest to Highest Income"</span>,</span>
-<span id="cb4-16"><a href="#cb4-16"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
-<span id="cb4-17"><a href="#cb4-17"></a>    <span class="at">y =</span> <span class="st">"Median Household Income"</span>,</span>
-<span id="cb4-18"><a href="#cb4-18"></a>    <span class="at">fill =</span> <span class="st">"Income Category"</span>,</span>
-<span id="cb4-19"><a href="#cb4-19"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, American Community Survey, 2019"</span></span>
-<span id="cb4-20"><a href="#cb4-20"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-21"><a href="#cb4-21"></a>  <span class="co"># Apply the professional theme</span></span>
-<span id="cb4-22"><a href="#cb4-22"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-9"><a href="#cb4-9"></a>  <span class="co"># Add labels</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    <span class="at">title =</span> <span class="st">"CO2 Emissions Per Capita by Country"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    <span class="at">subtitle =</span> <span class="st">"Countries Ordered from Lowest to Highest Emissions"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb4-14"><a href="#cb4-14"></a>    <span class="at">y =</span> <span class="st">"CO2 Emissions (tonnes per capita)"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15"></a>    <span class="at">fill =</span> <span class="st">"Emissions Category"</span>,</span>
+<span id="cb4-16"><a href="#cb4-16"></a>    <span class="at">caption =</span> <span class="st">"Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a>  <span class="co"># Apply the professional theme</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="bw-uni_files/figure-html/barchart-visualization-1.png" class="img-fluid figure-img" width="3000"></p>
+<figure class="figure"><p><img src="bw-uni_files/figure-html/barchart-visualization-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>The ordered bar chart reveals:</p>
 <ul>
-<li>A clear ranking of states by median household income</li>
-<li>Mississippi has the lowest median income at approximately $45,792</li>
-<li>Maryland has the highest median income at approximately $86,738</li>
-<li>There’s a significant gap (nearly $41,000) between the highest and lowest states</li>
-</ul></section><section id="regional-analysis-income-distribution-by-region" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="regional-analysis-income-distribution-by-region">
-<span class="header-section-number">2.5</span> Regional Analysis: Income Distribution by Region</h2>
-<p>Let’s examine how income distributions vary across different regions of the United States:</p>
+<li>A clear ranking of countries by CO2 emissions per capita</li>
+<li>The Democratic Republic of Congo has the lowest emissions at approximately 0.04 tonnes per capita</li>
+<li>Qatar has the highest emissions at approximately 32.4 tonnes per capita</li>
+<li>There’s a massive disparity (over 800-fold difference) between the highest and lowest emitting countries</li>
+<li>Oil-producing Gulf states dominate the highest emissions category</li>
+<li>Most developing countries fall in the low or very low emissions categories</li>
+</ul></section><section id="regional-analysis-emissions-distribution-by-region" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="regional-analysis-emissions-distribution-by-region">
+<span class="header-section-number">2.5</span> Regional Analysis: Emissions Distribution by Region</h2>
+<p>Let’s examine how emissions distributions vary across different regions of the world:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Create boxplot by region</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">ggplot</span>(income_data, <span class="fu">aes</span>(<span class="at">x =</span> region, <span class="at">y =</span> median_income, <span class="at">fill =</span> region)) <span class="sc">+</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Create boxplot by region</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">ggplot</span>(emissions_data, <span class="fu">aes</span>(<span class="at">x =</span> region, <span class="at">y =</span> co2_per_capita, <span class="at">fill =</span> region)) <span class="sc">+</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>  <span class="co"># Add boxplot</span></span>
 <span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width =</span> <span class="fl">0.6</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
 <span id="cb5-5"><a href="#cb5-5"></a>  <span class="co"># Add individual data points</span></span>
 <span id="cb5-6"><a href="#cb5-6"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.15</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb5-7"><a href="#cb5-7"></a>  <span class="co"># Use a vibrant color palette</span></span>
 <span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">"turbo"</span>, <span class="at">begin =</span> <span class="fl">0.1</span>, <span class="at">end =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>  <span class="co"># Scale y-axis to show as dollars</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">dollar_format</span>(), </span>
-<span id="cb5-11"><a href="#cb5-11"></a>                    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">40000</span>, <span class="dv">90000</span>, <span class="at">by =</span> <span class="dv">10000</span>)) <span class="sc">+</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a>  <span class="co"># Add labels</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-14"><a href="#cb5-14"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by Region"</span>,</span>
-<span id="cb5-15"><a href="#cb5-15"></a>    <span class="at">subtitle =</span> <span class="st">"Boxplots with Individual State Data Points"</span>,</span>
-<span id="cb5-16"><a href="#cb5-16"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
-<span id="cb5-17"><a href="#cb5-17"></a>    <span class="at">y =</span> <span class="st">"Median Household Income"</span>,</span>
-<span id="cb5-18"><a href="#cb5-18"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, American Community Survey, 2019"</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a>  <span class="co"># Remove legend since it's redundant with x-axis</span></span>
-<span id="cb5-21"><a href="#cb5-21"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a>  <span class="co"># Apply the professional theme</span></span>
-<span id="cb5-23"><a href="#cb5-23"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-9"><a href="#cb5-9"></a>  <span class="co"># Add labels</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    <span class="at">title =</span> <span class="st">"CO2 Emissions Per Capita by Region"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    <span class="at">subtitle =</span> <span class="st">"Boxplots with Individual Country Data Points"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb5-14"><a href="#cb5-14"></a>    <span class="at">y =</span> <span class="st">"CO2 Emissions (tonnes per capita)"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15"></a>    <span class="at">caption =</span> <span class="st">"Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a>  <span class="co"># Remove legend since it's redundant with x-axis</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a>  <span class="co"># Apply the professional theme</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="bw-uni_files/figure-html/boxplot-visualization-1.png" class="img-fluid figure-img" width="3000"></p>
+<figure class="figure"><p><img src="bw-uni_files/figure-html/boxplot-visualization-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>The regional boxplot visualization shows:</p>
 <ul>
-<li>The Northeast has the highest median income overall, followed by the West</li>
-<li>The South has the lowest median income and also shows the most variability</li>
-<li>The Midwest demonstrates the most consistency, with states clustering closely together</li>
-<li>Outliers are present in multiple regions, indicating significant intra-regional differences</li>
-</ul></section><section id="density-plot-comparative-income-distributions" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="density-plot-comparative-income-distributions">
-<span class="header-section-number">2.6</span> Density Plot: Comparative Income Distributions</h2>
-<p>For our final visualization, we’ll create a density plot showing the distribution of incomes by region:</p>
+<li>The Middle East &amp; North Africa region has the highest median emissions, driven by oil-producing Gulf states</li>
+<li>Europe and the Americas have similar median emissions, though the Americas show more variability</li>
+<li>Asia &amp; Pacific shows high variability, containing both high emitters like Australia and low emitters like Bangladesh</li>
+<li>Sub-Saharan Africa has the lowest emissions overall</li>
+<li>There are notable outliers in several regions, particularly in the Middle East &amp; North Africa</li>
+</ul></section><section id="density-plot-comparative-emissions-distributions" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="density-plot-comparative-emissions-distributions">
+<span class="header-section-number">2.6</span> Density Plot: Comparative Emissions Distributions</h2>
+<p>For our final visualization, we’ll create a density plot showing the distribution of emissions by region:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Create density plot by region</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">ggplot</span>(income_data, <span class="fu">aes</span>(<span class="at">x =</span> median_income, <span class="at">fill =</span> region)) <span class="sc">+</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Create density plot by region</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">ggplot</span>(emissions_data, <span class="fu">aes</span>(<span class="at">x =</span> co2_per_capita, <span class="at">fill =</span> region)) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>  <span class="co"># Add density curves</span></span>
 <span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
 <span id="cb6-5"><a href="#cb6-5"></a>  <span class="co"># Add rug plot</span></span>
@@ -538,70 +547,110 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-7"><a href="#cb6-7"></a>  <span class="co"># Use a vibrant color palette</span></span>
 <span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">"turbo"</span>, <span class="at">begin =</span> <span class="fl">0.1</span>, <span class="at">end =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
 <span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">scale_color_viridis_d</span>(<span class="at">option =</span> <span class="st">"turbo"</span>, <span class="at">begin =</span> <span class="fl">0.1</span>, <span class="at">end =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a>  <span class="co"># Scale x-axis to show as dollars</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">dollar_format</span>(), </span>
-<span id="cb6-12"><a href="#cb6-12"></a>                    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">40000</span>, <span class="dv">90000</span>, <span class="at">by =</span> <span class="dv">10000</span>)) <span class="sc">+</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a>  <span class="co"># Add labels</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a>  <span class="fu">labs</span>(</span>
-<span id="cb6-15"><a href="#cb6-15"></a>    <span class="at">title =</span> <span class="st">"Distribution of Median Household Income by Region"</span>,</span>
-<span id="cb6-16"><a href="#cb6-16"></a>    <span class="at">subtitle =</span> <span class="st">"Density Curves Showing Regional Patterns"</span>,</span>
-<span id="cb6-17"><a href="#cb6-17"></a>    <span class="at">x =</span> <span class="st">"Median Household Income"</span>,</span>
-<span id="cb6-18"><a href="#cb6-18"></a>    <span class="at">y =</span> <span class="st">"Density"</span>,</span>
-<span id="cb6-19"><a href="#cb6-19"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, American Community Survey, 2019"</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a>  <span class="co"># Use a shared legend for fill and color</span></span>
-<span id="cb6-22"><a href="#cb6-22"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a>  <span class="co"># Apply the professional theme</span></span>
-<span id="cb6-24"><a href="#cb6-24"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-10"><a href="#cb6-10"></a>  <span class="co"># Add labels</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-12"><a href="#cb6-12"></a>    <span class="at">title =</span> <span class="st">"Distribution of CO2 Emissions Per Capita by Region"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13"></a>    <span class="at">subtitle =</span> <span class="st">"Density Curves Showing Regional Patterns"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14"></a>    <span class="at">x =</span> <span class="st">"CO2 Emissions (tonnes per capita)"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15"></a>    <span class="at">y =</span> <span class="st">"Density"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16"></a>    <span class="at">caption =</span> <span class="st">"Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb6-17"><a href="#cb6-17"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a>  <span class="co"># Use a shared legend for fill and color</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb6-20"><a href="#cb6-20"></a>  <span class="co"># Apply the professional theme</span></span>
+<span id="cb6-21"><a href="#cb6-21"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="bw-uni_files/figure-html/density-visualization-1.png" class="img-fluid figure-img" width="3000"></p>
+<figure class="figure"><p><img src="bw-uni_files/figure-html/density-visualization-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>The density plot reveals:</p>
 <ul>
-<li>The Northeast shows a bimodal distribution, indicating two clusters of states</li>
-<li>The South has the widest spread, confirming its high variability</li>
-<li>The West shows a relatively flat distribution, suggesting diverse income levels</li>
-<li>The Midwest has the most compact distribution, centered around $60,000</li>
-</ul></section><section id="key-findings" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="key-findings">
-<span class="header-section-number">2.7</span> Key Findings</h2>
-<p>Our univariate analysis of median household income across U.S. states reveals several important patterns:</p>
+<li>The Middle East &amp; North Africa shows a bimodal distribution, with oil-producing states forming a high-emissions peak</li>
+<li>Sub-Saharan Africa has a tight distribution concentrated at very low emission levels</li>
+<li>The Americas and Europe show similar patterns with moderate emissions</li>
+<li>Asia &amp; Pacific shows the widest spread, reflecting diverse development levels across the region</li>
+</ul></section><section id="population-weighted-analysis" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="population-weighted-analysis">
+<span class="header-section-number">2.7</span> Population-Weighted Analysis</h2>
+<p>To add context to the emissions data, let’s examine how emissions relate to population size:</p>
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Create bubble chart</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">ggplot</span>(emissions_data, <span class="fu">aes</span>(<span class="at">x =</span> country_ordered, <span class="at">y =</span> co2_per_capita, <span class="at">size =</span> population_millions)) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="co"># Add bubbles</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> region), <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="co"># Flip coordinates for better readability</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="co"># Use a vibrant color palette</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">scale_color_viridis_d</span>(<span class="at">option =</span> <span class="st">"turbo"</span>, <span class="at">begin =</span> <span class="fl">0.1</span>, <span class="at">end =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>  <span class="co"># Customize size scale</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>  <span class="fu">scale_size_continuous</span>(</span>
+<span id="cb7-11"><a href="#cb7-11"></a>    <span class="at">name =</span> <span class="st">"Population (millions)"</span>,</span>
+<span id="cb7-12"><a href="#cb7-12"></a>    <span class="at">range =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">15</span>),</span>
+<span id="cb7-13"><a href="#cb7-13"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">200</span>, <span class="dv">1000</span>)</span>
+<span id="cb7-14"><a href="#cb7-14"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a>  <span class="co"># Add labels</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-17"><a href="#cb7-17"></a>    <span class="at">title =</span> <span class="st">"CO2 Emissions Per Capita by Country"</span>,</span>
+<span id="cb7-18"><a href="#cb7-18"></a>    <span class="at">subtitle =</span> <span class="st">"Bubble Size Represents Population"</span>,</span>
+<span id="cb7-19"><a href="#cb7-19"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb7-20"><a href="#cb7-20"></a>    <span class="at">y =</span> <span class="st">"CO2 Emissions (tonnes per capita)"</span>,</span>
+<span id="cb7-21"><a href="#cb7-21"></a>    <span class="at">color =</span> <span class="st">"Region"</span>,</span>
+<span id="cb7-22"><a href="#cb7-22"></a>    <span class="at">caption =</span> <span class="st">"Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb7-23"><a href="#cb7-23"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-24"><a href="#cb7-24"></a>  <span class="co"># Apply the professional theme</span></span>
+<span id="cb7-25"><a href="#cb7-25"></a>  <span class="fu">theme_professional</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="bw-uni_files/figure-html/bubble-visualization-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This visualization adds an important dimension to our analysis:</p>
+<ul>
+<li>Many high-emission countries have relatively small populations (e.g., Qatar, Kuwait)</li>
+<li>Large population countries like India, China, and Bangladesh span different emission levels</li>
+<li>When considering total emissions impact, both per capita rate and population size must be considered</li>
+<li>The United States stands out with both large population and high per capita emissions</li>
+<li>China has moderate per capita emissions but enormous total emissions due to its population size</li>
+</ul></section><section id="key-findings" class="level2" data-number="2.8"><h2 data-number="2.8" class="anchored" data-anchor-id="key-findings">
+<span class="header-section-number">2.8</span> Key Findings</h2>
+<p>Our univariate analysis of CO2 emissions per capita reveals several important patterns:</p>
 <ol type="1">
-<li><p><strong>Overall Distribution</strong>: The distribution of median household income across states shows a positive skew, with most states falling between $55,000 and $75,000.</p></li>
-<li><p><strong>State Rankings</strong>: There is a substantial gap (approximately $41,000) between the highest income state (Maryland at ~$86,738) and the lowest (Mississippi at ~$45,792).</p></li>
+<li><p><strong>Distribution Shape</strong>: The distribution of CO2 emissions per capita is heavily right-skewed, with a few high-emitting outliers and most countries having relatively low emissions.</p></li>
 <li>
 <p><strong>Regional Patterns</strong>:</p>
 <ul>
-<li>The Northeast has the highest typical incomes but shows a bimodal distribution</li>
-<li>The South has the lowest typical incomes and the highest variability</li>
-<li>The Midwest shows the most consistency in income levels</li>
-<li>The West demonstrates diverse income levels across states</li>
+<li>The Middle East &amp; North Africa, particularly Gulf states, has the highest emissions per capita</li>
+<li>Sub-Saharan Africa has the lowest emissions per capita</li>
+<li>Europe and the Americas have moderate emissions with some variability</li>
+<li>Asia &amp; Pacific shows the widest range, from very low to high emitters</li>
 </ul>
 </li>
-<li><p><strong>Income Clustering</strong>: States tend to cluster into distinct income categories, with clear separation between high-income and low-income states.</p></li>
-</ol></section><section id="technical-implementation" class="level2" data-number="2.8"><h2 data-number="2.8" class="anchored" data-anchor-id="technical-implementation">
-<span class="header-section-number">2.8</span> Technical Implementation</h2>
+<li><p><strong>Global Inequality</strong>: There is an 800-fold difference between the highest and lowest emitting countries, highlighting extreme inequality in emissions.</p></li>
+<li><p><strong>Population Context</strong>: Many high-emission countries have relatively small populations, while some large population countries have relatively low per capita emissions but significant total emissions.</p></li>
+</ol></section><section id="technical-implementation" class="level2" data-number="2.9"><h2 data-number="2.9" class="anchored" data-anchor-id="technical-implementation">
+<span class="header-section-number">2.9</span> Technical Implementation</h2>
 <p>This professional visualization demonstrates several advanced techniques:</p>
 <ul>
 <li>
-<strong>Multiple visualization approaches</strong> for the same variable (histogram, bar chart, boxplot, density plot)</li>
+<strong>Multiple visualization approaches</strong> for the same variable (histogram, bar chart, boxplot, density plot, bubble chart)</li>
 <li>
-<strong>Statistical annotations</strong> including mean indicators</li>
+<strong>Statistical annotations</strong> including mean and median indicators</li>
 <li>
 <strong>Thoughtful ordering</strong> of categorical data for clearer patterns</li>
 <li>
 <strong>Regional comparative analysis</strong> to reveal geographic patterns</li>
 <li>
-<strong>Appropriate scales</strong> with dollar formatting for better interpretation</li>
+<strong>Population context</strong> using bubble sizes to represent magnitude</li>
 <li>
 <strong>Layered visualizations</strong> combining multiple geoms (histogram with density curve, boxplots with jittered points)</li>
 <li>
 <strong>Consistent professional styling</strong> with custom theming</li>
 </ul>
-<p>For future enhancements, we could explore interactive elements, geographic mapping, or time-series analysis of income changes over multiple years.</p>
+<p>For future enhancements, we could explore time series data to examine emissions trends over multiple years, or incorporate additional variables such as GDP per capita or energy mix to better understand emissions drivers.</p>
 
 
 <!-- -->
@@ -1231,309 +1280,338 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../bw/bw-bi.html" class="pagination-link" aria-label="Bivariate Viz">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../bw/bw-bi.html" class="pagination-link" aria-label="Bivariate Visualization-Best Work">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Visualization-Best Work</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> "Univariate Viz"</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co">  html:</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="co">    theme: cosmo</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="co">    code-fold: true</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="co">    code-tools: true</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="co">    toc: true</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="co">    fig-width: 10</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a><span class="co">    fig-height: 6</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="co">    fig-dpi: 300</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="an">editor:</span><span class="co"> visual</span></span>
-<span id="cb7-13"><a href="#cb7-13"></a><span class="co">---</span></span>
-<span id="cb7-14"><a href="#cb7-14"></a></span>
-<span id="cb7-15"><a href="#cb7-15"></a><span class="in">```{r setup, include=FALSE}</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a><span class="in">knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)</span></span>
-<span id="cb7-17"><a href="#cb7-17"></a><span class="in"># Load necessary libraries</span></span>
-<span id="cb7-18"><a href="#cb7-18"></a><span class="in">library(tidyverse)</span></span>
-<span id="cb7-19"><a href="#cb7-19"></a><span class="in">library(ggplot2)</span></span>
-<span id="cb7-20"><a href="#cb7-20"></a><span class="in">library(viridis)</span></span>
-<span id="cb7-21"><a href="#cb7-21"></a><span class="in">library(scales)</span></span>
-<span id="cb7-22"><a href="#cb7-22"></a><span class="in">library(knitr)</span></span>
-<span id="cb7-23"><a href="#cb7-23"></a><span class="in">```</span></span>
-<span id="cb7-24"><a href="#cb7-24"></a></span>
-<span id="cb7-25"><a href="#cb7-25"></a><span class="fu"># Professional Univariate Visualization</span></span>
-<span id="cb7-26"><a href="#cb7-26"></a></span>
-<span id="cb7-27"><a href="#cb7-27"></a>This document presents a sophisticated univariate visualization that explores the distribution of household income across different states in the United States. Through careful data analysis and visual design, we'll create an informative and aesthetically pleasing visualization that effectively communicates patterns in the data.</span>
-<span id="cb7-28"><a href="#cb7-28"></a></span>
-<span id="cb7-29"><a href="#cb7-29"></a><span class="fu">## Data Preparation</span></span>
-<span id="cb7-30"><a href="#cb7-30"></a></span>
-<span id="cb7-31"><a href="#cb7-31"></a>We'll use the 2019 American Community Survey (ACS) data on median household income by state.</span>
-<span id="cb7-32"><a href="#cb7-32"></a></span>
-<span id="cb7-33"><a href="#cb7-33"></a><span class="in">```{r data-creation}</span></span>
-<span id="cb7-34"><a href="#cb7-34"></a><span class="in"># Create dataset of median household income by state</span></span>
-<span id="cb7-35"><a href="#cb7-35"></a><span class="in">income_data &lt;- data.frame(</span></span>
-<span id="cb7-36"><a href="#cb7-36"></a><span class="in">  state = c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", </span></span>
-<span id="cb7-37"><a href="#cb7-37"></a><span class="in">            "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", </span></span>
-<span id="cb7-38"><a href="#cb7-38"></a><span class="in">            "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", </span></span>
-<span id="cb7-39"><a href="#cb7-39"></a><span class="in">            "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", </span></span>
-<span id="cb7-40"><a href="#cb7-40"></a><span class="in">            "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", </span></span>
-<span id="cb7-41"><a href="#cb7-41"></a><span class="in">            "New Hampshire", "New Jersey", "New Mexico", "New York", </span></span>
-<span id="cb7-42"><a href="#cb7-42"></a><span class="in">            "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", </span></span>
-<span id="cb7-43"><a href="#cb7-43"></a><span class="in">            "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", </span></span>
-<span id="cb7-44"><a href="#cb7-44"></a><span class="in">            "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", </span></span>
-<span id="cb7-45"><a href="#cb7-45"></a><span class="in">            "West Virginia", "Wisconsin", "Wyoming"),</span></span>
-<span id="cb7-46"><a href="#cb7-46"></a><span class="in">  median_income = c(51734, 75463, 62055, 48952, 80440, 77127, 78833, 68287, </span></span>
-<span id="cb7-47"><a href="#cb7-47"></a><span class="in">                    59227, 61980, 83102, 60999, 69187, 57603, 61691, 62087, </span></span>
-<span id="cb7-48"><a href="#cb7-48"></a><span class="in">                    52295, 51073, 58924, 86738, 85843, 59584, 74593, 45792, </span></span>
-<span id="cb7-49"><a href="#cb7-49"></a><span class="in">                    57409, 57153, 63229, 63276, 77933, 85751, 51945, 72108, </span></span>
-<span id="cb7-50"><a href="#cb7-50"></a><span class="in">                    57341, 64577, 58642, 54449, 67058, 63463, 71169, 56227, </span></span>
-<span id="cb7-51"><a href="#cb7-51"></a><span class="in">                    59533, 56071, 64034, 75780, 63001, 76456, 78687, 48850, </span></span>
-<span id="cb7-52"><a href="#cb7-52"></a><span class="in">                    64168, 65003)</span></span>
-<span id="cb7-53"><a href="#cb7-53"></a><span class="in">)</span></span>
-<span id="cb7-54"><a href="#cb7-54"></a></span>
-<span id="cb7-55"><a href="#cb7-55"></a><span class="in"># Add region classification</span></span>
-<span id="cb7-56"><a href="#cb7-56"></a><span class="in">income_data &lt;- income_data %&gt;%</span></span>
-<span id="cb7-57"><a href="#cb7-57"></a><span class="in">  mutate(</span></span>
-<span id="cb7-58"><a href="#cb7-58"></a><span class="in">    region = case_when(</span></span>
-<span id="cb7-59"><a href="#cb7-59"></a><span class="in">      state %in% c("Connecticut", "Maine", "Massachusetts", "New Hampshire", </span></span>
-<span id="cb7-60"><a href="#cb7-60"></a><span class="in">                  "Rhode Island", "Vermont", "New Jersey", "New York", </span></span>
-<span id="cb7-61"><a href="#cb7-61"></a><span class="in">                  "Pennsylvania") ~ "Northeast",</span></span>
-<span id="cb7-62"><a href="#cb7-62"></a><span class="in">      state %in% c("Illinois", "Indiana", "Michigan", "Ohio", "Wisconsin", </span></span>
-<span id="cb7-63"><a href="#cb7-63"></a><span class="in">                  "Iowa", "Kansas", "Minnesota", "Missouri", "Nebraska", </span></span>
-<span id="cb7-64"><a href="#cb7-64"></a><span class="in">                  "North Dakota", "South Dakota") ~ "Midwest",</span></span>
-<span id="cb7-65"><a href="#cb7-65"></a><span class="in">      state %in% c("Delaware", "Florida", "Georgia", "Maryland", "North Carolina", </span></span>
-<span id="cb7-66"><a href="#cb7-66"></a><span class="in">                  "South Carolina", "Virginia", "West Virginia", "Alabama", </span></span>
-<span id="cb7-67"><a href="#cb7-67"></a><span class="in">                  "Kentucky", "Mississippi", "Tennessee", "Arkansas", </span></span>
-<span id="cb7-68"><a href="#cb7-68"></a><span class="in">                  "Louisiana", "Oklahoma", "Texas") ~ "South",</span></span>
-<span id="cb7-69"><a href="#cb7-69"></a><span class="in">      TRUE ~ "West"</span></span>
-<span id="cb7-70"><a href="#cb7-70"></a><span class="in">    ),</span></span>
-<span id="cb7-71"><a href="#cb7-71"></a><span class="in">    # Create income categories</span></span>
-<span id="cb7-72"><a href="#cb7-72"></a><span class="in">    income_category = cut(median_income, </span></span>
-<span id="cb7-73"><a href="#cb7-73"></a><span class="in">                         breaks = c(0, 50000, 60000, 70000, 80000, Inf),</span></span>
-<span id="cb7-74"><a href="#cb7-74"></a><span class="in">                         labels = c("Very Low", "Low", "Medium", "High", "Very High"),</span></span>
-<span id="cb7-75"><a href="#cb7-75"></a><span class="in">                         right = FALSE),</span></span>
-<span id="cb7-76"><a href="#cb7-76"></a><span class="in">    # Create a variable for ordering states by income</span></span>
-<span id="cb7-77"><a href="#cb7-77"></a><span class="in">    state_ordered = reorder(state, median_income)</span></span>
-<span id="cb7-78"><a href="#cb7-78"></a><span class="in">  )</span></span>
-<span id="cb7-79"><a href="#cb7-79"></a><span class="in">```</span></span>
-<span id="cb7-80"><a href="#cb7-80"></a></span>
-<span id="cb7-81"><a href="#cb7-81"></a><span class="fu">## Custom Theme for Professional Visualization</span></span>
-<span id="cb7-82"><a href="#cb7-82"></a></span>
-<span id="cb7-83"><a href="#cb7-83"></a>Creating a consistent visual style is crucial for professional visualizations. We'll define a custom theme that will be applied to all our plots:</span>
-<span id="cb7-84"><a href="#cb7-84"></a></span>
-<span id="cb7-85"><a href="#cb7-85"></a><span class="in">```{r custom-theme}</span></span>
-<span id="cb7-86"><a href="#cb7-86"></a><span class="in"># Create a custom theme for professional visualizations</span></span>
-<span id="cb7-87"><a href="#cb7-87"></a><span class="in">theme_professional &lt;- function() {</span></span>
-<span id="cb7-88"><a href="#cb7-88"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb7-89"><a href="#cb7-89"></a><span class="in">  theme(</span></span>
-<span id="cb7-90"><a href="#cb7-90"></a><span class="in">    text = element_text(family = "sans", color = "#2b2b2b"),</span></span>
-<span id="cb7-91"><a href="#cb7-91"></a><span class="in">    plot.title = element_text(size = 18, face = "bold", hjust = 0.5),</span></span>
-<span id="cb7-92"><a href="#cb7-92"></a><span class="in">    plot.subtitle = element_text(size = 12, hjust = 0.5, margin = margin(b = 15)),</span></span>
-<span id="cb7-93"><a href="#cb7-93"></a><span class="in">    plot.caption = element_text(size = 9, color = "#5c5c5c", hjust = 1),</span></span>
-<span id="cb7-94"><a href="#cb7-94"></a><span class="in">    plot.background = element_rect(fill = "#f9f9f9", color = NA),</span></span>
-<span id="cb7-95"><a href="#cb7-95"></a><span class="in">    panel.grid.major = element_line(color = "#e0e0e0"),</span></span>
-<span id="cb7-96"><a href="#cb7-96"></a><span class="in">    panel.grid.minor = element_line(color = "#f0f0f0"),</span></span>
-<span id="cb7-97"><a href="#cb7-97"></a><span class="in">    axis.title = element_text(size = 12, face = "bold"),</span></span>
-<span id="cb7-98"><a href="#cb7-98"></a><span class="in">    axis.text = element_text(size = 10),</span></span>
-<span id="cb7-99"><a href="#cb7-99"></a><span class="in">    axis.text.y = element_text(size = 8),</span></span>
-<span id="cb7-100"><a href="#cb7-100"></a><span class="in">    legend.title = element_text(size = 11, face = "bold"),</span></span>
-<span id="cb7-101"><a href="#cb7-101"></a><span class="in">    legend.text = element_text(size = 10),</span></span>
-<span id="cb7-102"><a href="#cb7-102"></a><span class="in">    legend.background = element_rect(fill = "#f9f9f9", color = NA),</span></span>
-<span id="cb7-103"><a href="#cb7-103"></a><span class="in">    strip.text = element_text(size = 11, face = "bold")</span></span>
-<span id="cb7-104"><a href="#cb7-104"></a><span class="in">  )</span></span>
-<span id="cb7-105"><a href="#cb7-105"></a><span class="in">}</span></span>
-<span id="cb7-106"><a href="#cb7-106"></a><span class="in">```</span></span>
-<span id="cb7-107"><a href="#cb7-107"></a></span>
-<span id="cb7-108"><a href="#cb7-108"></a><span class="fu">## Histogram: Distribution of Median Household Income</span></span>
-<span id="cb7-109"><a href="#cb7-109"></a></span>
-<span id="cb7-110"><a href="#cb7-110"></a>Our first visualization explores the overall distribution of median household income across all states:</span>
-<span id="cb7-111"><a href="#cb7-111"></a></span>
-<span id="cb7-112"><a href="#cb7-112"></a><span class="in">```{r histogram-visualization}</span></span>
-<span id="cb7-113"><a href="#cb7-113"></a><span class="in"># Create histogram</span></span>
-<span id="cb7-114"><a href="#cb7-114"></a><span class="in">ggplot(income_data, aes(x = median_income)) +</span></span>
-<span id="cb7-115"><a href="#cb7-115"></a><span class="in">  # Add histogram bars</span></span>
-<span id="cb7-116"><a href="#cb7-116"></a><span class="in">  geom_histogram(binwidth = 5000, </span></span>
-<span id="cb7-117"><a href="#cb7-117"></a><span class="in">                fill = "#3182bd", </span></span>
-<span id="cb7-118"><a href="#cb7-118"></a><span class="in">                color = "white",</span></span>
-<span id="cb7-119"><a href="#cb7-119"></a><span class="in">                alpha = 0.8) +</span></span>
-<span id="cb7-120"><a href="#cb7-120"></a><span class="in">  # Add a density curve</span></span>
-<span id="cb7-121"><a href="#cb7-121"></a><span class="in">  geom_density(aes(y = 5000 * ..density..), </span></span>
-<span id="cb7-122"><a href="#cb7-122"></a><span class="in">              color = "#e41a1c", </span></span>
-<span id="cb7-123"><a href="#cb7-123"></a><span class="in">              size = 1) +</span></span>
-<span id="cb7-124"><a href="#cb7-124"></a><span class="in">  # Add a rug plot at the bottom</span></span>
-<span id="cb7-125"><a href="#cb7-125"></a><span class="in">  geom_rug(color = "#636363", alpha = 0.5) +</span></span>
-<span id="cb7-126"><a href="#cb7-126"></a><span class="in">  # Add mean line</span></span>
-<span id="cb7-127"><a href="#cb7-127"></a><span class="in">  geom_vline(aes(xintercept = mean(median_income)),</span></span>
-<span id="cb7-128"><a href="#cb7-128"></a><span class="in">            color = "#e41a1c", </span></span>
-<span id="cb7-129"><a href="#cb7-129"></a><span class="in">            linetype = "dashed", </span></span>
-<span id="cb7-130"><a href="#cb7-130"></a><span class="in">            size = 1) +</span></span>
-<span id="cb7-131"><a href="#cb7-131"></a><span class="in">  # Add text annotation for mean</span></span>
-<span id="cb7-132"><a href="#cb7-132"></a><span class="in">  annotate("text", </span></span>
-<span id="cb7-133"><a href="#cb7-133"></a><span class="in">           x = mean(income_data$median_income) + 3000, </span></span>
-<span id="cb7-134"><a href="#cb7-134"></a><span class="in">           y = 12, </span></span>
-<span id="cb7-135"><a href="#cb7-135"></a><span class="in">           label = paste("Mean:", dollar(mean(income_data$median_income))), </span></span>
-<span id="cb7-136"><a href="#cb7-136"></a><span class="in">           color = "#e41a1c",</span></span>
-<span id="cb7-137"><a href="#cb7-137"></a><span class="in">           fontface = "bold") +</span></span>
-<span id="cb7-138"><a href="#cb7-138"></a><span class="in">  # Scale x-axis to show as dollars</span></span>
-<span id="cb7-139"><a href="#cb7-139"></a><span class="in">  scale_x_continuous(labels = dollar_format(), </span></span>
-<span id="cb7-140"><a href="#cb7-140"></a><span class="in">                    breaks = seq(45000, 90000, by = 10000)) +</span></span>
-<span id="cb7-141"><a href="#cb7-141"></a><span class="in">  # Add labels</span></span>
-<span id="cb7-142"><a href="#cb7-142"></a><span class="in">  labs(</span></span>
-<span id="cb7-143"><a href="#cb7-143"></a><span class="in">    title = "Distribution of Median Household Income by State",</span></span>
-<span id="cb7-144"><a href="#cb7-144"></a><span class="in">    subtitle = "Data from the 2019 American Community Survey",</span></span>
-<span id="cb7-145"><a href="#cb7-145"></a><span class="in">    x = "Median Household Income",</span></span>
-<span id="cb7-146"><a href="#cb7-146"></a><span class="in">    y = "Number of States",</span></span>
-<span id="cb7-147"><a href="#cb7-147"></a><span class="in">    caption = "Source: U.S. Census Bureau, American Community Survey, 2019"</span></span>
-<span id="cb7-148"><a href="#cb7-148"></a><span class="in">  ) +</span></span>
-<span id="cb7-149"><a href="#cb7-149"></a><span class="in">  # Apply the professional theme</span></span>
-<span id="cb7-150"><a href="#cb7-150"></a><span class="in">  theme_professional()</span></span>
-<span id="cb7-151"><a href="#cb7-151"></a><span class="in">```</span></span>
-<span id="cb7-152"><a href="#cb7-152"></a></span>
-<span id="cb7-153"><a href="#cb7-153"></a>The histogram above shows the distribution of median household income across all U.S. states. We can observe that:</span>
-<span id="cb7-154"><a href="#cb7-154"></a></span>
-<span id="cb7-155"><a href="#cb7-155"></a><span class="ss">- </span>Most states have a median household income between $55,000 and $75,000</span>
-<span id="cb7-156"><a href="#cb7-156"></a><span class="ss">- </span>There is a slight positive skew, with a few states having notably high median incomes</span>
-<span id="cb7-157"><a href="#cb7-157"></a><span class="ss">- </span>The mean income across states is higher than the median, confirming the positive skew</span>
-<span id="cb7-158"><a href="#cb7-158"></a></span>
-<span id="cb7-159"><a href="#cb7-159"></a><span class="fu">## Ordered Bar Chart: Income by State</span></span>
-<span id="cb7-160"><a href="#cb7-160"></a></span>
-<span id="cb7-161"><a href="#cb7-161"></a>To examine the income levels for each individual state, we'll create an ordered bar chart:</span>
-<span id="cb7-162"><a href="#cb7-162"></a></span>
-<span id="cb7-163"><a href="#cb7-163"></a><span class="in">```{r barchart-visualization}</span></span>
-<span id="cb7-164"><a href="#cb7-164"></a><span class="in"># Create ordered bar chart</span></span>
-<span id="cb7-165"><a href="#cb7-165"></a><span class="in">ggplot(income_data, aes(x = state_ordered, y = median_income, fill = income_category)) +</span></span>
-<span id="cb7-166"><a href="#cb7-166"></a><span class="in">  # Add bars</span></span>
-<span id="cb7-167"><a href="#cb7-167"></a><span class="in">  geom_bar(stat = "identity", width = 0.8) +</span></span>
-<span id="cb7-168"><a href="#cb7-168"></a><span class="in">  # Flip coordinates for better readability</span></span>
-<span id="cb7-169"><a href="#cb7-169"></a><span class="in">  coord_flip() +</span></span>
-<span id="cb7-170"><a href="#cb7-170"></a><span class="in">  # Use a color palette based on income categories</span></span>
-<span id="cb7-171"><a href="#cb7-171"></a><span class="in">  scale_fill_viridis_d(option = "plasma", direction = -1, begin = 0.1, end = 0.9) +</span></span>
-<span id="cb7-172"><a href="#cb7-172"></a><span class="in">  # Scale y-axis to show as dollars</span></span>
-<span id="cb7-173"><a href="#cb7-173"></a><span class="in">  scale_y_continuous(labels = dollar_format(), </span></span>
-<span id="cb7-174"><a href="#cb7-174"></a><span class="in">                    breaks = seq(0, 90000, by = 15000)) +</span></span>
-<span id="cb7-175"><a href="#cb7-175"></a><span class="in">  # Add labels</span></span>
-<span id="cb7-176"><a href="#cb7-176"></a><span class="in">  labs(</span></span>
-<span id="cb7-177"><a href="#cb7-177"></a><span class="in">    title = "Median Household Income by State",</span></span>
-<span id="cb7-178"><a href="#cb7-178"></a><span class="in">    subtitle = "States Ordered from Lowest to Highest Income",</span></span>
-<span id="cb7-179"><a href="#cb7-179"></a><span class="in">    x = NULL,</span></span>
-<span id="cb7-180"><a href="#cb7-180"></a><span class="in">    y = "Median Household Income",</span></span>
-<span id="cb7-181"><a href="#cb7-181"></a><span class="in">    fill = "Income Category",</span></span>
-<span id="cb7-182"><a href="#cb7-182"></a><span class="in">    caption = "Source: U.S. Census Bureau, American Community Survey, 2019"</span></span>
-<span id="cb7-183"><a href="#cb7-183"></a><span class="in">  ) +</span></span>
-<span id="cb7-184"><a href="#cb7-184"></a><span class="in">  # Apply the professional theme</span></span>
-<span id="cb7-185"><a href="#cb7-185"></a><span class="in">  theme_professional()</span></span>
-<span id="cb7-186"><a href="#cb7-186"></a><span class="in">```</span></span>
-<span id="cb7-187"><a href="#cb7-187"></a></span>
-<span id="cb7-188"><a href="#cb7-188"></a>The ordered bar chart reveals:</span>
-<span id="cb7-189"><a href="#cb7-189"></a></span>
-<span id="cb7-190"><a href="#cb7-190"></a><span class="ss">- </span>A clear ranking of states by median household income</span>
-<span id="cb7-191"><a href="#cb7-191"></a><span class="ss">- </span>Mississippi has the lowest median income at approximately $45,792</span>
-<span id="cb7-192"><a href="#cb7-192"></a><span class="ss">- </span>Maryland has the highest median income at approximately $86,738</span>
-<span id="cb7-193"><a href="#cb7-193"></a><span class="ss">- </span>There's a significant gap (nearly $41,000) between the highest and lowest states</span>
-<span id="cb7-194"><a href="#cb7-194"></a></span>
-<span id="cb7-195"><a href="#cb7-195"></a><span class="fu">## Regional Analysis: Income Distribution by Region</span></span>
-<span id="cb7-196"><a href="#cb7-196"></a></span>
-<span id="cb7-197"><a href="#cb7-197"></a>Let's examine how income distributions vary across different regions of the United States:</span>
-<span id="cb7-198"><a href="#cb7-198"></a></span>
-<span id="cb7-199"><a href="#cb7-199"></a><span class="in">```{r boxplot-visualization}</span></span>
-<span id="cb7-200"><a href="#cb7-200"></a><span class="in"># Create boxplot by region</span></span>
-<span id="cb7-201"><a href="#cb7-201"></a><span class="in">ggplot(income_data, aes(x = region, y = median_income, fill = region)) +</span></span>
-<span id="cb7-202"><a href="#cb7-202"></a><span class="in">  # Add boxplot</span></span>
-<span id="cb7-203"><a href="#cb7-203"></a><span class="in">  geom_boxplot(width = 0.6, alpha = 0.8) +</span></span>
-<span id="cb7-204"><a href="#cb7-204"></a><span class="in">  # Add individual data points</span></span>
-<span id="cb7-205"><a href="#cb7-205"></a><span class="in">  geom_jitter(width = 0.15, alpha = 0.6, size = 2) +</span></span>
-<span id="cb7-206"><a href="#cb7-206"></a><span class="in">  # Use a vibrant color palette</span></span>
-<span id="cb7-207"><a href="#cb7-207"></a><span class="in">  scale_fill_viridis_d(option = "turbo", begin = 0.1, end = 0.9) +</span></span>
-<span id="cb7-208"><a href="#cb7-208"></a><span class="in">  # Scale y-axis to show as dollars</span></span>
-<span id="cb7-209"><a href="#cb7-209"></a><span class="in">  scale_y_continuous(labels = dollar_format(), </span></span>
-<span id="cb7-210"><a href="#cb7-210"></a><span class="in">                    breaks = seq(40000, 90000, by = 10000)) +</span></span>
-<span id="cb7-211"><a href="#cb7-211"></a><span class="in">  # Add labels</span></span>
-<span id="cb7-212"><a href="#cb7-212"></a><span class="in">  labs(</span></span>
-<span id="cb7-213"><a href="#cb7-213"></a><span class="in">    title = "Median Household Income by Region",</span></span>
-<span id="cb7-214"><a href="#cb7-214"></a><span class="in">    subtitle = "Boxplots with Individual State Data Points",</span></span>
-<span id="cb7-215"><a href="#cb7-215"></a><span class="in">    x = NULL,</span></span>
-<span id="cb7-216"><a href="#cb7-216"></a><span class="in">    y = "Median Household Income",</span></span>
-<span id="cb7-217"><a href="#cb7-217"></a><span class="in">    caption = "Source: U.S. Census Bureau, American Community Survey, 2019"</span></span>
-<span id="cb7-218"><a href="#cb7-218"></a><span class="in">  ) +</span></span>
-<span id="cb7-219"><a href="#cb7-219"></a><span class="in">  # Remove legend since it's redundant with x-axis</span></span>
-<span id="cb7-220"><a href="#cb7-220"></a><span class="in">  guides(fill = "none") +</span></span>
-<span id="cb7-221"><a href="#cb7-221"></a><span class="in">  # Apply the professional theme</span></span>
-<span id="cb7-222"><a href="#cb7-222"></a><span class="in">  theme_professional()</span></span>
-<span id="cb7-223"><a href="#cb7-223"></a><span class="in">```</span></span>
-<span id="cb7-224"><a href="#cb7-224"></a></span>
-<span id="cb7-225"><a href="#cb7-225"></a>The regional boxplot visualization shows:</span>
-<span id="cb7-226"><a href="#cb7-226"></a></span>
-<span id="cb7-227"><a href="#cb7-227"></a><span class="ss">- </span>The Northeast has the highest median income overall, followed by the West</span>
-<span id="cb7-228"><a href="#cb7-228"></a><span class="ss">- </span>The South has the lowest median income and also shows the most variability</span>
-<span id="cb7-229"><a href="#cb7-229"></a><span class="ss">- </span>The Midwest demonstrates the most consistency, with states clustering closely together</span>
-<span id="cb7-230"><a href="#cb7-230"></a><span class="ss">- </span>Outliers are present in multiple regions, indicating significant intra-regional differences</span>
-<span id="cb7-231"><a href="#cb7-231"></a></span>
-<span id="cb7-232"><a href="#cb7-232"></a><span class="fu">## Density Plot: Comparative Income Distributions </span></span>
-<span id="cb7-233"><a href="#cb7-233"></a></span>
-<span id="cb7-234"><a href="#cb7-234"></a>For our final visualization, we'll create a density plot showing the distribution of incomes by region:</span>
-<span id="cb7-235"><a href="#cb7-235"></a></span>
-<span id="cb7-236"><a href="#cb7-236"></a><span class="in">```{r density-visualization}</span></span>
-<span id="cb7-237"><a href="#cb7-237"></a><span class="in"># Create density plot by region</span></span>
-<span id="cb7-238"><a href="#cb7-238"></a><span class="in">ggplot(income_data, aes(x = median_income, fill = region)) +</span></span>
-<span id="cb7-239"><a href="#cb7-239"></a><span class="in">  # Add density curves</span></span>
-<span id="cb7-240"><a href="#cb7-240"></a><span class="in">  geom_density(alpha = 0.7) +</span></span>
-<span id="cb7-241"><a href="#cb7-241"></a><span class="in">  # Add rug plot</span></span>
-<span id="cb7-242"><a href="#cb7-242"></a><span class="in">  geom_rug(aes(color = region), alpha = 0.7) +</span></span>
-<span id="cb7-243"><a href="#cb7-243"></a><span class="in">  # Use a vibrant color palette</span></span>
-<span id="cb7-244"><a href="#cb7-244"></a><span class="in">  scale_fill_viridis_d(option = "turbo", begin = 0.1, end = 0.9) +</span></span>
-<span id="cb7-245"><a href="#cb7-245"></a><span class="in">  scale_color_viridis_d(option = "turbo", begin = 0.1, end = 0.9) +</span></span>
-<span id="cb7-246"><a href="#cb7-246"></a><span class="in">  # Scale x-axis to show as dollars</span></span>
-<span id="cb7-247"><a href="#cb7-247"></a><span class="in">  scale_x_continuous(labels = dollar_format(), </span></span>
-<span id="cb7-248"><a href="#cb7-248"></a><span class="in">                    breaks = seq(40000, 90000, by = 10000)) +</span></span>
-<span id="cb7-249"><a href="#cb7-249"></a><span class="in">  # Add labels</span></span>
-<span id="cb7-250"><a href="#cb7-250"></a><span class="in">  labs(</span></span>
-<span id="cb7-251"><a href="#cb7-251"></a><span class="in">    title = "Distribution of Median Household Income by Region",</span></span>
-<span id="cb7-252"><a href="#cb7-252"></a><span class="in">    subtitle = "Density Curves Showing Regional Patterns",</span></span>
-<span id="cb7-253"><a href="#cb7-253"></a><span class="in">    x = "Median Household Income",</span></span>
-<span id="cb7-254"><a href="#cb7-254"></a><span class="in">    y = "Density",</span></span>
-<span id="cb7-255"><a href="#cb7-255"></a><span class="in">    caption = "Source: U.S. Census Bureau, American Community Survey, 2019"</span></span>
-<span id="cb7-256"><a href="#cb7-256"></a><span class="in">  ) +</span></span>
-<span id="cb7-257"><a href="#cb7-257"></a><span class="in">  # Use a shared legend for fill and color</span></span>
-<span id="cb7-258"><a href="#cb7-258"></a><span class="in">  guides(color = "none") +</span></span>
-<span id="cb7-259"><a href="#cb7-259"></a><span class="in">  # Apply the professional theme</span></span>
-<span id="cb7-260"><a href="#cb7-260"></a><span class="in">  theme_professional()</span></span>
-<span id="cb7-261"><a href="#cb7-261"></a><span class="in">```</span></span>
-<span id="cb7-262"><a href="#cb7-262"></a></span>
-<span id="cb7-263"><a href="#cb7-263"></a>The density plot reveals:</span>
-<span id="cb7-264"><a href="#cb7-264"></a></span>
-<span id="cb7-265"><a href="#cb7-265"></a><span class="ss">- </span>The Northeast shows a bimodal distribution, indicating two clusters of states</span>
-<span id="cb7-266"><a href="#cb7-266"></a><span class="ss">- </span>The South has the widest spread, confirming its high variability</span>
-<span id="cb7-267"><a href="#cb7-267"></a><span class="ss">- </span>The West shows a relatively flat distribution, suggesting diverse income levels</span>
-<span id="cb7-268"><a href="#cb7-268"></a><span class="ss">- </span>The Midwest has the most compact distribution, centered around $60,000</span>
-<span id="cb7-269"><a href="#cb7-269"></a></span>
-<span id="cb7-270"><a href="#cb7-270"></a><span class="fu">## Key Findings</span></span>
-<span id="cb7-271"><a href="#cb7-271"></a></span>
-<span id="cb7-272"><a href="#cb7-272"></a>Our univariate analysis of median household income across U.S. states reveals several important patterns:</span>
-<span id="cb7-273"><a href="#cb7-273"></a></span>
-<span id="cb7-274"><a href="#cb7-274"></a><span class="ss">1. </span>**Overall Distribution**: The distribution of median household income across states shows a positive skew, with most states falling between $55,000 and $75,000.</span>
-<span id="cb7-275"><a href="#cb7-275"></a></span>
-<span id="cb7-276"><a href="#cb7-276"></a><span class="ss">2. </span>**State Rankings**: There is a substantial gap (approximately $41,000) between the highest income state (Maryland at ~$86,738) and the lowest (Mississippi at ~$45,792).</span>
-<span id="cb7-277"><a href="#cb7-277"></a></span>
-<span id="cb7-278"><a href="#cb7-278"></a><span class="ss">3. </span>**Regional Patterns**: </span>
-<span id="cb7-279"><a href="#cb7-279"></a><span class="ss">   - </span>The Northeast has the highest typical incomes but shows a bimodal distribution</span>
-<span id="cb7-280"><a href="#cb7-280"></a><span class="ss">   - </span>The South has the lowest typical incomes and the highest variability</span>
-<span id="cb7-281"><a href="#cb7-281"></a><span class="ss">   - </span>The Midwest shows the most consistency in income levels</span>
-<span id="cb7-282"><a href="#cb7-282"></a><span class="ss">   - </span>The West demonstrates diverse income levels across states</span>
-<span id="cb7-283"><a href="#cb7-283"></a></span>
-<span id="cb7-284"><a href="#cb7-284"></a><span class="ss">4. </span>**Income Clustering**: States tend to cluster into distinct income categories, with clear separation between high-income and low-income states.</span>
-<span id="cb7-285"><a href="#cb7-285"></a></span>
-<span id="cb7-286"><a href="#cb7-286"></a><span class="fu">## Technical Implementation</span></span>
-<span id="cb7-287"><a href="#cb7-287"></a></span>
-<span id="cb7-288"><a href="#cb7-288"></a>This professional visualization demonstrates several advanced techniques:</span>
-<span id="cb7-289"><a href="#cb7-289"></a></span>
-<span id="cb7-290"><a href="#cb7-290"></a><span class="ss">- </span>**Multiple visualization approaches** for the same variable (histogram, bar chart, boxplot, density plot)</span>
-<span id="cb7-291"><a href="#cb7-291"></a><span class="ss">- </span>**Statistical annotations** including mean indicators</span>
-<span id="cb7-292"><a href="#cb7-292"></a><span class="ss">- </span>**Thoughtful ordering** of categorical data for clearer patterns</span>
-<span id="cb7-293"><a href="#cb7-293"></a><span class="ss">- </span>**Regional comparative analysis** to reveal geographic patterns</span>
-<span id="cb7-294"><a href="#cb7-294"></a><span class="ss">- </span>**Appropriate scales** with dollar formatting for better interpretation</span>
-<span id="cb7-295"><a href="#cb7-295"></a><span class="ss">- </span>**Layered visualizations** combining multiple geoms (histogram with density curve, boxplots with jittered points)</span>
-<span id="cb7-296"><a href="#cb7-296"></a><span class="ss">- </span>**Consistent professional styling** with custom theming</span>
-<span id="cb7-297"><a href="#cb7-297"></a></span>
-<span id="cb7-298"><a href="#cb7-298"></a>For future enhancements, we could explore interactive elements, geographic mapping, or time-series analysis of income changes over multiple years.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> "Univariate Visualization-Best Work"</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="an">author:</span><span class="co"> "Zhijun He"</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="an">date:</span><span class="co"> today</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="co">  html:</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co">    code-fold: show</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co">    theme: cosmo</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="co">    toc: true</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="co">    number-sections: true</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="co">---</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a></span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="in">```{r setup, include=FALSE}</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="in">knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a><span class="in"># Load necessary libraries</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb8-17"><a href="#cb8-17"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb8-18"><a href="#cb8-18"></a><span class="in">library(viridis)</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="in">library(scales)</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a><span class="in">library(knitr)</span></span>
+<span id="cb8-21"><a href="#cb8-21"></a><span class="in">```</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a></span>
+<span id="cb8-23"><a href="#cb8-23"></a><span class="fu"># Professional Univariate Visualization</span></span>
+<span id="cb8-24"><a href="#cb8-24"></a></span>
+<span id="cb8-25"><a href="#cb8-25"></a>This document presents sophisticated univariate visualizations that explore the distribution of global CO2 emissions per capita across different countries. Through careful data analysis and visual design, we'll create informative and aesthetically pleasing visualizations that effectively communicate patterns in the data.</span>
+<span id="cb8-26"><a href="#cb8-26"></a></span>
+<span id="cb8-27"><a href="#cb8-27"></a><span class="fu">## Data Preparation</span></span>
+<span id="cb8-28"><a href="#cb8-28"></a></span>
+<span id="cb8-29"><a href="#cb8-29"></a>We'll use a dataset containing CO2 emissions per capita for countries worldwide, based on data from the World Bank.</span>
+<span id="cb8-30"><a href="#cb8-30"></a></span>
+<span id="cb8-31"><a href="#cb8-31"></a><span class="in">```{r data-creation}</span></span>
+<span id="cb8-32"><a href="#cb8-32"></a><span class="in"># Create dataset of CO2 emissions per capita by country</span></span>
+<span id="cb8-33"><a href="#cb8-33"></a><span class="in">emissions_data &lt;- data.frame(</span></span>
+<span id="cb8-34"><a href="#cb8-34"></a><span class="in">  country = c("Qatar", "Kuwait", "United Arab Emirates", "Saudi Arabia", "Australia", </span></span>
+<span id="cb8-35"><a href="#cb8-35"></a><span class="in">              "United States", "Canada", "Russia", "South Korea", "Japan", "Germany", </span></span>
+<span id="cb8-36"><a href="#cb8-36"></a><span class="in">              "Poland", "South Africa", "China", "United Kingdom", "Italy", "France", </span></span>
+<span id="cb8-37"><a href="#cb8-37"></a><span class="in">              "Mexico", "Brazil", "Egypt", "India", "Nigeria", "Ethiopia", "Bangladesh", </span></span>
+<span id="cb8-38"><a href="#cb8-38"></a><span class="in">              "Democratic Republic of Congo"),</span></span>
+<span id="cb8-39"><a href="#cb8-39"></a><span class="in">  co2_per_capita = c(32.4, 21.6, 20.7, 18.4, 15.2, 14.7, 14.2, 11.1, 11.7, 8.5, 8.4, </span></span>
+<span id="cb8-40"><a href="#cb8-40"></a><span class="in">                     7.8, 7.4, 7.2, 5.3, 5.2, 4.6, 3.6, 2.2, 2.1, 1.8, 0.6, 0.1, 0.5, 0.04),</span></span>
+<span id="cb8-41"><a href="#cb8-41"></a><span class="in">  population_millions = c(2.9, 4.3, 9.9, 34.8, 25.7, 331.0, 38.0, 144.1, 51.7, 125.8, 83.2, </span></span>
+<span id="cb8-42"><a href="#cb8-42"></a><span class="in">                         37.8, 59.3, 1412.0, 67.2, 59.6, 67.4, 129.0, 212.6, 102.3, 1380.0, </span></span>
+<span id="cb8-43"><a href="#cb8-43"></a><span class="in">                         206.1, 115.0, 164.7, 89.6)</span></span>
+<span id="cb8-44"><a href="#cb8-44"></a><span class="in">)</span></span>
+<span id="cb8-45"><a href="#cb8-45"></a></span>
+<span id="cb8-46"><a href="#cb8-46"></a><span class="in"># Add region classification</span></span>
+<span id="cb8-47"><a href="#cb8-47"></a><span class="in">emissions_data &lt;- emissions_data %&gt;%</span></span>
+<span id="cb8-48"><a href="#cb8-48"></a><span class="in">  mutate(</span></span>
+<span id="cb8-49"><a href="#cb8-49"></a><span class="in">    region = case_when(</span></span>
+<span id="cb8-50"><a href="#cb8-50"></a><span class="in">      country %in% c("Qatar", "Kuwait", "United Arab Emirates", "Saudi Arabia", "Egypt") ~ "Middle East &amp; North Africa",</span></span>
+<span id="cb8-51"><a href="#cb8-51"></a><span class="in">      country %in% c("Australia", "Japan", "South Korea", "China", "Bangladesh") ~ "Asia &amp; Pacific",</span></span>
+<span id="cb8-52"><a href="#cb8-52"></a><span class="in">      country %in% c("United States", "Canada", "Mexico", "Brazil") ~ "Americas",</span></span>
+<span id="cb8-53"><a href="#cb8-53"></a><span class="in">      country %in% c("Russia", "Germany", "Poland", "United Kingdom", "Italy", "France") ~ "Europe",</span></span>
+<span id="cb8-54"><a href="#cb8-54"></a><span class="in">      TRUE ~ "Sub-Saharan Africa"</span></span>
+<span id="cb8-55"><a href="#cb8-55"></a><span class="in">    ),</span></span>
+<span id="cb8-56"><a href="#cb8-56"></a><span class="in">    # Create emissions categories</span></span>
+<span id="cb8-57"><a href="#cb8-57"></a><span class="in">    emissions_category = cut(co2_per_capita, </span></span>
+<span id="cb8-58"><a href="#cb8-58"></a><span class="in">                           breaks = c(0, 1, 5, 10, 20, Inf),</span></span>
+<span id="cb8-59"><a href="#cb8-59"></a><span class="in">                           labels = c("Very Low", "Low", "Medium", "High", "Very High"),</span></span>
+<span id="cb8-60"><a href="#cb8-60"></a><span class="in">                           right = FALSE),</span></span>
+<span id="cb8-61"><a href="#cb8-61"></a><span class="in">    # Create a variable for ordering countries by emissions</span></span>
+<span id="cb8-62"><a href="#cb8-62"></a><span class="in">    country_ordered = reorder(country, co2_per_capita)</span></span>
+<span id="cb8-63"><a href="#cb8-63"></a><span class="in">  )</span></span>
+<span id="cb8-64"><a href="#cb8-64"></a><span class="in">```</span></span>
+<span id="cb8-65"><a href="#cb8-65"></a></span>
+<span id="cb8-66"><a href="#cb8-66"></a><span class="fu">## Custom Theme for Professional Visualization</span></span>
+<span id="cb8-67"><a href="#cb8-67"></a></span>
+<span id="cb8-68"><a href="#cb8-68"></a>Creating a consistent visual style is crucial for professional visualizations. We'll define a custom theme that will be applied to all our plots:</span>
+<span id="cb8-69"><a href="#cb8-69"></a></span>
+<span id="cb8-70"><a href="#cb8-70"></a><span class="in">```{r custom-theme}</span></span>
+<span id="cb8-71"><a href="#cb8-71"></a><span class="in"># Create a custom theme for professional visualizations</span></span>
+<span id="cb8-72"><a href="#cb8-72"></a><span class="in">theme_professional &lt;- function() {</span></span>
+<span id="cb8-73"><a href="#cb8-73"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb8-74"><a href="#cb8-74"></a><span class="in">  theme(</span></span>
+<span id="cb8-75"><a href="#cb8-75"></a><span class="in">    text = element_text(family = "sans", color = "#2b2b2b"),</span></span>
+<span id="cb8-76"><a href="#cb8-76"></a><span class="in">    plot.title = element_text(size = 18, face = "bold", hjust = 0.5),</span></span>
+<span id="cb8-77"><a href="#cb8-77"></a><span class="in">    plot.subtitle = element_text(size = 12, hjust = 0.5, margin = margin(b = 15)),</span></span>
+<span id="cb8-78"><a href="#cb8-78"></a><span class="in">    plot.caption = element_text(size = 9, color = "#5c5c5c", hjust = 1),</span></span>
+<span id="cb8-79"><a href="#cb8-79"></a><span class="in">    plot.background = element_rect(fill = "#f9f9f9", color = NA),</span></span>
+<span id="cb8-80"><a href="#cb8-80"></a><span class="in">    panel.grid.major = element_line(color = "#e0e0e0"),</span></span>
+<span id="cb8-81"><a href="#cb8-81"></a><span class="in">    panel.grid.minor = element_line(color = "#f0f0f0"),</span></span>
+<span id="cb8-82"><a href="#cb8-82"></a><span class="in">    axis.title = element_text(size = 12, face = "bold"),</span></span>
+<span id="cb8-83"><a href="#cb8-83"></a><span class="in">    axis.text = element_text(size = 10),</span></span>
+<span id="cb8-84"><a href="#cb8-84"></a><span class="in">    axis.text.y = element_text(size = 8),</span></span>
+<span id="cb8-85"><a href="#cb8-85"></a><span class="in">    legend.title = element_text(size = 11, face = "bold"),</span></span>
+<span id="cb8-86"><a href="#cb8-86"></a><span class="in">    legend.text = element_text(size = 10),</span></span>
+<span id="cb8-87"><a href="#cb8-87"></a><span class="in">    legend.background = element_rect(fill = "#f9f9f9", color = NA),</span></span>
+<span id="cb8-88"><a href="#cb8-88"></a><span class="in">    strip.text = element_text(size = 11, face = "bold")</span></span>
+<span id="cb8-89"><a href="#cb8-89"></a><span class="in">  )</span></span>
+<span id="cb8-90"><a href="#cb8-90"></a><span class="in">}</span></span>
+<span id="cb8-91"><a href="#cb8-91"></a><span class="in">```</span></span>
+<span id="cb8-92"><a href="#cb8-92"></a></span>
+<span id="cb8-93"><a href="#cb8-93"></a><span class="fu">## Histogram: Distribution of CO2 Emissions Per Capita</span></span>
+<span id="cb8-94"><a href="#cb8-94"></a></span>
+<span id="cb8-95"><a href="#cb8-95"></a>Our first visualization explores the overall distribution of CO2 emissions per capita across countries:</span>
+<span id="cb8-96"><a href="#cb8-96"></a></span>
+<span id="cb8-97"><a href="#cb8-97"></a><span class="in">```{r histogram-visualization}</span></span>
+<span id="cb8-98"><a href="#cb8-98"></a><span class="in"># Create histogram</span></span>
+<span id="cb8-99"><a href="#cb8-99"></a><span class="in">ggplot(emissions_data, aes(x = co2_per_capita)) +</span></span>
+<span id="cb8-100"><a href="#cb8-100"></a><span class="in">  # Add histogram bars</span></span>
+<span id="cb8-101"><a href="#cb8-101"></a><span class="in">  geom_histogram(binwidth = 3, </span></span>
+<span id="cb8-102"><a href="#cb8-102"></a><span class="in">                fill = "#3182bd", </span></span>
+<span id="cb8-103"><a href="#cb8-103"></a><span class="in">                color = "white",</span></span>
+<span id="cb8-104"><a href="#cb8-104"></a><span class="in">                alpha = 0.8) +</span></span>
+<span id="cb8-105"><a href="#cb8-105"></a><span class="in">  # Add a density curve</span></span>
+<span id="cb8-106"><a href="#cb8-106"></a><span class="in">  geom_density(aes(y = 3 * ..density..), </span></span>
+<span id="cb8-107"><a href="#cb8-107"></a><span class="in">              color = "#e41a1c", </span></span>
+<span id="cb8-108"><a href="#cb8-108"></a><span class="in">              size = 1) +</span></span>
+<span id="cb8-109"><a href="#cb8-109"></a><span class="in">  # Add a rug plot at the bottom</span></span>
+<span id="cb8-110"><a href="#cb8-110"></a><span class="in">  geom_rug(color = "#636363", alpha = 0.5) +</span></span>
+<span id="cb8-111"><a href="#cb8-111"></a><span class="in">  # Add mean line</span></span>
+<span id="cb8-112"><a href="#cb8-112"></a><span class="in">  geom_vline(aes(xintercept = mean(co2_per_capita)),</span></span>
+<span id="cb8-113"><a href="#cb8-113"></a><span class="in">            color = "#e41a1c", </span></span>
+<span id="cb8-114"><a href="#cb8-114"></a><span class="in">            linetype = "dashed", </span></span>
+<span id="cb8-115"><a href="#cb8-115"></a><span class="in">            size = 1) +</span></span>
+<span id="cb8-116"><a href="#cb8-116"></a><span class="in">  # Add median line</span></span>
+<span id="cb8-117"><a href="#cb8-117"></a><span class="in">  geom_vline(aes(xintercept = median(co2_per_capita)),</span></span>
+<span id="cb8-118"><a href="#cb8-118"></a><span class="in">            color = "#4daf4a", </span></span>
+<span id="cb8-119"><a href="#cb8-119"></a><span class="in">            linetype = "dotted", </span></span>
+<span id="cb8-120"><a href="#cb8-120"></a><span class="in">            size = 1) +</span></span>
+<span id="cb8-121"><a href="#cb8-121"></a><span class="in">  # Add text annotation for mean</span></span>
+<span id="cb8-122"><a href="#cb8-122"></a><span class="in">  annotate("text", </span></span>
+<span id="cb8-123"><a href="#cb8-123"></a><span class="in">           x = mean(emissions_data$co2_per_capita) + 2, </span></span>
+<span id="cb8-124"><a href="#cb8-124"></a><span class="in">           y = 8, </span></span>
+<span id="cb8-125"><a href="#cb8-125"></a><span class="in">           label = paste("Mean:", round(mean(emissions_data$co2_per_capita), 1), "tonnes"), </span></span>
+<span id="cb8-126"><a href="#cb8-126"></a><span class="in">           color = "#e41a1c",</span></span>
+<span id="cb8-127"><a href="#cb8-127"></a><span class="in">           fontface = "bold") +</span></span>
+<span id="cb8-128"><a href="#cb8-128"></a><span class="in">  # Add text annotation for median</span></span>
+<span id="cb8-129"><a href="#cb8-129"></a><span class="in">  annotate("text", </span></span>
+<span id="cb8-130"><a href="#cb8-130"></a><span class="in">           x = median(emissions_data$co2_per_capita) - 2, </span></span>
+<span id="cb8-131"><a href="#cb8-131"></a><span class="in">           y = 6, </span></span>
+<span id="cb8-132"><a href="#cb8-132"></a><span class="in">           label = paste("Median:", round(median(emissions_data$co2_per_capita), 1), "tonnes"), </span></span>
+<span id="cb8-133"><a href="#cb8-133"></a><span class="in">           color = "#4daf4a",</span></span>
+<span id="cb8-134"><a href="#cb8-134"></a><span class="in">           fontface = "bold") +</span></span>
+<span id="cb8-135"><a href="#cb8-135"></a><span class="in">  # Add labels</span></span>
+<span id="cb8-136"><a href="#cb8-136"></a><span class="in">  labs(</span></span>
+<span id="cb8-137"><a href="#cb8-137"></a><span class="in">    title = "Distribution of CO2 Emissions Per Capita",</span></span>
+<span id="cb8-138"><a href="#cb8-138"></a><span class="in">    subtitle = "Data from selected countries worldwide",</span></span>
+<span id="cb8-139"><a href="#cb8-139"></a><span class="in">    x = "CO2 Emissions (tonnes per capita)",</span></span>
+<span id="cb8-140"><a href="#cb8-140"></a><span class="in">    y = "Number of Countries",</span></span>
+<span id="cb8-141"><a href="#cb8-141"></a><span class="in">    caption = "Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb8-142"><a href="#cb8-142"></a><span class="in">  ) +</span></span>
+<span id="cb8-143"><a href="#cb8-143"></a><span class="in">  # Apply the professional theme</span></span>
+<span id="cb8-144"><a href="#cb8-144"></a><span class="in">  theme_professional()</span></span>
+<span id="cb8-145"><a href="#cb8-145"></a><span class="in">```</span></span>
+<span id="cb8-146"><a href="#cb8-146"></a></span>
+<span id="cb8-147"><a href="#cb8-147"></a>The histogram above shows the distribution of CO2 emissions per capita across selected countries. We can observe that:</span>
+<span id="cb8-148"><a href="#cb8-148"></a></span>
+<span id="cb8-149"><a href="#cb8-149"></a><span class="ss">- </span>The distribution is heavily right-skewed, with most countries emitting less than 10 tonnes per capita</span>
+<span id="cb8-150"><a href="#cb8-150"></a><span class="ss">- </span>A small number of countries, primarily oil-producing nations, have significantly higher emissions</span>
+<span id="cb8-151"><a href="#cb8-151"></a><span class="ss">- </span>The mean (9.5 tonnes) is considerably higher than the median (7.2 tonnes), confirming the right skew</span>
+<span id="cb8-152"><a href="#cb8-152"></a><span class="ss">- </span>There appears to be a cluster of very high emitters (above 15 tonnes), separated from the main distribution</span>
+<span id="cb8-153"><a href="#cb8-153"></a></span>
+<span id="cb8-154"><a href="#cb8-154"></a><span class="fu">## Ordered Bar Chart: Emissions by Country</span></span>
+<span id="cb8-155"><a href="#cb8-155"></a></span>
+<span id="cb8-156"><a href="#cb8-156"></a>To examine emission levels for each individual country, we'll create an ordered bar chart:</span>
+<span id="cb8-157"><a href="#cb8-157"></a></span>
+<span id="cb8-158"><a href="#cb8-158"></a><span class="in">```{r barchart-visualization}</span></span>
+<span id="cb8-159"><a href="#cb8-159"></a><span class="in"># Create ordered bar chart</span></span>
+<span id="cb8-160"><a href="#cb8-160"></a><span class="in">ggplot(emissions_data, aes(x = country_ordered, y = co2_per_capita, fill = emissions_category)) +</span></span>
+<span id="cb8-161"><a href="#cb8-161"></a><span class="in">  # Add bars</span></span>
+<span id="cb8-162"><a href="#cb8-162"></a><span class="in">  geom_bar(stat = "identity", width = 0.8) +</span></span>
+<span id="cb8-163"><a href="#cb8-163"></a><span class="in">  # Flip coordinates for better readability</span></span>
+<span id="cb8-164"><a href="#cb8-164"></a><span class="in">  coord_flip() +</span></span>
+<span id="cb8-165"><a href="#cb8-165"></a><span class="in">  # Use a color palette based on emissions categories</span></span>
+<span id="cb8-166"><a href="#cb8-166"></a><span class="in">  scale_fill_viridis_d(option = "plasma", direction = -1, begin = 0.1, end = 0.9) +</span></span>
+<span id="cb8-167"><a href="#cb8-167"></a><span class="in">  # Add labels</span></span>
+<span id="cb8-168"><a href="#cb8-168"></a><span class="in">  labs(</span></span>
+<span id="cb8-169"><a href="#cb8-169"></a><span class="in">    title = "CO2 Emissions Per Capita by Country",</span></span>
+<span id="cb8-170"><a href="#cb8-170"></a><span class="in">    subtitle = "Countries Ordered from Lowest to Highest Emissions",</span></span>
+<span id="cb8-171"><a href="#cb8-171"></a><span class="in">    x = NULL,</span></span>
+<span id="cb8-172"><a href="#cb8-172"></a><span class="in">    y = "CO2 Emissions (tonnes per capita)",</span></span>
+<span id="cb8-173"><a href="#cb8-173"></a><span class="in">    fill = "Emissions Category",</span></span>
+<span id="cb8-174"><a href="#cb8-174"></a><span class="in">    caption = "Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb8-175"><a href="#cb8-175"></a><span class="in">  ) +</span></span>
+<span id="cb8-176"><a href="#cb8-176"></a><span class="in">  # Apply the professional theme</span></span>
+<span id="cb8-177"><a href="#cb8-177"></a><span class="in">  theme_professional()</span></span>
+<span id="cb8-178"><a href="#cb8-178"></a><span class="in">```</span></span>
+<span id="cb8-179"><a href="#cb8-179"></a></span>
+<span id="cb8-180"><a href="#cb8-180"></a>The ordered bar chart reveals:</span>
+<span id="cb8-181"><a href="#cb8-181"></a></span>
+<span id="cb8-182"><a href="#cb8-182"></a><span class="ss">- </span>A clear ranking of countries by CO2 emissions per capita</span>
+<span id="cb8-183"><a href="#cb8-183"></a><span class="ss">- </span>The Democratic Republic of Congo has the lowest emissions at approximately 0.04 tonnes per capita</span>
+<span id="cb8-184"><a href="#cb8-184"></a><span class="ss">- </span>Qatar has the highest emissions at approximately 32.4 tonnes per capita</span>
+<span id="cb8-185"><a href="#cb8-185"></a><span class="ss">- </span>There's a massive disparity (over 800-fold difference) between the highest and lowest emitting countries</span>
+<span id="cb8-186"><a href="#cb8-186"></a><span class="ss">- </span>Oil-producing Gulf states dominate the highest emissions category</span>
+<span id="cb8-187"><a href="#cb8-187"></a><span class="ss">- </span>Most developing countries fall in the low or very low emissions categories</span>
+<span id="cb8-188"><a href="#cb8-188"></a></span>
+<span id="cb8-189"><a href="#cb8-189"></a><span class="fu">## Regional Analysis: Emissions Distribution by Region</span></span>
+<span id="cb8-190"><a href="#cb8-190"></a></span>
+<span id="cb8-191"><a href="#cb8-191"></a>Let's examine how emissions distributions vary across different regions of the world:</span>
+<span id="cb8-192"><a href="#cb8-192"></a></span>
+<span id="cb8-193"><a href="#cb8-193"></a><span class="in">```{r boxplot-visualization}</span></span>
+<span id="cb8-194"><a href="#cb8-194"></a><span class="in"># Create boxplot by region</span></span>
+<span id="cb8-195"><a href="#cb8-195"></a><span class="in">ggplot(emissions_data, aes(x = region, y = co2_per_capita, fill = region)) +</span></span>
+<span id="cb8-196"><a href="#cb8-196"></a><span class="in">  # Add boxplot</span></span>
+<span id="cb8-197"><a href="#cb8-197"></a><span class="in">  geom_boxplot(width = 0.6, alpha = 0.8) +</span></span>
+<span id="cb8-198"><a href="#cb8-198"></a><span class="in">  # Add individual data points</span></span>
+<span id="cb8-199"><a href="#cb8-199"></a><span class="in">  geom_jitter(width = 0.15, alpha = 0.6, size = 2) +</span></span>
+<span id="cb8-200"><a href="#cb8-200"></a><span class="in">  # Use a vibrant color palette</span></span>
+<span id="cb8-201"><a href="#cb8-201"></a><span class="in">  scale_fill_viridis_d(option = "turbo", begin = 0.1, end = 0.9) +</span></span>
+<span id="cb8-202"><a href="#cb8-202"></a><span class="in">  # Add labels</span></span>
+<span id="cb8-203"><a href="#cb8-203"></a><span class="in">  labs(</span></span>
+<span id="cb8-204"><a href="#cb8-204"></a><span class="in">    title = "CO2 Emissions Per Capita by Region",</span></span>
+<span id="cb8-205"><a href="#cb8-205"></a><span class="in">    subtitle = "Boxplots with Individual Country Data Points",</span></span>
+<span id="cb8-206"><a href="#cb8-206"></a><span class="in">    x = NULL,</span></span>
+<span id="cb8-207"><a href="#cb8-207"></a><span class="in">    y = "CO2 Emissions (tonnes per capita)",</span></span>
+<span id="cb8-208"><a href="#cb8-208"></a><span class="in">    caption = "Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb8-209"><a href="#cb8-209"></a><span class="in">  ) +</span></span>
+<span id="cb8-210"><a href="#cb8-210"></a><span class="in">  # Remove legend since it's redundant with x-axis</span></span>
+<span id="cb8-211"><a href="#cb8-211"></a><span class="in">  guides(fill = "none") +</span></span>
+<span id="cb8-212"><a href="#cb8-212"></a><span class="in">  # Apply the professional theme</span></span>
+<span id="cb8-213"><a href="#cb8-213"></a><span class="in">  theme_professional()</span></span>
+<span id="cb8-214"><a href="#cb8-214"></a><span class="in">```</span></span>
+<span id="cb8-215"><a href="#cb8-215"></a></span>
+<span id="cb8-216"><a href="#cb8-216"></a>The regional boxplot visualization shows:</span>
+<span id="cb8-217"><a href="#cb8-217"></a></span>
+<span id="cb8-218"><a href="#cb8-218"></a><span class="ss">- </span>The Middle East &amp; North Africa region has the highest median emissions, driven by oil-producing Gulf states</span>
+<span id="cb8-219"><a href="#cb8-219"></a><span class="ss">- </span>Europe and the Americas have similar median emissions, though the Americas show more variability</span>
+<span id="cb8-220"><a href="#cb8-220"></a><span class="ss">- </span>Asia &amp; Pacific shows high variability, containing both high emitters like Australia and low emitters like Bangladesh</span>
+<span id="cb8-221"><a href="#cb8-221"></a><span class="ss">- </span>Sub-Saharan Africa has the lowest emissions overall</span>
+<span id="cb8-222"><a href="#cb8-222"></a><span class="ss">- </span>There are notable outliers in several regions, particularly in the Middle East &amp; North Africa</span>
+<span id="cb8-223"><a href="#cb8-223"></a></span>
+<span id="cb8-224"><a href="#cb8-224"></a><span class="fu">## Density Plot: Comparative Emissions Distributions </span></span>
+<span id="cb8-225"><a href="#cb8-225"></a></span>
+<span id="cb8-226"><a href="#cb8-226"></a>For our final visualization, we'll create a density plot showing the distribution of emissions by region:</span>
+<span id="cb8-227"><a href="#cb8-227"></a></span>
+<span id="cb8-228"><a href="#cb8-228"></a><span class="in">```{r density-visualization}</span></span>
+<span id="cb8-229"><a href="#cb8-229"></a><span class="in"># Create density plot by region</span></span>
+<span id="cb8-230"><a href="#cb8-230"></a><span class="in">ggplot(emissions_data, aes(x = co2_per_capita, fill = region)) +</span></span>
+<span id="cb8-231"><a href="#cb8-231"></a><span class="in">  # Add density curves</span></span>
+<span id="cb8-232"><a href="#cb8-232"></a><span class="in">  geom_density(alpha = 0.7) +</span></span>
+<span id="cb8-233"><a href="#cb8-233"></a><span class="in">  # Add rug plot</span></span>
+<span id="cb8-234"><a href="#cb8-234"></a><span class="in">  geom_rug(aes(color = region), alpha = 0.7) +</span></span>
+<span id="cb8-235"><a href="#cb8-235"></a><span class="in">  # Use a vibrant color palette</span></span>
+<span id="cb8-236"><a href="#cb8-236"></a><span class="in">  scale_fill_viridis_d(option = "turbo", begin = 0.1, end = 0.9) +</span></span>
+<span id="cb8-237"><a href="#cb8-237"></a><span class="in">  scale_color_viridis_d(option = "turbo", begin = 0.1, end = 0.9) +</span></span>
+<span id="cb8-238"><a href="#cb8-238"></a><span class="in">  # Add labels</span></span>
+<span id="cb8-239"><a href="#cb8-239"></a><span class="in">  labs(</span></span>
+<span id="cb8-240"><a href="#cb8-240"></a><span class="in">    title = "Distribution of CO2 Emissions Per Capita by Region",</span></span>
+<span id="cb8-241"><a href="#cb8-241"></a><span class="in">    subtitle = "Density Curves Showing Regional Patterns",</span></span>
+<span id="cb8-242"><a href="#cb8-242"></a><span class="in">    x = "CO2 Emissions (tonnes per capita)",</span></span>
+<span id="cb8-243"><a href="#cb8-243"></a><span class="in">    y = "Density",</span></span>
+<span id="cb8-244"><a href="#cb8-244"></a><span class="in">    caption = "Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb8-245"><a href="#cb8-245"></a><span class="in">  ) +</span></span>
+<span id="cb8-246"><a href="#cb8-246"></a><span class="in">  # Use a shared legend for fill and color</span></span>
+<span id="cb8-247"><a href="#cb8-247"></a><span class="in">  guides(color = "none") +</span></span>
+<span id="cb8-248"><a href="#cb8-248"></a><span class="in">  # Apply the professional theme</span></span>
+<span id="cb8-249"><a href="#cb8-249"></a><span class="in">  theme_professional()</span></span>
+<span id="cb8-250"><a href="#cb8-250"></a><span class="in">```</span></span>
+<span id="cb8-251"><a href="#cb8-251"></a></span>
+<span id="cb8-252"><a href="#cb8-252"></a>The density plot reveals:</span>
+<span id="cb8-253"><a href="#cb8-253"></a></span>
+<span id="cb8-254"><a href="#cb8-254"></a><span class="ss">- </span>The Middle East &amp; North Africa shows a bimodal distribution, with oil-producing states forming a high-emissions peak</span>
+<span id="cb8-255"><a href="#cb8-255"></a><span class="ss">- </span>Sub-Saharan Africa has a tight distribution concentrated at very low emission levels</span>
+<span id="cb8-256"><a href="#cb8-256"></a><span class="ss">- </span>The Americas and Europe show similar patterns with moderate emissions</span>
+<span id="cb8-257"><a href="#cb8-257"></a><span class="ss">- </span>Asia &amp; Pacific shows the widest spread, reflecting diverse development levels across the region</span>
+<span id="cb8-258"><a href="#cb8-258"></a></span>
+<span id="cb8-259"><a href="#cb8-259"></a><span class="fu">## Population-Weighted Analysis</span></span>
+<span id="cb8-260"><a href="#cb8-260"></a></span>
+<span id="cb8-261"><a href="#cb8-261"></a>To add context to the emissions data, let's examine how emissions relate to population size:</span>
+<span id="cb8-262"><a href="#cb8-262"></a></span>
+<span id="cb8-263"><a href="#cb8-263"></a><span class="in">```{r bubble-visualization}</span></span>
+<span id="cb8-264"><a href="#cb8-264"></a><span class="in"># Create bubble chart</span></span>
+<span id="cb8-265"><a href="#cb8-265"></a><span class="in">ggplot(emissions_data, aes(x = country_ordered, y = co2_per_capita, size = population_millions)) +</span></span>
+<span id="cb8-266"><a href="#cb8-266"></a><span class="in">  # Add bubbles</span></span>
+<span id="cb8-267"><a href="#cb8-267"></a><span class="in">  geom_point(aes(color = region), alpha = 0.7) +</span></span>
+<span id="cb8-268"><a href="#cb8-268"></a><span class="in">  # Flip coordinates for better readability</span></span>
+<span id="cb8-269"><a href="#cb8-269"></a><span class="in">  coord_flip() +</span></span>
+<span id="cb8-270"><a href="#cb8-270"></a><span class="in">  # Use a vibrant color palette</span></span>
+<span id="cb8-271"><a href="#cb8-271"></a><span class="in">  scale_color_viridis_d(option = "turbo", begin = 0.1, end = 0.9) +</span></span>
+<span id="cb8-272"><a href="#cb8-272"></a><span class="in">  # Customize size scale</span></span>
+<span id="cb8-273"><a href="#cb8-273"></a><span class="in">  scale_size_continuous(</span></span>
+<span id="cb8-274"><a href="#cb8-274"></a><span class="in">    name = "Population (millions)",</span></span>
+<span id="cb8-275"><a href="#cb8-275"></a><span class="in">    range = c(2, 15),</span></span>
+<span id="cb8-276"><a href="#cb8-276"></a><span class="in">    breaks = c(10, 50, 200, 1000)</span></span>
+<span id="cb8-277"><a href="#cb8-277"></a><span class="in">  ) +</span></span>
+<span id="cb8-278"><a href="#cb8-278"></a><span class="in">  # Add labels</span></span>
+<span id="cb8-279"><a href="#cb8-279"></a><span class="in">  labs(</span></span>
+<span id="cb8-280"><a href="#cb8-280"></a><span class="in">    title = "CO2 Emissions Per Capita by Country",</span></span>
+<span id="cb8-281"><a href="#cb8-281"></a><span class="in">    subtitle = "Bubble Size Represents Population",</span></span>
+<span id="cb8-282"><a href="#cb8-282"></a><span class="in">    x = NULL,</span></span>
+<span id="cb8-283"><a href="#cb8-283"></a><span class="in">    y = "CO2 Emissions (tonnes per capita)",</span></span>
+<span id="cb8-284"><a href="#cb8-284"></a><span class="in">    color = "Region",</span></span>
+<span id="cb8-285"><a href="#cb8-285"></a><span class="in">    caption = "Source: World Bank, CO2 emissions data"</span></span>
+<span id="cb8-286"><a href="#cb8-286"></a><span class="in">  ) +</span></span>
+<span id="cb8-287"><a href="#cb8-287"></a><span class="in">  # Apply the professional theme</span></span>
+<span id="cb8-288"><a href="#cb8-288"></a><span class="in">  theme_professional()</span></span>
+<span id="cb8-289"><a href="#cb8-289"></a><span class="in">```</span></span>
+<span id="cb8-290"><a href="#cb8-290"></a></span>
+<span id="cb8-291"><a href="#cb8-291"></a>This visualization adds an important dimension to our analysis:</span>
+<span id="cb8-292"><a href="#cb8-292"></a></span>
+<span id="cb8-293"><a href="#cb8-293"></a><span class="ss">- </span>Many high-emission countries have relatively small populations (e.g., Qatar, Kuwait)</span>
+<span id="cb8-294"><a href="#cb8-294"></a><span class="ss">- </span>Large population countries like India, China, and Bangladesh span different emission levels</span>
+<span id="cb8-295"><a href="#cb8-295"></a><span class="ss">- </span>When considering total emissions impact, both per capita rate and population size must be considered</span>
+<span id="cb8-296"><a href="#cb8-296"></a><span class="ss">- </span>The United States stands out with both large population and high per capita emissions</span>
+<span id="cb8-297"><a href="#cb8-297"></a><span class="ss">- </span>China has moderate per capita emissions but enormous total emissions due to its population size</span>
+<span id="cb8-298"><a href="#cb8-298"></a></span>
+<span id="cb8-299"><a href="#cb8-299"></a><span class="fu">## Key Findings</span></span>
+<span id="cb8-300"><a href="#cb8-300"></a></span>
+<span id="cb8-301"><a href="#cb8-301"></a>Our univariate analysis of CO2 emissions per capita reveals several important patterns:</span>
+<span id="cb8-302"><a href="#cb8-302"></a></span>
+<span id="cb8-303"><a href="#cb8-303"></a><span class="ss">1. </span>**Distribution Shape**: The distribution of CO2 emissions per capita is heavily right-skewed, with a few high-emitting outliers and most countries having relatively low emissions.</span>
+<span id="cb8-304"><a href="#cb8-304"></a></span>
+<span id="cb8-305"><a href="#cb8-305"></a><span class="ss">2. </span>**Regional Patterns**: </span>
+<span id="cb8-306"><a href="#cb8-306"></a><span class="ss">   - </span>The Middle East &amp; North Africa, particularly Gulf states, has the highest emissions per capita</span>
+<span id="cb8-307"><a href="#cb8-307"></a><span class="ss">   - </span>Sub-Saharan Africa has the lowest emissions per capita</span>
+<span id="cb8-308"><a href="#cb8-308"></a><span class="ss">   - </span>Europe and the Americas have moderate emissions with some variability</span>
+<span id="cb8-309"><a href="#cb8-309"></a><span class="ss">   - </span>Asia &amp; Pacific shows the widest range, from very low to high emitters</span>
+<span id="cb8-310"><a href="#cb8-310"></a></span>
+<span id="cb8-311"><a href="#cb8-311"></a><span class="ss">3. </span>**Global Inequality**: There is an 800-fold difference between the highest and lowest emitting countries, highlighting extreme inequality in emissions.</span>
+<span id="cb8-312"><a href="#cb8-312"></a></span>
+<span id="cb8-313"><a href="#cb8-313"></a><span class="ss">4. </span>**Population Context**: Many high-emission countries have relatively small populations, while some large population countries have relatively low per capita emissions but significant total emissions.</span>
+<span id="cb8-314"><a href="#cb8-314"></a></span>
+<span id="cb8-315"><a href="#cb8-315"></a><span class="fu">## Technical Implementation</span></span>
+<span id="cb8-316"><a href="#cb8-316"></a></span>
+<span id="cb8-317"><a href="#cb8-317"></a>This professional visualization demonstrates several advanced techniques:</span>
+<span id="cb8-318"><a href="#cb8-318"></a></span>
+<span id="cb8-319"><a href="#cb8-319"></a><span class="ss">- </span>**Multiple visualization approaches** for the same variable (histogram, bar chart, boxplot, density plot, bubble chart)</span>
+<span id="cb8-320"><a href="#cb8-320"></a><span class="ss">- </span>**Statistical annotations** including mean and median indicators</span>
+<span id="cb8-321"><a href="#cb8-321"></a><span class="ss">- </span>**Thoughtful ordering** of categorical data for clearer patterns</span>
+<span id="cb8-322"><a href="#cb8-322"></a><span class="ss">- </span>**Regional comparative analysis** to reveal geographic patterns</span>
+<span id="cb8-323"><a href="#cb8-323"></a><span class="ss">- </span>**Population context** using bubble sizes to represent magnitude</span>
+<span id="cb8-324"><a href="#cb8-324"></a><span class="ss">- </span>**Layered visualizations** combining multiple geoms (histogram with density curve, boxplots with jittered points)</span>
+<span id="cb8-325"><a href="#cb8-325"></a><span class="ss">- </span>**Consistent professional styling** with custom theming</span>
+<span id="cb8-326"><a href="#cb8-326"></a></span>
+<span id="cb8-327"><a href="#cb8-327"></a>For future enhancements, we could explore time series data to examine emissions trends over multiple years, or incorporate additional variables such as GDP per capita or energy mix to better understand emissions drivers.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
