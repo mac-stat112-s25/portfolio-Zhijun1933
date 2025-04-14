@@ -65,7 +65,7 @@ leaflet(data = fave_places) |>
 
 # Enhanced version
 leaflet(data = fave_places) |>
-  addProviderTiles("Stamen.Terrain") |>
+  addTiles() |> 
   addCircles(
     weight = 10, 
     opacity = 1, 
@@ -354,6 +354,7 @@ pal <- colorNumeric(
 
 # Create map
 leaflet(states_sf) |>
+  addTiles() |>
   addProviderTiles("CartoDB.Positron") |>
   addPolygons(
     fillColor = ~pal(elections_by_state$repub_pct_20),

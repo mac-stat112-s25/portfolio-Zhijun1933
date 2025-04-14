@@ -37,6 +37,16 @@ book:
       - ica/ica-bi.qmd
       - ica/ica-multi.qmd
       - ica/real-ica-spacial.qmd
+      - ica/ica-effective viz.qmd
+      - ica/ica-data wrangling.qmd
+      - ica/ica-working with dates.qmd
+      - ica/ica-reshaping data.qmd
+      - ica/ica-joining data.qmd
+      - ica/ica-working with factors.qmd
+      - ica/ica-working with strings.qmd
+      - ica/ica-working with data import.qmd
+      - ica/ica-EDA.qmd
+      
 
 format:
   html:
@@ -54,7 +64,7 @@ format:
 
 execute:
   cache: false
-  freeze: auto
+  freeze: false
 
 editor: 
   markdown:
