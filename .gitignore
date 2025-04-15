@@ -1,4 +1,4 @@
-.Rproj.user
+quarto publish gh-pages --no-browser.Rproj.user
 .Rhistory
 .RData
 .Ruserdata
@@ -11,3 +11,4 @@
 /site_libs
 *.html
 _freeze/
+.Rproj.user
