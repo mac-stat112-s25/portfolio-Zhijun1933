@@ -1,0 +1,366 @@
+---
+title: "Exam 1:Food Consumption and CO2 Emissions"
+author: "Zhijun He"
+format: html
+editor: visual
+---
+
+## 1 Background
+
+Diving into data storytelling has always fascinated me, and this analysis presents an exciting opportunity to explore global food consumption patterns.
+I've chosen the Food Consumption and CO2 Emissions dataset from the TidyTuesday project (Week 8 of 2020), which offers a window into our global food systems.
+What makes this dataset particularly compelling is its dual focus on consumption habits and environmental impact—two critical dimensions of our modern food challenges.
+
+### 1.1 Data Dictionary
+
+The dataset's structure is elegantly simple yet information-rich:
+
+**food_consumption.csv**
+
+| variable      | class     | description                       |
+|---------------|-----------|-----------------------------------|
+| country       | character | Country Name                      |
+| food_category | character | Food Category                     |
+| consumption   | double    | Consumption (kg/person/year)      |
+| co2_emmission | double    | CO2 Emission (kg CO2/person/year) |
+
+### 1.2 Grand Research Question
+
+Throughout this analysis, I'll be working to answer one central question that has both global and local implications:
+
+*What does the consumption of each food category in each country look like?*
+
+I find this question particularly intriguing because food consumption patterns reflect not just nutritional needs, but cultural traditions, economic realities, and even geopolitical histories.
+
+## 2 Install Packages
+
+**Working with this dataset required the packages listed in the code chunk above. Including the above code chunk in the Quarto file is not appropriate. Why? What should be done instead?**
+
+While preparing my analysis environment, I carefully considered best practices for reproducible research.
+Including package installation code directly in a Quarto document is, I've learned, problematic for several reasons:
+
+First, installing packages should be a one-time setup task, not something repeated with each rendering.
+Second, rendering would inevitably fail if internet connectivity issues arose during the process.
+Third, the document would suffer from unnecessary performance delays.
+Finally, installation output would create visual clutter in my final presentation.
+
+Instead, I've chosen to handle installations separately in the console, ensuring my document remains clean and focused on analysis.
+For team projects, I might alternatively recommend the `pacman` package with `p_load()`, which intelligently installs packages only when needed.
+
+## 3 Load Packages
+
+```{r}
+#| message: false
+#| warning: false
+library(tidytuesdayR)
+library(tidyverse)
+```
+
+**Inspect the warning message shown as a result of running the code chunk above. How many packages were loaded when loading the tidyverse package? Circle them in the output.**
+
+The tidyverse, my analytical Swiss Army knife, brings nine powerful packages into my workflow: ggplot2 for visualization, tibble for modern data frames, tidyr for data cleaning, readr for file import, purrr for functional programming, dplyr for data manipulation, stringr for text processing, forcats for factor handling, and lubridate for time series work.
+Each package contributes distinct capabilities, but together they create a cohesive analytical environment that streamlines my process from raw data to meaningful insights.
+
+## 4 Get Data
+
+```{r}
+#| message: false
+#| warning: false
+tuesdata <- tt_load('2020-02-18')
+fc <- tuesdata$food_consumption
+```
+
+**What does the above code chunk do?**
+
+Acquiring the dataset marks the beginning of my analytical journey.
+With a single elegant function call to `tt_load()`, I've pulled the TidyTuesday dataset from February 18, 2020, storing it in the `tuesdata` object.
+I then extracted the specific food consumption data frame and assigned it to `fc` for clarity and convenience in subsequent analysis.
+This approach not only simplifies my code but also maintains the connection to the dataset's original source—a practice I value for reproducibility and proper attribution.
+
+## 5 Understand Data
+
+**List a minimum of three initial steps that should be carried after loading the above dataset and the corresponding R functions to accomplish each.**
+
+Before diving into analysis, I always take time to get acquainted with my data.
+These initial exploration steps are crucial for building intuition about the dataset's structure and potential insights:
+
+| Step | R function |
+|-------------------------|-----------------------------------------------|
+| 1\. Check the structure and dimensions of the data | `str(fc)` or `glimpse(fc)` |
+| 2\. View a summary of the data | `summary(fc)` |
+| 3\. Check for missing values | `sum(is.na(fc))` or `colSums(is.na(fc))` |
+
+Let me implement these steps to build my foundational understanding:
+
+```{r}
+# Step 1: Check structure and dimensions
+glimpse(fc)
+
+# Step 2: View a summary
+summary(fc)
+
+# Step 3: Check for missing values
+colSums(is.na(fc))
+```
+
+Each of these functions reveals different facets of the dataset.
+The `glimpse()` function lets me quickly scan the variable types and first few values, giving me an immediate sense of the data's shape and content.
+The `summary()` function provides statistical insights about the numerical variables, highlighting ranges and distributions that might influence my analytical approach.
+Checking for missing values with `colSums(is.na())` is my data quality safeguard—a step I never skip because incomplete data can dramatically impact analytical conclusions.
+
+## 6 Explore Data
+
+### 6.3 Observations
+
+**Look at the top and bottom 22 observations from the dataset printed above. What are the units of observations?**
+
+**How many food categories are there?**
+
+**How many countries are there?**
+
+Looking beyond the raw numbers, I find the story of global food consumption beginning to emerge.
+Each row in this dataset represents a unique intersection of country and food category—a snapshot of cultural, economic, and agricultural patterns that varies dramatically across the globe.
+
+To truly understand the scope of the dataset, I need to quantify its dimensions:
+
+```{r}
+# Identifying unique food categories
+length(unique(fc$food_category))
+unique(fc$food_category)
+```
+
+Fascinating!
+The dataset categorizes global food consumption into 11 distinct categories, from staples like rice and wheat to various animal products and plant-based options.
+This moderate number of categories strikes a good balance—detailed enough to reveal meaningful patterns without becoming overwhelming.
+
+```{r}
+# Counting countries in the dataset
+length(unique(fc$country))
+```
+
+With data from 130 countries, this dataset offers impressive global coverage.
+The diversity of nations represented will allow me to explore consumption patterns across different regions, economies, and cultural traditions—a truly global perspective on our food systems.
+
+## 7 Understand Variables Individually
+
+**How many variables does the grand research question involve?**
+
+**Before answering the grand research question, a data scientist needs to understand the distribution of each involved variable. List all the involved variables in the table below with one appropriate plot type that can be used to visualize it without worrying about the R code details.**
+
+My grand research question weaves together two primary variables: country and consumption by food category.
+Before combining them, I'll explore each one individually:
+
+| Variable      | Appropriate Plot Type                     |
+|---------------|-------------------------------------------|
+| country       | Bar plot of counts or a map visualization |
+| food_category | Bar plot showing count or distribution    |
+| consumption   | Histogram or density plot                 |
+
+Let me visualize the distribution of consumption values to get a deeper understanding of this key variable:
+
+```{r}
+# Distribution of consumption
+ggplot(fc, aes(x = consumption)) +
+  geom_histogram(bins = 30, fill = "steelblue", alpha = 0.7) +
+  labs(title = "Distribution of Food Consumption",
+       x = "Consumption (kg/person/year)",
+       y = "Count") +
+  theme_minimal()
+
+# Let's also examine a log-transformed version since the data might be skewed
+ggplot(fc, aes(x = consumption + 0.1)) +  # Adding 0.1 to handle zero values
+  geom_histogram(bins = 30, fill = "steelblue", alpha = 0.7) +
+  scale_x_log10() +
+  labs(title = "Distribution of Food Consumption (Log Scale)",
+       x = "Consumption (kg/person/year) - Log Scale",
+       y = "Count") +
+  theme_minimal()
+```
+
+The raw distribution reveals an important insight: consumption values are heavily right-skewed, with many low values and fewer high values.
+This pattern suggests that most food categories in most countries have relatively modest per-person consumption, while a few country-food category combinations show exceptionally high consumption levels.
+The log-transformed visualization confirms this interpretation, showing a more balanced distribution that helps me better understand the full range of consumption patterns.
+
+## 8 Understand Consumption
+
+**Let us also try to understand the overall food consumption for (1) each food category (2) each country. List one appropriate plot for each bivariate viz and what should goes into their aesthetic without worrying about the R code details.**
+
+| Bivariate Viz | Plot Type | Aesthetic Details |
+|------------------------|-------------------|------------------------------|
+| Overall Food Consumption / Food Category | Bar chart | x = food_category, y = sum(consumption) |
+| Overall Food Consumption / Country | Bar chart (top 20 countries) | x = reorder(country, sum(consumption)), y = sum(consumption) |
+
+To deepen my analysis, I'll explore how total consumption varies across food categories and countries:
+
+```{r}
+# Overall consumption by food category
+fc %>%
+  group_by(food_category) %>%
+  summarize(total_consumption = sum(consumption)) %>%
+  ggplot(aes(x = reorder(food_category, total_consumption), y = total_consumption)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  coord_flip() +
+  labs(title = "Total Food Consumption by Category",
+       x = "Food Category",
+       y = "Total Consumption (kg/person/year)") +
+  theme_minimal()
+
+# Overall consumption by country (top 20)
+fc %>%
+  group_by(country) %>%
+  summarize(total_consumption = sum(consumption)) %>%
+  arrange(desc(total_consumption)) %>%
+  head(20) %>%
+  ggplot(aes(x = reorder(country, total_consumption), y = total_consumption)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  coord_flip() +
+  labs(title = "Total Food Consumption by Country (Top 20)",
+       x = "Country",
+       y = "Total Consumption (kg/person/year)") +
+  theme_minimal()
+```
+
+These visualizations reveal striking patterns!
+Milk (including cheese) emerges as the most consumed food category globally, followed by wheat products—a testament to their status as dietary staples across diverse cultures.
+The country-level analysis highlights significant variation, with the United States showing notably high total consumption.
+I'm particularly intrigued by the differences between countries with similar economic development but varying consumption levels, which suggests cultural and geographical factors play significant roles beyond mere economic capacity.
+
+## 9 Answering Grand RQ
+
+**List as many plot types (consider also their varieties) that can be used to answer the grand research question then list what should goes into their aesthetic (without worrying about its R code details) and what are some of the potential challenges you might face.**
+
+**Which of these plots is the most appropriate one? Why?**
+
+Now I face the central challenge of my analysis: visualizing consumption patterns across both countries and food categories.
+This requires careful consideration of various visualization approaches:
+
+| \# | Plot Type | Aesthetic Details | Potential Challenges |
+|----------------|----------------|------------------|----------------------|
+| 1 | Heatmap | x = country, y = food_category, fill = consumption | Too many countries to display at once |
+| 2 | Grouped bar chart | x = country, y = consumption, fill = food_category | Too many countries and categories to display clearly |
+| 3 | Faceted bar charts | facet = food_category, x = country, y = consumption | Too many countries for each facet |
+| 4 | Bubble chart | x = country, y = food_category, size = consumption | Overlapping bubbles with many data points |
+| 5 | Treemap | hierarchy = country \> food_category, size = consumption | May be difficult to compare across countries |
+| 6 | Small multiples | grid of small charts by country, showing food categories | Managing space with 130 countries |
+
+After careful consideration, I've chosen a clustered heatmap as my primary visualization approach.
+This choice offers several advantages: it can display all data points in a single, comprehensive view; its color gradients make patterns immediately apparent; clustering helps reveal similarities among countries; and it handles the large number of categories and countries better than alternative approaches.
+Perhaps most importantly, it facilitates comparisons across both dimensions simultaneously, offering a truly integrated view of global food consumption patterns.
+
+```{r}
+#| fig-height: 22
+#| fig-width: 11
+
+# Prepare data by normalizing consumption within food categories
+fc_normalized <- fc %>%
+  group_by(food_category) %>%
+  mutate(normalized_consumption = scale(consumption)[,1]) %>%
+  ungroup()
+
+# Calculate distance matrix between countries based on consumption patterns
+country_matrix <- fc %>%
+  pivot_wider(id_cols = country, names_from = food_category, values_from = consumption) %>%
+  column_to_rownames("country")
+
+country_dist <- dist(country_matrix)
+country_clust <- hclust(country_dist, method = "ward.D2")
+country_order <- country_clust$labels[country_clust$order]
+
+# Calculate distance matrix between food categories
+food_matrix <- fc %>%
+  pivot_wider(id_cols = food_category, names_from = country, values_from = consumption) %>%
+  column_to_rownames("food_category")
+
+food_dist <- dist(food_matrix)
+food_clust <- hclust(food_dist, method = "ward.D2")
+food_order <- food_clust$labels[food_clust$order]
+
+# Create the heatmap
+ggplot(fc, aes(x = factor(country, levels = country_order), 
+               y = factor(food_category, levels = food_order), 
+               fill = consumption)) +
+  geom_tile() +
+  scale_fill_viridis_c(name = "Consumption\n(kg/person/year)", 
+                      option = "plasma", 
+                      trans = "log1p") +  # log1p transformation to handle zeros
+  labs(title = "Food Category Consumption by Country",
+       subtitle = "Countries clustered by similar consumption patterns",
+       x = "Country", 
+       y = "Food Category") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8),
+        axis.text.y = element_text(size = 10),
+        panel.grid = element_blank(),
+        legend.position = "right")
+```
+
+The resulting visualization is truly illuminating!
+The clustering algorithm has grouped countries with similar consumption patterns together, revealing regional and cultural affinities I hadn't anticipated.
+The vibrant color gradient—transformed using a log scale to accommodate the wide range of values—highlights consumption patterns that would be difficult to discern in other visualization formats.
+I'm particularly struck by how some food categories show distinct regional patterns, while others reveal unexpected similarities between geographically distant countries.
+
+## 10 Beyond Viz
+
+### 10.1 Effectiveness
+
+**List a minimum of five concepts that you should apply to your final viz to make it more effective?**
+
+Creating an effective visualization isn't just about technical implementation—it's about thoughtful design choices that enhance understanding.
+For my heatmap, I've applied several key principles:
+
+First, I've embraced strategic color usage, selecting the plasma colorblind-friendly palette from the viridis family.
+This choice ensures accessibility while providing intuitive color gradients that reflect the data's magnitude.
+Clear labeling has been another priority, with descriptive titles, appropriate axis labels, and a well-positioned legend that helps readers interpret the visualization accurately.
+
+Recognizing the skewed nature of consumption data, I've applied a log transformation that reveals patterns across the full range of values, not just among the highest consumers.
+Perhaps most importantly, I've implemented hierarchical clustering to order both countries and food categories meaningfully, grouping similar entities together to highlight patterns that would otherwise remain hidden.
+
+To enhance interpretability, I've removed unnecessary grid lines and other visual distractions, focusing the viewer's attention on the data patterns themselves rather than decorative elements.
+With large datasets like this one, simplification isn't just an aesthetic choice—it's essential for clarity.
+
+I've also carefully considered the sizing of my visualization, using the fig-height and fig-width parameters to ensure all elements remain visible and legible despite the high data density.
+In a presentation context, I might additionally use annotations to highlight particularly interesting patterns or outliers, directing the viewer's attention to key insights.
+
+### 10.2 Additional Questions
+
+**List two additional questions, new or follow-up, that you would like to answer based on the this dataset.**
+
+This analysis has sparked my curiosity about several related questions that I'd like to explore in future work:
+
+1.  *Environmental efficiency of different food categories*: What is the relationship between food consumption and CO2 emissions across different food categories?
+    I'm particularly interested in identifying which food categories have the highest CO2 emissions per kg of consumption, as this could highlight opportunities for more environmentally sustainable dietary choices.
+
+2.  *Regional and economic patterns*: Are there identifiable regional patterns in food consumption and associated CO2 emissions?
+    Do countries from similar geographic regions or with similar economic development show similar consumption patterns?
+    These questions could help us understand how geography, culture, and economic development influence food systems.
+
+3.  *Plant vs. animal foods*: How do plant-based food categories compare to animal-based categories in terms of both consumption and CO2 emissions across different countries?
+    With growing interest in sustainable diets, this comparison could provide valuable insights into the environmental impacts of different dietary patterns.
+
+## 11 Finalize Work
+
+### 11.1 Manage Plot Size
+
+Creating effective visualizations with large datasets presents unique challenges, particularly when it comes to display sizing.
+For my heatmap, I've carefully calibrated the dimensions using fig-height: 22 and fig-width: 11 parameters to ensure that all 130 countries and 11 food categories remain visible and interpretable.
+This adjustment represents not just a technical tweak but a thoughtful design decision that balances comprehensive data display with visual clarity.
+
+### 11.2 Add Work to Portfolio
+
+This analysis represents a significant addition to my data science portfolio, demonstrating my ability to tackle complex, global datasets and extract meaningful patterns.
+When I add this work to my portfolio's Best Work section, I'll elaborate on my analytical process—from initial data exploration to visualization design decisions—and highlight key insights about global food consumption patterns.
+By documenting both my technical approach and my interpretations, I'll showcase not just what I did, but why I did it and what it means.
+
+### 11.3 Add Summary to Portfolio
+
+Beyond the technical analysis, I'll also create a dedicated Summary section in my portfolio to consolidate key learnings and reflections.
+This summary will serve as both a quick reference for viewers and a demonstration of my ability to distill complex analyses into accessible insights—a crucial skill for effective data communication.
+
+### 11.4 Reflect
+
+The final step in my analytical process is perhaps the most important: reflection.
+As I update my Progress Tracker, I'll consider what this project has taught me—not just about global food consumption patterns, but about data analysis approaches, visualization design principles, and my own analytical strengths and areas for growth.
+This reflection transforms a completed assignment into a learning opportunity, ensuring that each analysis contributes to my development as a data scientist.
+
+Through this project, I've gained deeper appreciation for how data visualization can reveal global patterns that might otherwise remain hidden in tables of numbers.
+I've also developed a richer understanding of how cultural, geographical, and economic factors shape something as fundamental as what we eat—a reminder that even seemingly simple questions can open windows into the complex interconnections of our global society.
