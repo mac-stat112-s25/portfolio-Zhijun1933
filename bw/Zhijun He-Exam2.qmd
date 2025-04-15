@@ -10,7 +10,9 @@ format:
 
 ## Introduction
 
-In this analysis, I'll explore the fascinating world of global food consumption patterns, examining which countries consume the most food overall, which ones lead in specific food categories, and visualizing consumption trends worldwide. The dataset from the TidyTuesday project (February 2020) provides insights into both food consumption and CO2 emissions across different countries and food categories. Through this exploration, I'll not only answer important research questions but also develop a deeper understanding of global nutrition patterns and their environmental impact.
+In this analysis, I'll explore the fascinating world of global food consumption patterns, examining which countries consume the most food overall, which ones lead in specific food categories, and visualizing consumption trends worldwide.
+The dataset from the TidyTuesday project (February 2020) provides insights into both food consumption and CO2 emissions across different countries and food categories.
+Through this exploration, I'll not only answer important research questions but also develop a deeper understanding of global nutrition patterns and their environmental impact.
 
 ## Setting Up the Environment
 
@@ -33,7 +35,8 @@ glimpse(fc)
 
 ## Data Cleaning
 
-Before diving into the analysis, I need to clean up the food category names to make them more concise and consistent. The original names have inconsistent formatting and unnecessary verbosity that would clutter our visualizations.
+Before diving into the analysis, I need to clean up the food category names to make them more concise and consistent.
+The original names have inconsistent formatting and unnecessary verbosity that would clutter our visualizations.
 
 ```{r clean_categories}
 # First, let's examine the original food categories
@@ -53,7 +56,9 @@ fcc <- fc %>%
 unique(fcc$food_category)
 ```
 
-The transformation worked perfectly! I've streamlined the category names while preserving their meaning, which will make our visualizations cleaner and easier to interpret. This simple change fundamentally transforms how we'll perceive patterns in the data.
+The transformation worked perfectly!
+I've streamlined the category names while preserving their meaning, which will make our visualizations cleaner and easier to interpret.
+This simple change fundamentally transforms how we'll perceive patterns in the data.
 
 ## Research Question 1: Which 5 countries consume the most food?
 
@@ -99,7 +104,9 @@ ggplot(top_consumers, aes(x = reorder(country, total_consumption), y = total_con
         axis.text.y = element_text(size = 11))
 ```
 
-The results reveal fascinating insights about global consumption patterns! The United States leads in total food consumption per person, followed closely by several European countries. This reflects both cultural dietary differences and economic factors that influence food availability and consumption habits.
+The results reveal fascinating insights about global consumption patterns!
+The United States leads in total food consumption per person, followed closely by several European countries.
+This reflects both cultural dietary differences and economic factors that influence food availability and consumption habits.
 
 ## Research Question 2: Which top 5 countries consume each food category the most?
 
@@ -147,7 +154,11 @@ ggplot(top_by_food, aes(x = reorder(country, consumption), y = consumption)) +
         strip.text = element_text(face = "bold"))
 ```
 
-What a fascinating glimpse into global eating habits! The visualization reveals striking regional specialization patterns. Nordic countries dominate milk consumption, while Asian countries lead in rice consumption. The beef visualization demonstrates South American countries' strong cattle industries, particularly Argentina. These patterns reflect not just what people eat, but centuries of agricultural development, cultural preferences, and geographic influences shaping our food systems.
+What a fascinating glimpse into global eating habits!
+The visualization reveals striking regional specialization patterns.
+Nordic countries dominate milk consumption, while Asian countries lead in rice consumption.
+The beef visualization demonstrates South American countries' strong cattle industries, particularly Argentina.
+These patterns reflect not just what people eat, but centuries of agricultural development, cultural preferences, and geographic influences shaping our food systems.
 
 ## Research Question 3: What does the consumption of each food look like globally?
 
@@ -181,7 +192,9 @@ missing_countries <- world_map %>%
 head(missing_countries, 10)
 ```
 
-I notice that there's a name mismatch between our consumption data and the natural earth map data. Several countries appear as "missing" because of naming differences. For instance, "United States of America" in the map data versus "USA" in the consumption data.
+I notice that there's a name mismatch between our consumption data and the natural earth map data.
+Several countries appear as "missing" because of naming differences.
+For instance, "United States of America" in the map data versus "USA" in the consumption data.
 
 Let's fix these discrepancies and create an improved visualization:
 
@@ -249,12 +262,19 @@ The choropleth maps provide a wealth of insights, but several enhancements could
 5.  Using a consistent scale across all maps allows for better comparisons
 6.  Adding borders between countries improves visual distinction
 
-These maps reveal fascinating global patterns in food consumption. Nordic countries excel in milk consumption, while Southeast Asian nations lead in rice. The beef map highlights South American leadership, particularly Argentina's remarkable consumption levels. What's particularly interesting is how standardization reveals outliers – countries that deviate significantly from average consumption patterns.
+These maps reveal fascinating global patterns in food consumption.
+Nordic countries excel in milk consumption, while Southeast Asian nations lead in rice.
+The beef map highlights South American leadership, particularly Argentina's remarkable consumption levels.
+What's particularly interesting is how standardization reveals outliers – countries that deviate significantly from average consumption patterns.
 
 ## Conclusion
 
-This exploration of global food consumption patterns has revealed fascinating insights about dietary habits across countries and regions. The analysis demonstrates not only which countries consume the most food overall but also where specific foods dominate cultural diets.
+This exploration of global food consumption patterns has revealed fascinating insights about dietary habits across countries and regions.
+The analysis demonstrates not only which countries consume the most food overall but also where specific foods dominate cultural diets.
 
-Through data wrangling and visualization, I've transformed raw numbers into meaningful insights. The standardized choropleth maps particularly highlight how consumption patterns vary globally, accounting for different scales across food categories. This standardization reveals which countries truly stand out in their consumption of specific foods relative to global averages.
+Through data wrangling and visualization, I've transformed raw numbers into meaningful insights.
+The standardized choropleth maps particularly highlight how consumption patterns vary globally, accounting for different scales across food categories.
+This standardization reveals which countries truly stand out in their consumption of specific foods relative to global averages.
 
-The techniques employed – from data cleaning to advanced visualization – showcase how statistical analysis can uncover patterns in complex global datasets. These findings could inform discussions about food security, cultural dietary patterns, and the environmental impact of food production across different regions of the world.
+The techniques employed – from data cleaning to advanced visualization – showcase how statistical analysis can uncover patterns in complex global datasets.
+These findings could inform discussions about food security, cultural dietary patterns, and the environmental impact of food production across different regions of the world.
