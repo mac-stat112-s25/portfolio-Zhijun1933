@@ -32,8 +32,12 @@ book:
       - bw/bw-spatial.qmd
       - bw/Zhijun He-Exam1.qmd
       - bw/Zhijun He-Exam2.qmd
+      - bw/Solo Project.qmd
       
-
+    - part: "Cheat Sheet"
+      chapters: 
+      - bw/Cheat Sheet.qmd
+      
     - part: "In-class Activities"
       chapters: 
       - ica/ica-uni.qmd

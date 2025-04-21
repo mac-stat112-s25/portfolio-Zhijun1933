@@ -1,0 +1,242 @@
+---
+title: "R Regression Analysis Cheatsheet"
+format: html
+---
+
+## Linear Regression
+
+```r
+# Simple linear regression
+model_linear <- lm(y ~ x, data = df)
+
+# Multiple linear regression
+model_multi <- lm(y ~ x1 + x2 + x3, data = df)
+
+# View model summary
+summary(model_linear)
+
+# Extract components
+coef(model_linear)       # Coefficients
+confint(model_linear)    # Confidence intervals
+fitted(model_linear)     # Fitted values
+residuals(model_linear)  # Residuals
+```
+
+## Visualizing Linear Relationships
+
+```r
+# Scatter plot with regression line
+ggplot(df, aes(x = x, y = y)) +
+  geom_point(alpha = 0.4) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(
+    title = "Linear Relationship",
+    x = "Predictor", y = "Outcome"
+  ) +
+  theme_minimal()
+
+# Diagnostic plots
+plot(model_linear)
+```
+
+## Logistic Regression
+
+```r
+# Simple logistic regression
+model_logit <- glm(binary_outcome ~ x, 
+                  data = df, 
+                  family = "binomial")
+
+# Multiple logistic regression
+model_logit_full <- glm(
+  binary_outcome ~ x1 + x2 + x3,
+  data = df,
+  family = "binomial"
+)
+
+# View model summary
+summary(model_logit)
+```
+
+## Interpreting Logistic Regression
+
+```r
+# Calculate odds ratios
+odds_ratios <- exp(coef(model_logit)) 
+
+# Confidence intervals for odds ratios
+odds_ratios_ci <- exp(confint(model_logit))
+
+# Combine into table
+odds_ratio_table <- data.frame(
+  Variable = names(odds_ratios),
+  Odds_Ratio = odds_ratios,
+  Lower_CI = odds_ratios_ci[,1],
+  Upper_CI = odds_ratios_ci[,2]
+)
+```
+
+## Predicted Probabilities
+
+```r
+# Create grid for prediction
+new_data <- expand_grid(
+  x1 = seq(min(df$x1), max(df$x1), length.out = 100),
+  x2 = c("level1", "level2", "level3")
+)
+
+# Calculate predicted probabilities
+new_data$pred_prob <- predict(
+  model_logit_full,
+  newdata = new_data,
+  type = "response"  # For probabilities
+)
+
+# Plot predictions
+ggplot(new_data, aes(x = x1, y = pred_prob, color = x2)) +
+  geom_line(linewidth = 1) +
+  labs(
+    title = "Predicted Probabilities",
+    x = "Predictor", y = "Probability"
+  ) +
+  ylim(0, 1) +
+  theme_minimal()
+```
+
+## Model Comparison
+
+```r
+# Compare models with ANOVA
+anova(smaller_model, larger_model, test = "Chisq")
+
+# Compare models using AIC/BIC (lower is better)
+AIC(model1, model2)
+BIC(model1, model2)
+```
+
+## Complete Regression Example
+
+```r
+# Load libraries
+library(tidyverse)
+
+# Import data
+survey_data <- read_csv("survey.csv")
+
+# Explore data
+glimpse(survey_data)
+summary(survey_data)
+
+# Visualize relationship
+ggplot(survey_data, aes(x = age, y = participation)) +
+  geom_point(alpha = 0.4) +
+  geom_smooth() +
+  theme_minimal()
+
+# Fit logistic regression
+model <- glm(
+  participation ~ age + ideology + gender,
+  data = survey_data,
+  family = "binomial"
+)
+
+# View results
+summary(model)
+
+# Calculate and display odds ratios
+exp(coef(model))
+
+# Predictions for visualization
+new_data <- expand_grid(
+  age = seq(18, 80, length.out = 100),
+  ideology = c(1, 5, 10),
+  gender = "Female"
+)
+
+new_data$pred_prob <- predict(
+  model, 
+  newdata = new_data,
+  type = "response"
+)
+
+# Plot predicted probabilities
+ggplot(new_data, aes(x = age, y = pred_prob, 
+                    color = factor(ideology))) +
+  geom_line(linewidth = 1) +
+  labs(
+    title = "Predicted Probability by Age and Ideology",
+    x = "Age", y = "Probability",
+    color = "Ideology"
+  ) +
+  scale_color_manual(
+    values = c("blue", "purple", "red"),
+    labels = c("Liberal", "Moderate", "Conservative")
+  ) +
+  theme_minimal() +
+  ylim(0, 1)
+```
+
+## Standard Errors, Confidence Intervals, and p-values
+
+```r
+# Standard errors
+sqrt(diag(vcov(model)))
+
+# Confidence intervals
+confint(model)  # Default 95% CI
+confint(model, level = 0.99)  # 99% CI
+
+# Extract p-values
+summary(model)$coefficients[, 4]
+```
+
+## Robust Standard Errors
+
+```r
+library(sandwich)
+library(lmtest)
+
+# Robust standard errors
+coeftest(model, vcov = vcovHC(model, type = "HC1"))
+```
+
+## Interaction Terms
+
+```r
+# Include interaction
+model_int <- lm(y ~ x1 * x2, data = df)
+# Equivalent to: y ~ x1 + x2 + x1:x2
+
+# Plot interaction
+ggplot(new_data, aes(x = x1, y = pred, color = x2)) +
+  geom_line() +
+  labs(title = "Interaction Effect") +
+  theme_minimal()
+```
+
+## Polynomial Terms
+
+```r
+# Quadratic term
+model_quad <- lm(y ~ x + I(x^2), data = df)
+
+# Cubic term
+model_cubic <- lm(y ~ x + I(x^2) + I(x^3), data = df)
+
+# Using poly() for orthogonal polynomials
+model_poly <- lm(y ~ poly(x, 3), data = df)
+```
+
+## Common Regression Diagnostics
+
+```r
+# Basic diagnostic plots
+plot(model)
+
+# Check for multicollinearity
+library(car)
+vif(model_multi)  # VIF > 5 indicates problems
+
+# Influence measures
+influence.measures(model)
+```
