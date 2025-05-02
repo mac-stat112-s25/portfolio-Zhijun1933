@@ -861,7 +861,7 @@
     "href": "bw/Cheatsheet2.html",
     "title": "9  Cheatsheet",
     "section": "",
-    "text": "10 Getting Started",
+    "text": "9.1 Introduction",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -871,19 +871,19 @@
     "objectID": "bw/Cheatsheet2.html#introduction",
     "href": "bw/Cheatsheet2.html#introduction",
     "title": "9  Cheatsheet",
-    "section": "10.1 1 Introduction",
-    "text": "10.1 1 Introduction\n# Install essential packages\ninstall.packages(\"tidyverse\")  # Collection of data science packages\ninstall.packages(\"quarto\")     # For document creation\n\n# Load libraries\nlibrary(tidyverse)  # Loads ggplot2, dplyr, tidyr, readr, etc.\n\n# Basic R objects\nx &lt;- c(1, 2, 3, 4, 5)          # Vector\ndf &lt;- data.frame(              # Data frame\n  id = 1:3,\n  value = c(10, 20, 30)\n)\nmy_list &lt;- list(a = 1:3, b = \"hello\")  # List\n\n# Basic functions\nmean(x)      # Calculate mean\nmedian(x)    # Calculate median\nsummary(df)  # Summarize data frame",
+    "section": "",
+    "text": "# Install essential packages\ninstall.packages(\"tidyverse\")  # Collection of data science packages\ninstall.packages(\"quarto\")     # For document creation\n\n# Load libraries\nlibrary(tidyverse)  # Loads ggplot2, dplyr, tidyr, readr, etc.\n\n# Basic R objects\nx &lt;- c(1, 2, 3, 4, 5)          # Vector\ndf &lt;- data.frame(              # Data frame\n  id = 1:3,\n  value = c(10, 20, 30)\n)\nmy_list &lt;- list(a = 1:3, b = \"hello\")  # List\n\n# Basic functions\nmean(x)      # Calculate mean\nmedian(x)    # Calculate median\nsummary(df)  # Summarize data frame",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
     ]
   },
   {
-    "objectID": "bw/Cheatsheet2.html#rstudio-hw1",
-    "href": "bw/Cheatsheet2.html#rstudio-hw1",
+    "objectID": "bw/Cheatsheet2.html#rstudio",
+    "href": "bw/Cheatsheet2.html#rstudio",
     "title": "9  Cheatsheet",
-    "section": "10.2 2 RStudio + HW1",
-    "text": "10.2 2 RStudio + HW1\n# RStudio interface\n# Top-left: Source editor (write code)\n# Bottom-left: Console (run code)\n# Top-right: Environment (view objects)\n# Bottom-right: Files/Plots/Help/Packages\n\n# Essential RStudio shortcuts\n# Ctrl+Enter: Run current line/selection\n# Ctrl+Shift+M: Insert pipe operator %&gt;%\n# Ctrl+Shift+C: Comment/uncomment lines\n# Tab: Auto-complete code\n# F1: Show help for function at cursor\n\n# Create a new Quarto document\n# File &gt; New File &gt; Quarto Document\n\n# Quarto document structure\n#| title: \"My Document\" \n#| format: html\n\n# This is markdown text\n\n# ```{r}\n# # This is an R code chunk\n# ```",
+    "section": "9.2 RStudio",
+    "text": "9.2 RStudio\n# RStudio interface\n# Top-left: Source editor (write code)\n# Bottom-left: Console (run code)\n# Top-right: Environment (view objects)\n# Bottom-right: Files/Plots/Help/Packages\n\n# Essential RStudio shortcuts\n# Ctrl+Enter: Run current line/selection\n# Ctrl+Shift+M: Insert pipe operator %&gt;%\n# Ctrl+Shift+C: Comment/uncomment lines\n# Tab: Auto-complete code\n# F1: Show help for function at cursor\n\n# Create a new Quarto document\n# File &gt; New File &gt; Quarto Document\n\n# Quarto document structure\n#| title: \"My Document\" \n#| format: html\n\n# This is markdown text\n\n# ```{r}\n# # This is an R code chunk\n# ```",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -893,8 +893,8 @@
     "objectID": "bw/Cheatsheet2.html#univariate-viz",
     "href": "bw/Cheatsheet2.html#univariate-viz",
     "title": "9  Cheatsheet",
-    "section": "11.1 3 Univariate Viz",
-    "text": "11.1 3 Univariate Viz\n# Histograms for continuous variables\nggplot(diamonds, aes(x = price)) +\n  geom_histogram(bins = 30)\n\n# Density plots\nggplot(diamonds, aes(x = price)) +\n  geom_density()\n\n# Bar charts for categorical variables\nggplot(diamonds, aes(x = cut)) +\n  geom_bar()\n\n# Boxplots\nggplot(diamonds, aes(y = price)) +\n  geom_boxplot()",
+    "section": "10.1 Univariate Viz",
+    "text": "10.1 Univariate Viz\n# Histograms for continuous variables\nggplot(diamonds, aes(x = price)) +\n  geom_histogram(bins = 30)\n\n# Density plots\nggplot(diamonds, aes(x = price)) +\n  geom_density()\n\n# Bar charts for categorical variables\nggplot(diamonds, aes(x = cut)) +\n  geom_bar()\n\n# Boxplots\nggplot(diamonds, aes(y = price)) +\n  geom_boxplot()",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -904,8 +904,8 @@
     "objectID": "bw/Cheatsheet2.html#bivariate-viz",
     "href": "bw/Cheatsheet2.html#bivariate-viz",
     "title": "9  Cheatsheet",
-    "section": "11.2 4 Bivariate Viz",
-    "text": "11.2 4 Bivariate Viz\n# Scatter plots (continuous x continuous)\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point()\n\n# Line plots (time series)\nggplot(economics, aes(x = date, y = unemploy)) +\n  geom_line()\n\n# Boxplots (categorical x continuous)\nggplot(mpg, aes(x = class, y = hwy)) +\n  geom_boxplot()\n\n# Bar plots (categorical x continuous, summarized)\nggplot(diamonds, aes(x = cut, y = price)) +\n  geom_bar(stat = \"summary\", fun = \"mean\")",
+    "section": "10.2 Bivariate Viz",
+    "text": "10.2 Bivariate Viz\n# Scatter plots (continuous x continuous)\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point()\n\n# Line plots (time series)\nggplot(economics, aes(x = date, y = unemploy)) +\n  geom_line()\n\n# Boxplots (categorical x continuous)\nggplot(mpg, aes(x = class, y = hwy)) +\n  geom_boxplot()\n\n# Bar plots (categorical x continuous, summarized)\nggplot(diamonds, aes(x = cut, y = price)) +\n  geom_bar(stat = \"summary\", fun = \"mean\")",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -915,8 +915,8 @@
     "objectID": "bw/Cheatsheet2.html#multivariate-viz",
     "href": "bw/Cheatsheet2.html#multivariate-viz",
     "title": "9  Cheatsheet",
-    "section": "11.3 5 Multivariate Viz",
-    "text": "11.3 5 Multivariate Viz\n# Color for third variable\nggplot(mpg, aes(x = displ, y = hwy, color = class)) +\n  geom_point()\n\n# Size for third variable\nggplot(mpg, aes(x = displ, y = hwy, size = cyl)) +\n  geom_point()\n\n# Shape for third variable (categorical, limit of 6 shapes)\nggplot(mpg, aes(x = displ, y = hwy, shape = drv)) +\n  geom_point()\n\n# Faceting (small multiples)\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point() +\n  facet_wrap(~class)",
+    "section": "10.3 Multivariate Viz",
+    "text": "10.3 Multivariate Viz\n# Color for third variable\nggplot(mpg, aes(x = displ, y = hwy, color = class)) +\n  geom_point()\n\n# Size for third variable\nggplot(mpg, aes(x = displ, y = hwy, size = cyl)) +\n  geom_point()\n\n# Shape for third variable (categorical, limit of 6 shapes)\nggplot(mpg, aes(x = displ, y = hwy, shape = drv)) +\n  geom_point()\n\n# Faceting (small multiples)\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point() +\n  facet_wrap(~class)",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -926,8 +926,8 @@
     "objectID": "bw/Cheatsheet2.html#spatial-viz",
     "href": "bw/Cheatsheet2.html#spatial-viz",
     "title": "9  Cheatsheet",
-    "section": "11.4 6 Spatial Viz",
-    "text": "11.4 6 Spatial Viz\n# Install and load required packages\nlibrary(sf)        # For spatial data\nlibrary(rnaturalearth) # For map data\n\n# Get world map data\nworld &lt;- ne_countries(scale = \"medium\", returnclass = \"sf\")\n\n# Basic map\nggplot(data = world) +\n  geom_sf()\n\n# Choropleth map (colored by variable)\nggplot(data = world) +\n  geom_sf(aes(fill = pop_est)) +\n  scale_fill_viridis_c(trans = \"log10\")\n\n# Add points to map\nggplot() +\n  geom_sf(data = world) +\n  geom_point(data = cities, aes(x = long, y = lat), color = \"red\")",
+    "section": "10.4 Spatial Viz",
+    "text": "10.4 Spatial Viz\n# Install and load required packages\nlibrary(sf)        # For spatial data\nlibrary(rnaturalearth) # For map data\n\n# Get world map data\nworld &lt;- ne_countries(scale = \"medium\", returnclass = \"sf\")\n\n# Basic map\nggplot(data = world) +\n  geom_sf()\n\n# Choropleth map (colored by variable)\nggplot(data = world) +\n  geom_sf(aes(fill = pop_est)) +\n  scale_fill_viridis_c(trans = \"log10\")\n\n# Add points to map\nggplot() +\n  geom_sf(data = world) +\n  geom_point(data = cities, aes(x = long, y = lat), color = \"red\")",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -937,8 +937,8 @@
     "objectID": "bw/Cheatsheet2.html#effective-viz",
     "href": "bw/Cheatsheet2.html#effective-viz",
     "title": "9  Cheatsheet",
-    "section": "11.5 7 Effective Viz",
-    "text": "11.5 7 Effective Viz\n# Complete plot with proper annotations\nggplot(mpg, aes(x = displ, y = hwy, color = class)) +\n  geom_point(alpha = 0.7) +\n  labs(\n    title = \"Engine Displacement vs. Highway MPG\",\n    subtitle = \"Larger engines tend to have lower fuel economy\",\n    x = \"Engine Displacement (L)\",\n    y = \"Highway Fuel Economy (MPG)\",\n    color = \"Vehicle Class\"\n  ) +\n  theme_minimal() +\n  scale_color_brewer(palette = \"Set1\")\n\n# Custom themes\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point() +\n  theme_bw() +      # Black and white theme\n  theme(\n    axis.title = element_text(face = \"bold\"),\n    legend.position = \"bottom\"\n  )",
+    "section": "10.5 Effective Viz",
+    "text": "10.5 Effective Viz\n# Complete plot with proper annotations\nggplot(mpg, aes(x = displ, y = hwy, color = class)) +\n  geom_point(alpha = 0.7) +\n  labs(\n    title = \"Engine Displacement vs. Highway MPG\",\n    subtitle = \"Larger engines tend to have lower fuel economy\",\n    x = \"Engine Displacement (L)\",\n    y = \"Highway Fuel Economy (MPG)\",\n    color = \"Vehicle Class\"\n  ) +\n  theme_minimal() +\n  scale_color_brewer(palette = \"Set1\")\n\n# Custom themes\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point() +\n  theme_bw() +      # Black and white theme\n  theme(\n    axis.title = element_text(face = \"bold\"),\n    legend.position = \"bottom\"\n  )",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -948,8 +948,8 @@
     "objectID": "bw/Cheatsheet2.html#wrangling",
     "href": "bw/Cheatsheet2.html#wrangling",
     "title": "9  Cheatsheet",
-    "section": "12.1 8 Wrangling",
-    "text": "12.1 8 Wrangling\n# Core dplyr verbs\n# filter: subset rows\ndiamonds %&gt;% filter(cut == \"Ideal\" & price &gt; 1000)\n\n# select: subset columns\ndiamonds %&gt;% select(carat, cut, price)\n\n# arrange: reorder rows\ndiamonds %&gt;% arrange(desc(price))\n\n# mutate: create/modify columns\ndiamonds %&gt;% mutate(price_per_carat = price / carat)\n\n# summarize: collapse rows\ndiamonds %&gt;% summarize(avg_price = mean(price), \n                      count = n())\n\n# Group operations\ndiamonds %&gt;%\n  group_by(cut) %&gt;%\n  summarize(avg_price = mean(price), \n            count = n()) %&gt;%\n  arrange(desc(avg_price))",
+    "section": "10.6 Wrangling",
+    "text": "10.6 Wrangling\n# Core dplyr verbs\n# filter: subset rows\ndiamonds %&gt;% filter(cut == \"Ideal\" & price &gt; 1000)\n\n# select: subset columns\ndiamonds %&gt;% select(carat, cut, price)\n\n# arrange: reorder rows\ndiamonds %&gt;% arrange(desc(price))\n\n# mutate: create/modify columns\ndiamonds %&gt;% mutate(price_per_carat = price / carat)\n\n# summarize: collapse rows\ndiamonds %&gt;% summarize(avg_price = mean(price), \n                      count = n())\n\n# Group operations\ndiamonds %&gt;%\n  group_by(cut) %&gt;%\n  summarize(avg_price = mean(price), \n            count = n()) %&gt;%\n  arrange(desc(avg_price))",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -959,8 +959,8 @@
     "objectID": "bw/Cheatsheet2.html#dates",
     "href": "bw/Cheatsheet2.html#dates",
     "title": "9  Cheatsheet",
-    "section": "12.2 9 Dates",
-    "text": "12.2 9 Dates\n# Working with dates using lubridate\nlibrary(lubridate)\n\n# Create dates\ntoday()               # Current date\nymd(\"2023-03-15\")     # From year-month-day string\nmdy(\"March 15, 2023\") # From month-day-year string\n\n# Extract components\nyear(today())         # Extract year\nmonth(today())        # Extract month\nday(today())          # Extract day\nwday(today(), label = TRUE) # Day of week\n\n# Date calculations\ntoday() + days(30)    # Add 30 days\ninterval(ymd(\"2023-01-01\"), today()) # Create interval\nas.period(interval(ymd(\"2023-01-01\"), today())) # Period",
+    "section": "10.7 Dates",
+    "text": "10.7 Dates\n# Working with dates using lubridate\nlibrary(lubridate)\n\n# Create dates\ntoday()               # Current date\nymd(\"2023-03-15\")     # From year-month-day string\nmdy(\"March 15, 2023\") # From month-day-year string\n\n# Extract components\nyear(today())         # Extract year\nmonth(today())        # Extract month\nday(today())          # Extract day\nwday(today(), label = TRUE) # Day of week\n\n# Date calculations\ntoday() + days(30)    # Add 30 days\ninterval(ymd(\"2023-01-01\"), today()) # Create interval\nas.period(interval(ymd(\"2023-01-01\"), today())) # Period",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -970,8 +970,8 @@
     "objectID": "bw/Cheatsheet2.html#reshaping",
     "href": "bw/Cheatsheet2.html#reshaping",
     "title": "9  Cheatsheet",
-    "section": "12.3 10 Reshaping",
-    "text": "12.3 10 Reshaping\n# Convert wide to long format\nstocks &lt;- data.frame(\n  time = as.Date('2009-01-01') + 0:9,\n  X = rnorm(10, 0, 1),\n  Y = rnorm(10, 0, 2),\n  Z = rnorm(10, 0, 4)\n)\n\nstocks_long &lt;- stocks %&gt;%\n  pivot_longer(cols = c(X, Y, Z),\n               names_to = \"stock\",\n               values_to = \"price\")\n\n# Convert long to wide format\nstocks_wide &lt;- stocks_long %&gt;%\n  pivot_wider(names_from = stock,\n              values_from = price)\n\n# Separate a column\ndata &lt;- data.frame(name = c(\"John Smith\", \"Mary Johnson\"))\ndata %&gt;% separate(name, into = c(\"first\", \"last\"), sep = \" \")\n\n# Unite columns\ndata &lt;- data.frame(first = c(\"John\", \"Mary\"), \n                  last = c(\"Smith\", \"Johnson\"))\ndata %&gt;% unite(name, first, last, sep = \" \")",
+    "section": "10.8 Reshaping",
+    "text": "10.8 Reshaping\n# Convert wide to long format\nstocks &lt;- data.frame(\n  time = as.Date('2009-01-01') + 0:9,\n  X = rnorm(10, 0, 1),\n  Y = rnorm(10, 0, 2),\n  Z = rnorm(10, 0, 4)\n)\n\nstocks_long &lt;- stocks %&gt;%\n  pivot_longer(cols = c(X, Y, Z),\n               names_to = \"stock\",\n               values_to = \"price\")\n\n# Convert long to wide format\nstocks_wide &lt;- stocks_long %&gt;%\n  pivot_wider(names_from = stock,\n              values_from = price)\n\n# Separate a column\ndata &lt;- data.frame(name = c(\"John Smith\", \"Mary Johnson\"))\ndata %&gt;% separate(name, into = c(\"first\", \"last\"), sep = \" \")\n\n# Unite columns\ndata &lt;- data.frame(first = c(\"John\", \"Mary\"), \n                  last = c(\"Smith\", \"Johnson\"))\ndata %&gt;% unite(name, first, last, sep = \" \")",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -981,8 +981,8 @@
     "objectID": "bw/Cheatsheet2.html#joining",
     "href": "bw/Cheatsheet2.html#joining",
     "title": "9  Cheatsheet",
-    "section": "12.4 11 Joining",
-    "text": "12.4 11 Joining\n# Sample data frames\nemployees &lt;- data.frame(\n  id = 1:5,\n  name = c(\"Alice\", \"Bob\", \"Charlie\", \"David\", \"Eve\")\n)\n\nsalaries &lt;- data.frame(\n  id = c(1, 3, 4, 6),\n  salary = c(50000, 60000, 55000, 65000)\n)\n\n# Inner join (only matching rows)\ninner_join(employees, salaries, by = \"id\")\n\n# Left join (all rows from employees)\nleft_join(employees, salaries, by = \"id\")\n\n# Right join (all rows from salaries)\nright_join(employees, salaries, by = \"id\")\n\n# Full join (all rows from both)\nfull_join(employees, salaries, by = \"id\")\n\n# Anti join (rows in employees with no match in salaries)\nanti_join(employees, salaries, by = \"id\")",
+    "section": "10.9 Joining",
+    "text": "10.9 Joining\n# Sample data frames\nemployees &lt;- data.frame(\n  id = 1:5,\n  name = c(\"Alice\", \"Bob\", \"Charlie\", \"David\", \"Eve\")\n)\n\nsalaries &lt;- data.frame(\n  id = c(1, 3, 4, 6),\n  salary = c(50000, 60000, 55000, 65000)\n)\n\n# Inner join (only matching rows)\ninner_join(employees, salaries, by = \"id\")\n\n# Left join (all rows from employees)\nleft_join(employees, salaries, by = \"id\")\n\n# Right join (all rows from salaries)\nright_join(employees, salaries, by = \"id\")\n\n# Full join (all rows from both)\nfull_join(employees, salaries, by = \"id\")\n\n# Anti join (rows in employees with no match in salaries)\nanti_join(employees, salaries, by = \"id\")",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -992,8 +992,8 @@
     "objectID": "bw/Cheatsheet2.html#factors",
     "href": "bw/Cheatsheet2.html#factors",
     "title": "9  Cheatsheet",
-    "section": "12.5 12 Factors",
-    "text": "12.5 12 Factors\n# Create factors\nmonths &lt;- factor(c(\"Jan\", \"Feb\", \"Mar\"), \n                levels = c(\"Jan\", \"Feb\", \"Mar\", \"Apr\"))\nmonths\n\n# Inspect factors\nlevels(months)\nnlevels(months)\n\n# Using forcats package for factor manipulation\nlibrary(forcats)\n\n# Reorder factor levels\nmpg %&gt;%\n  mutate(class = fct_reorder(class, hwy, .fun = median)) %&gt;%\n  ggplot(aes(x = class, y = hwy)) +\n  geom_boxplot()\n\n# Combine rare levels\ndiamonds %&gt;%\n  mutate(clarity = fct_lump_n(clarity, n = 5)) %&gt;%\n  count(clarity)",
+    "section": "10.10 Factors",
+    "text": "10.10 Factors\n# Create factors\nmonths &lt;- factor(c(\"Jan\", \"Feb\", \"Mar\"), \n                levels = c(\"Jan\", \"Feb\", \"Mar\", \"Apr\"))\nmonths\n\n# Inspect factors\nlevels(months)\nnlevels(months)\n\n# Using forcats package for factor manipulation\nlibrary(forcats)\n\n# Reorder factor levels\nmpg %&gt;%\n  mutate(class = fct_reorder(class, hwy, .fun = median)) %&gt;%\n  ggplot(aes(x = class, y = hwy)) +\n  geom_boxplot()\n\n# Combine rare levels\ndiamonds %&gt;%\n  mutate(clarity = fct_lump_n(clarity, n = 5)) %&gt;%\n  count(clarity)",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -1003,8 +1003,8 @@
     "objectID": "bw/Cheatsheet2.html#strings",
     "href": "bw/Cheatsheet2.html#strings",
     "title": "9  Cheatsheet",
-    "section": "12.6 13 Strings",
-    "text": "12.6 13 Strings\n# Using stringr package\nlibrary(stringr)\n\n# String basics\ntext &lt;- c(\"apple\", \"banana\", \"cherry\")\nstr_length(text)      # Length of strings\nstr_c(text, \" fruit\") # Concatenate strings\nstr_sub(text, 1, 3)   # Substring\n\n# Pattern matching\nstr_detect(text, \"a\")    # Detect pattern\nstr_count(text, \"a\")     # Count matches\nstr_extract(text, \"a.+\") # Extract match\nstr_replace(text, \"a\", \"A\") # Replace pattern\n\n# Regular expressions\nemails &lt;- c(\"john@example.com\", \"not-an-email\", \"mary@test.org\")\nstr_detect(emails, \"^[a-z]+@[a-z]+\\\\.[a-z]+$\") # Email pattern",
+    "section": "10.11 Strings",
+    "text": "10.11 Strings\n# Using stringr package\nlibrary(stringr)\n\n# String basics\ntext &lt;- c(\"apple\", \"banana\", \"cherry\")\nstr_length(text)      # Length of strings\nstr_c(text, \" fruit\") # Concatenate strings\nstr_sub(text, 1, 3)   # Substring\n\n# Pattern matching\nstr_detect(text, \"a\")    # Detect pattern\nstr_count(text, \"a\")     # Count matches\nstr_extract(text, \"a.+\") # Extract match\nstr_replace(text, \"a\", \"A\") # Replace pattern\n\n# Regular expressions\nemails &lt;- c(\"john@example.com\", \"not-an-email\", \"mary@test.org\")\nstr_detect(emails, \"^[a-z]+@[a-z]+\\\\.[a-z]+$\") # Email pattern",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -1014,8 +1014,8 @@
     "objectID": "bw/Cheatsheet2.html#data-import",
     "href": "bw/Cheatsheet2.html#data-import",
     "title": "9  Cheatsheet",
-    "section": "13.1 14 Data Import",
-    "text": "13.1 14 Data Import\n# CSV files\nread_csv(\"data.csv\")\nwrite_csv(df, \"output.csv\")\n\n# Excel files\nlibrary(readxl)\nread_excel(\"data.xlsx\", sheet = \"Sheet1\")\n\n# Other formats\nread_tsv(\"data.tsv\")         # Tab-separated\nread_delim(\"data.txt\", delim = \"|\") # Custom delimiter\nread_rds(\"data.rds\")         # R's binary format\nlibrary(jsonlite)\nfromJSON(\"data.json\")        # JSON\n\n# Read data from URL\nread_csv(\"https://example.com/data.csv\")",
+    "section": "11.1 Data Import",
+    "text": "11.1 Data Import\n# CSV files\nread_csv(\"data.csv\")\nwrite_csv(df, \"output.csv\")\n\n# Excel files\nlibrary(readxl)\nread_excel(\"data.xlsx\", sheet = \"Sheet1\")\n\n# Other formats\nread_tsv(\"data.tsv\")         # Tab-separated\nread_delim(\"data.txt\", delim = \"|\") # Custom delimiter\nread_rds(\"data.rds\")         # R's binary format\nlibrary(jsonlite)\nfromJSON(\"data.json\")        # JSON\n\n# Read data from URL\nread_csv(\"https://example.com/data.csv\")",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
@@ -1025,8 +1025,8 @@
     "objectID": "bw/Cheatsheet2.html#eda",
     "href": "bw/Cheatsheet2.html#eda",
     "title": "9  Cheatsheet",
-    "section": "13.2 15 EDA",
-    "text": "13.2 15 EDA\n# Exploratory Data Analysis (EDA)\n\n# Quick summary of data\nsummary(diamonds)\nglimpse(diamonds)\n\n# Count unique values\ndiamonds %&gt;% count(cut)\ndiamonds %&gt;% count(cut, clarity)\n\n# Explore distributions\ndiamonds %&gt;%\n  ggplot(aes(x = price)) +\n  geom_histogram(bins = 30)\n\n# Explore relationships\ndiamonds %&gt;%\n  ggplot(aes(x = carat, y = price)) +\n  geom_point(alpha = 0.2) +\n  geom_smooth()\n\n# Summary statistics by group\ndiamonds %&gt;%\n  group_by(cut) %&gt;%\n  summarize(\n    count = n(),\n    min_price = min(price),\n    max_price = max(price),\n    mean_price = mean(price),\n    median_price = median(price)\n  )",
+    "section": "11.2 EDA",
+    "text": "11.2 EDA\n# Exploratory Data Analysis (EDA)\n\n# Quick summary of data\nsummary(diamonds)\nglimpse(diamonds)\n\n# Count unique values\ndiamonds %&gt;% count(cut)\ndiamonds %&gt;% count(cut, clarity)\n\n# Explore distributions\ndiamonds %&gt;%\n  ggplot(aes(x = price)) +\n  geom_histogram(bins = 30)\n\n# Explore relationships\ndiamonds %&gt;%\n  ggplot(aes(x = carat, y = price)) +\n  geom_point(alpha = 0.2) +\n  geom_smooth()\n\n# Summary statistics by group\ndiamonds %&gt;%\n  group_by(cut) %&gt;%\n  summarize(\n    count = n(),\n    min_price = min(price),\n    max_price = max(price),\n    mean_price = mean(price),\n    median_price = median(price)\n  )",
     "crumbs": [
       "Cheat Sheet",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cheatsheet</span>"
