@@ -321,20 +321,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li>
-<a href="#univariate-viz" id="toc-univariate-viz" class="nav-link active" data-scroll-target="#univariate-viz">3 Univariate Viz</a>
+<a href="#univariate-viz" id="toc-univariate-viz" class="nav-link active" data-scroll-target="#univariate-viz">Univariate Viz</a>
   <ul class="collapse">
 <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning Goals</a></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   <li>
-<a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">3.1 Background</a>
+<a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a>
   <ul class="collapse">
-<li><a href="#importance-of-visualizations" id="toc-importance-of-visualizations" class="nav-link" data-scroll-target="#importance-of-visualizations">3.1.1 Importance of Visualizations</a></li>
-  <li><a href="#components-of-data-graphics" id="toc-components-of-data-graphics" class="nav-link" data-scroll-target="#components-of-data-graphics">3.1.2 Components of Data Graphics</a></li>
-  <li><a href="#ggplot-r-packages" id="toc-ggplot-r-packages" class="nav-link" data-scroll-target="#ggplot-r-packages">3.1.3 ggplot + R packages</a></li>
+<li><a href="#importance-of-visualizations" id="toc-importance-of-visualizations" class="nav-link" data-scroll-target="#importance-of-visualizations">Importance of Visualizations</a></li>
+  <li><a href="#components-of-data-graphics" id="toc-components-of-data-graphics" class="nav-link" data-scroll-target="#components-of-data-graphics">Components of Data Graphics</a></li>
+  <li><a href="#ggplot-r-packages" id="toc-ggplot-r-packages" class="nav-link" data-scroll-target="#ggplot-r-packages">ggplot + R packages</a></li>
   </ul>
 </li>
   <li>
-<a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">3.2 Exercises</a>
+<a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
   <ul class="collapse">
 <li><a href="#exercise-1-research-questions" id="toc-exercise-1-research-questions" class="nav-link" data-scroll-target="#exercise-1-research-questions">Exercise 1: Research Questions</a></li>
   <li><a href="#exercise-2-load-tidyverse" id="toc-exercise-2-load-tidyverse" class="nav-link" data-scroll-target="#exercise-2-load-tidyverse">Exercise 2: Load tidyverse</a></li>
@@ -372,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="univariate-viz" class="level1"><h1>3 Univariate Viz</h1>
+</header><section id="univariate-viz" class="level1"><h1>Univariate Viz</h1>
 <section id="learning-goals" class="level2"><h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
 <ul>
 <li>Convince ourselves about the importance of data viz.</li>
@@ -389,9 +389,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Data visualization (html) by Wickham, Çetinkaya-Rundel, &amp; Grolemund</li>
 <li>Visualizing distributions (html) by Wilke</li>
 <li>ggplot cheatsheet (pdf)</li>
-</ul></section><section id="background" class="level2"><h2 class="anchored" data-anchor-id="background">3.1 Background</h2>
+</ul></section><section id="background" class="level2"><h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>We’re starting our unit on data visualization or data viz, thus skipping some steps in the data science workflow. Mainly, it’s tough to understand how our data should be prepared before we have a sense of what we want to do with this data!</p>
-<section id="importance-of-visualizations" class="level3"><h3 class="anchored" data-anchor-id="importance-of-visualizations">3.1.1 Importance of Visualizations</h3>
+<section id="importance-of-visualizations" class="level3"><h3 class="anchored" data-anchor-id="importance-of-visualizations">Importance of Visualizations</h3>
 <section id="example-1" class="level4"><h4 class="anchored" data-anchor-id="example-1">Example 1</h4>
 <p>The data below includes information on hiking trails in the 46 “high peaks” in the Adirondack mountains of Northeastern New York state. This includes data on the hike’s highest elevation (feet), vertical ascent (feet), length (miles), time in hours that it takes to complete, and difficulty rating. Open this data in a viewer, through the Environment tab or by typing View(hikes) in the console.</p>
 <div class="cell">
@@ -417,7 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Refine research questions &amp; inform next steps of our analysis.</li>
 <li>Communicate our findings and tell a story.</li>
-</ul></section></section><section id="components-of-data-graphics" class="level3"><h3 class="anchored" data-anchor-id="components-of-data-graphics">3.1.2 Components of Data Graphics</h3>
+</ul></section></section><section id="components-of-data-graphics" class="level3"><h3 class="anchored" data-anchor-id="components-of-data-graphics">Components of Data Graphics</h3>
 <section id="example-3" class="level4"><h4 class="anchored" data-anchor-id="example-3">Example 3</h4>
 <p>Data viz is the process of mapping data to different plot components. For example, in the NYT example above, the research team mapped data like the following (but with many more rows!) to the plot.</p>
 <table class="caption-top table">
@@ -466,7 +466,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>scales: color each line by decade</li>
 <li>faceting: none</li>
 <li>a theme: NYT style</li>
-</ul></section></section><section id="ggplot-r-packages" class="level3"><h3 class="anchored" data-anchor-id="ggplot-r-packages">3.1.3 ggplot + R packages</h3>
+</ul></section></section><section id="ggplot-r-packages" class="level3"><h3 class="anchored" data-anchor-id="ggplot-r-packages">ggplot + R packages</h3>
 <p>We will use the powerful ggplot tools in R to build (most of) our viz. The gg here is short for the “grammar of graphics”. These tools are developed in a way that:</p>
 <ul>
 <li>recognizes that code is communication (it has a grammar!)</li>
@@ -497,7 +497,7 @@ Note
 <ul>
 <li>Type library(tidyverse) in your console. If you don’t get an error, it’s installed!</li>
 <li>Check that it appears in the list under the “Packages” pane.</li>
-</ul></section></section><section id="exercises" class="level2"><h2 class="anchored" data-anchor-id="exercises">3.2 Exercises</h2>
+</ul></section></section><section id="exercises" class="level2"><h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
 <section id="exercise-1-research-questions" class="level3"><h3 class="anchored" data-anchor-id="exercise-1-research-questions">Exercise 1: Research Questions</h3>
 <p>Let’s dig into the hikes data, starting with the elevation and difficulty ratings of the hikes:</p>
 <div class="cell">
@@ -1716,7 +1716,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-14"><a href="#cb46-14"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb46-15"><a href="#cb46-15"></a><span class="in">```</span></span>
 <span id="cb46-16"><a href="#cb46-16"></a></span>
-<span id="cb46-17"><a href="#cb46-17"></a><span class="fu"># 3 Univariate Viz</span></span>
+<span id="cb46-17"><a href="#cb46-17"></a><span class="fu"># Univariate Viz</span></span>
 <span id="cb46-18"><a href="#cb46-18"></a></span>
 <span id="cb46-19"><a href="#cb46-19"></a><span class="fu">## Learning Goals</span></span>
 <span id="cb46-20"><a href="#cb46-20"></a></span>
@@ -1737,12 +1737,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-35"><a href="#cb46-35"></a><span class="ss">-   </span>Visualizing distributions (html) by Wilke</span>
 <span id="cb46-36"><a href="#cb46-36"></a><span class="ss">-   </span>ggplot cheatsheet (pdf)</span>
 <span id="cb46-37"><a href="#cb46-37"></a></span>
-<span id="cb46-38"><a href="#cb46-38"></a><span class="fu">## 3.1 Background</span></span>
+<span id="cb46-38"><a href="#cb46-38"></a><span class="fu">## Background</span></span>
 <span id="cb46-39"><a href="#cb46-39"></a></span>
 <span id="cb46-40"><a href="#cb46-40"></a>We're starting our unit on data visualization or data viz, thus skipping some steps in the data science workflow.</span>
 <span id="cb46-41"><a href="#cb46-41"></a>Mainly, it's tough to understand how our data should be prepared before we have a sense of what we want to do with this data!</span>
 <span id="cb46-42"><a href="#cb46-42"></a></span>
-<span id="cb46-43"><a href="#cb46-43"></a><span class="fu">### 3.1.1 Importance of Visualizations</span></span>
+<span id="cb46-43"><a href="#cb46-43"></a><span class="fu">### Importance of Visualizations</span></span>
 <span id="cb46-44"><a href="#cb46-44"></a></span>
 <span id="cb46-45"><a href="#cb46-45"></a><span class="fu">#### Example 1</span></span>
 <span id="cb46-46"><a href="#cb46-46"></a></span>
@@ -1777,7 +1777,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-77"><a href="#cb46-77"></a><span class="ss">-   </span>Refine research questions &amp; inform next steps of our analysis.</span>
 <span id="cb46-78"><a href="#cb46-78"></a><span class="ss">-   </span>Communicate our findings and tell a story.</span>
 <span id="cb46-79"><a href="#cb46-79"></a></span>
-<span id="cb46-80"><a href="#cb46-80"></a><span class="fu">### 3.1.2 Components of Data Graphics</span></span>
+<span id="cb46-80"><a href="#cb46-80"></a><span class="fu">### Components of Data Graphics</span></span>
 <span id="cb46-81"><a href="#cb46-81"></a></span>
 <span id="cb46-82"><a href="#cb46-82"></a><span class="fu">#### Example 3</span></span>
 <span id="cb46-83"><a href="#cb46-83"></a></span>
@@ -1832,7 +1832,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-132"><a href="#cb46-132"></a><span class="ss">-   </span>faceting: none</span>
 <span id="cb46-133"><a href="#cb46-133"></a><span class="ss">-   </span>a theme: NYT style</span>
 <span id="cb46-134"><a href="#cb46-134"></a></span>
-<span id="cb46-135"><a href="#cb46-135"></a><span class="fu">### 3.1.3 ggplot + R packages</span></span>
+<span id="cb46-135"><a href="#cb46-135"></a><span class="fu">### ggplot + R packages</span></span>
 <span id="cb46-136"><a href="#cb46-136"></a></span>
 <span id="cb46-137"><a href="#cb46-137"></a>We will use the powerful ggplot tools in R to build (most of) our viz.</span>
 <span id="cb46-138"><a href="#cb46-138"></a>The gg here is short for the "grammar of graphics".</span>
@@ -1866,7 +1866,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-166"><a href="#cb46-166"></a><span class="ss">-   </span>Type library(tidyverse) in your console. If you don't get an error, it's installed!</span>
 <span id="cb46-167"><a href="#cb46-167"></a><span class="ss">-   </span>Check that it appears in the list under the "Packages" pane.</span>
 <span id="cb46-168"><a href="#cb46-168"></a></span>
-<span id="cb46-169"><a href="#cb46-169"></a><span class="fu">## 3.2 Exercises</span></span>
+<span id="cb46-169"><a href="#cb46-169"></a><span class="fu">## Exercises</span></span>
 <span id="cb46-170"><a href="#cb46-170"></a></span>
 <span id="cb46-171"><a href="#cb46-171"></a><span class="fu">### Exercise 1: Research Questions</span></span>
 <span id="cb46-172"><a href="#cb46-172"></a></span>

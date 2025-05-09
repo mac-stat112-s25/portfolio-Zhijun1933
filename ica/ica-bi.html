@@ -321,12 +321,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li>
-<a href="#bivariate-viz" id="toc-bivariate-viz" class="nav-link active" data-scroll-target="#bivariate-viz">4 Bivariate Viz</a>
+<a href="#bivariate-viz" id="toc-bivariate-viz" class="nav-link active" data-scroll-target="#bivariate-viz">Bivariate Viz</a>
   <ul class="collapse">
 <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning Goals</a></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   <li>
-<a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">4.1 Review</a>
+<a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">Review</a>
   <ul class="collapse">
 <li><a href="#example-1-hangout-preferences" id="toc-example-1-hangout-preferences" class="nav-link" data-scroll-target="#example-1-hangout-preferences">Example 1: Hangout Preferences</a></li>
   <li><a href="#example-2-temperature-preferences" id="toc-example-2-temperature-preferences" class="nav-link" data-scroll-target="#example-2-temperature-preferences">Example 2: Temperature Preferences</a></li>
@@ -334,14 +334,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul>
 </li>
   <li>
-<a href="#new-stuff" id="toc-new-stuff" class="nav-link" data-scroll-target="#new-stuff">4.2 New stuff</a>
+<a href="#new-stuff" id="toc-new-stuff" class="nav-link" data-scroll-target="#new-stuff">New stuff</a>
   <ul class="collapse">
-<li><a href="#exploring-relationships" id="toc-exploring-relationships" class="nav-link" data-scroll-target="#exploring-relationships">4.2.1 Exploring relationships</a></li>
-  <li><a href="#general-guidance-for-building-bivariate-plots" id="toc-general-guidance-for-building-bivariate-plots" class="nav-link" data-scroll-target="#general-guidance-for-building-bivariate-plots">4.2.2 General guidance for building bivariate plots</a></li>
+<li><a href="#exploring-relationships" id="toc-exploring-relationships" class="nav-link" data-scroll-target="#exploring-relationships">Exploring relationships</a></li>
+  <li><a href="#general-guidance-for-building-bivariate-plots" id="toc-general-guidance-for-building-bivariate-plots" class="nav-link" data-scroll-target="#general-guidance-for-building-bivariate-plots">General guidance for building bivariate plots</a></li>
   </ul>
 </li>
   <li>
-<a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">4.3 Exercises</a>
+<a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
   <ul class="collapse">
 <li><a href="#exercise-0-review" id="toc-exercise-0-review" class="nav-link" data-scroll-target="#exercise-0-review">Exercise 0: Review</a></li>
   <li><a href="#exercise-1-quantitative-vs-quantitative-intuition-check" id="toc-exercise-1-quantitative-vs-quantitative-intuition-check" class="nav-link" data-scroll-target="#exercise-1-quantitative-vs-quantitative-intuition-check">Exercise 1: Quantitative vs Quantitative Intuition Check</a></li>
@@ -380,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="bivariate-viz" class="level1"><h1>4 Bivariate Viz</h1>
+</header><section id="bivariate-viz" class="level1"><h1>Bivariate Viz</h1>
 <section id="learning-goals" class="level2"><h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
 <ul>
 <li>Explore how to build and interpret visualizations of bivariate, i.e.&nbsp;two variable, relationships.</li>
@@ -391,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>common ggplot mistakes (YouTube) by Lisa Lendway</li>
 <li>Visualizing amounts (html) by Wilke</li>
 <li>Visualizing many distributions at once (html) by Wilke</li>
-</ul></section><section id="review" class="level2"><h2 class="anchored" data-anchor-id="review">4.1 Review</h2>
+</ul></section><section id="review" class="level2"><h2 class="anchored" data-anchor-id="review">Review</h2>
 <p>Let’s review some univariate concepts and code using our class survey data. If the answers aren’t at the top of your mind, don’t fret! We’ve barely started speaking this new language, and learned a ton of vocab last week, so you naturally won’t remember it all.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Import data</span></span>
@@ -488,13 +488,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Bar charts count up the number of observations of each outcome of a variable. They’re good for categorical variables, or quantitative variables with only a handful of possible outcomes.</li>
 <li>Histograms count up the number of observations that fall into different numerical ranges of variable. They’re good for quantitative variables, especially those with many different observed outcomes.</li>
-</ul></section></section><section id="new-stuff" class="level2"><h2 class="anchored" data-anchor-id="new-stuff">4.2 New stuff</h2>
+</ul></section></section><section id="new-stuff" class="level2"><h2 class="anchored" data-anchor-id="new-stuff">New stuff</h2>
 <p>Thus far, we’ve been studying one variable at a time, using univariate plots. But once we get a sense of how individual variables behave on their own, our questions often turn to relationships among variables. For example, in our hikes data:</p>
 <ul>
 <li>How much time does it take to complete a hike? ——&gt; How is time related to a hike’s elevation? What about its length?</li>
 <li>How does difficult rating vary from hike to hike? ——-&gt; How is difficulty rating related to a hike’s ascent?</li>
 </ul>
-<section id="exploring-relationships" class="level3"><h3 class="anchored" data-anchor-id="exploring-relationships">4.2.1 Exploring relationships</h3>
+<section id="exploring-relationships" class="level3"><h3 class="anchored" data-anchor-id="exploring-relationships">Exploring relationships</h3>
 <p>Exploring univariate patterns often sparks follow-up questions about relationships between 2+ variables. Often, but not always, variables take on specific roles:</p>
 <ul>
 <li>response variable: the variable whose variability we would like to explain (time to complete a hike)</li>
@@ -585,13 +585,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-</section></section><section id="general-guidance-for-building-bivariate-plots" class="level3"><h3 class="anchored" data-anchor-id="general-guidance-for-building-bivariate-plots">4.2.2 General guidance for building bivariate plots</h3>
+</section></section><section id="general-guidance-for-building-bivariate-plots" class="level3"><h3 class="anchored" data-anchor-id="general-guidance-for-building-bivariate-plots">General guidance for building bivariate plots</h3>
 <p>As with univariate plots, an appropriate visualization for the relationship between 2 variables depends upon whether the variables are quantitative or categorical. In general:</p>
 <ul>
 <li>Each quantitative variable requires a new axis (or a quantitative scale if we run out of axes).</li>
 <li>Each categorical variable requires a new way to “group” the graphic (eg: using colors, shapes, separate facets, etc)</li>
 <li>For visualizations in which overlap in glyphs or plots obscures the patterns, try faceting or transparency.</li>
-</ul></section></section><section id="exercises" class="level2"><h2 class="anchored" data-anchor-id="exercises">4.3 Exercises</h2>
+</ul></section></section><section id="exercises" class="level2"><h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
 <p>Github user Tony McGovern has compiled and made available 2020/2016/2012 presidential election results for most of 3000+ U.S. counties, except Alaska.</p>
 <p>A wrangled version of this data, is imported below, after being combined with:</p>
 <ul>
@@ -1956,7 +1956,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb66-14"><a href="#cb66-14"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb66-15"><a href="#cb66-15"></a><span class="in">```</span></span>
 <span id="cb66-16"><a href="#cb66-16"></a></span>
-<span id="cb66-17"><a href="#cb66-17"></a><span class="fu"># 4 Bivariate Viz</span></span>
+<span id="cb66-17"><a href="#cb66-17"></a><span class="fu"># Bivariate Viz</span></span>
 <span id="cb66-18"><a href="#cb66-18"></a></span>
 <span id="cb66-19"><a href="#cb66-19"></a><span class="fu">## Learning Goals</span></span>
 <span id="cb66-20"><a href="#cb66-20"></a></span>
@@ -1971,7 +1971,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb66-29"><a href="#cb66-29"></a><span class="ss">-   </span>Visualizing amounts (html) by Wilke</span>
 <span id="cb66-30"><a href="#cb66-30"></a><span class="ss">-   </span>Visualizing many distributions at once (html) by Wilke</span>
 <span id="cb66-31"><a href="#cb66-31"></a></span>
-<span id="cb66-32"><a href="#cb66-32"></a><span class="fu">## 4.1 Review</span></span>
+<span id="cb66-32"><a href="#cb66-32"></a><span class="fu">## Review</span></span>
 <span id="cb66-33"><a href="#cb66-33"></a></span>
 <span id="cb66-34"><a href="#cb66-34"></a>Let's review some univariate concepts and code using our class survey data.</span>
 <span id="cb66-35"><a href="#cb66-35"></a>If the answers aren't at the top of your mind, don't fret!</span>
@@ -2048,7 +2048,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb66-112"><a href="#cb66-112"></a><span class="ss">-   </span>Bar charts count up the number of observations of each outcome of a variable. They're good for categorical variables, or quantitative variables with only a handful of possible outcomes.</span>
 <span id="cb66-113"><a href="#cb66-113"></a><span class="ss">-   </span>Histograms count up the number of observations that fall into different numerical ranges of variable. They're good for quantitative variables, especially those with many different observed outcomes.</span>
 <span id="cb66-114"><a href="#cb66-114"></a></span>
-<span id="cb66-115"><a href="#cb66-115"></a><span class="fu">## 4.2 New stuff</span></span>
+<span id="cb66-115"><a href="#cb66-115"></a><span class="fu">## New stuff</span></span>
 <span id="cb66-116"><a href="#cb66-116"></a></span>
 <span id="cb66-117"><a href="#cb66-117"></a>Thus far, we've been studying one variable at a time, using univariate plots.</span>
 <span id="cb66-118"><a href="#cb66-118"></a>But once we get a sense of how individual variables behave on their own, our questions often turn to relationships among variables.</span>
@@ -2057,7 +2057,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb66-121"><a href="#cb66-121"></a><span class="ss">-   </span>How much time does it take to complete a hike? ——<span class="sc">\&gt;</span> How is time related to a hike's elevation? What about its length?</span>
 <span id="cb66-122"><a href="#cb66-122"></a><span class="ss">-   </span>How does difficult rating vary from hike to hike? ——-<span class="sc">\&gt;</span> How is difficulty rating related to a hike's ascent?</span>
 <span id="cb66-123"><a href="#cb66-123"></a></span>
-<span id="cb66-124"><a href="#cb66-124"></a><span class="fu">### 4.2.1 Exploring relationships</span></span>
+<span id="cb66-124"><a href="#cb66-124"></a><span class="fu">### Exploring relationships</span></span>
 <span id="cb66-125"><a href="#cb66-125"></a></span>
 <span id="cb66-126"><a href="#cb66-126"></a>Exploring univariate patterns often sparks follow-up questions about relationships between 2+ variables.</span>
 <span id="cb66-127"><a href="#cb66-127"></a>Often, but not always, variables take on specific roles:</span>
@@ -2113,7 +2113,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb66-187"><a href="#cb66-187"></a>      <span class="fu">geom_bar</span>()</span>
 <span id="cb66-188"><a href="#cb66-188"></a><span class="in">```</span></span>
 <span id="cb66-189"><a href="#cb66-189"></a></span>
-<span id="cb66-190"><a href="#cb66-190"></a><span class="fu">### 4.2.2 General guidance for building bivariate plots</span></span>
+<span id="cb66-190"><a href="#cb66-190"></a><span class="fu">### General guidance for building bivariate plots</span></span>
 <span id="cb66-191"><a href="#cb66-191"></a></span>
 <span id="cb66-192"><a href="#cb66-192"></a>As with univariate plots, an appropriate visualization for the relationship between 2 variables depends upon whether the variables are quantitative or categorical.</span>
 <span id="cb66-193"><a href="#cb66-193"></a>In general:</span>
@@ -2122,7 +2122,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb66-196"><a href="#cb66-196"></a><span class="ss">-   </span>Each categorical variable requires a new way to "group" the graphic (eg: using colors, shapes, separate facets, etc)</span>
 <span id="cb66-197"><a href="#cb66-197"></a><span class="ss">-   </span>For visualizations in which overlap in glyphs or plots obscures the patterns, try faceting or transparency.</span>
 <span id="cb66-198"><a href="#cb66-198"></a></span>
-<span id="cb66-199"><a href="#cb66-199"></a><span class="fu">## 4.3 Exercises</span></span>
+<span id="cb66-199"><a href="#cb66-199"></a><span class="fu">## Exercises</span></span>
 <span id="cb66-200"><a href="#cb66-200"></a></span>
 <span id="cb66-201"><a href="#cb66-201"></a>Github user Tony McGovern has compiled and made available 2020/2016/2012 presidential election results for most of 3000+ U.S. counties, except Alaska.</span>
 <span id="cb66-202"><a href="#cb66-202"></a></span>
