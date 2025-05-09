@@ -4,9 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Zhijun He">
-<meta name="dcterms.date" content="2025-04-01">
-<title>7&nbsp; Exam 2 – COMP/STAT112 Notebook</title>
+<title>Exam 2 – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -197,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/Solo Project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project:Australia Fires</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project</span></span></a>
   </div>
 </li>
       </ul>
@@ -214,13 +212,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/Cheatsheet2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Cheatsheet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Reference Sheet 1</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/Cheatsheet3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">R Data Analysis Cheatsheet for Exam 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Reference Sheet 2</span></span></a>
   </div>
 </li>
       </ul>
@@ -249,13 +247,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-multi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multivariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multivariate Visualization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/real-ica-spacial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Spatial Visualization Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Spacial Visualization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -273,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-working with dates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Working with Dates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Dates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -291,13 +289,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-working with factors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Working with Factors</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Factors</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-working with strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Working with Strings</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Strings</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -322,71 +320,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">7.1</span> Introduction</a></li>
-  <li><a href="#setting-up-the-environment" id="toc-setting-up-the-environment" class="nav-link" data-scroll-target="#setting-up-the-environment"><span class="header-section-number">7.2</span> Setting Up the Environment</a></li>
-  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning"><span class="header-section-number">7.3</span> Data Cleaning</a></li>
+<li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#setting-up-the-environment" id="toc-setting-up-the-environment" class="nav-link" data-scroll-target="#setting-up-the-environment">Setting Up the Environment</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
   <li>
-<a href="#research-question-1-which-5-countries-consume-the-most-food" id="toc-research-question-1-which-5-countries-consume-the-most-food" class="nav-link" data-scroll-target="#research-question-1-which-5-countries-consume-the-most-food"><span class="header-section-number">7.4</span> Research Question 1: Which 5 countries consume the most food?</a>
+<a href="#research-question-1-which-5-countries-consume-the-most-food" id="toc-research-question-1-which-5-countries-consume-the-most-food" class="nav-link" data-scroll-target="#research-question-1-which-5-countries-consume-the-most-food">Research Question 1: Which 5 countries consume the most food?</a>
   <ul class="collapse">
-<li><a href="#expected-shape" id="toc-expected-shape" class="nav-link" data-scroll-target="#expected-shape"><span class="header-section-number">7.4.1</span> Expected Shape</a></li>
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps"><span class="header-section-number">7.4.2</span> Steps</a></li>
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">7.4.3</span> Visualization</a></li>
+<li><a href="#expected-shape" id="toc-expected-shape" class="nav-link" data-scroll-target="#expected-shape">Expected Shape</a></li>
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
   </ul>
 </li>
   <li>
-<a href="#research-question-2-which-top-5-countries-consume-each-food-category-the-most" id="toc-research-question-2-which-top-5-countries-consume-each-food-category-the-most" class="nav-link" data-scroll-target="#research-question-2-which-top-5-countries-consume-each-food-category-the-most"><span class="header-section-number">7.5</span> Research Question 2: Which top 5 countries consume each food category the most?</a>
+<a href="#research-question-2-which-top-5-countries-consume-each-food-category-the-most" id="toc-research-question-2-which-top-5-countries-consume-each-food-category-the-most" class="nav-link" data-scroll-target="#research-question-2-which-top-5-countries-consume-each-food-category-the-most">Research Question 2: Which top 5 countries consume each food category the most?</a>
   <ul class="collapse">
-<li><a href="#expected-shape-1" id="toc-expected-shape-1" class="nav-link" data-scroll-target="#expected-shape-1"><span class="header-section-number">7.5.1</span> Expected Shape</a></li>
-  <li><a href="#steps-1" id="toc-steps-1" class="nav-link" data-scroll-target="#steps-1"><span class="header-section-number">7.5.2</span> Steps</a></li>
-  <li><a href="#visualization-1" id="toc-visualization-1" class="nav-link" data-scroll-target="#visualization-1"><span class="header-section-number">7.5.3</span> Visualization</a></li>
+<li><a href="#expected-shape-1" id="toc-expected-shape-1" class="nav-link" data-scroll-target="#expected-shape-1">Expected Shape</a></li>
+  <li><a href="#steps-1" id="toc-steps-1" class="nav-link" data-scroll-target="#steps-1">Steps</a></li>
+  <li><a href="#visualization-1" id="toc-visualization-1" class="nav-link" data-scroll-target="#visualization-1">Visualization</a></li>
   </ul>
 </li>
   <li>
-<a href="#research-question-3-what-does-the-consumption-of-each-food-look-like-globally" id="toc-research-question-3-what-does-the-consumption-of-each-food-look-like-globally" class="nav-link" data-scroll-target="#research-question-3-what-does-the-consumption-of-each-food-look-like-globally"><span class="header-section-number">7.6</span> Research Question 3: What does the consumption of each food look like globally?</a>
+<a href="#research-question-3-what-does-the-consumption-of-each-food-look-like-globally" id="toc-research-question-3-what-does-the-consumption-of-each-food-look-like-globally" class="nav-link" data-scroll-target="#research-question-3-what-does-the-consumption-of-each-food-look-like-globally">Research Question 3: What does the consumption of each food look like globally?</a>
   <ul class="collapse">
-<li><a href="#expected-shape-2" id="toc-expected-shape-2" class="nav-link" data-scroll-target="#expected-shape-2"><span class="header-section-number">7.6.1</span> Expected Shape</a></li>
-  <li><a href="#steps-2" id="toc-steps-2" class="nav-link" data-scroll-target="#steps-2"><span class="header-section-number">7.6.2</span> Steps</a></li>
+<li><a href="#expected-shape-2" id="toc-expected-shape-2" class="nav-link" data-scroll-target="#expected-shape-2">Expected Shape</a></li>
+  <li><a href="#steps-2" id="toc-steps-2" class="nav-link" data-scroll-target="#steps-2">Steps</a></li>
   </ul>
 </li>
-  <li><a href="#reflections-and-enhancements" id="toc-reflections-and-enhancements" class="nav-link" data-scroll-target="#reflections-and-enhancements"><span class="header-section-number">7.7</span> Reflections and Enhancements</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">7.8</span> Conclusion</a></li>
+  <li><a href="#reflections-and-enhancements" id="toc-reflections-and-enhancements" class="nav-link" data-scroll-target="#reflections-and-enhancements">Reflections and Enhancements</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/Zhijun He-Exam2.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exam 2</span></a></li></ol></nav><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exam 2</span>
-</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Exam 2</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Zhijun He </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 1, 2025</p>
-    </div>
-  </div>
   
     
   </div>
   
 
 
-</header><section id="introduction" class="level2" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="introduction">
-<span class="header-section-number">7.1</span> Introduction</h2>
+</header><section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>In this analysis, I’ll explore the fascinating world of global food consumption patterns, examining which countries consume the most food overall, which ones lead in specific food categories, and visualizing consumption trends worldwide. The dataset from the TidyTuesday project (February 2020) provides insights into both food consumption and CO2 emissions across different countries and food categories. Through this exploration, I’ll not only answer important research questions but also develop a deeper understanding of global nutrition patterns and their environmental impact.</p>
-</section><section id="setting-up-the-environment" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="setting-up-the-environment">
-<span class="header-section-number">7.2</span> Setting Up the Environment</h2>
+</section><section id="setting-up-the-environment" class="level2"><h2 class="anchored" data-anchor-id="setting-up-the-environment">Setting Up the Environment</h2>
 <p>First, I’ll load the necessary packages and the dataset to begin our analysis journey:</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidytuesdayR)</span>
@@ -410,8 +392,7 @@ $ consumption   &lt;dbl&gt; 10.51, 38.66, 55.48, 1.56, 4.36, 11.39, 195.08, 103.
 $ co2_emmission &lt;dbl&gt; 37.20, 41.53, 1712.00, 54.63, 6.96, 10.46, 277.87, 19.66…</code></pre>
 </div>
 </div>
-</section><section id="data-cleaning" class="level2" data-number="7.3"><h2 data-number="7.3" class="anchored" data-anchor-id="data-cleaning">
-<span class="header-section-number">7.3</span> Data Cleaning</h2>
+</section><section id="data-cleaning" class="level2"><h2 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h2>
 <p>Before diving into the analysis, I need to clean up the food category names to make them more concise and consistent. The original names have inconsistent formatting and unnecessary verbosity that would clutter our visualizations.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># First, let's examine the original food categories</span></span>
@@ -442,14 +423,11 @@ $ co2_emmission &lt;dbl&gt; 37.20, 41.53, 1712.00, 54.63, 6.96, 10.46, 277.87, 1
 </div>
 </div>
 <p>The transformation worked perfectly! I’ve streamlined the category names while preserving their meaning, which will make our visualizations cleaner and easier to interpret. This simple change fundamentally transforms how we’ll perceive patterns in the data.</p>
-</section><section id="research-question-1-which-5-countries-consume-the-most-food" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="research-question-1-which-5-countries-consume-the-most-food">
-<span class="header-section-number">7.4</span> Research Question 1: Which 5 countries consume the most food?</h2>
+</section><section id="research-question-1-which-5-countries-consume-the-most-food" class="level2"><h2 class="anchored" data-anchor-id="research-question-1-which-5-countries-consume-the-most-food">Research Question 1: Which 5 countries consume the most food?</h2>
 <p>To answer this question, I need to calculate the total consumption for each country across all food categories.</p>
-<section id="expected-shape" class="level3" data-number="7.4.1"><h3 data-number="7.4.1" class="anchored" data-anchor-id="expected-shape">
-<span class="header-section-number">7.4.1</span> Expected Shape</h3>
+<section id="expected-shape" class="level3"><h3 class="anchored" data-anchor-id="expected-shape">Expected Shape</h3>
 <p>The resulting dataframe should have 2 columns: - country: character (5 rows) - total_consumption: numeric (total kg/person/year)</p>
-</section><section id="steps" class="level3" data-number="7.4.2"><h3 data-number="7.4.2" class="anchored" data-anchor-id="steps">
-<span class="header-section-number">7.4.2</span> Steps</h3>
+</section><section id="steps" class="level3"><h3 class="anchored" data-anchor-id="steps">Steps</h3>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># 1. Group by country</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="co"># 2. Sum consumption across all food categories</span></span>
@@ -496,8 +474,7 @@ $ co2_emmission &lt;dbl&gt; 37.20, 41.53, 1712.00, 54.63, 6.96, 10.46, 277.87, 1
 </table>
 </div>
 </div>
-</section><section id="visualization" class="level3" data-number="7.4.3"><h3 data-number="7.4.3" class="anchored" data-anchor-id="visualization">
-<span class="header-section-number">7.4.3</span> Visualization</h3>
+</section><section id="visualization" class="level3"><h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
 <p>A horizontal bar chart would be the most appropriate visualization for this data:</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Create a bar chart of top consuming countries</span></span>
@@ -519,14 +496,11 @@ $ co2_emmission &lt;dbl&gt; 37.20, 41.53, 1712.00, 54.63, 6.96, 10.46, 277.87, 1
 </div>
 </div>
 <p>The results reveal fascinating insights about global consumption patterns! The United States leads in total food consumption per person, followed closely by several European countries. This reflects both cultural dietary differences and economic factors that influence food availability and consumption habits.</p>
-</section></section><section id="research-question-2-which-top-5-countries-consume-each-food-category-the-most" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="research-question-2-which-top-5-countries-consume-each-food-category-the-most">
-<span class="header-section-number">7.5</span> Research Question 2: Which top 5 countries consume each food category the most?</h2>
+</section></section><section id="research-question-2-which-top-5-countries-consume-each-food-category-the-most" class="level2"><h2 class="anchored" data-anchor-id="research-question-2-which-top-5-countries-consume-each-food-category-the-most">Research Question 2: Which top 5 countries consume each food category the most?</h2>
 <p>Now I’ll dig deeper to identify consumption leaders for each specific food category.</p>
-<section id="expected-shape-1" class="level3" data-number="7.5.1"><h3 data-number="7.5.1" class="anchored" data-anchor-id="expected-shape-1">
-<span class="header-section-number">7.5.1</span> Expected Shape</h3>
+<section id="expected-shape-1" class="level3"><h3 class="anchored" data-anchor-id="expected-shape-1">Expected Shape</h3>
 <p>The resulting dataframe should have 3 columns: - food_category: character (11 different foods x 5 countries = 55 rows) - country: character - consumption: numeric (kg/person/year)</p>
-</section><section id="steps-1" class="level3" data-number="7.5.2"><h3 data-number="7.5.2" class="anchored" data-anchor-id="steps-1">
-<span class="header-section-number">7.5.2</span> Steps</h3>
+</section><section id="steps-1" class="level3"><h3 class="anchored" data-anchor-id="steps-1">Steps</h3>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># 1. Group by food_category</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="co"># 2. Arrange in descending order within each group</span></span>
@@ -629,8 +603,7 @@ $ co2_emmission &lt;dbl&gt; 37.20, 41.53, 1712.00, 54.63, 6.96, 10.46, 277.87, 1
 </table>
 </div>
 </div>
-</section><section id="visualization-1" class="level3" data-number="7.5.3"><h3 data-number="7.5.3" class="anchored" data-anchor-id="visualization-1">
-<span class="header-section-number">7.5.3</span> Visualization</h3>
+</section><section id="visualization-1" class="level3"><h3 class="anchored" data-anchor-id="visualization-1">Visualization</h3>
 <p>A faceted bar chart would be the most appropriate visualization for this data:</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Create faceted bar chart</span></span>
@@ -654,14 +627,11 @@ $ co2_emmission &lt;dbl&gt; 37.20, 41.53, 1712.00, 54.63, 6.96, 10.46, 277.87, 1
 </div>
 </div>
 <p>What a fascinating glimpse into global eating habits! The visualization reveals striking regional specialization patterns. Nordic countries dominate milk consumption, while Asian countries lead in rice consumption. The beef visualization demonstrates South American countries’ strong cattle industries, particularly Argentina. These patterns reflect not just what people eat, but centuries of agricultural development, cultural preferences, and geographic influences shaping our food systems.</p>
-</section></section><section id="research-question-3-what-does-the-consumption-of-each-food-look-like-globally" class="level2" data-number="7.6"><h2 data-number="7.6" class="anchored" data-anchor-id="research-question-3-what-does-the-consumption-of-each-food-look-like-globally">
-<span class="header-section-number">7.6</span> Research Question 3: What does the consumption of each food look like globally?</h2>
+</section></section><section id="research-question-3-what-does-the-consumption-of-each-food-look-like-globally" class="level2"><h2 class="anchored" data-anchor-id="research-question-3-what-does-the-consumption-of-each-food-look-like-globally">Research Question 3: What does the consumption of each food look like globally?</h2>
 <p>For this question, I’ll create choropleth maps showing consumption patterns across countries for each food category.</p>
-<section id="expected-shape-2" class="level3" data-number="7.6.1"><h3 data-number="7.6.1" class="anchored" data-anchor-id="expected-shape-2">
-<span class="header-section-number">7.6.1</span> Expected Shape</h3>
+<section id="expected-shape-2" class="level3"><h3 class="anchored" data-anchor-id="expected-shape-2">Expected Shape</h3>
 <p>After joining with geographical data, the dataframe should have: - name: character (country name from map data) - geometry: sf geometry - food_category: character (pivoted) - consumption: numeric (standardized)</p>
-</section><section id="steps-2" class="level3" data-number="7.6.2"><h3 data-number="7.6.2" class="anchored" data-anchor-id="steps-2">
-<span class="header-section-number">7.6.2</span> Steps</h3>
+</section><section id="steps-2" class="level3"><h3 class="anchored" data-anchor-id="steps-2">Steps</h3>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># First attempt at creating a choropleth map</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
@@ -833,8 +803,7 @@ $ co2_emmission &lt;dbl&gt; 37.20, 41.53, 1712.00, 54.63, 6.96, 10.46, 277.87, 1
 </div>
 </div>
 </div>
-</section></section><section id="reflections-and-enhancements" class="level2" data-number="7.7"><h2 data-number="7.7" class="anchored" data-anchor-id="reflections-and-enhancements">
-<span class="header-section-number">7.7</span> Reflections and Enhancements</h2>
+</section></section><section id="reflections-and-enhancements" class="level2"><h2 class="anchored" data-anchor-id="reflections-and-enhancements">Reflections and Enhancements</h2>
 <p>The choropleth maps provide a wealth of insights, but several enhancements could make them even more effective:</p>
 <ol type="1">
 <li>Using a better color palette (like viridis) improves accessibility and makes patterns more visible</li>
@@ -845,8 +814,7 @@ $ co2_emmission &lt;dbl&gt; 37.20, 41.53, 1712.00, 54.63, 6.96, 10.46, 277.87, 1
 <li>Adding borders between countries improves visual distinction</li>
 </ol>
 <p>These maps reveal fascinating global patterns in food consumption. Nordic countries excel in milk consumption, while Southeast Asian nations lead in rice. The beef map highlights South American leadership, particularly Argentina’s remarkable consumption levels. What’s particularly interesting is how standardization reveals outliers – countries that deviate significantly from average consumption patterns.</p>
-</section><section id="conclusion" class="level2" data-number="7.8"><h2 data-number="7.8" class="anchored" data-anchor-id="conclusion">
-<span class="header-section-number">7.8</span> Conclusion</h2>
+</section><section id="conclusion" class="level2"><h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>This exploration of global food consumption patterns has revealed fascinating insights about dietary habits across countries and regions. The analysis demonstrates not only which countries consume the most food overall but also where specific foods dominate cultural diets.</p>
 <p>Through data wrangling and visualization, I’ve transformed raw numbers into meaningful insights. The standardized choropleth maps particularly highlight how consumption patterns vary globally, accounting for different scales across food categories. This standardization reveals which countries truly stand out in their consumption of specific foods relative to global averages.</p>
 <p>The techniques employed – from data cleaning to advanced visualization – showcase how statistical analysis can uncover patterns in complex global datasets. These findings could inform discussions about food security, cultural dietary patterns, and the environmental impact of food production across different regions of the world.</p>
@@ -1479,292 +1447,291 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../bw/Solo Project.html" class="pagination-link" aria-label="Solo Project:Australia Fires">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project:Australia Fires</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../bw/Solo Project.html" class="pagination-link" aria-label="Solo Project">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">---</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="an">title:</span><span class="co"> "Exam 2"</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="an">author:</span><span class="co"> "Zhijun He"</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="an">date:</span><span class="co"> "April 01, 2025"</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="co">  html:</span></span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="co">    toc: true</span></span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="co">    code-fold: true</span></span>
-<span id="cb15-9"><a href="#cb15-9"></a><span class="co">    code-tools: true</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="co">---</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a></span>
-<span id="cb15-12"><a href="#cb15-12"></a><span class="fu">## Introduction</span></span>
-<span id="cb15-13"><a href="#cb15-13"></a></span>
-<span id="cb15-14"><a href="#cb15-14"></a>In this analysis, I'll explore the fascinating world of global food consumption patterns, examining which countries consume the most food overall, which ones lead in specific food categories, and visualizing consumption trends worldwide.</span>
-<span id="cb15-15"><a href="#cb15-15"></a>The dataset from the TidyTuesday project (February 2020) provides insights into both food consumption and CO2 emissions across different countries and food categories.</span>
-<span id="cb15-16"><a href="#cb15-16"></a>Through this exploration, I'll not only answer important research questions but also develop a deeper understanding of global nutrition patterns and their environmental impact.</span>
-<span id="cb15-17"><a href="#cb15-17"></a></span>
-<span id="cb15-18"><a href="#cb15-18"></a><span class="fu">## Setting Up the Environment</span></span>
-<span id="cb15-19"><a href="#cb15-19"></a></span>
-<span id="cb15-20"><a href="#cb15-20"></a>First, I'll load the necessary packages and the dataset to begin our analysis journey:</span>
-<span id="cb15-21"><a href="#cb15-21"></a></span>
-<span id="cb15-22"><a href="#cb15-22"></a><span class="in">```{r setup, message=FALSE, warning=FALSE}</span></span>
-<span id="cb15-23"><a href="#cb15-23"></a><span class="in">library(tidytuesdayR)</span></span>
-<span id="cb15-24"><a href="#cb15-24"></a><span class="in">library(tidyverse)</span></span>
-<span id="cb15-25"><a href="#cb15-25"></a><span class="in">library(rnaturalearth) # for country boundaries</span></span>
-<span id="cb15-26"><a href="#cb15-26"></a><span class="in">library(sf) # for spatial visualization</span></span>
-<span id="cb15-27"><a href="#cb15-27"></a><span class="in">library(knitr) # for tables</span></span>
-<span id="cb15-28"><a href="#cb15-28"></a></span>
-<span id="cb15-29"><a href="#cb15-29"></a><span class="in"># Load the data</span></span>
-<span id="cb15-30"><a href="#cb15-30"></a><span class="in">tuesdata &lt;- tt_load('2020-02-18')</span></span>
-<span id="cb15-31"><a href="#cb15-31"></a><span class="in">fc &lt;- tuesdata$food_consumption</span></span>
-<span id="cb15-32"><a href="#cb15-32"></a></span>
-<span id="cb15-33"><a href="#cb15-33"></a><span class="in"># Initial data inspection</span></span>
-<span id="cb15-34"><a href="#cb15-34"></a><span class="in">glimpse(fc)</span></span>
-<span id="cb15-35"><a href="#cb15-35"></a><span class="in">```</span></span>
-<span id="cb15-36"><a href="#cb15-36"></a></span>
-<span id="cb15-37"><a href="#cb15-37"></a><span class="fu">## Data Cleaning</span></span>
-<span id="cb15-38"><a href="#cb15-38"></a></span>
-<span id="cb15-39"><a href="#cb15-39"></a>Before diving into the analysis, I need to clean up the food category names to make them more concise and consistent.</span>
-<span id="cb15-40"><a href="#cb15-40"></a>The original names have inconsistent formatting and unnecessary verbosity that would clutter our visualizations.</span>
-<span id="cb15-41"><a href="#cb15-41"></a></span>
-<span id="cb15-42"><a href="#cb15-42"></a><span class="in">```{r clean_categories}</span></span>
-<span id="cb15-43"><a href="#cb15-43"></a><span class="in"># First, let's examine the original food categories</span></span>
-<span id="cb15-44"><a href="#cb15-44"></a><span class="in">unique(fc$food_category)</span></span>
-<span id="cb15-45"><a href="#cb15-45"></a></span>
-<span id="cb15-46"><a href="#cb15-46"></a><span class="in"># Clean up the food category names</span></span>
-<span id="cb15-47"><a href="#cb15-47"></a><span class="in">fcc &lt;- fc %&gt;%</span></span>
-<span id="cb15-48"><a href="#cb15-48"></a><span class="in">  mutate(food_category = case_when(</span></span>
-<span id="cb15-49"><a href="#cb15-49"></a><span class="in">    food_category == "Lamb &amp; Goat" ~ "Lamb",</span></span>
-<span id="cb15-50"><a href="#cb15-50"></a><span class="in">    food_category == "Milk - inc. cheese" ~ "Milk",</span></span>
-<span id="cb15-51"><a href="#cb15-51"></a><span class="in">    food_category == "Wheat and Wheat Products" ~ "Wheat",</span></span>
-<span id="cb15-52"><a href="#cb15-52"></a><span class="in">    food_category == "Nuts inc. Peanut Butter" ~ "Nuts",</span></span>
-<span id="cb15-53"><a href="#cb15-53"></a><span class="in">    TRUE ~ food_category</span></span>
-<span id="cb15-54"><a href="#cb15-54"></a><span class="in">  ))</span></span>
-<span id="cb15-55"><a href="#cb15-55"></a></span>
-<span id="cb15-56"><a href="#cb15-56"></a><span class="in"># Verify the changes</span></span>
-<span id="cb15-57"><a href="#cb15-57"></a><span class="in">unique(fcc$food_category)</span></span>
-<span id="cb15-58"><a href="#cb15-58"></a><span class="in">```</span></span>
-<span id="cb15-59"><a href="#cb15-59"></a></span>
-<span id="cb15-60"><a href="#cb15-60"></a>The transformation worked perfectly!</span>
-<span id="cb15-61"><a href="#cb15-61"></a>I've streamlined the category names while preserving their meaning, which will make our visualizations cleaner and easier to interpret.</span>
-<span id="cb15-62"><a href="#cb15-62"></a>This simple change fundamentally transforms how we'll perceive patterns in the data.</span>
-<span id="cb15-63"><a href="#cb15-63"></a></span>
-<span id="cb15-64"><a href="#cb15-64"></a><span class="fu">## Research Question 1: Which 5 countries consume the most food?</span></span>
-<span id="cb15-65"><a href="#cb15-65"></a></span>
-<span id="cb15-66"><a href="#cb15-66"></a>To answer this question, I need to calculate the total consumption for each country across all food categories.</span>
-<span id="cb15-67"><a href="#cb15-67"></a></span>
-<span id="cb15-68"><a href="#cb15-68"></a><span class="fu">### Expected Shape</span></span>
-<span id="cb15-69"><a href="#cb15-69"></a></span>
-<span id="cb15-70"><a href="#cb15-70"></a>The resulting dataframe should have 2 columns: - country: character (5 rows) - total_consumption: numeric (total kg/person/year)</span>
-<span id="cb15-71"><a href="#cb15-71"></a></span>
-<span id="cb15-72"><a href="#cb15-72"></a><span class="fu">### Steps</span></span>
-<span id="cb15-73"><a href="#cb15-73"></a></span>
-<span id="cb15-74"><a href="#cb15-74"></a><span class="in">```{r most_consuming_countries}</span></span>
-<span id="cb15-75"><a href="#cb15-75"></a><span class="in"># 1. Group by country</span></span>
-<span id="cb15-76"><a href="#cb15-76"></a><span class="in"># 2. Sum consumption across all food categories</span></span>
-<span id="cb15-77"><a href="#cb15-77"></a><span class="in"># 3. Arrange in descending order</span></span>
-<span id="cb15-78"><a href="#cb15-78"></a><span class="in"># 4. Select top 5 countries</span></span>
-<span id="cb15-79"><a href="#cb15-79"></a></span>
-<span id="cb15-80"><a href="#cb15-80"></a><span class="in">top_consumers &lt;- fcc %&gt;%</span></span>
-<span id="cb15-81"><a href="#cb15-81"></a><span class="in">  group_by(country) %&gt;%</span></span>
-<span id="cb15-82"><a href="#cb15-82"></a><span class="in">  summarize(total_consumption = sum(consumption, na.rm = TRUE)) %&gt;%</span></span>
-<span id="cb15-83"><a href="#cb15-83"></a><span class="in">  arrange(desc(total_consumption)) %&gt;%</span></span>
-<span id="cb15-84"><a href="#cb15-84"></a><span class="in">  slice_head(n = 5)</span></span>
-<span id="cb15-85"><a href="#cb15-85"></a></span>
-<span id="cb15-86"><a href="#cb15-86"></a><span class="in"># Display as a table</span></span>
-<span id="cb15-87"><a href="#cb15-87"></a><span class="in">kable(top_consumers, caption = "Top 5 Countries by Total Food Consumption (kg/person/year)")</span></span>
-<span id="cb15-88"><a href="#cb15-88"></a><span class="in">```</span></span>
-<span id="cb15-89"><a href="#cb15-89"></a></span>
-<span id="cb15-90"><a href="#cb15-90"></a><span class="fu">### Visualization</span></span>
-<span id="cb15-91"><a href="#cb15-91"></a></span>
-<span id="cb15-92"><a href="#cb15-92"></a>A horizontal bar chart would be the most appropriate visualization for this data:</span>
-<span id="cb15-93"><a href="#cb15-93"></a></span>
-<span id="cb15-94"><a href="#cb15-94"></a><span class="in">```{r top_consumers_viz, fig.height=4, fig.width=8}</span></span>
-<span id="cb15-95"><a href="#cb15-95"></a><span class="in"># Create a bar chart of top consuming countries</span></span>
-<span id="cb15-96"><a href="#cb15-96"></a><span class="in">ggplot(top_consumers, aes(x = reorder(country, total_consumption), y = total_consumption)) +</span></span>
-<span id="cb15-97"><a href="#cb15-97"></a><span class="in">  geom_col(fill = "steelblue") +</span></span>
-<span id="cb15-98"><a href="#cb15-98"></a><span class="in">  coord_flip() +</span></span>
-<span id="cb15-99"><a href="#cb15-99"></a><span class="in">  labs(title = "Top 5 Countries by Total Food Consumption",</span></span>
-<span id="cb15-100"><a href="#cb15-100"></a><span class="in">       subtitle = "Total kg per person per year",</span></span>
-<span id="cb15-101"><a href="#cb15-101"></a><span class="in">       x = NULL,</span></span>
-<span id="cb15-102"><a href="#cb15-102"></a><span class="in">       y = "Total Consumption (kg/person/year)") +</span></span>
-<span id="cb15-103"><a href="#cb15-103"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-104"><a href="#cb15-104"></a><span class="in">  theme(plot.title = element_text(face = "bold"),</span></span>
-<span id="cb15-105"><a href="#cb15-105"></a><span class="in">        axis.text.y = element_text(size = 11))</span></span>
-<span id="cb15-106"><a href="#cb15-106"></a><span class="in">```</span></span>
-<span id="cb15-107"><a href="#cb15-107"></a></span>
-<span id="cb15-108"><a href="#cb15-108"></a>The results reveal fascinating insights about global consumption patterns!</span>
-<span id="cb15-109"><a href="#cb15-109"></a>The United States leads in total food consumption per person, followed closely by several European countries.</span>
-<span id="cb15-110"><a href="#cb15-110"></a>This reflects both cultural dietary differences and economic factors that influence food availability and consumption habits.</span>
-<span id="cb15-111"><a href="#cb15-111"></a></span>
-<span id="cb15-112"><a href="#cb15-112"></a><span class="fu">## Research Question 2: Which top 5 countries consume each food category the most?</span></span>
-<span id="cb15-113"><a href="#cb15-113"></a></span>
-<span id="cb15-114"><a href="#cb15-114"></a>Now I'll dig deeper to identify consumption leaders for each specific food category.</span>
-<span id="cb15-115"><a href="#cb15-115"></a></span>
-<span id="cb15-116"><a href="#cb15-116"></a><span class="fu">### Expected Shape</span></span>
-<span id="cb15-117"><a href="#cb15-117"></a></span>
-<span id="cb15-118"><a href="#cb15-118"></a>The resulting dataframe should have 3 columns: - food_category: character (11 different foods x 5 countries = 55 rows) - country: character - consumption: numeric (kg/person/year)</span>
-<span id="cb15-119"><a href="#cb15-119"></a></span>
-<span id="cb15-120"><a href="#cb15-120"></a><span class="fu">### Steps</span></span>
-<span id="cb15-121"><a href="#cb15-121"></a></span>
-<span id="cb15-122"><a href="#cb15-122"></a><span class="in">```{r top_consumers_by_food}</span></span>
-<span id="cb15-123"><a href="#cb15-123"></a><span class="in"># 1. Group by food_category</span></span>
-<span id="cb15-124"><a href="#cb15-124"></a><span class="in"># 2. Arrange in descending order within each group</span></span>
-<span id="cb15-125"><a href="#cb15-125"></a><span class="in"># 3. Select top 5 countries for each food category</span></span>
-<span id="cb15-126"><a href="#cb15-126"></a><span class="in"># 4. Keep food_category, country, and consumption columns</span></span>
-<span id="cb15-127"><a href="#cb15-127"></a></span>
-<span id="cb15-128"><a href="#cb15-128"></a><span class="in">top_by_food &lt;- fcc %&gt;%</span></span>
-<span id="cb15-129"><a href="#cb15-129"></a><span class="in">  group_by(food_category) %&gt;%</span></span>
-<span id="cb15-130"><a href="#cb15-130"></a><span class="in">  arrange(desc(consumption)) %&gt;%</span></span>
-<span id="cb15-131"><a href="#cb15-131"></a><span class="in">  slice_head(n = 5) %&gt;%</span></span>
-<span id="cb15-132"><a href="#cb15-132"></a><span class="in">  select(food_category, country, consumption)</span></span>
-<span id="cb15-133"><a href="#cb15-133"></a></span>
-<span id="cb15-134"><a href="#cb15-134"></a><span class="in"># Display the first 15 rows (to keep the output manageable)</span></span>
-<span id="cb15-135"><a href="#cb15-135"></a><span class="in">kable(head(top_by_food, 15), caption = "Sample of Top 5 Countries by Food Category (First 3 Categories)")</span></span>
-<span id="cb15-136"><a href="#cb15-136"></a><span class="in">```</span></span>
-<span id="cb15-137"><a href="#cb15-137"></a></span>
-<span id="cb15-138"><a href="#cb15-138"></a><span class="fu">### Visualization</span></span>
-<span id="cb15-139"><a href="#cb15-139"></a></span>
-<span id="cb15-140"><a href="#cb15-140"></a>A faceted bar chart would be the most appropriate visualization for this data:</span>
-<span id="cb15-141"><a href="#cb15-141"></a></span>
-<span id="cb15-142"><a href="#cb15-142"></a><span class="in">```{r top_by_food_viz, fig.height=12, fig.width=10}</span></span>
-<span id="cb15-143"><a href="#cb15-143"></a><span class="in"># Create faceted bar chart</span></span>
-<span id="cb15-144"><a href="#cb15-144"></a><span class="in">ggplot(top_by_food, aes(x = reorder(country, consumption), y = consumption)) +</span></span>
-<span id="cb15-145"><a href="#cb15-145"></a><span class="in">  geom_col(fill = "darkgreen") +</span></span>
-<span id="cb15-146"><a href="#cb15-146"></a><span class="in">  facet_wrap(~food_category, scales = "free_y", ncol = 2) +</span></span>
-<span id="cb15-147"><a href="#cb15-147"></a><span class="in">  coord_flip() +</span></span>
-<span id="cb15-148"><a href="#cb15-148"></a><span class="in">  labs(title = "Top 5 Countries by Food Category Consumption",</span></span>
-<span id="cb15-149"><a href="#cb15-149"></a><span class="in">       subtitle = "Measured in kg per person per year",</span></span>
-<span id="cb15-150"><a href="#cb15-150"></a><span class="in">       x = NULL,</span></span>
-<span id="cb15-151"><a href="#cb15-151"></a><span class="in">       y = "Consumption (kg/person/year)") +</span></span>
-<span id="cb15-152"><a href="#cb15-152"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-153"><a href="#cb15-153"></a><span class="in">  theme(plot.title = element_text(face = "bold"),</span></span>
-<span id="cb15-154"><a href="#cb15-154"></a><span class="in">        strip.background = element_rect(fill = "lightgray"),</span></span>
-<span id="cb15-155"><a href="#cb15-155"></a><span class="in">        strip.text = element_text(face = "bold"))</span></span>
-<span id="cb15-156"><a href="#cb15-156"></a><span class="in">```</span></span>
-<span id="cb15-157"><a href="#cb15-157"></a></span>
-<span id="cb15-158"><a href="#cb15-158"></a>What a fascinating glimpse into global eating habits!</span>
-<span id="cb15-159"><a href="#cb15-159"></a>The visualization reveals striking regional specialization patterns.</span>
-<span id="cb15-160"><a href="#cb15-160"></a>Nordic countries dominate milk consumption, while Asian countries lead in rice consumption.</span>
-<span id="cb15-161"><a href="#cb15-161"></a>The beef visualization demonstrates South American countries' strong cattle industries, particularly Argentina.</span>
-<span id="cb15-162"><a href="#cb15-162"></a>These patterns reflect not just what people eat, but centuries of agricultural development, cultural preferences, and geographic influences shaping our food systems.</span>
-<span id="cb15-163"><a href="#cb15-163"></a></span>
-<span id="cb15-164"><a href="#cb15-164"></a><span class="fu">## Research Question 3: What does the consumption of each food look like globally?</span></span>
-<span id="cb15-165"><a href="#cb15-165"></a></span>
-<span id="cb15-166"><a href="#cb15-166"></a>For this question, I'll create choropleth maps showing consumption patterns across countries for each food category.</span>
-<span id="cb15-167"><a href="#cb15-167"></a></span>
-<span id="cb15-168"><a href="#cb15-168"></a><span class="fu">### Expected Shape</span></span>
-<span id="cb15-169"><a href="#cb15-169"></a></span>
-<span id="cb15-170"><a href="#cb15-170"></a>After joining with geographical data, the dataframe should have: - name: character (country name from map data) - geometry: sf geometry - food_category: character (pivoted) - consumption: numeric (standardized)</span>
-<span id="cb15-171"><a href="#cb15-171"></a></span>
-<span id="cb15-172"><a href="#cb15-172"></a><span class="fu">### Steps</span></span>
-<span id="cb15-173"><a href="#cb15-173"></a></span>
-<span id="cb15-174"><a href="#cb15-174"></a><span class="in">```{r choropleth_prep, message=FALSE, warning=FALSE}</span></span>
-<span id="cb15-175"><a href="#cb15-175"></a><span class="in"># First attempt at creating a choropleth map</span></span>
-<span id="cb15-176"><a href="#cb15-176"></a></span>
-<span id="cb15-177"><a href="#cb15-177"></a><span class="in"># 1. Get country boundaries</span></span>
-<span id="cb15-178"><a href="#cb15-178"></a><span class="in"># 2. Select name and geometry</span></span>
-<span id="cb15-179"><a href="#cb15-179"></a><span class="in"># 3. Join with consumption data</span></span>
-<span id="cb15-180"><a href="#cb15-180"></a><span class="in"># 4. Create the map</span></span>
-<span id="cb15-181"><a href="#cb15-181"></a></span>
-<span id="cb15-182"><a href="#cb15-182"></a><span class="in"># First, let's identify countries with missing data</span></span>
-<span id="cb15-183"><a href="#cb15-183"></a><span class="in">countries_with_data &lt;- unique(fcc$country)</span></span>
-<span id="cb15-184"><a href="#cb15-184"></a><span class="in">world_map &lt;- ne_countries(returnclass = "sf") %&gt;%</span></span>
-<span id="cb15-185"><a href="#cb15-185"></a><span class="in">  select(name, geometry)</span></span>
-<span id="cb15-186"><a href="#cb15-186"></a></span>
-<span id="cb15-187"><a href="#cb15-187"></a><span class="in">missing_countries &lt;- world_map %&gt;%</span></span>
-<span id="cb15-188"><a href="#cb15-188"></a><span class="in">  filter(!name %in% countries_with_data) %&gt;%</span></span>
-<span id="cb15-189"><a href="#cb15-189"></a><span class="in">  st_drop_geometry() %&gt;%</span></span>
-<span id="cb15-190"><a href="#cb15-190"></a><span class="in">  select(name)</span></span>
-<span id="cb15-191"><a href="#cb15-191"></a></span>
-<span id="cb15-192"><a href="#cb15-192"></a><span class="in"># First few missing countries</span></span>
-<span id="cb15-193"><a href="#cb15-193"></a><span class="in">head(missing_countries, 10)</span></span>
-<span id="cb15-194"><a href="#cb15-194"></a><span class="in">```</span></span>
-<span id="cb15-195"><a href="#cb15-195"></a></span>
-<span id="cb15-196"><a href="#cb15-196"></a>I notice that there's a name mismatch between our consumption data and the natural earth map data.</span>
-<span id="cb15-197"><a href="#cb15-197"></a>Several countries appear as "missing" because of naming differences.</span>
-<span id="cb15-198"><a href="#cb15-198"></a>For instance, "United States of America" in the map data versus "USA" in the consumption data.</span>
-<span id="cb15-199"><a href="#cb15-199"></a></span>
-<span id="cb15-200"><a href="#cb15-200"></a>Let's fix these discrepancies and create an improved visualization:</span>
-<span id="cb15-201"><a href="#cb15-201"></a></span>
-<span id="cb15-202"><a href="#cb15-202"></a><span class="in">```{r fix_country_names, message=FALSE, warning=FALSE}</span></span>
-<span id="cb15-203"><a href="#cb15-203"></a><span class="in"># Fix country name mismatches</span></span>
-<span id="cb15-204"><a href="#cb15-204"></a><span class="in">world_map_fixed &lt;- ne_countries(returnclass = "sf") %&gt;%</span></span>
-<span id="cb15-205"><a href="#cb15-205"></a><span class="in">  select(name, geometry) %&gt;%</span></span>
-<span id="cb15-206"><a href="#cb15-206"></a><span class="in">  mutate(name = ifelse(name == "United States of America", "USA", name)) %&gt;%</span></span>
-<span id="cb15-207"><a href="#cb15-207"></a><span class="in">  mutate(name = ifelse(name == "Bosnia and Herz.", "Bosnia and Herzegovina", name)) %&gt;%</span></span>
-<span id="cb15-208"><a href="#cb15-208"></a><span class="in">  mutate(name = ifelse(name == "Czechia", "Czech Republic", name)) %&gt;%</span></span>
-<span id="cb15-209"><a href="#cb15-209"></a><span class="in">  mutate(name = ifelse(name == "Taiwan", "Taiwan. ROC", name))</span></span>
-<span id="cb15-210"><a href="#cb15-210"></a></span>
-<span id="cb15-211"><a href="#cb15-211"></a><span class="in"># Now let's standardize consumption for better comparison across foods</span></span>
-<span id="cb15-212"><a href="#cb15-212"></a><span class="in">fcc_standardized &lt;- fcc %&gt;%</span></span>
-<span id="cb15-213"><a href="#cb15-213"></a><span class="in">  select(-co2_emmission) %&gt;%</span></span>
-<span id="cb15-214"><a href="#cb15-214"></a><span class="in">  group_by(food_category) %&gt;%</span></span>
-<span id="cb15-215"><a href="#cb15-215"></a><span class="in">  mutate(consumption = (consumption - mean(consumption))/sd(consumption))</span></span>
-<span id="cb15-216"><a href="#cb15-216"></a></span>
-<span id="cb15-217"><a href="#cb15-217"></a><span class="in"># Check the range of standardized values for each food</span></span>
-<span id="cb15-218"><a href="#cb15-218"></a><span class="in">food_stats &lt;- fcc_standardized %&gt;%</span></span>
-<span id="cb15-219"><a href="#cb15-219"></a><span class="in">  group_by(food_category) %&gt;%</span></span>
-<span id="cb15-220"><a href="#cb15-220"></a><span class="in">  summarize(min = min(consumption, na.rm = TRUE),</span></span>
-<span id="cb15-221"><a href="#cb15-221"></a><span class="in">            max = max(consumption, na.rm = TRUE),</span></span>
-<span id="cb15-222"><a href="#cb15-222"></a><span class="in">            range = max - min) %&gt;%</span></span>
-<span id="cb15-223"><a href="#cb15-223"></a><span class="in">  arrange(desc(range))</span></span>
-<span id="cb15-224"><a href="#cb15-224"></a></span>
-<span id="cb15-225"><a href="#cb15-225"></a><span class="in">kable(food_stats, caption = "Range of Standardized Consumption Values by Food Category")</span></span>
-<span id="cb15-226"><a href="#cb15-226"></a><span class="in">```</span></span>
-<span id="cb15-227"><a href="#cb15-227"></a></span>
-<span id="cb15-228"><a href="#cb15-228"></a>Now I'll create the improved choropleth maps:</span>
-<span id="cb15-229"><a href="#cb15-229"></a></span>
-<span id="cb15-230"><a href="#cb15-230"></a><span class="in">```{r final_choropleth, fig.height=22, fig.width=11, message=FALSE, warning=FALSE}</span></span>
-<span id="cb15-231"><a href="#cb15-231"></a><span class="in"># Join data and create maps</span></span>
-<span id="cb15-232"><a href="#cb15-232"></a><span class="in">consumption_map &lt;- world_map_fixed %&gt;%</span></span>
-<span id="cb15-233"><a href="#cb15-233"></a><span class="in">  left_join(fcc_standardized, join_by(name == country)) %&gt;%</span></span>
-<span id="cb15-234"><a href="#cb15-234"></a><span class="in">  pivot_wider(names_from = food_category, values_from = consumption) %&gt;%</span></span>
-<span id="cb15-235"><a href="#cb15-235"></a><span class="in">  select(-`NA`) %&gt;%</span></span>
-<span id="cb15-236"><a href="#cb15-236"></a><span class="in">  pivot_longer(cols = c(-name, -geometry),</span></span>
-<span id="cb15-237"><a href="#cb15-237"></a><span class="in">               names_to = "food_category",</span></span>
-<span id="cb15-238"><a href="#cb15-238"></a><span class="in">               values_to = "consumption")</span></span>
-<span id="cb15-239"><a href="#cb15-239"></a></span>
-<span id="cb15-240"><a href="#cb15-240"></a><span class="in"># Create an enhanced map with better color palette and fixed legend</span></span>
-<span id="cb15-241"><a href="#cb15-241"></a><span class="in">ggplot(consumption_map) +</span></span>
-<span id="cb15-242"><a href="#cb15-242"></a><span class="in">  geom_sf(aes(fill = consumption)) +</span></span>
-<span id="cb15-243"><a href="#cb15-243"></a><span class="in">  scale_fill_viridis_c(option = "plasma", na.value = "gray90") +</span></span>
-<span id="cb15-244"><a href="#cb15-244"></a><span class="in">  facet_wrap(~food_category, ncol = 2) +</span></span>
-<span id="cb15-245"><a href="#cb15-245"></a><span class="in">  labs(title = "Standardized Food Consumption Around the World",</span></span>
-<span id="cb15-246"><a href="#cb15-246"></a><span class="in">       subtitle = "Values shown as standard deviations from mean consumption",</span></span>
-<span id="cb15-247"><a href="#cb15-247"></a><span class="in">       fill = "Std. Consumption") +</span></span>
-<span id="cb15-248"><a href="#cb15-248"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb15-249"><a href="#cb15-249"></a><span class="in">  theme(legend.position = "bottom",</span></span>
-<span id="cb15-250"><a href="#cb15-250"></a><span class="in">        plot.title = element_text(face = "bold", size = 16),</span></span>
-<span id="cb15-251"><a href="#cb15-251"></a><span class="in">        strip.background = element_rect(fill = "lightgray"),</span></span>
-<span id="cb15-252"><a href="#cb15-252"></a><span class="in">        strip.text = element_text(face = "bold", size = 12))</span></span>
-<span id="cb15-253"><a href="#cb15-253"></a><span class="in">```</span></span>
-<span id="cb15-254"><a href="#cb15-254"></a></span>
-<span id="cb15-255"><a href="#cb15-255"></a><span class="fu">## Reflections and Enhancements</span></span>
-<span id="cb15-256"><a href="#cb15-256"></a></span>
-<span id="cb15-257"><a href="#cb15-257"></a>The choropleth maps provide a wealth of insights, but several enhancements could make them even more effective:</span>
-<span id="cb15-258"><a href="#cb15-258"></a></span>
-<span id="cb15-259"><a href="#cb15-259"></a><span class="ss">1.  </span>Using a better color palette (like viridis) improves accessibility and makes patterns more visible</span>
-<span id="cb15-260"><a href="#cb15-260"></a><span class="ss">2.  </span>Adding a clear title and subtitle provides context for interpretation</span>
-<span id="cb15-261"><a href="#cb15-261"></a><span class="ss">3.  </span>Adjusting the facet_wrap layout to display maps in a more readable format</span>
-<span id="cb15-262"><a href="#cb15-262"></a><span class="ss">4.  </span>Including a proper legend with meaningful labels</span>
-<span id="cb15-263"><a href="#cb15-263"></a><span class="ss">5.  </span>Using a consistent scale across all maps allows for better comparisons</span>
-<span id="cb15-264"><a href="#cb15-264"></a><span class="ss">6.  </span>Adding borders between countries improves visual distinction</span>
-<span id="cb15-265"><a href="#cb15-265"></a></span>
-<span id="cb15-266"><a href="#cb15-266"></a>These maps reveal fascinating global patterns in food consumption.</span>
-<span id="cb15-267"><a href="#cb15-267"></a>Nordic countries excel in milk consumption, while Southeast Asian nations lead in rice.</span>
-<span id="cb15-268"><a href="#cb15-268"></a>The beef map highlights South American leadership, particularly Argentina's remarkable consumption levels.</span>
-<span id="cb15-269"><a href="#cb15-269"></a>What's particularly interesting is how standardization reveals outliers – countries that deviate significantly from average consumption patterns.</span>
-<span id="cb15-270"><a href="#cb15-270"></a></span>
-<span id="cb15-271"><a href="#cb15-271"></a><span class="fu">## Conclusion</span></span>
-<span id="cb15-272"><a href="#cb15-272"></a></span>
-<span id="cb15-273"><a href="#cb15-273"></a>This exploration of global food consumption patterns has revealed fascinating insights about dietary habits across countries and regions.</span>
-<span id="cb15-274"><a href="#cb15-274"></a>The analysis demonstrates not only which countries consume the most food overall but also where specific foods dominate cultural diets.</span>
-<span id="cb15-275"><a href="#cb15-275"></a></span>
-<span id="cb15-276"><a href="#cb15-276"></a>Through data wrangling and visualization, I've transformed raw numbers into meaningful insights.</span>
-<span id="cb15-277"><a href="#cb15-277"></a>The standardized choropleth maps particularly highlight how consumption patterns vary globally, accounting for different scales across food categories.</span>
-<span id="cb15-278"><a href="#cb15-278"></a>This standardization reveals which countries truly stand out in their consumption of specific foods relative to global averages.</span>
-<span id="cb15-279"><a href="#cb15-279"></a></span>
-<span id="cb15-280"><a href="#cb15-280"></a>The techniques employed – from data cleaning to advanced visualization – showcase how statistical analysis can uncover patterns in complex global datasets.</span>
-<span id="cb15-281"><a href="#cb15-281"></a>These findings could inform discussions about food security, cultural dietary patterns, and the environmental impact of food production across different regions of the world.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="co">  html:</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="co">    toc: true</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="co">    code-fold: true</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a><span class="co">    code-tools: true</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a><span class="co">    number-sections: false</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="co">---</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a></span>
+<span id="cb15-11"><a href="#cb15-11"></a><span class="fu">## Introduction</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a></span>
+<span id="cb15-13"><a href="#cb15-13"></a>In this analysis, I'll explore the fascinating world of global food consumption patterns, examining which countries consume the most food overall, which ones lead in specific food categories, and visualizing consumption trends worldwide.</span>
+<span id="cb15-14"><a href="#cb15-14"></a>The dataset from the TidyTuesday project (February 2020) provides insights into both food consumption and CO2 emissions across different countries and food categories.</span>
+<span id="cb15-15"><a href="#cb15-15"></a>Through this exploration, I'll not only answer important research questions but also develop a deeper understanding of global nutrition patterns and their environmental impact.</span>
+<span id="cb15-16"><a href="#cb15-16"></a></span>
+<span id="cb15-17"><a href="#cb15-17"></a><span class="fu">## Setting Up the Environment</span></span>
+<span id="cb15-18"><a href="#cb15-18"></a></span>
+<span id="cb15-19"><a href="#cb15-19"></a>First, I'll load the necessary packages and the dataset to begin our analysis journey:</span>
+<span id="cb15-20"><a href="#cb15-20"></a></span>
+<span id="cb15-21"><a href="#cb15-21"></a><span class="in">```{r setup, message=FALSE, warning=FALSE}</span></span>
+<span id="cb15-22"><a href="#cb15-22"></a><span class="in">library(tidytuesdayR)</span></span>
+<span id="cb15-23"><a href="#cb15-23"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb15-24"><a href="#cb15-24"></a><span class="in">library(rnaturalearth) # for country boundaries</span></span>
+<span id="cb15-25"><a href="#cb15-25"></a><span class="in">library(sf) # for spatial visualization</span></span>
+<span id="cb15-26"><a href="#cb15-26"></a><span class="in">library(knitr) # for tables</span></span>
+<span id="cb15-27"><a href="#cb15-27"></a></span>
+<span id="cb15-28"><a href="#cb15-28"></a><span class="in"># Load the data</span></span>
+<span id="cb15-29"><a href="#cb15-29"></a><span class="in">tuesdata &lt;- tt_load('2020-02-18')</span></span>
+<span id="cb15-30"><a href="#cb15-30"></a><span class="in">fc &lt;- tuesdata$food_consumption</span></span>
+<span id="cb15-31"><a href="#cb15-31"></a></span>
+<span id="cb15-32"><a href="#cb15-32"></a><span class="in"># Initial data inspection</span></span>
+<span id="cb15-33"><a href="#cb15-33"></a><span class="in">glimpse(fc)</span></span>
+<span id="cb15-34"><a href="#cb15-34"></a><span class="in">```</span></span>
+<span id="cb15-35"><a href="#cb15-35"></a></span>
+<span id="cb15-36"><a href="#cb15-36"></a><span class="fu">## Data Cleaning</span></span>
+<span id="cb15-37"><a href="#cb15-37"></a></span>
+<span id="cb15-38"><a href="#cb15-38"></a>Before diving into the analysis, I need to clean up the food category names to make them more concise and consistent.</span>
+<span id="cb15-39"><a href="#cb15-39"></a>The original names have inconsistent formatting and unnecessary verbosity that would clutter our visualizations.</span>
+<span id="cb15-40"><a href="#cb15-40"></a></span>
+<span id="cb15-41"><a href="#cb15-41"></a><span class="in">```{r clean_categories}</span></span>
+<span id="cb15-42"><a href="#cb15-42"></a><span class="in"># First, let's examine the original food categories</span></span>
+<span id="cb15-43"><a href="#cb15-43"></a><span class="in">unique(fc$food_category)</span></span>
+<span id="cb15-44"><a href="#cb15-44"></a></span>
+<span id="cb15-45"><a href="#cb15-45"></a><span class="in"># Clean up the food category names</span></span>
+<span id="cb15-46"><a href="#cb15-46"></a><span class="in">fcc &lt;- fc %&gt;%</span></span>
+<span id="cb15-47"><a href="#cb15-47"></a><span class="in">  mutate(food_category = case_when(</span></span>
+<span id="cb15-48"><a href="#cb15-48"></a><span class="in">    food_category == "Lamb &amp; Goat" ~ "Lamb",</span></span>
+<span id="cb15-49"><a href="#cb15-49"></a><span class="in">    food_category == "Milk - inc. cheese" ~ "Milk",</span></span>
+<span id="cb15-50"><a href="#cb15-50"></a><span class="in">    food_category == "Wheat and Wheat Products" ~ "Wheat",</span></span>
+<span id="cb15-51"><a href="#cb15-51"></a><span class="in">    food_category == "Nuts inc. Peanut Butter" ~ "Nuts",</span></span>
+<span id="cb15-52"><a href="#cb15-52"></a><span class="in">    TRUE ~ food_category</span></span>
+<span id="cb15-53"><a href="#cb15-53"></a><span class="in">  ))</span></span>
+<span id="cb15-54"><a href="#cb15-54"></a></span>
+<span id="cb15-55"><a href="#cb15-55"></a><span class="in"># Verify the changes</span></span>
+<span id="cb15-56"><a href="#cb15-56"></a><span class="in">unique(fcc$food_category)</span></span>
+<span id="cb15-57"><a href="#cb15-57"></a><span class="in">```</span></span>
+<span id="cb15-58"><a href="#cb15-58"></a></span>
+<span id="cb15-59"><a href="#cb15-59"></a>The transformation worked perfectly!</span>
+<span id="cb15-60"><a href="#cb15-60"></a>I've streamlined the category names while preserving their meaning, which will make our visualizations cleaner and easier to interpret.</span>
+<span id="cb15-61"><a href="#cb15-61"></a>This simple change fundamentally transforms how we'll perceive patterns in the data.</span>
+<span id="cb15-62"><a href="#cb15-62"></a></span>
+<span id="cb15-63"><a href="#cb15-63"></a><span class="fu">## Research Question 1: Which 5 countries consume the most food?</span></span>
+<span id="cb15-64"><a href="#cb15-64"></a></span>
+<span id="cb15-65"><a href="#cb15-65"></a>To answer this question, I need to calculate the total consumption for each country across all food categories.</span>
+<span id="cb15-66"><a href="#cb15-66"></a></span>
+<span id="cb15-67"><a href="#cb15-67"></a><span class="fu">### Expected Shape</span></span>
+<span id="cb15-68"><a href="#cb15-68"></a></span>
+<span id="cb15-69"><a href="#cb15-69"></a>The resulting dataframe should have 2 columns: - country: character (5 rows) - total_consumption: numeric (total kg/person/year)</span>
+<span id="cb15-70"><a href="#cb15-70"></a></span>
+<span id="cb15-71"><a href="#cb15-71"></a><span class="fu">### Steps</span></span>
+<span id="cb15-72"><a href="#cb15-72"></a></span>
+<span id="cb15-73"><a href="#cb15-73"></a><span class="in">```{r most_consuming_countries}</span></span>
+<span id="cb15-74"><a href="#cb15-74"></a><span class="in"># 1. Group by country</span></span>
+<span id="cb15-75"><a href="#cb15-75"></a><span class="in"># 2. Sum consumption across all food categories</span></span>
+<span id="cb15-76"><a href="#cb15-76"></a><span class="in"># 3. Arrange in descending order</span></span>
+<span id="cb15-77"><a href="#cb15-77"></a><span class="in"># 4. Select top 5 countries</span></span>
+<span id="cb15-78"><a href="#cb15-78"></a></span>
+<span id="cb15-79"><a href="#cb15-79"></a><span class="in">top_consumers &lt;- fcc %&gt;%</span></span>
+<span id="cb15-80"><a href="#cb15-80"></a><span class="in">  group_by(country) %&gt;%</span></span>
+<span id="cb15-81"><a href="#cb15-81"></a><span class="in">  summarize(total_consumption = sum(consumption, na.rm = TRUE)) %&gt;%</span></span>
+<span id="cb15-82"><a href="#cb15-82"></a><span class="in">  arrange(desc(total_consumption)) %&gt;%</span></span>
+<span id="cb15-83"><a href="#cb15-83"></a><span class="in">  slice_head(n = 5)</span></span>
+<span id="cb15-84"><a href="#cb15-84"></a></span>
+<span id="cb15-85"><a href="#cb15-85"></a><span class="in"># Display as a table</span></span>
+<span id="cb15-86"><a href="#cb15-86"></a><span class="in">kable(top_consumers, caption = "Top 5 Countries by Total Food Consumption (kg/person/year)")</span></span>
+<span id="cb15-87"><a href="#cb15-87"></a><span class="in">```</span></span>
+<span id="cb15-88"><a href="#cb15-88"></a></span>
+<span id="cb15-89"><a href="#cb15-89"></a><span class="fu">### Visualization</span></span>
+<span id="cb15-90"><a href="#cb15-90"></a></span>
+<span id="cb15-91"><a href="#cb15-91"></a>A horizontal bar chart would be the most appropriate visualization for this data:</span>
+<span id="cb15-92"><a href="#cb15-92"></a></span>
+<span id="cb15-93"><a href="#cb15-93"></a><span class="in">```{r top_consumers_viz, fig.height=4, fig.width=8}</span></span>
+<span id="cb15-94"><a href="#cb15-94"></a><span class="in"># Create a bar chart of top consuming countries</span></span>
+<span id="cb15-95"><a href="#cb15-95"></a><span class="in">ggplot(top_consumers, aes(x = reorder(country, total_consumption), y = total_consumption)) +</span></span>
+<span id="cb15-96"><a href="#cb15-96"></a><span class="in">  geom_col(fill = "steelblue") +</span></span>
+<span id="cb15-97"><a href="#cb15-97"></a><span class="in">  coord_flip() +</span></span>
+<span id="cb15-98"><a href="#cb15-98"></a><span class="in">  labs(title = "Top 5 Countries by Total Food Consumption",</span></span>
+<span id="cb15-99"><a href="#cb15-99"></a><span class="in">       subtitle = "Total kg per person per year",</span></span>
+<span id="cb15-100"><a href="#cb15-100"></a><span class="in">       x = NULL,</span></span>
+<span id="cb15-101"><a href="#cb15-101"></a><span class="in">       y = "Total Consumption (kg/person/year)") +</span></span>
+<span id="cb15-102"><a href="#cb15-102"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-103"><a href="#cb15-103"></a><span class="in">  theme(plot.title = element_text(face = "bold"),</span></span>
+<span id="cb15-104"><a href="#cb15-104"></a><span class="in">        axis.text.y = element_text(size = 11))</span></span>
+<span id="cb15-105"><a href="#cb15-105"></a><span class="in">```</span></span>
+<span id="cb15-106"><a href="#cb15-106"></a></span>
+<span id="cb15-107"><a href="#cb15-107"></a>The results reveal fascinating insights about global consumption patterns!</span>
+<span id="cb15-108"><a href="#cb15-108"></a>The United States leads in total food consumption per person, followed closely by several European countries.</span>
+<span id="cb15-109"><a href="#cb15-109"></a>This reflects both cultural dietary differences and economic factors that influence food availability and consumption habits.</span>
+<span id="cb15-110"><a href="#cb15-110"></a></span>
+<span id="cb15-111"><a href="#cb15-111"></a><span class="fu">## Research Question 2: Which top 5 countries consume each food category the most?</span></span>
+<span id="cb15-112"><a href="#cb15-112"></a></span>
+<span id="cb15-113"><a href="#cb15-113"></a>Now I'll dig deeper to identify consumption leaders for each specific food category.</span>
+<span id="cb15-114"><a href="#cb15-114"></a></span>
+<span id="cb15-115"><a href="#cb15-115"></a><span class="fu">### Expected Shape</span></span>
+<span id="cb15-116"><a href="#cb15-116"></a></span>
+<span id="cb15-117"><a href="#cb15-117"></a>The resulting dataframe should have 3 columns: - food_category: character (11 different foods x 5 countries = 55 rows) - country: character - consumption: numeric (kg/person/year)</span>
+<span id="cb15-118"><a href="#cb15-118"></a></span>
+<span id="cb15-119"><a href="#cb15-119"></a><span class="fu">### Steps</span></span>
+<span id="cb15-120"><a href="#cb15-120"></a></span>
+<span id="cb15-121"><a href="#cb15-121"></a><span class="in">```{r top_consumers_by_food}</span></span>
+<span id="cb15-122"><a href="#cb15-122"></a><span class="in"># 1. Group by food_category</span></span>
+<span id="cb15-123"><a href="#cb15-123"></a><span class="in"># 2. Arrange in descending order within each group</span></span>
+<span id="cb15-124"><a href="#cb15-124"></a><span class="in"># 3. Select top 5 countries for each food category</span></span>
+<span id="cb15-125"><a href="#cb15-125"></a><span class="in"># 4. Keep food_category, country, and consumption columns</span></span>
+<span id="cb15-126"><a href="#cb15-126"></a></span>
+<span id="cb15-127"><a href="#cb15-127"></a><span class="in">top_by_food &lt;- fcc %&gt;%</span></span>
+<span id="cb15-128"><a href="#cb15-128"></a><span class="in">  group_by(food_category) %&gt;%</span></span>
+<span id="cb15-129"><a href="#cb15-129"></a><span class="in">  arrange(desc(consumption)) %&gt;%</span></span>
+<span id="cb15-130"><a href="#cb15-130"></a><span class="in">  slice_head(n = 5) %&gt;%</span></span>
+<span id="cb15-131"><a href="#cb15-131"></a><span class="in">  select(food_category, country, consumption)</span></span>
+<span id="cb15-132"><a href="#cb15-132"></a></span>
+<span id="cb15-133"><a href="#cb15-133"></a><span class="in"># Display the first 15 rows (to keep the output manageable)</span></span>
+<span id="cb15-134"><a href="#cb15-134"></a><span class="in">kable(head(top_by_food, 15), caption = "Sample of Top 5 Countries by Food Category (First 3 Categories)")</span></span>
+<span id="cb15-135"><a href="#cb15-135"></a><span class="in">```</span></span>
+<span id="cb15-136"><a href="#cb15-136"></a></span>
+<span id="cb15-137"><a href="#cb15-137"></a><span class="fu">### Visualization</span></span>
+<span id="cb15-138"><a href="#cb15-138"></a></span>
+<span id="cb15-139"><a href="#cb15-139"></a>A faceted bar chart would be the most appropriate visualization for this data:</span>
+<span id="cb15-140"><a href="#cb15-140"></a></span>
+<span id="cb15-141"><a href="#cb15-141"></a><span class="in">```{r top_by_food_viz, fig.height=12, fig.width=10}</span></span>
+<span id="cb15-142"><a href="#cb15-142"></a><span class="in"># Create faceted bar chart</span></span>
+<span id="cb15-143"><a href="#cb15-143"></a><span class="in">ggplot(top_by_food, aes(x = reorder(country, consumption), y = consumption)) +</span></span>
+<span id="cb15-144"><a href="#cb15-144"></a><span class="in">  geom_col(fill = "darkgreen") +</span></span>
+<span id="cb15-145"><a href="#cb15-145"></a><span class="in">  facet_wrap(~food_category, scales = "free_y", ncol = 2) +</span></span>
+<span id="cb15-146"><a href="#cb15-146"></a><span class="in">  coord_flip() +</span></span>
+<span id="cb15-147"><a href="#cb15-147"></a><span class="in">  labs(title = "Top 5 Countries by Food Category Consumption",</span></span>
+<span id="cb15-148"><a href="#cb15-148"></a><span class="in">       subtitle = "Measured in kg per person per year",</span></span>
+<span id="cb15-149"><a href="#cb15-149"></a><span class="in">       x = NULL,</span></span>
+<span id="cb15-150"><a href="#cb15-150"></a><span class="in">       y = "Consumption (kg/person/year)") +</span></span>
+<span id="cb15-151"><a href="#cb15-151"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-152"><a href="#cb15-152"></a><span class="in">  theme(plot.title = element_text(face = "bold"),</span></span>
+<span id="cb15-153"><a href="#cb15-153"></a><span class="in">        strip.background = element_rect(fill = "lightgray"),</span></span>
+<span id="cb15-154"><a href="#cb15-154"></a><span class="in">        strip.text = element_text(face = "bold"))</span></span>
+<span id="cb15-155"><a href="#cb15-155"></a><span class="in">```</span></span>
+<span id="cb15-156"><a href="#cb15-156"></a></span>
+<span id="cb15-157"><a href="#cb15-157"></a>What a fascinating glimpse into global eating habits!</span>
+<span id="cb15-158"><a href="#cb15-158"></a>The visualization reveals striking regional specialization patterns.</span>
+<span id="cb15-159"><a href="#cb15-159"></a>Nordic countries dominate milk consumption, while Asian countries lead in rice consumption.</span>
+<span id="cb15-160"><a href="#cb15-160"></a>The beef visualization demonstrates South American countries' strong cattle industries, particularly Argentina.</span>
+<span id="cb15-161"><a href="#cb15-161"></a>These patterns reflect not just what people eat, but centuries of agricultural development, cultural preferences, and geographic influences shaping our food systems.</span>
+<span id="cb15-162"><a href="#cb15-162"></a></span>
+<span id="cb15-163"><a href="#cb15-163"></a><span class="fu">## Research Question 3: What does the consumption of each food look like globally?</span></span>
+<span id="cb15-164"><a href="#cb15-164"></a></span>
+<span id="cb15-165"><a href="#cb15-165"></a>For this question, I'll create choropleth maps showing consumption patterns across countries for each food category.</span>
+<span id="cb15-166"><a href="#cb15-166"></a></span>
+<span id="cb15-167"><a href="#cb15-167"></a><span class="fu">### Expected Shape</span></span>
+<span id="cb15-168"><a href="#cb15-168"></a></span>
+<span id="cb15-169"><a href="#cb15-169"></a>After joining with geographical data, the dataframe should have: - name: character (country name from map data) - geometry: sf geometry - food_category: character (pivoted) - consumption: numeric (standardized)</span>
+<span id="cb15-170"><a href="#cb15-170"></a></span>
+<span id="cb15-171"><a href="#cb15-171"></a><span class="fu">### Steps</span></span>
+<span id="cb15-172"><a href="#cb15-172"></a></span>
+<span id="cb15-173"><a href="#cb15-173"></a><span class="in">```{r choropleth_prep, message=FALSE, warning=FALSE}</span></span>
+<span id="cb15-174"><a href="#cb15-174"></a><span class="in"># First attempt at creating a choropleth map</span></span>
+<span id="cb15-175"><a href="#cb15-175"></a></span>
+<span id="cb15-176"><a href="#cb15-176"></a><span class="in"># 1. Get country boundaries</span></span>
+<span id="cb15-177"><a href="#cb15-177"></a><span class="in"># 2. Select name and geometry</span></span>
+<span id="cb15-178"><a href="#cb15-178"></a><span class="in"># 3. Join with consumption data</span></span>
+<span id="cb15-179"><a href="#cb15-179"></a><span class="in"># 4. Create the map</span></span>
+<span id="cb15-180"><a href="#cb15-180"></a></span>
+<span id="cb15-181"><a href="#cb15-181"></a><span class="in"># First, let's identify countries with missing data</span></span>
+<span id="cb15-182"><a href="#cb15-182"></a><span class="in">countries_with_data &lt;- unique(fcc$country)</span></span>
+<span id="cb15-183"><a href="#cb15-183"></a><span class="in">world_map &lt;- ne_countries(returnclass = "sf") %&gt;%</span></span>
+<span id="cb15-184"><a href="#cb15-184"></a><span class="in">  select(name, geometry)</span></span>
+<span id="cb15-185"><a href="#cb15-185"></a></span>
+<span id="cb15-186"><a href="#cb15-186"></a><span class="in">missing_countries &lt;- world_map %&gt;%</span></span>
+<span id="cb15-187"><a href="#cb15-187"></a><span class="in">  filter(!name %in% countries_with_data) %&gt;%</span></span>
+<span id="cb15-188"><a href="#cb15-188"></a><span class="in">  st_drop_geometry() %&gt;%</span></span>
+<span id="cb15-189"><a href="#cb15-189"></a><span class="in">  select(name)</span></span>
+<span id="cb15-190"><a href="#cb15-190"></a></span>
+<span id="cb15-191"><a href="#cb15-191"></a><span class="in"># First few missing countries</span></span>
+<span id="cb15-192"><a href="#cb15-192"></a><span class="in">head(missing_countries, 10)</span></span>
+<span id="cb15-193"><a href="#cb15-193"></a><span class="in">```</span></span>
+<span id="cb15-194"><a href="#cb15-194"></a></span>
+<span id="cb15-195"><a href="#cb15-195"></a>I notice that there's a name mismatch between our consumption data and the natural earth map data.</span>
+<span id="cb15-196"><a href="#cb15-196"></a>Several countries appear as "missing" because of naming differences.</span>
+<span id="cb15-197"><a href="#cb15-197"></a>For instance, "United States of America" in the map data versus "USA" in the consumption data.</span>
+<span id="cb15-198"><a href="#cb15-198"></a></span>
+<span id="cb15-199"><a href="#cb15-199"></a>Let's fix these discrepancies and create an improved visualization:</span>
+<span id="cb15-200"><a href="#cb15-200"></a></span>
+<span id="cb15-201"><a href="#cb15-201"></a><span class="in">```{r fix_country_names, message=FALSE, warning=FALSE}</span></span>
+<span id="cb15-202"><a href="#cb15-202"></a><span class="in"># Fix country name mismatches</span></span>
+<span id="cb15-203"><a href="#cb15-203"></a><span class="in">world_map_fixed &lt;- ne_countries(returnclass = "sf") %&gt;%</span></span>
+<span id="cb15-204"><a href="#cb15-204"></a><span class="in">  select(name, geometry) %&gt;%</span></span>
+<span id="cb15-205"><a href="#cb15-205"></a><span class="in">  mutate(name = ifelse(name == "United States of America", "USA", name)) %&gt;%</span></span>
+<span id="cb15-206"><a href="#cb15-206"></a><span class="in">  mutate(name = ifelse(name == "Bosnia and Herz.", "Bosnia and Herzegovina", name)) %&gt;%</span></span>
+<span id="cb15-207"><a href="#cb15-207"></a><span class="in">  mutate(name = ifelse(name == "Czechia", "Czech Republic", name)) %&gt;%</span></span>
+<span id="cb15-208"><a href="#cb15-208"></a><span class="in">  mutate(name = ifelse(name == "Taiwan", "Taiwan. ROC", name))</span></span>
+<span id="cb15-209"><a href="#cb15-209"></a></span>
+<span id="cb15-210"><a href="#cb15-210"></a><span class="in"># Now let's standardize consumption for better comparison across foods</span></span>
+<span id="cb15-211"><a href="#cb15-211"></a><span class="in">fcc_standardized &lt;- fcc %&gt;%</span></span>
+<span id="cb15-212"><a href="#cb15-212"></a><span class="in">  select(-co2_emmission) %&gt;%</span></span>
+<span id="cb15-213"><a href="#cb15-213"></a><span class="in">  group_by(food_category) %&gt;%</span></span>
+<span id="cb15-214"><a href="#cb15-214"></a><span class="in">  mutate(consumption = (consumption - mean(consumption))/sd(consumption))</span></span>
+<span id="cb15-215"><a href="#cb15-215"></a></span>
+<span id="cb15-216"><a href="#cb15-216"></a><span class="in"># Check the range of standardized values for each food</span></span>
+<span id="cb15-217"><a href="#cb15-217"></a><span class="in">food_stats &lt;- fcc_standardized %&gt;%</span></span>
+<span id="cb15-218"><a href="#cb15-218"></a><span class="in">  group_by(food_category) %&gt;%</span></span>
+<span id="cb15-219"><a href="#cb15-219"></a><span class="in">  summarize(min = min(consumption, na.rm = TRUE),</span></span>
+<span id="cb15-220"><a href="#cb15-220"></a><span class="in">            max = max(consumption, na.rm = TRUE),</span></span>
+<span id="cb15-221"><a href="#cb15-221"></a><span class="in">            range = max - min) %&gt;%</span></span>
+<span id="cb15-222"><a href="#cb15-222"></a><span class="in">  arrange(desc(range))</span></span>
+<span id="cb15-223"><a href="#cb15-223"></a></span>
+<span id="cb15-224"><a href="#cb15-224"></a><span class="in">kable(food_stats, caption = "Range of Standardized Consumption Values by Food Category")</span></span>
+<span id="cb15-225"><a href="#cb15-225"></a><span class="in">```</span></span>
+<span id="cb15-226"><a href="#cb15-226"></a></span>
+<span id="cb15-227"><a href="#cb15-227"></a>Now I'll create the improved choropleth maps:</span>
+<span id="cb15-228"><a href="#cb15-228"></a></span>
+<span id="cb15-229"><a href="#cb15-229"></a><span class="in">```{r final_choropleth, fig.height=22, fig.width=11, message=FALSE, warning=FALSE}</span></span>
+<span id="cb15-230"><a href="#cb15-230"></a><span class="in"># Join data and create maps</span></span>
+<span id="cb15-231"><a href="#cb15-231"></a><span class="in">consumption_map &lt;- world_map_fixed %&gt;%</span></span>
+<span id="cb15-232"><a href="#cb15-232"></a><span class="in">  left_join(fcc_standardized, join_by(name == country)) %&gt;%</span></span>
+<span id="cb15-233"><a href="#cb15-233"></a><span class="in">  pivot_wider(names_from = food_category, values_from = consumption) %&gt;%</span></span>
+<span id="cb15-234"><a href="#cb15-234"></a><span class="in">  select(-`NA`) %&gt;%</span></span>
+<span id="cb15-235"><a href="#cb15-235"></a><span class="in">  pivot_longer(cols = c(-name, -geometry),</span></span>
+<span id="cb15-236"><a href="#cb15-236"></a><span class="in">               names_to = "food_category",</span></span>
+<span id="cb15-237"><a href="#cb15-237"></a><span class="in">               values_to = "consumption")</span></span>
+<span id="cb15-238"><a href="#cb15-238"></a></span>
+<span id="cb15-239"><a href="#cb15-239"></a><span class="in"># Create an enhanced map with better color palette and fixed legend</span></span>
+<span id="cb15-240"><a href="#cb15-240"></a><span class="in">ggplot(consumption_map) +</span></span>
+<span id="cb15-241"><a href="#cb15-241"></a><span class="in">  geom_sf(aes(fill = consumption)) +</span></span>
+<span id="cb15-242"><a href="#cb15-242"></a><span class="in">  scale_fill_viridis_c(option = "plasma", na.value = "gray90") +</span></span>
+<span id="cb15-243"><a href="#cb15-243"></a><span class="in">  facet_wrap(~food_category, ncol = 2) +</span></span>
+<span id="cb15-244"><a href="#cb15-244"></a><span class="in">  labs(title = "Standardized Food Consumption Around the World",</span></span>
+<span id="cb15-245"><a href="#cb15-245"></a><span class="in">       subtitle = "Values shown as standard deviations from mean consumption",</span></span>
+<span id="cb15-246"><a href="#cb15-246"></a><span class="in">       fill = "Std. Consumption") +</span></span>
+<span id="cb15-247"><a href="#cb15-247"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb15-248"><a href="#cb15-248"></a><span class="in">  theme(legend.position = "bottom",</span></span>
+<span id="cb15-249"><a href="#cb15-249"></a><span class="in">        plot.title = element_text(face = "bold", size = 16),</span></span>
+<span id="cb15-250"><a href="#cb15-250"></a><span class="in">        strip.background = element_rect(fill = "lightgray"),</span></span>
+<span id="cb15-251"><a href="#cb15-251"></a><span class="in">        strip.text = element_text(face = "bold", size = 12))</span></span>
+<span id="cb15-252"><a href="#cb15-252"></a><span class="in">```</span></span>
+<span id="cb15-253"><a href="#cb15-253"></a></span>
+<span id="cb15-254"><a href="#cb15-254"></a><span class="fu">## Reflections and Enhancements</span></span>
+<span id="cb15-255"><a href="#cb15-255"></a></span>
+<span id="cb15-256"><a href="#cb15-256"></a>The choropleth maps provide a wealth of insights, but several enhancements could make them even more effective:</span>
+<span id="cb15-257"><a href="#cb15-257"></a></span>
+<span id="cb15-258"><a href="#cb15-258"></a><span class="ss">1.  </span>Using a better color palette (like viridis) improves accessibility and makes patterns more visible</span>
+<span id="cb15-259"><a href="#cb15-259"></a><span class="ss">2.  </span>Adding a clear title and subtitle provides context for interpretation</span>
+<span id="cb15-260"><a href="#cb15-260"></a><span class="ss">3.  </span>Adjusting the facet_wrap layout to display maps in a more readable format</span>
+<span id="cb15-261"><a href="#cb15-261"></a><span class="ss">4.  </span>Including a proper legend with meaningful labels</span>
+<span id="cb15-262"><a href="#cb15-262"></a><span class="ss">5.  </span>Using a consistent scale across all maps allows for better comparisons</span>
+<span id="cb15-263"><a href="#cb15-263"></a><span class="ss">6.  </span>Adding borders between countries improves visual distinction</span>
+<span id="cb15-264"><a href="#cb15-264"></a></span>
+<span id="cb15-265"><a href="#cb15-265"></a>These maps reveal fascinating global patterns in food consumption.</span>
+<span id="cb15-266"><a href="#cb15-266"></a>Nordic countries excel in milk consumption, while Southeast Asian nations lead in rice.</span>
+<span id="cb15-267"><a href="#cb15-267"></a>The beef map highlights South American leadership, particularly Argentina's remarkable consumption levels.</span>
+<span id="cb15-268"><a href="#cb15-268"></a>What's particularly interesting is how standardization reveals outliers – countries that deviate significantly from average consumption patterns.</span>
+<span id="cb15-269"><a href="#cb15-269"></a></span>
+<span id="cb15-270"><a href="#cb15-270"></a><span class="fu">## Conclusion</span></span>
+<span id="cb15-271"><a href="#cb15-271"></a></span>
+<span id="cb15-272"><a href="#cb15-272"></a>This exploration of global food consumption patterns has revealed fascinating insights about dietary habits across countries and regions.</span>
+<span id="cb15-273"><a href="#cb15-273"></a>The analysis demonstrates not only which countries consume the most food overall but also where specific foods dominate cultural diets.</span>
+<span id="cb15-274"><a href="#cb15-274"></a></span>
+<span id="cb15-275"><a href="#cb15-275"></a>Through data wrangling and visualization, I've transformed raw numbers into meaningful insights.</span>
+<span id="cb15-276"><a href="#cb15-276"></a>The standardized choropleth maps particularly highlight how consumption patterns vary globally, accounting for different scales across food categories.</span>
+<span id="cb15-277"><a href="#cb15-277"></a>This standardization reveals which countries truly stand out in their consumption of specific foods relative to global averages.</span>
+<span id="cb15-278"><a href="#cb15-278"></a></span>
+<span id="cb15-279"><a href="#cb15-279"></a>The techniques employed – from data cleaning to advanced visualization – showcase how statistical analysis can uncover patterns in complex global datasets.</span>
+<span id="cb15-280"><a href="#cb15-280"></a>These findings could inform discussions about food security, cultural dietary patterns, and the environmental impact of food production across different regions of the world.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

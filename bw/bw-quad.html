@@ -4,9 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Zhijun He">
-<meta name="dcterms.date" content="2025-05-09">
-<title>4&nbsp; Quadvariate Visualization – COMP/STAT112 Notebook</title>
+<title>Quadvariate Visualization – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -201,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/Solo Project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project:Australia Fires</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project</span></span></a>
   </div>
 </li>
       </ul>
@@ -218,13 +216,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/Cheatsheet2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Cheatsheet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Reference Sheet 1</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/Cheatsheet3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">R Data Analysis Cheatsheet for Exam 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Reference Sheet 2</span></span></a>
   </div>
 </li>
       </ul>
@@ -253,13 +251,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-multi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multivariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multivariate Visualization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/real-ica-spacial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Spatial Visualization Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Spacial Visualization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -277,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-working with dates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Working with Dates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Dates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -295,13 +293,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-working with factors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Working with Factors</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Factors</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-working with strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Working with Strings</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Strings</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,69 +324,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#my-introduction-to-quadvariate-visualization" id="toc-my-introduction-to-quadvariate-visualization" class="nav-link active" data-scroll-target="#my-introduction-to-quadvariate-visualization"><span class="header-section-number">5</span> My Introduction to Quadvariate Visualization</a></li>
-  <li><a href="#dataset-selection-and-preparation" id="toc-dataset-selection-and-preparation" class="nav-link" data-scroll-target="#dataset-selection-and-preparation"><span class="header-section-number">6</span> Dataset Selection and Preparation</a></li>
+<li><a href="#my-introduction-to-quadvariate-visualization" id="toc-my-introduction-to-quadvariate-visualization" class="nav-link active" data-scroll-target="#my-introduction-to-quadvariate-visualization">My Introduction to Quadvariate Visualization</a></li>
+  <li><a href="#dataset-selection-and-preparation" id="toc-dataset-selection-and-preparation" class="nav-link" data-scroll-target="#dataset-selection-and-preparation">Dataset Selection and Preparation</a></li>
   <li>
-<a href="#my-approaches-to-quadvariate-visualization" id="toc-my-approaches-to-quadvariate-visualization" class="nav-link" data-scroll-target="#my-approaches-to-quadvariate-visualization"><span class="header-section-number">7</span> My Approaches to Quadvariate Visualization</a>
+<a href="#my-approaches-to-quadvariate-visualization" id="toc-my-approaches-to-quadvariate-visualization" class="nav-link" data-scroll-target="#my-approaches-to-quadvariate-visualization">My Approaches to Quadvariate Visualization</a>
   <ul class="collapse">
-<li><a href="#approach-1-position-color-size-shape" id="toc-approach-1-position-color-size-shape" class="nav-link" data-scroll-target="#approach-1-position-color-size-shape"><span class="header-section-number">7.1</span> Approach 1: Position + Color + Size + Shape</a></li>
-  <li><a href="#approach-2-position-color-size-faceting" id="toc-approach-2-position-color-size-faceting" class="nav-link" data-scroll-target="#approach-2-position-color-size-faceting"><span class="header-section-number">7.2</span> Approach 2: Position + Color + Size + Faceting</a></li>
-  <li><a href="#approach-3-position-color-size-annotation" id="toc-approach-3-position-color-size-annotation" class="nav-link" data-scroll-target="#approach-3-position-color-size-annotation"><span class="header-section-number">7.3</span> Approach 3: Position + Color + Size + Annotation</a></li>
-  <li><a href="#approach-4-multiple-aesthetics-with-trend-lines" id="toc-approach-4-multiple-aesthetics-with-trend-lines" class="nav-link" data-scroll-target="#approach-4-multiple-aesthetics-with-trend-lines"><span class="header-section-number">7.4</span> Approach 4: Multiple Aesthetics with Trend Lines</a></li>
-  <li><a href="#approach-5-interactive-visualization" id="toc-approach-5-interactive-visualization" class="nav-link" data-scroll-target="#approach-5-interactive-visualization"><span class="header-section-number">7.5</span> Approach 5: Interactive Visualization</a></li>
-  <li><a href="#approach-6-small-multiples-with-embedded-elements" id="toc-approach-6-small-multiples-with-embedded-elements" class="nav-link" data-scroll-target="#approach-6-small-multiples-with-embedded-elements"><span class="header-section-number">7.6</span> Approach 6: Small Multiples with Embedded Elements</a></li>
+<li><a href="#approach-1-position-color-size-shape" id="toc-approach-1-position-color-size-shape" class="nav-link" data-scroll-target="#approach-1-position-color-size-shape">Approach 1: Position + Color + Size + Shape</a></li>
+  <li><a href="#approach-2-position-color-size-faceting" id="toc-approach-2-position-color-size-faceting" class="nav-link" data-scroll-target="#approach-2-position-color-size-faceting">Approach 2: Position + Color + Size + Faceting</a></li>
+  <li><a href="#approach-3-position-color-size-annotation" id="toc-approach-3-position-color-size-annotation" class="nav-link" data-scroll-target="#approach-3-position-color-size-annotation">Approach 3: Position + Color + Size + Annotation</a></li>
+  <li><a href="#approach-4-multiple-aesthetics-with-trend-lines" id="toc-approach-4-multiple-aesthetics-with-trend-lines" class="nav-link" data-scroll-target="#approach-4-multiple-aesthetics-with-trend-lines">Approach 4: Multiple Aesthetics with Trend Lines</a></li>
+  <li><a href="#approach-5-interactive-visualization" id="toc-approach-5-interactive-visualization" class="nav-link" data-scroll-target="#approach-5-interactive-visualization">Approach 5: Interactive Visualization</a></li>
+  <li><a href="#approach-6-small-multiples-with-embedded-elements" id="toc-approach-6-small-multiples-with-embedded-elements" class="nav-link" data-scroll-target="#approach-6-small-multiples-with-embedded-elements">Approach 6: Small Multiples with Embedded Elements</a></li>
   </ul>
 </li>
   <li>
-<a href="#design-principles-ive-learned-for-effective-quadvariate-visualization" id="toc-design-principles-ive-learned-for-effective-quadvariate-visualization" class="nav-link" data-scroll-target="#design-principles-ive-learned-for-effective-quadvariate-visualization"><span class="header-section-number">8</span> Design Principles I’ve Learned for Effective Quadvariate Visualization</a>
+<a href="#design-principles-ive-learned-for-effective-quadvariate-visualization" id="toc-design-principles-ive-learned-for-effective-quadvariate-visualization" class="nav-link" data-scroll-target="#design-principles-ive-learned-for-effective-quadvariate-visualization">Design Principles I’ve Learned for Effective Quadvariate Visualization</a>
   <ul class="collapse">
-<li><a href="#visual-hierarchy" id="toc-visual-hierarchy" class="nav-link" data-scroll-target="#visual-hierarchy"><span class="header-section-number">8.1</span> 1. Visual Hierarchy</a></li>
-  <li><a href="#perceptual-effectiveness" id="toc-perceptual-effectiveness" class="nav-link" data-scroll-target="#perceptual-effectiveness"><span class="header-section-number">8.2</span> 2. Perceptual Effectiveness</a></li>
-  <li><a href="#cognitive-load-management" id="toc-cognitive-load-management" class="nav-link" data-scroll-target="#cognitive-load-management"><span class="header-section-number">8.3</span> 3. Cognitive Load Management</a></li>
-  <li><a href="#accessibility-considerations" id="toc-accessibility-considerations" class="nav-link" data-scroll-target="#accessibility-considerations"><span class="header-section-number">8.4</span> 4. Accessibility Considerations</a></li>
+<li><a href="#visual-hierarchy" id="toc-visual-hierarchy" class="nav-link" data-scroll-target="#visual-hierarchy">1. Visual Hierarchy</a></li>
+  <li><a href="#perceptual-effectiveness" id="toc-perceptual-effectiveness" class="nav-link" data-scroll-target="#perceptual-effectiveness">2. Perceptual Effectiveness</a></li>
+  <li><a href="#cognitive-load-management" id="toc-cognitive-load-management" class="nav-link" data-scroll-target="#cognitive-load-management">3. Cognitive Load Management</a></li>
+  <li><a href="#accessibility-considerations" id="toc-accessibility-considerations" class="nav-link" data-scroll-target="#accessibility-considerations">4. Accessibility Considerations</a></li>
   </ul>
 </li>
-  <li><a href="#future-enhancements-im-exploring" id="toc-future-enhancements-im-exploring" class="nav-link" data-scroll-target="#future-enhancements-im-exploring"><span class="header-section-number">9</span> Future Enhancements I’m Exploring</a></li>
-  <li><a href="#my-conclusion" id="toc-my-conclusion" class="nav-link" data-scroll-target="#my-conclusion"><span class="header-section-number">10</span> My Conclusion</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">11</span> References</a></li>
+  <li><a href="#future-enhancements-im-exploring" id="toc-future-enhancements-im-exploring" class="nav-link" data-scroll-target="#future-enhancements-im-exploring">Future Enhancements I’m Exploring</a></li>
+  <li><a href="#my-conclusion" id="toc-my-conclusion" class="nav-link" data-scroll-target="#my-conclusion">My Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-quad.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Visualization</span></a></li></ol></nav><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Visualization</span>
-</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Quadvariate Visualization</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Zhijun He </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 9, 2025</p>
-    </div>
-  </div>
   
     
   </div>
   
 
 
-</header><section id="my-introduction-to-quadvariate-visualization" class="level1" data-number="5"><h1 data-number="5">
-<span class="header-section-number">5</span> My Introduction to Quadvariate Visualization</h1>
+</header><section id="my-introduction-to-quadvariate-visualization" class="level1"><h1>My Introduction to Quadvariate Visualization</h1>
 <p>In my data visualization journey, I’ve found that while many analysts begin with univariate plots showing distributions and then move to bivariate plots examining relationships between pairs of variables, many stop there. Yet our world rarely operates in just two dimensions. As I’ve developed my skills, I’ve discovered that the art of visualizing relationships among multiple variables—particularly four variables simultaneously—opens doors to deeper insights that might otherwise remain hidden in the complexity of data.</p>
 <p>In this document, I’ll share my approaches to creating quadvariate visualizations that effectively communicate patterns across four variables. While I’ve found these challenging to execute well, these visualizations can tell rich, nuanced stories about data that simpler plots cannot capture.</p>
-</section><section id="dataset-selection-and-preparation" class="level1" data-number="6"><h1 data-number="6">
-<span class="header-section-number">6</span> Dataset Selection and Preparation</h1>
+</section><section id="dataset-selection-and-preparation" class="level1"><h1>Dataset Selection and Preparation</h1>
 <p>For this demonstration, I’ve selected the mtcars dataset, which contains fuel consumption and performance metrics for various car models from the 1970s. I chose this dataset because it offers several continuous and categorical variables that we can combine in our exploration.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Load required libraries</span></span>
@@ -592,10 +574,8 @@ Transmission
 </div>
 </div>
 <p>The dataset includes continuous variables such as mpg (miles per gallon), disp (displacement), hp (horsepower), and wt (weight), as well as categorical variables like cyl (number of cylinders), vs (engine shape), and am (transmission type).</p>
-</section><section id="my-approaches-to-quadvariate-visualization" class="level1" data-number="7"><h1 data-number="7">
-<span class="header-section-number">7</span> My Approaches to Quadvariate Visualization</h1>
-<section id="approach-1-position-color-size-shape" class="level2" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="approach-1-position-color-size-shape">
-<span class="header-section-number">7.1</span> Approach 1: Position + Color + Size + Shape</h2>
+</section><section id="my-approaches-to-quadvariate-visualization" class="level1"><h1>My Approaches to Quadvariate Visualization</h1>
+<section id="approach-1-position-color-size-shape" class="level2"><h2 class="anchored" data-anchor-id="approach-1-position-color-size-shape">Approach 1: Position + Color + Size + Shape</h2>
 <p>In my first approach, I’ve combined four fundamental visual elements: - Position (x and y coordinates) - Color - Size - Shape</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Basic quadvariate plot using position, color, size, and shape</span></span>
@@ -641,8 +621,7 @@ Transmission
 <li>I was intrigued to find that manual transmission cars (triangles) tend to have better fuel efficiency than automatic transmission cars (circles) of similar weight.</li>
 </ol>
 <p>What I find most effective about this approach is its ability to show interactions between variables. For instance, I can see that weight and cylinder count are correlated, but even controlling for weight, cars with fewer cylinders tend to be more fuel-efficient.</p>
-</section><section id="approach-2-position-color-size-faceting" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="approach-2-position-color-size-faceting">
-<span class="header-section-number">7.2</span> Approach 2: Position + Color + Size + Faceting</h2>
+</section><section id="approach-2-position-color-size-faceting" class="level2"><h2 class="anchored" data-anchor-id="approach-2-position-color-size-faceting">Approach 2: Position + Color + Size + Faceting</h2>
 <p>When I found that shape becomes difficult to distinguish—particularly with crowded plots—I discovered that faceting provides an excellent alternative. In this approach, I’ve created separate panels for one categorical variable while still encoding three other variables.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Quadvariate visualization using faceting instead of shape</span></span>
@@ -681,8 +660,7 @@ Transmission
 </div>
 </div>
 <p>Through faceting by transmission type, I’ve been able to create a clearer view of how the relationships between weight, mpg, cylinders, and horsepower vary across transmission types. This arrangement makes it easier for me to compare patterns between the two groups. I’ve observed that manual transmission cars maintain better fuel efficiency across weight classes, particularly for higher-cylinder counts.</p>
-</section><section id="approach-3-position-color-size-annotation" class="level2" data-number="7.3"><h2 data-number="7.3" class="anchored" data-anchor-id="approach-3-position-color-size-annotation">
-<span class="header-section-number">7.3</span> Approach 3: Position + Color + Size + Annotation</h2>
+</section><section id="approach-3-position-color-size-annotation" class="level2"><h2 class="anchored" data-anchor-id="approach-3-position-color-size-annotation">Approach 3: Position + Color + Size + Annotation</h2>
 <p>Another powerful approach I’ve explored involves using position, color, and size for three variables, while incorporating annotations to represent a fourth variable.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Create a dataset with labels for selected points</span></span>
@@ -737,8 +715,7 @@ Transmission
 </div>
 </div>
 <p>By selectively annotating points of interest with the number of gears, I’ve added a fourth dimension to my visualization. I’ve found this technique works particularly well when I want to highlight specific observations or when the fourth variable is most relevant for certain data points. Through these annotations, I’ve discovered that many high-performance cars (high displacement, lower mpg) have higher gear counts, while the most fuel-efficient vehicles I examined typically have moderate gear counts.</p>
-</section><section id="approach-4-multiple-aesthetics-with-trend-lines" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="approach-4-multiple-aesthetics-with-trend-lines">
-<span class="header-section-number">7.4</span> Approach 4: Multiple Aesthetics with Trend Lines</h2>
+</section><section id="approach-4-multiple-aesthetics-with-trend-lines" class="level2"><h2 class="anchored" data-anchor-id="approach-4-multiple-aesthetics-with-trend-lines">Approach 4: Multiple Aesthetics with Trend Lines</h2>
 <p>I’ve discovered that adding statistical elements like trend lines can further enhance a quadvariate visualization by emphasizing patterns within subgroups.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Create a plot with trend lines for different groups</span></span>
@@ -781,8 +758,7 @@ Transmission
 </div>
 </div>
 <p>In this visualization, I’m demonstrating the relationship between horsepower and quarter-mile time (qsec), with cylinder count shown through color, weight through point size, and transmission type through line style. Through the trend lines, I’ve revealed how the relationship between horsepower and quarter-mile time varies by transmission type, showing that manual transmission cars generally have faster quarter-mile times at similar horsepower levels.</p>
-</section><section id="approach-5-interactive-visualization" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="approach-5-interactive-visualization">
-<span class="header-section-number">7.5</span> Approach 5: Interactive Visualization</h2>
+</section><section id="approach-5-interactive-visualization" class="level2"><h2 class="anchored" data-anchor-id="approach-5-interactive-visualization">Approach 5: Interactive Visualization</h2>
 <p>In my exploration, I’ve recognized that static visualizations have limitations, particularly for complex quadvariate relationships. I’ve found that interactive visualizations allow users to explore the data dynamically.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Create an interactive plot using plotly</span></span>
@@ -819,13 +795,12 @@ Transmission
 <span id="cb7-32"><a href="#cb7-32"></a><span class="co"># Convert to an interactive plotly object</span></span>
 <span id="cb7-33"><a href="#cb7-33"></a>plotly<span class="sc">::</span><span class="fu">ggplotly</span>(interactive_plot, <span class="at">tooltip =</span> <span class="st">"text"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-3b98ce756575acbc1581" style="width:100%;height:520px;"></div>
-<script type="application/json" data-for="htmlwidget-3b98ce756575acbc1581">{"x":{"data":[{"x":[2.3199999999999998,3.1899999999999999,3.1499999999999999,2.2000000000000002,1.615,1.835,2.4649999999999999,1.9350000000000001,2.1400000000000001,1.5129999999999999,2.7799999999999998],"y":[22.800000000000001,24.399999999999999,22.800000000000001,32.399999999999999,30.399999999999999,33.899999999999999,21.5,27.300000000000001,26,30.399999999999999,21.399999999999999],"text":["Car: Datsun 710 <br>MPG: 22.8 <br>Weight: 2.32 <br>Cylinders: 4 <br>Horsepower: 93 <br>Transmission: Manual","Car: Merc 240D <br>MPG: 24.4 <br>Weight: 3.19 <br>Cylinders: 4 <br>Horsepower: 62 <br>Transmission: Automatic","Car: Merc 230 <br>MPG: 22.8 <br>Weight: 3.15 <br>Cylinders: 4 <br>Horsepower: 95 <br>Transmission: Automatic","Car: Fiat 128 <br>MPG: 32.4 <br>Weight: 2.2 <br>Cylinders: 4 <br>Horsepower: 66 <br>Transmission: Manual","Car: Honda Civic <br>MPG: 30.4 <br>Weight: 1.615 <br>Cylinders: 4 <br>Horsepower: 52 <br>Transmission: Manual","Car: Toyota Corolla <br>MPG: 33.9 <br>Weight: 1.835 <br>Cylinders: 4 <br>Horsepower: 65 <br>Transmission: Manual","Car: Toyota Corona <br>MPG: 21.5 <br>Weight: 2.465 <br>Cylinders: 4 <br>Horsepower: 97 <br>Transmission: Automatic","Car: Fiat X1-9 <br>MPG: 27.3 <br>Weight: 1.935 <br>Cylinders: 4 <br>Horsepower: 66 <br>Transmission: Manual","Car: Porsche 914-2 <br>MPG: 26 <br>Weight: 2.14 <br>Cylinders: 4 <br>Horsepower: 91 <br>Transmission: Manual","Car: Lotus Europa <br>MPG: 30.4 <br>Weight: 1.513 <br>Cylinders: 4 <br>Horsepower: 113 <br>Transmission: Manual","Car: Volvo 142E <br>MPG: 21.4 <br>Weight: 2.78 <br>Cylinders: 4 <br>Horsepower: 109 <br>Transmission: Manual"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(68,1,84,1)","opacity":0.80000000000000004,"size":[21.408693893867646,16.311856122310285,21.651381990096354,17.223039174094975,11.338582677165356,17.008986841617734,21.88848881043625,17.223039174094975,21.160010789447025,23.621661991291795,23.212110288328237],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(68,1,84,1)"}},"hoveron":"points","name":"4","legendgroup":"4","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2.6200000000000001,2.875,3.2149999999999999,3.46,3.4399999999999999,3.4399999999999999,2.77],"y":[21,21,21.399999999999999,18.100000000000001,19.199999999999999,17.800000000000001,19.699999999999999],"text":["Car: Mazda RX4 <br>MPG: 21 <br>Weight: 2.62 <br>Cylinders: 6 <br>Horsepower: 110 <br>Transmission: Manual","Car: Mazda RX4 Wag <br>MPG: 21 <br>Weight: 2.875 <br>Cylinders: 6 <br>Horsepower: 110 <br>Transmission: Manual","Car: Hornet 4 Drive <br>MPG: 21.4 <br>Weight: 3.215 <br>Cylinders: 6 <br>Horsepower: 110 <br>Transmission: Automatic","Car: Valiant <br>MPG: 18.1 <br>Weight: 3.46 <br>Cylinders: 6 <br>Horsepower: 105 <br>Transmission: Automatic","Car: Merc 280 <br>MPG: 19.2 <br>Weight: 3.44 <br>Cylinders: 6 <br>Horsepower: 123 <br>Transmission: Automatic","Car: Merc 280C <br>MPG: 17.8 <br>Weight: 3.44 <br>Cylinders: 6 <br>Horsepower: 123 <br>Transmission: Automatic","Car: Ferrari Dino <br>MPG: 19.7 <br>Weight: 2.77 <br>Cylinders: 6 <br>Horsepower: 175 <br>Transmission: Manual"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(37,132,142,1)","opacity":0.80000000000000004,"size":[23.315811188347137,23.315811188347137,23.315811188347137,22.787917960445945,24.590280160782484,24.590280160782484,28.780526942362972],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(37,132,142,1)"}},"hoveron":"points","name":"6","legendgroup":"6","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3.4399999999999999,3.5699999999999998,4.0700000000000003,3.73,3.7799999999999998,5.25,5.4240000000000004,5.3449999999999998,3.52,3.4350000000000001,3.8399999999999999,3.8450000000000002,3.1699999999999999,3.5699999999999998],"y":[18.699999999999999,14.300000000000001,16.399999999999999,17.300000000000001,15.199999999999999,10.4,10.4,14.699999999999999,15.5,15.199999999999999,13.300000000000001,19.199999999999999,15.800000000000001,15],"text":["Car: Hornet Sportabout <br>MPG: 18.7 <br>Weight: 3.44 <br>Cylinders: 8 <br>Horsepower: 175 <br>Transmission: Automatic","Car: Duster 360 <br>MPG: 14.3 <br>Weight: 3.57 <br>Cylinders: 8 <br>Horsepower: 245 <br>Transmission: Automatic","Car: Merc 450SE <br>MPG: 16.4 <br>Weight: 4.07 <br>Cylinders: 8 <br>Horsepower: 180 <br>Transmission: Automatic","Car: Merc 450SL <br>MPG: 17.3 <br>Weight: 3.73 <br>Cylinders: 8 <br>Horsepower: 180 <br>Transmission: Automatic","Car: Merc 450SLC <br>MPG: 15.2 <br>Weight: 3.78 <br>Cylinders: 8 <br>Horsepower: 180 <br>Transmission: Automatic","Car: Cadillac Fleetwood <br>MPG: 10.4 <br>Weight: 5.25 <br>Cylinders: 8 <br>Horsepower: 205 <br>Transmission: Automatic","Car: Lincoln Continental <br>MPG: 10.4 <br>Weight: 5.424 <br>Cylinders: 8 <br>Horsepower: 215 <br>Transmission: Automatic","Car: Chrysler Imperial <br>MPG: 14.7 <br>Weight: 5.345 <br>Cylinders: 8 <br>Horsepower: 230 <br>Transmission: Automatic","Car: Dodge Challenger <br>MPG: 15.5 <br>Weight: 3.52 <br>Cylinders: 8 <br>Horsepower: 150 <br>Transmission: Automatic","Car: AMC Javelin <br>MPG: 15.2 <br>Weight: 3.435 <br>Cylinders: 8 <br>Horsepower: 150 <br>Transmission: Automatic","Car: Camaro Z28 <br>MPG: 13.3 <br>Weight: 3.84 <br>Cylinders: 8 <br>Horsepower: 245 <br>Transmission: Automatic","Car: Pontiac Firebird <br>MPG: 19.2 <br>Weight: 3.845 <br>Cylinders: 8 <br>Horsepower: 175 <br>Transmission: Automatic","Car: Ford Pantera L <br>MPG: 15.8 <br>Weight: 3.17 <br>Cylinders: 8 <br>Horsepower: 264 <br>Transmission: Manual","Car: Maserati Bora <br>MPG: 15 <br>Weight: 3.57 <br>Cylinders: 8 <br>Horsepower: 335 <br>Transmission: Manual"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(187,223,39,1)","opacity":0.80000000000000004,"size":[28.780526942362972,33.187050840209331,29.131506667627182,29.131506667627182,29.131506667627182,30.791648400356934,31.417308104617046,32.320846328432118,26.907391168819451,26.907391168819451,33.187050840209331,28.780526942362972,34.237253243726535,37.795275590551185],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(187,223,39,1)"}},"hoveron":"points","name":"8","legendgroup":"8","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":42.666666666666671,"r":7.3059360730593621,"b":39.086757990867589,"l":37.260273972602747},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Fuel Efficiency vs. Weight of Cars","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.3174499999999998,5.6195500000000003],"tickmode":"array","ticktext":["2","3","4","5"],"tickvals":[2,3,4,5],"categoryorder":"array","categoryarray":["2","3","4","5"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Weight (1000 lbs)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[9.2249999999999996,35.074999999999996],"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"categoryorder":"array","categoryarray":["10","15","20","25","30","35"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Miles Per Gallon","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Cylinders<br />Horsepower","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"3d4d7f72d9dd":{"x":{},"y":{},"colour":{},"size":{},"text":{},"type":"scatter"}},"cur_data":"3d4d7f72d9dd","visdat":{"3d4d7f72d9dd":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-e06ca00d60fd4c2dd82c" style="width:100%;height:520px;"></div>
+<script type="application/json" data-for="htmlwidget-e06ca00d60fd4c2dd82c">{"x":{"data":[{"x":[2.3199999999999998,3.1899999999999999,3.1499999999999999,2.2000000000000002,1.615,1.835,2.4649999999999999,1.9350000000000001,2.1400000000000001,1.5129999999999999,2.7799999999999998],"y":[22.800000000000001,24.399999999999999,22.800000000000001,32.399999999999999,30.399999999999999,33.899999999999999,21.5,27.300000000000001,26,30.399999999999999,21.399999999999999],"text":["Car: Datsun 710 <br>MPG: 22.8 <br>Weight: 2.32 <br>Cylinders: 4 <br>Horsepower: 93 <br>Transmission: Manual","Car: Merc 240D <br>MPG: 24.4 <br>Weight: 3.19 <br>Cylinders: 4 <br>Horsepower: 62 <br>Transmission: Automatic","Car: Merc 230 <br>MPG: 22.8 <br>Weight: 3.15 <br>Cylinders: 4 <br>Horsepower: 95 <br>Transmission: Automatic","Car: Fiat 128 <br>MPG: 32.4 <br>Weight: 2.2 <br>Cylinders: 4 <br>Horsepower: 66 <br>Transmission: Manual","Car: Honda Civic <br>MPG: 30.4 <br>Weight: 1.615 <br>Cylinders: 4 <br>Horsepower: 52 <br>Transmission: Manual","Car: Toyota Corolla <br>MPG: 33.9 <br>Weight: 1.835 <br>Cylinders: 4 <br>Horsepower: 65 <br>Transmission: Manual","Car: Toyota Corona <br>MPG: 21.5 <br>Weight: 2.465 <br>Cylinders: 4 <br>Horsepower: 97 <br>Transmission: Automatic","Car: Fiat X1-9 <br>MPG: 27.3 <br>Weight: 1.935 <br>Cylinders: 4 <br>Horsepower: 66 <br>Transmission: Manual","Car: Porsche 914-2 <br>MPG: 26 <br>Weight: 2.14 <br>Cylinders: 4 <br>Horsepower: 91 <br>Transmission: Manual","Car: Lotus Europa <br>MPG: 30.4 <br>Weight: 1.513 <br>Cylinders: 4 <br>Horsepower: 113 <br>Transmission: Manual","Car: Volvo 142E <br>MPG: 21.4 <br>Weight: 2.78 <br>Cylinders: 4 <br>Horsepower: 109 <br>Transmission: Manual"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(68,1,84,1)","opacity":0.80000000000000004,"size":[21.408693893867646,16.311856122310285,21.651381990096354,17.223039174094975,11.338582677165356,17.008986841617734,21.88848881043625,17.223039174094975,21.160010789447025,23.621661991291795,23.212110288328237],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(68,1,84,1)"}},"hoveron":"points","name":"4","legendgroup":"4","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2.6200000000000001,2.875,3.2149999999999999,3.46,3.4399999999999999,3.4399999999999999,2.77],"y":[21,21,21.399999999999999,18.100000000000001,19.199999999999999,17.800000000000001,19.699999999999999],"text":["Car: Mazda RX4 <br>MPG: 21 <br>Weight: 2.62 <br>Cylinders: 6 <br>Horsepower: 110 <br>Transmission: Manual","Car: Mazda RX4 Wag <br>MPG: 21 <br>Weight: 2.875 <br>Cylinders: 6 <br>Horsepower: 110 <br>Transmission: Manual","Car: Hornet 4 Drive <br>MPG: 21.4 <br>Weight: 3.215 <br>Cylinders: 6 <br>Horsepower: 110 <br>Transmission: Automatic","Car: Valiant <br>MPG: 18.1 <br>Weight: 3.46 <br>Cylinders: 6 <br>Horsepower: 105 <br>Transmission: Automatic","Car: Merc 280 <br>MPG: 19.2 <br>Weight: 3.44 <br>Cylinders: 6 <br>Horsepower: 123 <br>Transmission: Automatic","Car: Merc 280C <br>MPG: 17.8 <br>Weight: 3.44 <br>Cylinders: 6 <br>Horsepower: 123 <br>Transmission: Automatic","Car: Ferrari Dino <br>MPG: 19.7 <br>Weight: 2.77 <br>Cylinders: 6 <br>Horsepower: 175 <br>Transmission: Manual"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(37,132,142,1)","opacity":0.80000000000000004,"size":[23.315811188347137,23.315811188347137,23.315811188347137,22.787917960445945,24.590280160782484,24.590280160782484,28.780526942362972],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(37,132,142,1)"}},"hoveron":"points","name":"6","legendgroup":"6","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3.4399999999999999,3.5699999999999998,4.0700000000000003,3.73,3.7799999999999998,5.25,5.4240000000000004,5.3449999999999998,3.52,3.4350000000000001,3.8399999999999999,3.8450000000000002,3.1699999999999999,3.5699999999999998],"y":[18.699999999999999,14.300000000000001,16.399999999999999,17.300000000000001,15.199999999999999,10.4,10.4,14.699999999999999,15.5,15.199999999999999,13.300000000000001,19.199999999999999,15.800000000000001,15],"text":["Car: Hornet Sportabout <br>MPG: 18.7 <br>Weight: 3.44 <br>Cylinders: 8 <br>Horsepower: 175 <br>Transmission: Automatic","Car: Duster 360 <br>MPG: 14.3 <br>Weight: 3.57 <br>Cylinders: 8 <br>Horsepower: 245 <br>Transmission: Automatic","Car: Merc 450SE <br>MPG: 16.4 <br>Weight: 4.07 <br>Cylinders: 8 <br>Horsepower: 180 <br>Transmission: Automatic","Car: Merc 450SL <br>MPG: 17.3 <br>Weight: 3.73 <br>Cylinders: 8 <br>Horsepower: 180 <br>Transmission: Automatic","Car: Merc 450SLC <br>MPG: 15.2 <br>Weight: 3.78 <br>Cylinders: 8 <br>Horsepower: 180 <br>Transmission: Automatic","Car: Cadillac Fleetwood <br>MPG: 10.4 <br>Weight: 5.25 <br>Cylinders: 8 <br>Horsepower: 205 <br>Transmission: Automatic","Car: Lincoln Continental <br>MPG: 10.4 <br>Weight: 5.424 <br>Cylinders: 8 <br>Horsepower: 215 <br>Transmission: Automatic","Car: Chrysler Imperial <br>MPG: 14.7 <br>Weight: 5.345 <br>Cylinders: 8 <br>Horsepower: 230 <br>Transmission: Automatic","Car: Dodge Challenger <br>MPG: 15.5 <br>Weight: 3.52 <br>Cylinders: 8 <br>Horsepower: 150 <br>Transmission: Automatic","Car: AMC Javelin <br>MPG: 15.2 <br>Weight: 3.435 <br>Cylinders: 8 <br>Horsepower: 150 <br>Transmission: Automatic","Car: Camaro Z28 <br>MPG: 13.3 <br>Weight: 3.84 <br>Cylinders: 8 <br>Horsepower: 245 <br>Transmission: Automatic","Car: Pontiac Firebird <br>MPG: 19.2 <br>Weight: 3.845 <br>Cylinders: 8 <br>Horsepower: 175 <br>Transmission: Automatic","Car: Ford Pantera L <br>MPG: 15.8 <br>Weight: 3.17 <br>Cylinders: 8 <br>Horsepower: 264 <br>Transmission: Manual","Car: Maserati Bora <br>MPG: 15 <br>Weight: 3.57 <br>Cylinders: 8 <br>Horsepower: 335 <br>Transmission: Manual"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(187,223,39,1)","opacity":0.80000000000000004,"size":[28.780526942362972,33.187050840209331,29.131506667627182,29.131506667627182,29.131506667627182,30.791648400356934,31.417308104617046,32.320846328432118,26.907391168819451,26.907391168819451,33.187050840209331,28.780526942362972,34.237253243726535,37.795275590551185],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(187,223,39,1)"}},"hoveron":"points","name":"8","legendgroup":"8","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":42.666666666666671,"r":7.3059360730593621,"b":39.086757990867589,"l":37.260273972602747},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Fuel Efficiency vs. Weight of Cars","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.3174499999999998,5.6195500000000003],"tickmode":"array","ticktext":["2","3","4","5"],"tickvals":[2,3,4,5],"categoryorder":"array","categoryarray":["2","3","4","5"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Weight (1000 lbs)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[9.2249999999999996,35.074999999999996],"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"categoryorder":"array","categoryarray":["10","15","20","25","30","35"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Miles Per Gallon","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Cylinders<br />Horsepower","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"4e514f902722":{"x":{},"y":{},"colour":{},"size":{},"text":{},"type":"scatter"}},"cur_data":"4e514f902722","visdat":{"4e514f902722":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>I’ve found that interactive visualization allows the viewer to hover over points to see exact values and additional information, revealing details about the fourth (or even fifth or sixth) variables without cluttering the visual space. This approach has been particularly valuable for my presentations or dashboards where audience members can explore the data according to their interests.</p>
-</section><section id="approach-6-small-multiples-with-embedded-elements" class="level2" data-number="7.6"><h2 data-number="7.6" class="anchored" data-anchor-id="approach-6-small-multiples-with-embedded-elements">
-<span class="header-section-number">7.6</span> Approach 6: Small Multiples with Embedded Elements</h2>
+</section><section id="approach-6-small-multiples-with-embedded-elements" class="level2"><h2 class="anchored" data-anchor-id="approach-6-small-multiples-with-embedded-elements">Approach 6: Small Multiples with Embedded Elements</h2>
 <p>Small multiples (or trellis plots) provide another powerful approach I’ve used for quadvariate visualization. By creating a grid of plots, I can systematically vary two categorical variables while showing relationships between two continuous variables.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Create a plot with small multiples</span></span>
@@ -864,18 +839,15 @@ Transmission
 </div>
 </div>
 <p>With this approach, I’ve created a grid where each cell represents a specific combination of cylinder count and transmission type. Within each cell, I’ve shown the relationship between displacement and mpg, with point size indicating weight. I’ve found the small multiples approach to be particularly effective at revealing how relationships vary across categorical variables, making it easy for me to compare patterns across different subgroups of data.</p>
-</section></section><section id="design-principles-ive-learned-for-effective-quadvariate-visualization" class="level1" data-number="8"><h1 data-number="8">
-<span class="header-section-number">8</span> Design Principles I’ve Learned for Effective Quadvariate Visualization</h1>
+</section></section><section id="design-principles-ive-learned-for-effective-quadvariate-visualization" class="level1"><h1>Design Principles I’ve Learned for Effective Quadvariate Visualization</h1>
 <p>In my journey creating effective quadvariate visualizations, I’ve discovered several design principles that are crucial to consider:</p>
-<section id="visual-hierarchy" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="visual-hierarchy">
-<span class="header-section-number">8.1</span> 1. Visual Hierarchy</h2>
+<section id="visual-hierarchy" class="level2"><h2 class="anchored" data-anchor-id="visual-hierarchy">1. Visual Hierarchy</h2>
 <p>I’ve learned that not all variables deserve equal emphasis in my visualizations. I establish a clear visual hierarchy by:</p>
 <ul>
 <li>Placing the most important relationship on the x and y axes</li>
 <li>Using color for the next most important variable, particularly if it’s categorical</li>
 <li>Using less prominent visual cues (size, shape, etc.) for secondary variables</li>
-</ul></section><section id="perceptual-effectiveness" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="perceptual-effectiveness">
-<span class="header-section-number">8.2</span> 2. Perceptual Effectiveness</h2>
+</ul></section><section id="perceptual-effectiveness" class="level2"><h2 class="anchored" data-anchor-id="perceptual-effectiveness">2. Perceptual Effectiveness</h2>
 <p>Through my experimentation, I’ve discovered that different visual encodings vary in their perceptual effectiveness:</p>
 <ul>
 <li>Position (x, y coordinates) is most precisely perceived</li>
@@ -884,24 +856,21 @@ Transmission
 <li>Shape works well for categorical variables with few categories</li>
 </ul>
 <p>I choose encodings that match the precision requirements of each variable and the nature of the data.</p>
-</section><section id="cognitive-load-management" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="cognitive-load-management">
-<span class="header-section-number">8.3</span> 3. Cognitive Load Management</h2>
+</section><section id="cognitive-load-management" class="level2"><h2 class="anchored" data-anchor-id="cognitive-load-management">3. Cognitive Load Management</h2>
 <p>I’ve found that quadvariate visualizations can easily become overwhelming. I manage cognitive load by:</p>
 <ul>
 <li>Using clear, direct labeling</li>
 <li>Providing context through titles and annotations</li>
 <li>Considering interactive elements to reveal details on demand</li>
 <li>Breaking complex relationships into multiple coordinated views</li>
-</ul></section><section id="accessibility-considerations" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="accessibility-considerations">
-<span class="header-section-number">8.4</span> 4. Accessibility Considerations</h2>
+</ul></section><section id="accessibility-considerations" class="level2"><h2 class="anchored" data-anchor-id="accessibility-considerations">4. Accessibility Considerations</h2>
 <p>In my work, I ensure my visualizations remain accessible by:</p>
 <ul>
 <li>Using colorblind-friendly palettes (like viridis)</li>
 <li>Incorporating redundant encodings when possible</li>
 <li>Providing text alternatives or descriptions</li>
 <li>Testing visualization with potential users</li>
-</ul></section></section><section id="future-enhancements-im-exploring" class="level1" data-number="9"><h1 data-number="9">
-<span class="header-section-number">9</span> Future Enhancements I’m Exploring</h1>
+</ul></section></section><section id="future-enhancements-im-exploring" class="level1"><h1>Future Enhancements I’m Exploring</h1>
 <p>As I continue to develop my quadvariate visualization skills, I’m considering these potential enhancements:</p>
 <ol type="1">
 <li>
@@ -912,13 +881,11 @@ Transmission
 <strong>Coordinated multiple views</strong>: Creating linked visualizations that highlight the same data points across different perspectives</li>
 <li>
 <strong>Dimension reduction techniques</strong>: Using methods like PCA to reduce dimensionality while preserving important relationships</li>
-</ol></section><section id="my-conclusion" class="level1" data-number="10"><h1 data-number="10">
-<span class="header-section-number">10</span> My Conclusion</h1>
+</ol></section><section id="my-conclusion" class="level1"><h1>My Conclusion</h1>
 <p>Through my experimentation with quadvariate visualization, I’ve discovered a powerful approach to understanding complex relationships in data. While I’ve found these challenging to execute effectively, these visualizations reveal patterns and interactions that simpler plots would miss. The approaches I’ve demonstrated—combining position, color, size, shape, faceting, and annotation—provide a foundation for creating rich, informative graphics.</p>
 <p>I’ve learned that the goal of any visualization is to communicate clearly. Even with the technical ability to show four variables, I always ask whether the added complexity serves my narrative. Sometimes, multiple simpler visualizations may communicate more effectively than a single complex one.</p>
 <p>As I refine my visualization skills, I continue to experiment with these techniques, paying careful attention to user feedback and the clarity of my message. I’ve found that the most successful visualizations balance technical sophistication with intuitive comprehension.</p>
-</section><section id="references" class="level1" data-number="11"><h1 data-number="11">
-<span class="header-section-number">11</span> References</h1>
+</section><section id="references" class="level1"><h1>References</h1>
 <p>Wickham H (2016). <em>ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. ISBN 978-3-319-24277-4, https://ggplot2.tidyverse.org.</p>
 <p>Wilke CO (2019). <em>Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures</em>. O’Reilly Media. https://clauswilke.com/dataviz/</p>
 <p>Few S (2009). <em>Now You See It: Simple Visualization Techniques for Quantitative Analysis</em>. Analytics Press.</p>
@@ -1559,448 +1526,446 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">---</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="an">title:</span><span class="co"> "Quadvariate Visualization"</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="an">author:</span><span class="co"> "Zhijun He"</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="an">date:</span><span class="co"> today</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb9-6"><a href="#cb9-6"></a><span class="co">  html:</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a><span class="co">    code-fold: true</span></span>
-<span id="cb9-8"><a href="#cb9-8"></a><span class="co">    theme: flatly</span></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="co">    toc: true</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a><span class="co">    number-sections: true</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="co">    fig-width: 10</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a><span class="co">    fig-height: 7</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a><span class="co">---</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a></span>
-<span id="cb9-15"><a href="#cb9-15"></a><span class="in">```{r setup, include=FALSE}</span></span>
-<span id="cb9-16"><a href="#cb9-16"></a><span class="in">knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a><span class="in">library(tidyverse)</span></span>
-<span id="cb9-18"><a href="#cb9-18"></a><span class="in">library(ggrepel)</span></span>
-<span id="cb9-19"><a href="#cb9-19"></a><span class="in">library(patchwork)</span></span>
-<span id="cb9-20"><a href="#cb9-20"></a><span class="in">library(viridis)</span></span>
-<span id="cb9-21"><a href="#cb9-21"></a><span class="in">library(plotly)</span></span>
-<span id="cb9-22"><a href="#cb9-22"></a><span class="in">```</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co">  html:</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">    code-fold: true</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co">    theme: flatly</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co">    toc: true</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="co">    number-sections: false</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="co">    fig-width: 10</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="co">    fig-height: 7</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="co">---</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a></span>
+<span id="cb9-13"><a href="#cb9-13"></a><span class="in">```{r setup, include=FALSE}</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a><span class="in">knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="in">library(ggrepel)</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="in">library(patchwork)</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a><span class="in">library(viridis)</span></span>
+<span id="cb9-19"><a href="#cb9-19"></a><span class="in">library(plotly)</span></span>
+<span id="cb9-20"><a href="#cb9-20"></a><span class="in">```</span></span>
+<span id="cb9-21"><a href="#cb9-21"></a></span>
+<span id="cb9-22"><a href="#cb9-22"></a><span class="fu"># My Introduction to Quadvariate Visualization</span></span>
 <span id="cb9-23"><a href="#cb9-23"></a></span>
-<span id="cb9-24"><a href="#cb9-24"></a><span class="fu"># My Introduction to Quadvariate Visualization</span></span>
+<span id="cb9-24"><a href="#cb9-24"></a>In my data visualization journey, I've found that while many analysts begin with univariate plots showing distributions and then move to bivariate plots examining relationships between pairs of variables, many stop there. Yet our world rarely operates in just two dimensions. As I've developed my skills, I've discovered that the art of visualizing relationships among multiple variables—particularly four variables simultaneously—opens doors to deeper insights that might otherwise remain hidden in the complexity of data.</span>
 <span id="cb9-25"><a href="#cb9-25"></a></span>
-<span id="cb9-26"><a href="#cb9-26"></a>In my data visualization journey, I've found that while many analysts begin with univariate plots showing distributions and then move to bivariate plots examining relationships between pairs of variables, many stop there. Yet our world rarely operates in just two dimensions. As I've developed my skills, I've discovered that the art of visualizing relationships among multiple variables—particularly four variables simultaneously—opens doors to deeper insights that might otherwise remain hidden in the complexity of data.</span>
+<span id="cb9-26"><a href="#cb9-26"></a>In this document, I'll share my approaches to creating quadvariate visualizations that effectively communicate patterns across four variables. While I've found these challenging to execute well, these visualizations can tell rich, nuanced stories about data that simpler plots cannot capture.</span>
 <span id="cb9-27"><a href="#cb9-27"></a></span>
-<span id="cb9-28"><a href="#cb9-28"></a>In this document, I'll share my approaches to creating quadvariate visualizations that effectively communicate patterns across four variables. While I've found these challenging to execute well, these visualizations can tell rich, nuanced stories about data that simpler plots cannot capture.</span>
+<span id="cb9-28"><a href="#cb9-28"></a><span class="fu"># Dataset Selection and Preparation</span></span>
 <span id="cb9-29"><a href="#cb9-29"></a></span>
-<span id="cb9-30"><a href="#cb9-30"></a><span class="fu"># Dataset Selection and Preparation</span></span>
+<span id="cb9-30"><a href="#cb9-30"></a>For this demonstration, I've selected the mtcars dataset, which contains fuel consumption and performance metrics for various car models from the 1970s. I chose this dataset because it offers several continuous and categorical variables that we can combine in our exploration.</span>
 <span id="cb9-31"><a href="#cb9-31"></a></span>
-<span id="cb9-32"><a href="#cb9-32"></a>For this demonstration, I've selected the mtcars dataset, which contains fuel consumption and performance metrics for various car models from the 1970s. I chose this dataset because it offers several continuous and categorical variables that we can combine in our exploration.</span>
-<span id="cb9-33"><a href="#cb9-33"></a></span>
-<span id="cb9-36"><a href="#cb9-36"></a><span class="in">```{r}</span></span>
-<span id="cb9-37"><a href="#cb9-37"></a><span class="co">#| label: car-data-exploration</span></span>
-<span id="cb9-38"><a href="#cb9-38"></a><span class="co">#| message: false</span></span>
-<span id="cb9-39"><a href="#cb9-39"></a><span class="co">#| warning: false</span></span>
-<span id="cb9-40"><a href="#cb9-40"></a></span>
-<span id="cb9-41"><a href="#cb9-41"></a><span class="co"># Load required libraries</span></span>
-<span id="cb9-42"><a href="#cb9-42"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb9-43"><a href="#cb9-43"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb9-44"><a href="#cb9-44"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-45"><a href="#cb9-45"></a></span>
-<span id="cb9-46"><a href="#cb9-46"></a><span class="co"># Load and examine the dataset</span></span>
-<span id="cb9-47"><a href="#cb9-47"></a><span class="fu">data</span>(mtcars)</span>
-<span id="cb9-48"><a href="#cb9-48"></a></span>
-<span id="cb9-49"><a href="#cb9-49"></a><span class="co"># Add the row names as a column for car models</span></span>
-<span id="cb9-50"><a href="#cb9-50"></a>cars_data <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span></span>
-<span id="cb9-51"><a href="#cb9-51"></a>  <span class="fu">rownames_to_column</span>(<span class="st">"car_model"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-52"><a href="#cb9-52"></a>  <span class="co"># Convert appropriate variables to factors</span></span>
-<span id="cb9-53"><a href="#cb9-53"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb9-54"><a href="#cb9-54"></a>    <span class="at">cyl =</span> <span class="fu">as.factor</span>(cyl),</span>
-<span id="cb9-55"><a href="#cb9-55"></a>    <span class="at">vs =</span> <span class="fu">as.factor</span>(vs),</span>
-<span id="cb9-56"><a href="#cb9-56"></a>    <span class="at">am =</span> <span class="fu">as.factor</span>(am),</span>
-<span id="cb9-57"><a href="#cb9-57"></a>    <span class="at">gear =</span> <span class="fu">as.factor</span>(gear),</span>
-<span id="cb9-58"><a href="#cb9-58"></a>    <span class="at">carb =</span> <span class="fu">as.factor</span>(carb)</span>
-<span id="cb9-59"><a href="#cb9-59"></a>  )</span>
-<span id="cb9-60"><a href="#cb9-60"></a></span>
-<span id="cb9-61"><a href="#cb9-61"></a><span class="co"># Create descriptive labels for better presentation</span></span>
-<span id="cb9-62"><a href="#cb9-62"></a>am_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0"</span> <span class="ot">=</span> <span class="st">"Automatic"</span>, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Manual"</span>)</span>
-<span id="cb9-63"><a href="#cb9-63"></a>vs_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0"</span> <span class="ot">=</span> <span class="st">"V-engine"</span>, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Straight engine"</span>)</span>
-<span id="cb9-64"><a href="#cb9-64"></a></span>
-<span id="cb9-65"><a href="#cb9-65"></a><span class="co"># Create a summary table of key statistics by cylinder count</span></span>
-<span id="cb9-66"><a href="#cb9-66"></a>cars_summary <span class="ot">&lt;-</span> cars_data <span class="sc">%&gt;%</span></span>
-<span id="cb9-67"><a href="#cb9-67"></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb9-68"><a href="#cb9-68"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb9-69"><a href="#cb9-69"></a>    <span class="st">`</span><span class="at">Count</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">n</span>(),</span>
-<span id="cb9-70"><a href="#cb9-70"></a>    <span class="st">`</span><span class="at">MPG</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(mpg), <span class="dv">1</span>),</span>
-<span id="cb9-71"><a href="#cb9-71"></a>    <span class="st">`</span><span class="at">Horsepower</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(hp), <span class="dv">1</span>),</span>
-<span id="cb9-72"><a href="#cb9-72"></a>    <span class="st">`</span><span class="at">Weight (1000 lbs)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(wt), <span class="dv">2</span>),</span>
-<span id="cb9-73"><a href="#cb9-73"></a>    <span class="st">`</span><span class="at">Manual Trans. %</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(am <span class="sc">==</span> <span class="st">"1"</span>) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>)</span>
-<span id="cb9-74"><a href="#cb9-74"></a>  )</span>
-<span id="cb9-75"><a href="#cb9-75"></a></span>
-<span id="cb9-76"><a href="#cb9-76"></a><span class="co"># A nicely formatted table</span></span>
-<span id="cb9-77"><a href="#cb9-77"></a>cars_summary <span class="sc">%&gt;%</span></span>
-<span id="cb9-78"><a href="#cb9-78"></a>  <span class="fu">kbl</span>(<span class="at">caption =</span> <span class="st">"Performance Metrics by Number of Cylinders"</span>,</span>
-<span id="cb9-79"><a href="#cb9-79"></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Cylinders"</span>, <span class="st">"Count"</span>, <span class="st">"MPG"</span>, <span class="st">"Horsepower"</span>, </span>
-<span id="cb9-80"><a href="#cb9-80"></a>                   <span class="st">"Weight (1000 lbs)"</span>, <span class="st">"Manual Trans. %"</span>),</span>
-<span id="cb9-81"><a href="#cb9-81"></a>      <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"c"</span>, <span class="st">"r"</span>, <span class="st">"r"</span>, <span class="st">"r"</span>, <span class="st">"r"</span>, <span class="st">"r"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-82"><a href="#cb9-82"></a>  <span class="fu">kable_classic</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">html_font =</span> <span class="st">"Cambria"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-83"><a href="#cb9-83"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">background =</span> <span class="st">"#1B3A4B"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-84"><a href="#cb9-84"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">background =</span> <span class="st">"#F0F0F0"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-85"><a href="#cb9-85"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">" "</span> <span class="ot">=</span> <span class="dv">2</span>, <span class="st">"Performance"</span> <span class="ot">=</span> <span class="dv">2</span>, <span class="st">"Physical"</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Transmission"</span> <span class="ot">=</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-86"><a href="#cb9-86"></a>  <span class="fu">footnote</span>(<span class="at">general =</span> <span class="st">"Data source: Motor Trend Car Road Tests (1974)"</span>)</span>
-<span id="cb9-87"><a href="#cb9-87"></a></span>
-<span id="cb9-88"><a href="#cb9-88"></a><span class="co"># Display sample of the processed data with improved factor labels</span></span>
-<span id="cb9-89"><a href="#cb9-89"></a>cars_data <span class="sc">%&gt;%</span></span>
-<span id="cb9-90"><a href="#cb9-90"></a>  <span class="fu">select</span>(car_model, mpg, cyl, hp, wt, am) <span class="sc">%&gt;%</span></span>
-<span id="cb9-91"><a href="#cb9-91"></a>  <span class="fu">mutate</span>(<span class="at">am =</span> <span class="fu">recode</span>(am, <span class="sc">!!!</span>am_labels)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-92"><a href="#cb9-92"></a>  <span class="fu">head</span>(<span class="dv">6</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-93"><a href="#cb9-93"></a>  <span class="fu">kbl</span>(<span class="at">caption =</span> <span class="st">"Sample of Car Data (First 6 Records)"</span>,</span>
-<span id="cb9-94"><a href="#cb9-94"></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Car Model"</span>, <span class="st">"MPG"</span>, <span class="st">"Cylinders"</span>, <span class="st">"Horsepower"</span>, </span>
-<span id="cb9-95"><a href="#cb9-95"></a>                   <span class="st">"Weight (1000 lbs)"</span>, <span class="st">"Transmission"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-96"><a href="#cb9-96"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>), </span>
-<span id="cb9-97"><a href="#cb9-97"></a>               <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb9-98"><a href="#cb9-98"></a><span class="in">```</span></span>
+<span id="cb9-34"><a href="#cb9-34"></a><span class="in">```{r}</span></span>
+<span id="cb9-35"><a href="#cb9-35"></a><span class="co">#| label: car-data-exploration</span></span>
+<span id="cb9-36"><a href="#cb9-36"></a><span class="co">#| message: false</span></span>
+<span id="cb9-37"><a href="#cb9-37"></a><span class="co">#| warning: false</span></span>
+<span id="cb9-38"><a href="#cb9-38"></a></span>
+<span id="cb9-39"><a href="#cb9-39"></a><span class="co"># Load required libraries</span></span>
+<span id="cb9-40"><a href="#cb9-40"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-41"><a href="#cb9-41"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb9-42"><a href="#cb9-42"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-43"><a href="#cb9-43"></a></span>
+<span id="cb9-44"><a href="#cb9-44"></a><span class="co"># Load and examine the dataset</span></span>
+<span id="cb9-45"><a href="#cb9-45"></a><span class="fu">data</span>(mtcars)</span>
+<span id="cb9-46"><a href="#cb9-46"></a></span>
+<span id="cb9-47"><a href="#cb9-47"></a><span class="co"># Add the row names as a column for car models</span></span>
+<span id="cb9-48"><a href="#cb9-48"></a>cars_data <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span></span>
+<span id="cb9-49"><a href="#cb9-49"></a>  <span class="fu">rownames_to_column</span>(<span class="st">"car_model"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-50"><a href="#cb9-50"></a>  <span class="co"># Convert appropriate variables to factors</span></span>
+<span id="cb9-51"><a href="#cb9-51"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-52"><a href="#cb9-52"></a>    <span class="at">cyl =</span> <span class="fu">as.factor</span>(cyl),</span>
+<span id="cb9-53"><a href="#cb9-53"></a>    <span class="at">vs =</span> <span class="fu">as.factor</span>(vs),</span>
+<span id="cb9-54"><a href="#cb9-54"></a>    <span class="at">am =</span> <span class="fu">as.factor</span>(am),</span>
+<span id="cb9-55"><a href="#cb9-55"></a>    <span class="at">gear =</span> <span class="fu">as.factor</span>(gear),</span>
+<span id="cb9-56"><a href="#cb9-56"></a>    <span class="at">carb =</span> <span class="fu">as.factor</span>(carb)</span>
+<span id="cb9-57"><a href="#cb9-57"></a>  )</span>
+<span id="cb9-58"><a href="#cb9-58"></a></span>
+<span id="cb9-59"><a href="#cb9-59"></a><span class="co"># Create descriptive labels for better presentation</span></span>
+<span id="cb9-60"><a href="#cb9-60"></a>am_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0"</span> <span class="ot">=</span> <span class="st">"Automatic"</span>, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Manual"</span>)</span>
+<span id="cb9-61"><a href="#cb9-61"></a>vs_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0"</span> <span class="ot">=</span> <span class="st">"V-engine"</span>, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Straight engine"</span>)</span>
+<span id="cb9-62"><a href="#cb9-62"></a></span>
+<span id="cb9-63"><a href="#cb9-63"></a><span class="co"># Create a summary table of key statistics by cylinder count</span></span>
+<span id="cb9-64"><a href="#cb9-64"></a>cars_summary <span class="ot">&lt;-</span> cars_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-65"><a href="#cb9-65"></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb9-66"><a href="#cb9-66"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb9-67"><a href="#cb9-67"></a>    <span class="st">`</span><span class="at">Count</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">n</span>(),</span>
+<span id="cb9-68"><a href="#cb9-68"></a>    <span class="st">`</span><span class="at">MPG</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(mpg), <span class="dv">1</span>),</span>
+<span id="cb9-69"><a href="#cb9-69"></a>    <span class="st">`</span><span class="at">Horsepower</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(hp), <span class="dv">1</span>),</span>
+<span id="cb9-70"><a href="#cb9-70"></a>    <span class="st">`</span><span class="at">Weight (1000 lbs)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(wt), <span class="dv">2</span>),</span>
+<span id="cb9-71"><a href="#cb9-71"></a>    <span class="st">`</span><span class="at">Manual Trans. %</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(am <span class="sc">==</span> <span class="st">"1"</span>) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb9-72"><a href="#cb9-72"></a>  )</span>
+<span id="cb9-73"><a href="#cb9-73"></a></span>
+<span id="cb9-74"><a href="#cb9-74"></a><span class="co"># A nicely formatted table</span></span>
+<span id="cb9-75"><a href="#cb9-75"></a>cars_summary <span class="sc">%&gt;%</span></span>
+<span id="cb9-76"><a href="#cb9-76"></a>  <span class="fu">kbl</span>(<span class="at">caption =</span> <span class="st">"Performance Metrics by Number of Cylinders"</span>,</span>
+<span id="cb9-77"><a href="#cb9-77"></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Cylinders"</span>, <span class="st">"Count"</span>, <span class="st">"MPG"</span>, <span class="st">"Horsepower"</span>, </span>
+<span id="cb9-78"><a href="#cb9-78"></a>                   <span class="st">"Weight (1000 lbs)"</span>, <span class="st">"Manual Trans. %"</span>),</span>
+<span id="cb9-79"><a href="#cb9-79"></a>      <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"c"</span>, <span class="st">"r"</span>, <span class="st">"r"</span>, <span class="st">"r"</span>, <span class="st">"r"</span>, <span class="st">"r"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-80"><a href="#cb9-80"></a>  <span class="fu">kable_classic</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">html_font =</span> <span class="st">"Cambria"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-81"><a href="#cb9-81"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">background =</span> <span class="st">"#1B3A4B"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-82"><a href="#cb9-82"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">background =</span> <span class="st">"#F0F0F0"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-83"><a href="#cb9-83"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">" "</span> <span class="ot">=</span> <span class="dv">2</span>, <span class="st">"Performance"</span> <span class="ot">=</span> <span class="dv">2</span>, <span class="st">"Physical"</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Transmission"</span> <span class="ot">=</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-84"><a href="#cb9-84"></a>  <span class="fu">footnote</span>(<span class="at">general =</span> <span class="st">"Data source: Motor Trend Car Road Tests (1974)"</span>)</span>
+<span id="cb9-85"><a href="#cb9-85"></a></span>
+<span id="cb9-86"><a href="#cb9-86"></a><span class="co"># Display sample of the processed data with improved factor labels</span></span>
+<span id="cb9-87"><a href="#cb9-87"></a>cars_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-88"><a href="#cb9-88"></a>  <span class="fu">select</span>(car_model, mpg, cyl, hp, wt, am) <span class="sc">%&gt;%</span></span>
+<span id="cb9-89"><a href="#cb9-89"></a>  <span class="fu">mutate</span>(<span class="at">am =</span> <span class="fu">recode</span>(am, <span class="sc">!!!</span>am_labels)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-90"><a href="#cb9-90"></a>  <span class="fu">head</span>(<span class="dv">6</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-91"><a href="#cb9-91"></a>  <span class="fu">kbl</span>(<span class="at">caption =</span> <span class="st">"Sample of Car Data (First 6 Records)"</span>,</span>
+<span id="cb9-92"><a href="#cb9-92"></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Car Model"</span>, <span class="st">"MPG"</span>, <span class="st">"Cylinders"</span>, <span class="st">"Horsepower"</span>, </span>
+<span id="cb9-93"><a href="#cb9-93"></a>                   <span class="st">"Weight (1000 lbs)"</span>, <span class="st">"Transmission"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-94"><a href="#cb9-94"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>), </span>
+<span id="cb9-95"><a href="#cb9-95"></a>               <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb9-96"><a href="#cb9-96"></a><span class="in">```</span></span>
+<span id="cb9-97"><a href="#cb9-97"></a></span>
+<span id="cb9-98"><a href="#cb9-98"></a>The dataset includes continuous variables such as mpg (miles per gallon), disp (displacement), hp (horsepower), and wt (weight), as well as categorical variables like cyl (number of cylinders), vs (engine shape), and am (transmission type).</span>
 <span id="cb9-99"><a href="#cb9-99"></a></span>
-<span id="cb9-100"><a href="#cb9-100"></a>The dataset includes continuous variables such as mpg (miles per gallon), disp (displacement), hp (horsepower), and wt (weight), as well as categorical variables like cyl (number of cylinders), vs (engine shape), and am (transmission type).</span>
+<span id="cb9-100"><a href="#cb9-100"></a><span class="fu"># My Approaches to Quadvariate Visualization</span></span>
 <span id="cb9-101"><a href="#cb9-101"></a></span>
-<span id="cb9-102"><a href="#cb9-102"></a><span class="fu"># My Approaches to Quadvariate Visualization</span></span>
+<span id="cb9-102"><a href="#cb9-102"></a><span class="fu">## Approach 1: Position + Color + Size + Shape</span></span>
 <span id="cb9-103"><a href="#cb9-103"></a></span>
-<span id="cb9-104"><a href="#cb9-104"></a><span class="fu">## Approach 1: Position + Color + Size + Shape</span></span>
-<span id="cb9-105"><a href="#cb9-105"></a></span>
-<span id="cb9-106"><a href="#cb9-106"></a>In my first approach, I've combined four fundamental visual elements:</span>
-<span id="cb9-107"><a href="#cb9-107"></a><span class="ss">- </span>Position (x and y coordinates)</span>
-<span id="cb9-108"><a href="#cb9-108"></a><span class="ss">- </span>Color</span>
-<span id="cb9-109"><a href="#cb9-109"></a><span class="ss">- </span>Size</span>
-<span id="cb9-110"><a href="#cb9-110"></a><span class="ss">- </span>Shape</span>
-<span id="cb9-111"><a href="#cb9-111"></a></span>
-<span id="cb9-112"><a href="#cb9-112"></a><span class="in">```{r approach1}</span></span>
-<span id="cb9-113"><a href="#cb9-113"></a><span class="in">#| fig.width: 10</span></span>
-<span id="cb9-114"><a href="#cb9-114"></a><span class="in">#| fig.height: 8</span></span>
-<span id="cb9-115"><a href="#cb9-115"></a><span class="in">#| dpi: 300</span></span>
-<span id="cb9-116"><a href="#cb9-116"></a><span class="in"># Basic quadvariate plot using position, color, size, and shape</span></span>
-<span id="cb9-117"><a href="#cb9-117"></a><span class="in">ggplot(cars_data, </span></span>
-<span id="cb9-118"><a href="#cb9-118"></a><span class="in">       aes(x = wt, </span></span>
-<span id="cb9-119"><a href="#cb9-119"></a><span class="in">           y = mpg, </span></span>
-<span id="cb9-120"><a href="#cb9-120"></a><span class="in">           color = as.factor(cyl), </span></span>
-<span id="cb9-121"><a href="#cb9-121"></a><span class="in">           size = hp, </span></span>
-<span id="cb9-122"><a href="#cb9-122"></a><span class="in">           shape = am)) +</span></span>
-<span id="cb9-123"><a href="#cb9-123"></a><span class="in">  geom_point(alpha = 0.7) +</span></span>
-<span id="cb9-124"><a href="#cb9-124"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
-<span id="cb9-125"><a href="#cb9-125"></a><span class="in">  scale_size_continuous(range = c(2, 10)) +</span></span>
-<span id="cb9-126"><a href="#cb9-126"></a><span class="in">  labs(</span></span>
-<span id="cb9-127"><a href="#cb9-127"></a><span class="in">    title = "Fuel Efficiency vs. Weight of Cars",</span></span>
-<span id="cb9-128"><a href="#cb9-128"></a><span class="in">    subtitle = "Showing cylinders, horsepower, and transmission type",</span></span>
-<span id="cb9-129"><a href="#cb9-129"></a><span class="in">    x = "Weight (1000 lbs)",</span></span>
-<span id="cb9-130"><a href="#cb9-130"></a><span class="in">    y = "Miles Per Gallon",</span></span>
-<span id="cb9-131"><a href="#cb9-131"></a><span class="in">    color = "Cylinders",</span></span>
-<span id="cb9-132"><a href="#cb9-132"></a><span class="in">    size = "Horsepower",</span></span>
-<span id="cb9-133"><a href="#cb9-133"></a><span class="in">    shape = "Transmission",</span></span>
-<span id="cb9-134"><a href="#cb9-134"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
-<span id="cb9-135"><a href="#cb9-135"></a><span class="in">  ) +</span></span>
-<span id="cb9-136"><a href="#cb9-136"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb9-137"><a href="#cb9-137"></a><span class="in">  theme(</span></span>
-<span id="cb9-138"><a href="#cb9-138"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
-<span id="cb9-139"><a href="#cb9-139"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
-<span id="cb9-140"><a href="#cb9-140"></a><span class="in">    axis.title = element_text(face = "bold"),</span></span>
-<span id="cb9-141"><a href="#cb9-141"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0),</span></span>
-<span id="cb9-142"><a href="#cb9-142"></a><span class="in">    legend.position = "right"</span></span>
-<span id="cb9-143"><a href="#cb9-143"></a><span class="in">  )</span></span>
-<span id="cb9-144"><a href="#cb9-144"></a><span class="in">```</span></span>
+<span id="cb9-104"><a href="#cb9-104"></a>In my first approach, I've combined four fundamental visual elements:</span>
+<span id="cb9-105"><a href="#cb9-105"></a><span class="ss">- </span>Position (x and y coordinates)</span>
+<span id="cb9-106"><a href="#cb9-106"></a><span class="ss">- </span>Color</span>
+<span id="cb9-107"><a href="#cb9-107"></a><span class="ss">- </span>Size</span>
+<span id="cb9-108"><a href="#cb9-108"></a><span class="ss">- </span>Shape</span>
+<span id="cb9-109"><a href="#cb9-109"></a></span>
+<span id="cb9-110"><a href="#cb9-110"></a><span class="in">```{r approach1}</span></span>
+<span id="cb9-111"><a href="#cb9-111"></a><span class="in">#| fig.width: 10</span></span>
+<span id="cb9-112"><a href="#cb9-112"></a><span class="in">#| fig.height: 8</span></span>
+<span id="cb9-113"><a href="#cb9-113"></a><span class="in">#| dpi: 300</span></span>
+<span id="cb9-114"><a href="#cb9-114"></a><span class="in"># Basic quadvariate plot using position, color, size, and shape</span></span>
+<span id="cb9-115"><a href="#cb9-115"></a><span class="in">ggplot(cars_data, </span></span>
+<span id="cb9-116"><a href="#cb9-116"></a><span class="in">       aes(x = wt, </span></span>
+<span id="cb9-117"><a href="#cb9-117"></a><span class="in">           y = mpg, </span></span>
+<span id="cb9-118"><a href="#cb9-118"></a><span class="in">           color = as.factor(cyl), </span></span>
+<span id="cb9-119"><a href="#cb9-119"></a><span class="in">           size = hp, </span></span>
+<span id="cb9-120"><a href="#cb9-120"></a><span class="in">           shape = am)) +</span></span>
+<span id="cb9-121"><a href="#cb9-121"></a><span class="in">  geom_point(alpha = 0.7) +</span></span>
+<span id="cb9-122"><a href="#cb9-122"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
+<span id="cb9-123"><a href="#cb9-123"></a><span class="in">  scale_size_continuous(range = c(2, 10)) +</span></span>
+<span id="cb9-124"><a href="#cb9-124"></a><span class="in">  labs(</span></span>
+<span id="cb9-125"><a href="#cb9-125"></a><span class="in">    title = "Fuel Efficiency vs. Weight of Cars",</span></span>
+<span id="cb9-126"><a href="#cb9-126"></a><span class="in">    subtitle = "Showing cylinders, horsepower, and transmission type",</span></span>
+<span id="cb9-127"><a href="#cb9-127"></a><span class="in">    x = "Weight (1000 lbs)",</span></span>
+<span id="cb9-128"><a href="#cb9-128"></a><span class="in">    y = "Miles Per Gallon",</span></span>
+<span id="cb9-129"><a href="#cb9-129"></a><span class="in">    color = "Cylinders",</span></span>
+<span id="cb9-130"><a href="#cb9-130"></a><span class="in">    size = "Horsepower",</span></span>
+<span id="cb9-131"><a href="#cb9-131"></a><span class="in">    shape = "Transmission",</span></span>
+<span id="cb9-132"><a href="#cb9-132"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
+<span id="cb9-133"><a href="#cb9-133"></a><span class="in">  ) +</span></span>
+<span id="cb9-134"><a href="#cb9-134"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb9-135"><a href="#cb9-135"></a><span class="in">  theme(</span></span>
+<span id="cb9-136"><a href="#cb9-136"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
+<span id="cb9-137"><a href="#cb9-137"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
+<span id="cb9-138"><a href="#cb9-138"></a><span class="in">    axis.title = element_text(face = "bold"),</span></span>
+<span id="cb9-139"><a href="#cb9-139"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0),</span></span>
+<span id="cb9-140"><a href="#cb9-140"></a><span class="in">    legend.position = "right"</span></span>
+<span id="cb9-141"><a href="#cb9-141"></a><span class="in">  )</span></span>
+<span id="cb9-142"><a href="#cb9-142"></a><span class="in">```</span></span>
+<span id="cb9-143"><a href="#cb9-143"></a></span>
+<span id="cb9-144"><a href="#cb9-144"></a>As I analyzed this visualization, I discovered several patterns simultaneously:</span>
 <span id="cb9-145"><a href="#cb9-145"></a></span>
-<span id="cb9-146"><a href="#cb9-146"></a>As I analyzed this visualization, I discovered several patterns simultaneously:</span>
-<span id="cb9-147"><a href="#cb9-147"></a></span>
-<span id="cb9-148"><a href="#cb9-148"></a><span class="ss">1. </span>I can clearly see a strong negative relationship between car weight and fuel efficiency.</span>
-<span id="cb9-149"><a href="#cb9-149"></a><span class="ss">2. </span>I notice that cars with fewer cylinders (shown in blue) generally achieve better fuel economy.</span>
-<span id="cb9-150"><a href="#cb9-150"></a><span class="ss">3. </span>I observed that higher horsepower (larger points) typically corresponds with lower mpg.</span>
-<span id="cb9-151"><a href="#cb9-151"></a><span class="ss">4. </span>I was intrigued to find that manual transmission cars (triangles) tend to have better fuel efficiency than automatic transmission cars (circles) of similar weight.</span>
+<span id="cb9-146"><a href="#cb9-146"></a><span class="ss">1. </span>I can clearly see a strong negative relationship between car weight and fuel efficiency.</span>
+<span id="cb9-147"><a href="#cb9-147"></a><span class="ss">2. </span>I notice that cars with fewer cylinders (shown in blue) generally achieve better fuel economy.</span>
+<span id="cb9-148"><a href="#cb9-148"></a><span class="ss">3. </span>I observed that higher horsepower (larger points) typically corresponds with lower mpg.</span>
+<span id="cb9-149"><a href="#cb9-149"></a><span class="ss">4. </span>I was intrigued to find that manual transmission cars (triangles) tend to have better fuel efficiency than automatic transmission cars (circles) of similar weight.</span>
+<span id="cb9-150"><a href="#cb9-150"></a></span>
+<span id="cb9-151"><a href="#cb9-151"></a>What I find most effective about this approach is its ability to show interactions between variables. For instance, I can see that weight and cylinder count are correlated, but even controlling for weight, cars with fewer cylinders tend to be more fuel-efficient.</span>
 <span id="cb9-152"><a href="#cb9-152"></a></span>
-<span id="cb9-153"><a href="#cb9-153"></a>What I find most effective about this approach is its ability to show interactions between variables. For instance, I can see that weight and cylinder count are correlated, but even controlling for weight, cars with fewer cylinders tend to be more fuel-efficient.</span>
+<span id="cb9-153"><a href="#cb9-153"></a><span class="fu">## Approach 2: Position + Color + Size + Faceting</span></span>
 <span id="cb9-154"><a href="#cb9-154"></a></span>
-<span id="cb9-155"><a href="#cb9-155"></a><span class="fu">## Approach 2: Position + Color + Size + Faceting</span></span>
+<span id="cb9-155"><a href="#cb9-155"></a>When I found that shape becomes difficult to distinguish—particularly with crowded plots—I discovered that faceting provides an excellent alternative. In this approach, I've created separate panels for one categorical variable while still encoding three other variables.</span>
 <span id="cb9-156"><a href="#cb9-156"></a></span>
-<span id="cb9-157"><a href="#cb9-157"></a>When I found that shape becomes difficult to distinguish—particularly with crowded plots—I discovered that faceting provides an excellent alternative. In this approach, I've created separate panels for one categorical variable while still encoding three other variables.</span>
-<span id="cb9-158"><a href="#cb9-158"></a></span>
-<span id="cb9-159"><a href="#cb9-159"></a><span class="in">```{r approach2}</span></span>
-<span id="cb9-160"><a href="#cb9-160"></a><span class="in">#| fig.width: 10</span></span>
-<span id="cb9-161"><a href="#cb9-161"></a><span class="in">#| fig.height: 8</span></span>
-<span id="cb9-162"><a href="#cb9-162"></a><span class="in">#| dpi: 300</span></span>
-<span id="cb9-163"><a href="#cb9-163"></a><span class="in"># Quadvariate visualization using faceting instead of shape</span></span>
-<span id="cb9-164"><a href="#cb9-164"></a><span class="in">ggplot(cars_data, </span></span>
-<span id="cb9-165"><a href="#cb9-165"></a><span class="in">       aes(x = wt, </span></span>
-<span id="cb9-166"><a href="#cb9-166"></a><span class="in">           y = mpg, </span></span>
-<span id="cb9-167"><a href="#cb9-167"></a><span class="in">           color = as.factor(cyl), </span></span>
-<span id="cb9-168"><a href="#cb9-168"></a><span class="in">           size = hp)) +</span></span>
-<span id="cb9-169"><a href="#cb9-169"></a><span class="in">  geom_point(alpha = 0.8) +</span></span>
-<span id="cb9-170"><a href="#cb9-170"></a><span class="in">  facet_wrap(~ am, labeller = labeller(am = c("0" = "Automatic", "1" = "Manual"))) +</span></span>
-<span id="cb9-171"><a href="#cb9-171"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
-<span id="cb9-172"><a href="#cb9-172"></a><span class="in">  scale_size_continuous(range = c(2, 8)) +</span></span>
-<span id="cb9-173"><a href="#cb9-173"></a><span class="in">  labs(</span></span>
-<span id="cb9-174"><a href="#cb9-174"></a><span class="in">    title = "Fuel Efficiency vs. Weight by Transmission Type",</span></span>
-<span id="cb9-175"><a href="#cb9-175"></a><span class="in">    subtitle = "Showing cylinders and horsepower",</span></span>
-<span id="cb9-176"><a href="#cb9-176"></a><span class="in">    x = "Weight (1000 lbs)",</span></span>
-<span id="cb9-177"><a href="#cb9-177"></a><span class="in">    y = "Miles Per Gallon",</span></span>
-<span id="cb9-178"><a href="#cb9-178"></a><span class="in">    color = "Cylinders",</span></span>
-<span id="cb9-179"><a href="#cb9-179"></a><span class="in">    size = "Horsepower",</span></span>
-<span id="cb9-180"><a href="#cb9-180"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
-<span id="cb9-181"><a href="#cb9-181"></a><span class="in">  ) +</span></span>
-<span id="cb9-182"><a href="#cb9-182"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb9-183"><a href="#cb9-183"></a><span class="in">  theme(</span></span>
-<span id="cb9-184"><a href="#cb9-184"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
-<span id="cb9-185"><a href="#cb9-185"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
-<span id="cb9-186"><a href="#cb9-186"></a><span class="in">    strip.background = element_rect(fill = "gray95"),</span></span>
-<span id="cb9-187"><a href="#cb9-187"></a><span class="in">    strip.text = element_text(face = "bold"),</span></span>
-<span id="cb9-188"><a href="#cb9-188"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0),</span></span>
-<span id="cb9-189"><a href="#cb9-189"></a><span class="in">    legend.position = "right"</span></span>
-<span id="cb9-190"><a href="#cb9-190"></a><span class="in">  )</span></span>
-<span id="cb9-191"><a href="#cb9-191"></a><span class="in">```</span></span>
+<span id="cb9-157"><a href="#cb9-157"></a><span class="in">```{r approach2}</span></span>
+<span id="cb9-158"><a href="#cb9-158"></a><span class="in">#| fig.width: 10</span></span>
+<span id="cb9-159"><a href="#cb9-159"></a><span class="in">#| fig.height: 8</span></span>
+<span id="cb9-160"><a href="#cb9-160"></a><span class="in">#| dpi: 300</span></span>
+<span id="cb9-161"><a href="#cb9-161"></a><span class="in"># Quadvariate visualization using faceting instead of shape</span></span>
+<span id="cb9-162"><a href="#cb9-162"></a><span class="in">ggplot(cars_data, </span></span>
+<span id="cb9-163"><a href="#cb9-163"></a><span class="in">       aes(x = wt, </span></span>
+<span id="cb9-164"><a href="#cb9-164"></a><span class="in">           y = mpg, </span></span>
+<span id="cb9-165"><a href="#cb9-165"></a><span class="in">           color = as.factor(cyl), </span></span>
+<span id="cb9-166"><a href="#cb9-166"></a><span class="in">           size = hp)) +</span></span>
+<span id="cb9-167"><a href="#cb9-167"></a><span class="in">  geom_point(alpha = 0.8) +</span></span>
+<span id="cb9-168"><a href="#cb9-168"></a><span class="in">  facet_wrap(~ am, labeller = labeller(am = c("0" = "Automatic", "1" = "Manual"))) +</span></span>
+<span id="cb9-169"><a href="#cb9-169"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
+<span id="cb9-170"><a href="#cb9-170"></a><span class="in">  scale_size_continuous(range = c(2, 8)) +</span></span>
+<span id="cb9-171"><a href="#cb9-171"></a><span class="in">  labs(</span></span>
+<span id="cb9-172"><a href="#cb9-172"></a><span class="in">    title = "Fuel Efficiency vs. Weight by Transmission Type",</span></span>
+<span id="cb9-173"><a href="#cb9-173"></a><span class="in">    subtitle = "Showing cylinders and horsepower",</span></span>
+<span id="cb9-174"><a href="#cb9-174"></a><span class="in">    x = "Weight (1000 lbs)",</span></span>
+<span id="cb9-175"><a href="#cb9-175"></a><span class="in">    y = "Miles Per Gallon",</span></span>
+<span id="cb9-176"><a href="#cb9-176"></a><span class="in">    color = "Cylinders",</span></span>
+<span id="cb9-177"><a href="#cb9-177"></a><span class="in">    size = "Horsepower",</span></span>
+<span id="cb9-178"><a href="#cb9-178"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
+<span id="cb9-179"><a href="#cb9-179"></a><span class="in">  ) +</span></span>
+<span id="cb9-180"><a href="#cb9-180"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb9-181"><a href="#cb9-181"></a><span class="in">  theme(</span></span>
+<span id="cb9-182"><a href="#cb9-182"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
+<span id="cb9-183"><a href="#cb9-183"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
+<span id="cb9-184"><a href="#cb9-184"></a><span class="in">    strip.background = element_rect(fill = "gray95"),</span></span>
+<span id="cb9-185"><a href="#cb9-185"></a><span class="in">    strip.text = element_text(face = "bold"),</span></span>
+<span id="cb9-186"><a href="#cb9-186"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0),</span></span>
+<span id="cb9-187"><a href="#cb9-187"></a><span class="in">    legend.position = "right"</span></span>
+<span id="cb9-188"><a href="#cb9-188"></a><span class="in">  )</span></span>
+<span id="cb9-189"><a href="#cb9-189"></a><span class="in">```</span></span>
+<span id="cb9-190"><a href="#cb9-190"></a></span>
+<span id="cb9-191"><a href="#cb9-191"></a>Through faceting by transmission type, I've been able to create a clearer view of how the relationships between weight, mpg, cylinders, and horsepower vary across transmission types. This arrangement makes it easier for me to compare patterns between the two groups. I've observed that manual transmission cars maintain better fuel efficiency across weight classes, particularly for higher-cylinder counts.</span>
 <span id="cb9-192"><a href="#cb9-192"></a></span>
-<span id="cb9-193"><a href="#cb9-193"></a>Through faceting by transmission type, I've been able to create a clearer view of how the relationships between weight, mpg, cylinders, and horsepower vary across transmission types. This arrangement makes it easier for me to compare patterns between the two groups. I've observed that manual transmission cars maintain better fuel efficiency across weight classes, particularly for higher-cylinder counts.</span>
+<span id="cb9-193"><a href="#cb9-193"></a><span class="fu">## Approach 3: Position + Color + Size + Annotation</span></span>
 <span id="cb9-194"><a href="#cb9-194"></a></span>
-<span id="cb9-195"><a href="#cb9-195"></a><span class="fu">## Approach 3: Position + Color + Size + Annotation</span></span>
+<span id="cb9-195"><a href="#cb9-195"></a>Another powerful approach I've explored involves using position, color, and size for three variables, while incorporating annotations to represent a fourth variable.</span>
 <span id="cb9-196"><a href="#cb9-196"></a></span>
-<span id="cb9-197"><a href="#cb9-197"></a>Another powerful approach I've explored involves using position, color, and size for three variables, while incorporating annotations to represent a fourth variable.</span>
-<span id="cb9-198"><a href="#cb9-198"></a></span>
-<span id="cb9-199"><a href="#cb9-199"></a><span class="in">```{r approach3}</span></span>
-<span id="cb9-200"><a href="#cb9-200"></a><span class="in">#| fig.width: 10</span></span>
-<span id="cb9-201"><a href="#cb9-201"></a><span class="in">#| fig.height: 8</span></span>
-<span id="cb9-202"><a href="#cb9-202"></a><span class="in">#| dpi: 300</span></span>
-<span id="cb9-203"><a href="#cb9-203"></a><span class="in"># Create a dataset with labels for selected points</span></span>
-<span id="cb9-204"><a href="#cb9-204"></a><span class="in">labeled_cars &lt;- cars_data %&gt;%</span></span>
-<span id="cb9-205"><a href="#cb9-205"></a><span class="in">  mutate(label_text = if_else(</span></span>
-<span id="cb9-206"><a href="#cb9-206"></a><span class="in">    disp &gt; 350 | mpg &gt; 30 | (hp &gt; 200 &amp; wt &lt; 3), </span></span>
-<span id="cb9-207"><a href="#cb9-207"></a><span class="in">    paste0(car_model, "\n", gear, " gears"),</span></span>
-<span id="cb9-208"><a href="#cb9-208"></a><span class="in">    NA_character_</span></span>
-<span id="cb9-209"><a href="#cb9-209"></a><span class="in">  ))</span></span>
-<span id="cb9-210"><a href="#cb9-210"></a></span>
-<span id="cb9-211"><a href="#cb9-211"></a><span class="in"># Create the plot with annotations</span></span>
-<span id="cb9-212"><a href="#cb9-212"></a><span class="in">ggplot(cars_data, </span></span>
-<span id="cb9-213"><a href="#cb9-213"></a><span class="in">       aes(x = disp, </span></span>
-<span id="cb9-214"><a href="#cb9-214"></a><span class="in">           y = mpg, </span></span>
-<span id="cb9-215"><a href="#cb9-215"></a><span class="in">           color = as.factor(cyl), </span></span>
-<span id="cb9-216"><a href="#cb9-216"></a><span class="in">           size = wt)) +</span></span>
-<span id="cb9-217"><a href="#cb9-217"></a><span class="in">  geom_point(alpha = 0.7) +</span></span>
-<span id="cb9-218"><a href="#cb9-218"></a><span class="in">  geom_text_repel(</span></span>
-<span id="cb9-219"><a href="#cb9-219"></a><span class="in">    data = labeled_cars %&gt;% filter(!is.na(label_text)),</span></span>
-<span id="cb9-220"><a href="#cb9-220"></a><span class="in">    aes(label = label_text),</span></span>
-<span id="cb9-221"><a href="#cb9-221"></a><span class="in">    size = 3,</span></span>
-<span id="cb9-222"><a href="#cb9-222"></a><span class="in">    box.padding = 0.5,</span></span>
-<span id="cb9-223"><a href="#cb9-223"></a><span class="in">    point.padding = 0.5,</span></span>
-<span id="cb9-224"><a href="#cb9-224"></a><span class="in">    force = 2,</span></span>
-<span id="cb9-225"><a href="#cb9-225"></a><span class="in">    segment.color = "gray40",</span></span>
-<span id="cb9-226"><a href="#cb9-226"></a><span class="in">    segment.alpha = 0.6</span></span>
-<span id="cb9-227"><a href="#cb9-227"></a><span class="in">  ) +</span></span>
-<span id="cb9-228"><a href="#cb9-228"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
-<span id="cb9-229"><a href="#cb9-229"></a><span class="in">  scale_size_continuous(range = c(2, 8)) +</span></span>
-<span id="cb9-230"><a href="#cb9-230"></a><span class="in">  labs(</span></span>
-<span id="cb9-231"><a href="#cb9-231"></a><span class="in">    title = "Fuel Efficiency vs. Engine Displacement",</span></span>
-<span id="cb9-232"><a href="#cb9-232"></a><span class="in">    subtitle = "Showing cylinders, weight, and gear count for notable cars",</span></span>
-<span id="cb9-233"><a href="#cb9-233"></a><span class="in">    x = "Displacement (cu. in.)",</span></span>
-<span id="cb9-234"><a href="#cb9-234"></a><span class="in">    y = "Miles Per Gallon",</span></span>
-<span id="cb9-235"><a href="#cb9-235"></a><span class="in">    color = "Cylinders",</span></span>
-<span id="cb9-236"><a href="#cb9-236"></a><span class="in">    size = "Weight (1000 lbs)",</span></span>
-<span id="cb9-237"><a href="#cb9-237"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
-<span id="cb9-238"><a href="#cb9-238"></a><span class="in">  ) +</span></span>
-<span id="cb9-239"><a href="#cb9-239"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb9-240"><a href="#cb9-240"></a><span class="in">  theme(</span></span>
-<span id="cb9-241"><a href="#cb9-241"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
-<span id="cb9-242"><a href="#cb9-242"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
-<span id="cb9-243"><a href="#cb9-243"></a><span class="in">    axis.title = element_text(face = "bold"),</span></span>
-<span id="cb9-244"><a href="#cb9-244"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0),</span></span>
-<span id="cb9-245"><a href="#cb9-245"></a><span class="in">    legend.position = "right"</span></span>
-<span id="cb9-246"><a href="#cb9-246"></a><span class="in">  )</span></span>
-<span id="cb9-247"><a href="#cb9-247"></a><span class="in">```</span></span>
+<span id="cb9-197"><a href="#cb9-197"></a><span class="in">```{r approach3}</span></span>
+<span id="cb9-198"><a href="#cb9-198"></a><span class="in">#| fig.width: 10</span></span>
+<span id="cb9-199"><a href="#cb9-199"></a><span class="in">#| fig.height: 8</span></span>
+<span id="cb9-200"><a href="#cb9-200"></a><span class="in">#| dpi: 300</span></span>
+<span id="cb9-201"><a href="#cb9-201"></a><span class="in"># Create a dataset with labels for selected points</span></span>
+<span id="cb9-202"><a href="#cb9-202"></a><span class="in">labeled_cars &lt;- cars_data %&gt;%</span></span>
+<span id="cb9-203"><a href="#cb9-203"></a><span class="in">  mutate(label_text = if_else(</span></span>
+<span id="cb9-204"><a href="#cb9-204"></a><span class="in">    disp &gt; 350 | mpg &gt; 30 | (hp &gt; 200 &amp; wt &lt; 3), </span></span>
+<span id="cb9-205"><a href="#cb9-205"></a><span class="in">    paste0(car_model, "\n", gear, " gears"),</span></span>
+<span id="cb9-206"><a href="#cb9-206"></a><span class="in">    NA_character_</span></span>
+<span id="cb9-207"><a href="#cb9-207"></a><span class="in">  ))</span></span>
+<span id="cb9-208"><a href="#cb9-208"></a></span>
+<span id="cb9-209"><a href="#cb9-209"></a><span class="in"># Create the plot with annotations</span></span>
+<span id="cb9-210"><a href="#cb9-210"></a><span class="in">ggplot(cars_data, </span></span>
+<span id="cb9-211"><a href="#cb9-211"></a><span class="in">       aes(x = disp, </span></span>
+<span id="cb9-212"><a href="#cb9-212"></a><span class="in">           y = mpg, </span></span>
+<span id="cb9-213"><a href="#cb9-213"></a><span class="in">           color = as.factor(cyl), </span></span>
+<span id="cb9-214"><a href="#cb9-214"></a><span class="in">           size = wt)) +</span></span>
+<span id="cb9-215"><a href="#cb9-215"></a><span class="in">  geom_point(alpha = 0.7) +</span></span>
+<span id="cb9-216"><a href="#cb9-216"></a><span class="in">  geom_text_repel(</span></span>
+<span id="cb9-217"><a href="#cb9-217"></a><span class="in">    data = labeled_cars %&gt;% filter(!is.na(label_text)),</span></span>
+<span id="cb9-218"><a href="#cb9-218"></a><span class="in">    aes(label = label_text),</span></span>
+<span id="cb9-219"><a href="#cb9-219"></a><span class="in">    size = 3,</span></span>
+<span id="cb9-220"><a href="#cb9-220"></a><span class="in">    box.padding = 0.5,</span></span>
+<span id="cb9-221"><a href="#cb9-221"></a><span class="in">    point.padding = 0.5,</span></span>
+<span id="cb9-222"><a href="#cb9-222"></a><span class="in">    force = 2,</span></span>
+<span id="cb9-223"><a href="#cb9-223"></a><span class="in">    segment.color = "gray40",</span></span>
+<span id="cb9-224"><a href="#cb9-224"></a><span class="in">    segment.alpha = 0.6</span></span>
+<span id="cb9-225"><a href="#cb9-225"></a><span class="in">  ) +</span></span>
+<span id="cb9-226"><a href="#cb9-226"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
+<span id="cb9-227"><a href="#cb9-227"></a><span class="in">  scale_size_continuous(range = c(2, 8)) +</span></span>
+<span id="cb9-228"><a href="#cb9-228"></a><span class="in">  labs(</span></span>
+<span id="cb9-229"><a href="#cb9-229"></a><span class="in">    title = "Fuel Efficiency vs. Engine Displacement",</span></span>
+<span id="cb9-230"><a href="#cb9-230"></a><span class="in">    subtitle = "Showing cylinders, weight, and gear count for notable cars",</span></span>
+<span id="cb9-231"><a href="#cb9-231"></a><span class="in">    x = "Displacement (cu. in.)",</span></span>
+<span id="cb9-232"><a href="#cb9-232"></a><span class="in">    y = "Miles Per Gallon",</span></span>
+<span id="cb9-233"><a href="#cb9-233"></a><span class="in">    color = "Cylinders",</span></span>
+<span id="cb9-234"><a href="#cb9-234"></a><span class="in">    size = "Weight (1000 lbs)",</span></span>
+<span id="cb9-235"><a href="#cb9-235"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
+<span id="cb9-236"><a href="#cb9-236"></a><span class="in">  ) +</span></span>
+<span id="cb9-237"><a href="#cb9-237"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb9-238"><a href="#cb9-238"></a><span class="in">  theme(</span></span>
+<span id="cb9-239"><a href="#cb9-239"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
+<span id="cb9-240"><a href="#cb9-240"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
+<span id="cb9-241"><a href="#cb9-241"></a><span class="in">    axis.title = element_text(face = "bold"),</span></span>
+<span id="cb9-242"><a href="#cb9-242"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0),</span></span>
+<span id="cb9-243"><a href="#cb9-243"></a><span class="in">    legend.position = "right"</span></span>
+<span id="cb9-244"><a href="#cb9-244"></a><span class="in">  )</span></span>
+<span id="cb9-245"><a href="#cb9-245"></a><span class="in">```</span></span>
+<span id="cb9-246"><a href="#cb9-246"></a></span>
+<span id="cb9-247"><a href="#cb9-247"></a>By selectively annotating points of interest with the number of gears, I've added a fourth dimension to my visualization. I've found this technique works particularly well when I want to highlight specific observations or when the fourth variable is most relevant for certain data points. Through these annotations, I've discovered that many high-performance cars (high displacement, lower mpg) have higher gear counts, while the most fuel-efficient vehicles I examined typically have moderate gear counts.</span>
 <span id="cb9-248"><a href="#cb9-248"></a></span>
-<span id="cb9-249"><a href="#cb9-249"></a>By selectively annotating points of interest with the number of gears, I've added a fourth dimension to my visualization. I've found this technique works particularly well when I want to highlight specific observations or when the fourth variable is most relevant for certain data points. Through these annotations, I've discovered that many high-performance cars (high displacement, lower mpg) have higher gear counts, while the most fuel-efficient vehicles I examined typically have moderate gear counts.</span>
+<span id="cb9-249"><a href="#cb9-249"></a><span class="fu">## Approach 4: Multiple Aesthetics with Trend Lines</span></span>
 <span id="cb9-250"><a href="#cb9-250"></a></span>
-<span id="cb9-251"><a href="#cb9-251"></a><span class="fu">## Approach 4: Multiple Aesthetics with Trend Lines</span></span>
+<span id="cb9-251"><a href="#cb9-251"></a>I've discovered that adding statistical elements like trend lines can further enhance a quadvariate visualization by emphasizing patterns within subgroups.</span>
 <span id="cb9-252"><a href="#cb9-252"></a></span>
-<span id="cb9-253"><a href="#cb9-253"></a>I've discovered that adding statistical elements like trend lines can further enhance a quadvariate visualization by emphasizing patterns within subgroups.</span>
-<span id="cb9-254"><a href="#cb9-254"></a></span>
-<span id="cb9-255"><a href="#cb9-255"></a><span class="in">```{r approach4}</span></span>
-<span id="cb9-256"><a href="#cb9-256"></a><span class="in">#| fig.width: 10</span></span>
-<span id="cb9-257"><a href="#cb9-257"></a><span class="in">#| fig.height: 8</span></span>
-<span id="cb9-258"><a href="#cb9-258"></a><span class="in">#| dpi: 300</span></span>
-<span id="cb9-259"><a href="#cb9-259"></a><span class="in"># Create a plot with trend lines for different groups</span></span>
-<span id="cb9-260"><a href="#cb9-260"></a><span class="in">ggplot(cars_data, </span></span>
-<span id="cb9-261"><a href="#cb9-261"></a><span class="in">       aes(x = hp, </span></span>
-<span id="cb9-262"><a href="#cb9-262"></a><span class="in">           y = qsec, </span></span>
-<span id="cb9-263"><a href="#cb9-263"></a><span class="in">           color = as.factor(cyl), </span></span>
-<span id="cb9-264"><a href="#cb9-264"></a><span class="in">           size = wt)) +</span></span>
-<span id="cb9-265"><a href="#cb9-265"></a><span class="in">  geom_point(alpha = 0.7) +</span></span>
-<span id="cb9-266"><a href="#cb9-266"></a><span class="in">  geom_smooth(method = "lm", se = FALSE, aes(linetype = am), linewidth = 1) +</span></span>
-<span id="cb9-267"><a href="#cb9-267"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
-<span id="cb9-268"><a href="#cb9-268"></a><span class="in">  scale_size_continuous(range = c(2, 8)) +</span></span>
-<span id="cb9-269"><a href="#cb9-269"></a><span class="in">  scale_linetype_manual(</span></span>
-<span id="cb9-270"><a href="#cb9-270"></a><span class="in">    values = c("0" = "dashed", "1" = "solid"),</span></span>
-<span id="cb9-271"><a href="#cb9-271"></a><span class="in">    labels = c("0" = "Automatic", "1" = "Manual")</span></span>
-<span id="cb9-272"><a href="#cb9-272"></a><span class="in">  ) +</span></span>
-<span id="cb9-273"><a href="#cb9-273"></a><span class="in">  labs(</span></span>
-<span id="cb9-274"><a href="#cb9-274"></a><span class="in">    title = "Quarter Mile Time vs. Horsepower",</span></span>
-<span id="cb9-275"><a href="#cb9-275"></a><span class="in">    subtitle = "Showing cylinders, weight, and transmission type (with trend lines)",</span></span>
-<span id="cb9-276"><a href="#cb9-276"></a><span class="in">    x = "Horsepower",</span></span>
-<span id="cb9-277"><a href="#cb9-277"></a><span class="in">    y = "Quarter Mile Time (seconds)",</span></span>
-<span id="cb9-278"><a href="#cb9-278"></a><span class="in">    color = "Cylinders",</span></span>
-<span id="cb9-279"><a href="#cb9-279"></a><span class="in">    size = "Weight (1000 lbs)",</span></span>
-<span id="cb9-280"><a href="#cb9-280"></a><span class="in">    linetype = "Transmission",</span></span>
-<span id="cb9-281"><a href="#cb9-281"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
-<span id="cb9-282"><a href="#cb9-282"></a><span class="in">  ) +</span></span>
-<span id="cb9-283"><a href="#cb9-283"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb9-284"><a href="#cb9-284"></a><span class="in">  theme(</span></span>
-<span id="cb9-285"><a href="#cb9-285"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
-<span id="cb9-286"><a href="#cb9-286"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
-<span id="cb9-287"><a href="#cb9-287"></a><span class="in">    axis.title = element_text(face = "bold"),</span></span>
-<span id="cb9-288"><a href="#cb9-288"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0),</span></span>
-<span id="cb9-289"><a href="#cb9-289"></a><span class="in">    legend.position = "right"</span></span>
-<span id="cb9-290"><a href="#cb9-290"></a><span class="in">  )</span></span>
-<span id="cb9-291"><a href="#cb9-291"></a><span class="in">```</span></span>
+<span id="cb9-253"><a href="#cb9-253"></a><span class="in">```{r approach4}</span></span>
+<span id="cb9-254"><a href="#cb9-254"></a><span class="in">#| fig.width: 10</span></span>
+<span id="cb9-255"><a href="#cb9-255"></a><span class="in">#| fig.height: 8</span></span>
+<span id="cb9-256"><a href="#cb9-256"></a><span class="in">#| dpi: 300</span></span>
+<span id="cb9-257"><a href="#cb9-257"></a><span class="in"># Create a plot with trend lines for different groups</span></span>
+<span id="cb9-258"><a href="#cb9-258"></a><span class="in">ggplot(cars_data, </span></span>
+<span id="cb9-259"><a href="#cb9-259"></a><span class="in">       aes(x = hp, </span></span>
+<span id="cb9-260"><a href="#cb9-260"></a><span class="in">           y = qsec, </span></span>
+<span id="cb9-261"><a href="#cb9-261"></a><span class="in">           color = as.factor(cyl), </span></span>
+<span id="cb9-262"><a href="#cb9-262"></a><span class="in">           size = wt)) +</span></span>
+<span id="cb9-263"><a href="#cb9-263"></a><span class="in">  geom_point(alpha = 0.7) +</span></span>
+<span id="cb9-264"><a href="#cb9-264"></a><span class="in">  geom_smooth(method = "lm", se = FALSE, aes(linetype = am), linewidth = 1) +</span></span>
+<span id="cb9-265"><a href="#cb9-265"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
+<span id="cb9-266"><a href="#cb9-266"></a><span class="in">  scale_size_continuous(range = c(2, 8)) +</span></span>
+<span id="cb9-267"><a href="#cb9-267"></a><span class="in">  scale_linetype_manual(</span></span>
+<span id="cb9-268"><a href="#cb9-268"></a><span class="in">    values = c("0" = "dashed", "1" = "solid"),</span></span>
+<span id="cb9-269"><a href="#cb9-269"></a><span class="in">    labels = c("0" = "Automatic", "1" = "Manual")</span></span>
+<span id="cb9-270"><a href="#cb9-270"></a><span class="in">  ) +</span></span>
+<span id="cb9-271"><a href="#cb9-271"></a><span class="in">  labs(</span></span>
+<span id="cb9-272"><a href="#cb9-272"></a><span class="in">    title = "Quarter Mile Time vs. Horsepower",</span></span>
+<span id="cb9-273"><a href="#cb9-273"></a><span class="in">    subtitle = "Showing cylinders, weight, and transmission type (with trend lines)",</span></span>
+<span id="cb9-274"><a href="#cb9-274"></a><span class="in">    x = "Horsepower",</span></span>
+<span id="cb9-275"><a href="#cb9-275"></a><span class="in">    y = "Quarter Mile Time (seconds)",</span></span>
+<span id="cb9-276"><a href="#cb9-276"></a><span class="in">    color = "Cylinders",</span></span>
+<span id="cb9-277"><a href="#cb9-277"></a><span class="in">    size = "Weight (1000 lbs)",</span></span>
+<span id="cb9-278"><a href="#cb9-278"></a><span class="in">    linetype = "Transmission",</span></span>
+<span id="cb9-279"><a href="#cb9-279"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
+<span id="cb9-280"><a href="#cb9-280"></a><span class="in">  ) +</span></span>
+<span id="cb9-281"><a href="#cb9-281"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb9-282"><a href="#cb9-282"></a><span class="in">  theme(</span></span>
+<span id="cb9-283"><a href="#cb9-283"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
+<span id="cb9-284"><a href="#cb9-284"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
+<span id="cb9-285"><a href="#cb9-285"></a><span class="in">    axis.title = element_text(face = "bold"),</span></span>
+<span id="cb9-286"><a href="#cb9-286"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0),</span></span>
+<span id="cb9-287"><a href="#cb9-287"></a><span class="in">    legend.position = "right"</span></span>
+<span id="cb9-288"><a href="#cb9-288"></a><span class="in">  )</span></span>
+<span id="cb9-289"><a href="#cb9-289"></a><span class="in">```</span></span>
+<span id="cb9-290"><a href="#cb9-290"></a></span>
+<span id="cb9-291"><a href="#cb9-291"></a>In this visualization, I'm demonstrating the relationship between horsepower and quarter-mile time (qsec), with cylinder count shown through color, weight through point size, and transmission type through line style. Through the trend lines, I've revealed how the relationship between horsepower and quarter-mile time varies by transmission type, showing that manual transmission cars generally have faster quarter-mile times at similar horsepower levels.</span>
 <span id="cb9-292"><a href="#cb9-292"></a></span>
-<span id="cb9-293"><a href="#cb9-293"></a>In this visualization, I'm demonstrating the relationship between horsepower and quarter-mile time (qsec), with cylinder count shown through color, weight through point size, and transmission type through line style. Through the trend lines, I've revealed how the relationship between horsepower and quarter-mile time varies by transmission type, showing that manual transmission cars generally have faster quarter-mile times at similar horsepower levels.</span>
+<span id="cb9-293"><a href="#cb9-293"></a><span class="fu">## Approach 5: Interactive Visualization</span></span>
 <span id="cb9-294"><a href="#cb9-294"></a></span>
-<span id="cb9-295"><a href="#cb9-295"></a><span class="fu">## Approach 5: Interactive Visualization</span></span>
+<span id="cb9-295"><a href="#cb9-295"></a>In my exploration, I've recognized that static visualizations have limitations, particularly for complex quadvariate relationships. I've found that interactive visualizations allow users to explore the data dynamically.</span>
 <span id="cb9-296"><a href="#cb9-296"></a></span>
-<span id="cb9-297"><a href="#cb9-297"></a>In my exploration, I've recognized that static visualizations have limitations, particularly for complex quadvariate relationships. I've found that interactive visualizations allow users to explore the data dynamically.</span>
-<span id="cb9-298"><a href="#cb9-298"></a></span>
-<span id="cb9-299"><a href="#cb9-299"></a><span class="in">```{r approach5}</span></span>
-<span id="cb9-300"><a href="#cb9-300"></a><span class="in">#| fig.width: 10</span></span>
-<span id="cb9-301"><a href="#cb9-301"></a><span class="in">#| fig.height: 8</span></span>
-<span id="cb9-302"><a href="#cb9-302"></a><span class="in">#| dpi: 300</span></span>
-<span id="cb9-303"><a href="#cb9-303"></a><span class="in"># Create an interactive plot using plotly</span></span>
-<span id="cb9-304"><a href="#cb9-304"></a><span class="in">interactive_plot &lt;- ggplot(cars_data, </span></span>
-<span id="cb9-305"><a href="#cb9-305"></a><span class="in">       aes(x = wt, </span></span>
-<span id="cb9-306"><a href="#cb9-306"></a><span class="in">           y = mpg, </span></span>
-<span id="cb9-307"><a href="#cb9-307"></a><span class="in">           color = as.factor(cyl), </span></span>
-<span id="cb9-308"><a href="#cb9-308"></a><span class="in">           size = hp,</span></span>
-<span id="cb9-309"><a href="#cb9-309"></a><span class="in">           text = paste(</span></span>
-<span id="cb9-310"><a href="#cb9-310"></a><span class="in">             "Car:", car_model,</span></span>
-<span id="cb9-311"><a href="#cb9-311"></a><span class="in">             "&lt;br&gt;MPG:", mpg,</span></span>
-<span id="cb9-312"><a href="#cb9-312"></a><span class="in">             "&lt;br&gt;Weight:", wt,</span></span>
-<span id="cb9-313"><a href="#cb9-313"></a><span class="in">             "&lt;br&gt;Cylinders:", cyl,</span></span>
-<span id="cb9-314"><a href="#cb9-314"></a><span class="in">             "&lt;br&gt;Horsepower:", hp,</span></span>
-<span id="cb9-315"><a href="#cb9-315"></a><span class="in">             "&lt;br&gt;Transmission:", ifelse(am == 1, "Manual", "Automatic")</span></span>
-<span id="cb9-316"><a href="#cb9-316"></a><span class="in">           ))) +</span></span>
-<span id="cb9-317"><a href="#cb9-317"></a><span class="in">  geom_point(alpha = 0.8) +</span></span>
-<span id="cb9-318"><a href="#cb9-318"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
-<span id="cb9-319"><a href="#cb9-319"></a><span class="in">  scale_size_continuous(range = c(3, 10)) +</span></span>
-<span id="cb9-320"><a href="#cb9-320"></a><span class="in">  labs(</span></span>
-<span id="cb9-321"><a href="#cb9-321"></a><span class="in">    title = "Fuel Efficiency vs. Weight of Cars",</span></span>
-<span id="cb9-322"><a href="#cb9-322"></a><span class="in">    subtitle = "Hover over points for details",</span></span>
-<span id="cb9-323"><a href="#cb9-323"></a><span class="in">    x = "Weight (1000 lbs)",</span></span>
-<span id="cb9-324"><a href="#cb9-324"></a><span class="in">    y = "Miles Per Gallon",</span></span>
-<span id="cb9-325"><a href="#cb9-325"></a><span class="in">    color = "Cylinders",</span></span>
-<span id="cb9-326"><a href="#cb9-326"></a><span class="in">    size = "Horsepower",</span></span>
-<span id="cb9-327"><a href="#cb9-327"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
-<span id="cb9-328"><a href="#cb9-328"></a><span class="in">  ) +</span></span>
-<span id="cb9-329"><a href="#cb9-329"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb9-330"><a href="#cb9-330"></a><span class="in">  theme(</span></span>
-<span id="cb9-331"><a href="#cb9-331"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0)</span></span>
-<span id="cb9-332"><a href="#cb9-332"></a><span class="in">  )</span></span>
-<span id="cb9-333"><a href="#cb9-333"></a></span>
-<span id="cb9-334"><a href="#cb9-334"></a><span class="in"># Convert to an interactive plotly object</span></span>
-<span id="cb9-335"><a href="#cb9-335"></a><span class="in">plotly::ggplotly(interactive_plot, tooltip = "text")</span></span>
-<span id="cb9-336"><a href="#cb9-336"></a><span class="in">```</span></span>
+<span id="cb9-297"><a href="#cb9-297"></a><span class="in">```{r approach5}</span></span>
+<span id="cb9-298"><a href="#cb9-298"></a><span class="in">#| fig.width: 10</span></span>
+<span id="cb9-299"><a href="#cb9-299"></a><span class="in">#| fig.height: 8</span></span>
+<span id="cb9-300"><a href="#cb9-300"></a><span class="in">#| dpi: 300</span></span>
+<span id="cb9-301"><a href="#cb9-301"></a><span class="in"># Create an interactive plot using plotly</span></span>
+<span id="cb9-302"><a href="#cb9-302"></a><span class="in">interactive_plot &lt;- ggplot(cars_data, </span></span>
+<span id="cb9-303"><a href="#cb9-303"></a><span class="in">       aes(x = wt, </span></span>
+<span id="cb9-304"><a href="#cb9-304"></a><span class="in">           y = mpg, </span></span>
+<span id="cb9-305"><a href="#cb9-305"></a><span class="in">           color = as.factor(cyl), </span></span>
+<span id="cb9-306"><a href="#cb9-306"></a><span class="in">           size = hp,</span></span>
+<span id="cb9-307"><a href="#cb9-307"></a><span class="in">           text = paste(</span></span>
+<span id="cb9-308"><a href="#cb9-308"></a><span class="in">             "Car:", car_model,</span></span>
+<span id="cb9-309"><a href="#cb9-309"></a><span class="in">             "&lt;br&gt;MPG:", mpg,</span></span>
+<span id="cb9-310"><a href="#cb9-310"></a><span class="in">             "&lt;br&gt;Weight:", wt,</span></span>
+<span id="cb9-311"><a href="#cb9-311"></a><span class="in">             "&lt;br&gt;Cylinders:", cyl,</span></span>
+<span id="cb9-312"><a href="#cb9-312"></a><span class="in">             "&lt;br&gt;Horsepower:", hp,</span></span>
+<span id="cb9-313"><a href="#cb9-313"></a><span class="in">             "&lt;br&gt;Transmission:", ifelse(am == 1, "Manual", "Automatic")</span></span>
+<span id="cb9-314"><a href="#cb9-314"></a><span class="in">           ))) +</span></span>
+<span id="cb9-315"><a href="#cb9-315"></a><span class="in">  geom_point(alpha = 0.8) +</span></span>
+<span id="cb9-316"><a href="#cb9-316"></a><span class="in">  scale_color_viridis_d(option = "D", end = 0.9) +</span></span>
+<span id="cb9-317"><a href="#cb9-317"></a><span class="in">  scale_size_continuous(range = c(3, 10)) +</span></span>
+<span id="cb9-318"><a href="#cb9-318"></a><span class="in">  labs(</span></span>
+<span id="cb9-319"><a href="#cb9-319"></a><span class="in">    title = "Fuel Efficiency vs. Weight of Cars",</span></span>
+<span id="cb9-320"><a href="#cb9-320"></a><span class="in">    subtitle = "Hover over points for details",</span></span>
+<span id="cb9-321"><a href="#cb9-321"></a><span class="in">    x = "Weight (1000 lbs)",</span></span>
+<span id="cb9-322"><a href="#cb9-322"></a><span class="in">    y = "Miles Per Gallon",</span></span>
+<span id="cb9-323"><a href="#cb9-323"></a><span class="in">    color = "Cylinders",</span></span>
+<span id="cb9-324"><a href="#cb9-324"></a><span class="in">    size = "Horsepower",</span></span>
+<span id="cb9-325"><a href="#cb9-325"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
+<span id="cb9-326"><a href="#cb9-326"></a><span class="in">  ) +</span></span>
+<span id="cb9-327"><a href="#cb9-327"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb9-328"><a href="#cb9-328"></a><span class="in">  theme(</span></span>
+<span id="cb9-329"><a href="#cb9-329"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0)</span></span>
+<span id="cb9-330"><a href="#cb9-330"></a><span class="in">  )</span></span>
+<span id="cb9-331"><a href="#cb9-331"></a></span>
+<span id="cb9-332"><a href="#cb9-332"></a><span class="in"># Convert to an interactive plotly object</span></span>
+<span id="cb9-333"><a href="#cb9-333"></a><span class="in">plotly::ggplotly(interactive_plot, tooltip = "text")</span></span>
+<span id="cb9-334"><a href="#cb9-334"></a><span class="in">```</span></span>
+<span id="cb9-335"><a href="#cb9-335"></a></span>
+<span id="cb9-336"><a href="#cb9-336"></a>I've found that interactive visualization allows the viewer to hover over points to see exact values and additional information, revealing details about the fourth (or even fifth or sixth) variables without cluttering the visual space. This approach has been particularly valuable for my presentations or dashboards where audience members can explore the data according to their interests.</span>
 <span id="cb9-337"><a href="#cb9-337"></a></span>
-<span id="cb9-338"><a href="#cb9-338"></a>I've found that interactive visualization allows the viewer to hover over points to see exact values and additional information, revealing details about the fourth (or even fifth or sixth) variables without cluttering the visual space. This approach has been particularly valuable for my presentations or dashboards where audience members can explore the data according to their interests.</span>
+<span id="cb9-338"><a href="#cb9-338"></a><span class="fu">## Approach 6: Small Multiples with Embedded Elements</span></span>
 <span id="cb9-339"><a href="#cb9-339"></a></span>
-<span id="cb9-340"><a href="#cb9-340"></a><span class="fu">## Approach 6: Small Multiples with Embedded Elements</span></span>
+<span id="cb9-340"><a href="#cb9-340"></a>Small multiples (or trellis plots) provide another powerful approach I've used for quadvariate visualization. By creating a grid of plots, I can systematically vary two categorical variables while showing relationships between two continuous variables.</span>
 <span id="cb9-341"><a href="#cb9-341"></a></span>
-<span id="cb9-342"><a href="#cb9-342"></a>Small multiples (or trellis plots) provide another powerful approach I've used for quadvariate visualization. By creating a grid of plots, I can systematically vary two categorical variables while showing relationships between two continuous variables.</span>
-<span id="cb9-343"><a href="#cb9-343"></a></span>
-<span id="cb9-344"><a href="#cb9-344"></a><span class="in">```{r approach6}</span></span>
-<span id="cb9-345"><a href="#cb9-345"></a><span class="in">#| fig.width: 10</span></span>
-<span id="cb9-346"><a href="#cb9-346"></a><span class="in">#| fig.height: 8</span></span>
-<span id="cb9-347"><a href="#cb9-347"></a><span class="in">#| dpi: 300</span></span>
-<span id="cb9-348"><a href="#cb9-348"></a><span class="in"># Create a plot with small multiples</span></span>
-<span id="cb9-349"><a href="#cb9-349"></a><span class="in">ggplot(cars_data, </span></span>
-<span id="cb9-350"><a href="#cb9-350"></a><span class="in">       aes(x = disp, </span></span>
-<span id="cb9-351"><a href="#cb9-351"></a><span class="in">           y = mpg)) +</span></span>
-<span id="cb9-352"><a href="#cb9-352"></a><span class="in">  geom_point(aes(size = wt), alpha = 0.8) +</span></span>
-<span id="cb9-353"><a href="#cb9-353"></a><span class="in">  facet_grid(cyl ~ am, </span></span>
-<span id="cb9-354"><a href="#cb9-354"></a><span class="in">             labeller = labeller(</span></span>
-<span id="cb9-355"><a href="#cb9-355"></a><span class="in">               am = c("0" = "Automatic", "1" = "Manual"),</span></span>
-<span id="cb9-356"><a href="#cb9-356"></a><span class="in">               cyl = c("4" = "4 Cylinders", "6" = "6 Cylinders", "8" = "8 Cylinders")</span></span>
-<span id="cb9-357"><a href="#cb9-357"></a><span class="in">             )) +</span></span>
-<span id="cb9-358"><a href="#cb9-358"></a><span class="in">  scale_size_continuous(range = c(2, 8)) +</span></span>
-<span id="cb9-359"><a href="#cb9-359"></a><span class="in">  labs(</span></span>
-<span id="cb9-360"><a href="#cb9-360"></a><span class="in">    title = "Fuel Efficiency vs. Displacement",</span></span>
-<span id="cb9-361"><a href="#cb9-361"></a><span class="in">    subtitle = "Faceted by cylinders and transmission type, with point size showing weight",</span></span>
-<span id="cb9-362"><a href="#cb9-362"></a><span class="in">    x = "Displacement (cu. in.)",</span></span>
-<span id="cb9-363"><a href="#cb9-363"></a><span class="in">    y = "Miles Per Gallon",</span></span>
-<span id="cb9-364"><a href="#cb9-364"></a><span class="in">    size = "Weight (1000 lbs)",</span></span>
-<span id="cb9-365"><a href="#cb9-365"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
-<span id="cb9-366"><a href="#cb9-366"></a><span class="in">  ) +</span></span>
-<span id="cb9-367"><a href="#cb9-367"></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb9-368"><a href="#cb9-368"></a><span class="in">  theme(</span></span>
-<span id="cb9-369"><a href="#cb9-369"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
-<span id="cb9-370"><a href="#cb9-370"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
-<span id="cb9-371"><a href="#cb9-371"></a><span class="in">    strip.background = element_rect(fill = "gray95"),</span></span>
-<span id="cb9-372"><a href="#cb9-372"></a><span class="in">    strip.text = element_text(face = "bold"),</span></span>
-<span id="cb9-373"><a href="#cb9-373"></a><span class="in">    panel.spacing = unit(1, "lines"),</span></span>
-<span id="cb9-374"><a href="#cb9-374"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0)</span></span>
-<span id="cb9-375"><a href="#cb9-375"></a><span class="in">  )</span></span>
-<span id="cb9-376"><a href="#cb9-376"></a><span class="in">```</span></span>
+<span id="cb9-342"><a href="#cb9-342"></a><span class="in">```{r approach6}</span></span>
+<span id="cb9-343"><a href="#cb9-343"></a><span class="in">#| fig.width: 10</span></span>
+<span id="cb9-344"><a href="#cb9-344"></a><span class="in">#| fig.height: 8</span></span>
+<span id="cb9-345"><a href="#cb9-345"></a><span class="in">#| dpi: 300</span></span>
+<span id="cb9-346"><a href="#cb9-346"></a><span class="in"># Create a plot with small multiples</span></span>
+<span id="cb9-347"><a href="#cb9-347"></a><span class="in">ggplot(cars_data, </span></span>
+<span id="cb9-348"><a href="#cb9-348"></a><span class="in">       aes(x = disp, </span></span>
+<span id="cb9-349"><a href="#cb9-349"></a><span class="in">           y = mpg)) +</span></span>
+<span id="cb9-350"><a href="#cb9-350"></a><span class="in">  geom_point(aes(size = wt), alpha = 0.8) +</span></span>
+<span id="cb9-351"><a href="#cb9-351"></a><span class="in">  facet_grid(cyl ~ am, </span></span>
+<span id="cb9-352"><a href="#cb9-352"></a><span class="in">             labeller = labeller(</span></span>
+<span id="cb9-353"><a href="#cb9-353"></a><span class="in">               am = c("0" = "Automatic", "1" = "Manual"),</span></span>
+<span id="cb9-354"><a href="#cb9-354"></a><span class="in">               cyl = c("4" = "4 Cylinders", "6" = "6 Cylinders", "8" = "8 Cylinders")</span></span>
+<span id="cb9-355"><a href="#cb9-355"></a><span class="in">             )) +</span></span>
+<span id="cb9-356"><a href="#cb9-356"></a><span class="in">  scale_size_continuous(range = c(2, 8)) +</span></span>
+<span id="cb9-357"><a href="#cb9-357"></a><span class="in">  labs(</span></span>
+<span id="cb9-358"><a href="#cb9-358"></a><span class="in">    title = "Fuel Efficiency vs. Displacement",</span></span>
+<span id="cb9-359"><a href="#cb9-359"></a><span class="in">    subtitle = "Faceted by cylinders and transmission type, with point size showing weight",</span></span>
+<span id="cb9-360"><a href="#cb9-360"></a><span class="in">    x = "Displacement (cu. in.)",</span></span>
+<span id="cb9-361"><a href="#cb9-361"></a><span class="in">    y = "Miles Per Gallon",</span></span>
+<span id="cb9-362"><a href="#cb9-362"></a><span class="in">    size = "Weight (1000 lbs)",</span></span>
+<span id="cb9-363"><a href="#cb9-363"></a><span class="in">    caption = "Data source: mtcars dataset (1974) | Created by Zhijun He"</span></span>
+<span id="cb9-364"><a href="#cb9-364"></a><span class="in">  ) +</span></span>
+<span id="cb9-365"><a href="#cb9-365"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb9-366"><a href="#cb9-366"></a><span class="in">  theme(</span></span>
+<span id="cb9-367"><a href="#cb9-367"></a><span class="in">    plot.title = element_text(face = "bold", size = 16),</span></span>
+<span id="cb9-368"><a href="#cb9-368"></a><span class="in">    plot.subtitle = element_text(size = 12, color = "gray40"),</span></span>
+<span id="cb9-369"><a href="#cb9-369"></a><span class="in">    strip.background = element_rect(fill = "gray95"),</span></span>
+<span id="cb9-370"><a href="#cb9-370"></a><span class="in">    strip.text = element_text(face = "bold"),</span></span>
+<span id="cb9-371"><a href="#cb9-371"></a><span class="in">    panel.spacing = unit(1, "lines"),</span></span>
+<span id="cb9-372"><a href="#cb9-372"></a><span class="in">    plot.caption = element_text(size = 9, hjust = 0)</span></span>
+<span id="cb9-373"><a href="#cb9-373"></a><span class="in">  )</span></span>
+<span id="cb9-374"><a href="#cb9-374"></a><span class="in">```</span></span>
+<span id="cb9-375"><a href="#cb9-375"></a></span>
+<span id="cb9-376"><a href="#cb9-376"></a>With this approach, I've created a grid where each cell represents a specific combination of cylinder count and transmission type. Within each cell, I've shown the relationship between displacement and mpg, with point size indicating weight. I've found the small multiples approach to be particularly effective at revealing how relationships vary across categorical variables, making it easy for me to compare patterns across different subgroups of data.</span>
 <span id="cb9-377"><a href="#cb9-377"></a></span>
-<span id="cb9-378"><a href="#cb9-378"></a>With this approach, I've created a grid where each cell represents a specific combination of cylinder count and transmission type. Within each cell, I've shown the relationship between displacement and mpg, with point size indicating weight. I've found the small multiples approach to be particularly effective at revealing how relationships vary across categorical variables, making it easy for me to compare patterns across different subgroups of data.</span>
+<span id="cb9-378"><a href="#cb9-378"></a><span class="fu"># Design Principles I've Learned for Effective Quadvariate Visualization</span></span>
 <span id="cb9-379"><a href="#cb9-379"></a></span>
-<span id="cb9-380"><a href="#cb9-380"></a><span class="fu"># Design Principles I've Learned for Effective Quadvariate Visualization</span></span>
+<span id="cb9-380"><a href="#cb9-380"></a>In my journey creating effective quadvariate visualizations, I've discovered several design principles that are crucial to consider:</span>
 <span id="cb9-381"><a href="#cb9-381"></a></span>
-<span id="cb9-382"><a href="#cb9-382"></a>In my journey creating effective quadvariate visualizations, I've discovered several design principles that are crucial to consider:</span>
+<span id="cb9-382"><a href="#cb9-382"></a><span class="fu">## 1. Visual Hierarchy</span></span>
 <span id="cb9-383"><a href="#cb9-383"></a></span>
-<span id="cb9-384"><a href="#cb9-384"></a><span class="fu">## 1. Visual Hierarchy</span></span>
+<span id="cb9-384"><a href="#cb9-384"></a>I've learned that not all variables deserve equal emphasis in my visualizations. I establish a clear visual hierarchy by:</span>
 <span id="cb9-385"><a href="#cb9-385"></a></span>
-<span id="cb9-386"><a href="#cb9-386"></a>I've learned that not all variables deserve equal emphasis in my visualizations. I establish a clear visual hierarchy by:</span>
-<span id="cb9-387"><a href="#cb9-387"></a></span>
-<span id="cb9-388"><a href="#cb9-388"></a><span class="ss">- </span>Placing the most important relationship on the x and y axes</span>
-<span id="cb9-389"><a href="#cb9-389"></a><span class="ss">- </span>Using color for the next most important variable, particularly if it's categorical</span>
-<span id="cb9-390"><a href="#cb9-390"></a><span class="ss">- </span>Using less prominent visual cues (size, shape, etc.) for secondary variables</span>
+<span id="cb9-386"><a href="#cb9-386"></a><span class="ss">- </span>Placing the most important relationship on the x and y axes</span>
+<span id="cb9-387"><a href="#cb9-387"></a><span class="ss">- </span>Using color for the next most important variable, particularly if it's categorical</span>
+<span id="cb9-388"><a href="#cb9-388"></a><span class="ss">- </span>Using less prominent visual cues (size, shape, etc.) for secondary variables</span>
+<span id="cb9-389"><a href="#cb9-389"></a></span>
+<span id="cb9-390"><a href="#cb9-390"></a><span class="fu">## 2. Perceptual Effectiveness</span></span>
 <span id="cb9-391"><a href="#cb9-391"></a></span>
-<span id="cb9-392"><a href="#cb9-392"></a><span class="fu">## 2. Perceptual Effectiveness</span></span>
+<span id="cb9-392"><a href="#cb9-392"></a>Through my experimentation, I've discovered that different visual encodings vary in their perceptual effectiveness:</span>
 <span id="cb9-393"><a href="#cb9-393"></a></span>
-<span id="cb9-394"><a href="#cb9-394"></a>Through my experimentation, I've discovered that different visual encodings vary in their perceptual effectiveness:</span>
-<span id="cb9-395"><a href="#cb9-395"></a></span>
-<span id="cb9-396"><a href="#cb9-396"></a><span class="ss">- </span>Position (x, y coordinates) is most precisely perceived</span>
-<span id="cb9-397"><a href="#cb9-397"></a><span class="ss">- </span>Color is effective for categorical variables but less so for continuous ones</span>
-<span id="cb9-398"><a href="#cb9-398"></a><span class="ss">- </span>Size works for continuous variables but has a more limited perceptual range</span>
-<span id="cb9-399"><a href="#cb9-399"></a><span class="ss">- </span>Shape works well for categorical variables with few categories</span>
+<span id="cb9-394"><a href="#cb9-394"></a><span class="ss">- </span>Position (x, y coordinates) is most precisely perceived</span>
+<span id="cb9-395"><a href="#cb9-395"></a><span class="ss">- </span>Color is effective for categorical variables but less so for continuous ones</span>
+<span id="cb9-396"><a href="#cb9-396"></a><span class="ss">- </span>Size works for continuous variables but has a more limited perceptual range</span>
+<span id="cb9-397"><a href="#cb9-397"></a><span class="ss">- </span>Shape works well for categorical variables with few categories</span>
+<span id="cb9-398"><a href="#cb9-398"></a></span>
+<span id="cb9-399"><a href="#cb9-399"></a>I choose encodings that match the precision requirements of each variable and the nature of the data.</span>
 <span id="cb9-400"><a href="#cb9-400"></a></span>
-<span id="cb9-401"><a href="#cb9-401"></a>I choose encodings that match the precision requirements of each variable and the nature of the data.</span>
+<span id="cb9-401"><a href="#cb9-401"></a><span class="fu">## 3. Cognitive Load Management</span></span>
 <span id="cb9-402"><a href="#cb9-402"></a></span>
-<span id="cb9-403"><a href="#cb9-403"></a><span class="fu">## 3. Cognitive Load Management</span></span>
+<span id="cb9-403"><a href="#cb9-403"></a>I've found that quadvariate visualizations can easily become overwhelming. I manage cognitive load by:</span>
 <span id="cb9-404"><a href="#cb9-404"></a></span>
-<span id="cb9-405"><a href="#cb9-405"></a>I've found that quadvariate visualizations can easily become overwhelming. I manage cognitive load by:</span>
-<span id="cb9-406"><a href="#cb9-406"></a></span>
-<span id="cb9-407"><a href="#cb9-407"></a><span class="ss">- </span>Using clear, direct labeling</span>
-<span id="cb9-408"><a href="#cb9-408"></a><span class="ss">- </span>Providing context through titles and annotations</span>
-<span id="cb9-409"><a href="#cb9-409"></a><span class="ss">- </span>Considering interactive elements to reveal details on demand</span>
-<span id="cb9-410"><a href="#cb9-410"></a><span class="ss">- </span>Breaking complex relationships into multiple coordinated views</span>
+<span id="cb9-405"><a href="#cb9-405"></a><span class="ss">- </span>Using clear, direct labeling</span>
+<span id="cb9-406"><a href="#cb9-406"></a><span class="ss">- </span>Providing context through titles and annotations</span>
+<span id="cb9-407"><a href="#cb9-407"></a><span class="ss">- </span>Considering interactive elements to reveal details on demand</span>
+<span id="cb9-408"><a href="#cb9-408"></a><span class="ss">- </span>Breaking complex relationships into multiple coordinated views</span>
+<span id="cb9-409"><a href="#cb9-409"></a></span>
+<span id="cb9-410"><a href="#cb9-410"></a><span class="fu">## 4. Accessibility Considerations</span></span>
 <span id="cb9-411"><a href="#cb9-411"></a></span>
-<span id="cb9-412"><a href="#cb9-412"></a><span class="fu">## 4. Accessibility Considerations</span></span>
+<span id="cb9-412"><a href="#cb9-412"></a>In my work, I ensure my visualizations remain accessible by:</span>
 <span id="cb9-413"><a href="#cb9-413"></a></span>
-<span id="cb9-414"><a href="#cb9-414"></a>In my work, I ensure my visualizations remain accessible by:</span>
-<span id="cb9-415"><a href="#cb9-415"></a></span>
-<span id="cb9-416"><a href="#cb9-416"></a><span class="ss">- </span>Using colorblind-friendly palettes (like viridis)</span>
-<span id="cb9-417"><a href="#cb9-417"></a><span class="ss">- </span>Incorporating redundant encodings when possible</span>
-<span id="cb9-418"><a href="#cb9-418"></a><span class="ss">- </span>Providing text alternatives or descriptions</span>
-<span id="cb9-419"><a href="#cb9-419"></a><span class="ss">- </span>Testing visualization with potential users</span>
+<span id="cb9-414"><a href="#cb9-414"></a><span class="ss">- </span>Using colorblind-friendly palettes (like viridis)</span>
+<span id="cb9-415"><a href="#cb9-415"></a><span class="ss">- </span>Incorporating redundant encodings when possible</span>
+<span id="cb9-416"><a href="#cb9-416"></a><span class="ss">- </span>Providing text alternatives or descriptions</span>
+<span id="cb9-417"><a href="#cb9-417"></a><span class="ss">- </span>Testing visualization with potential users</span>
+<span id="cb9-418"><a href="#cb9-418"></a></span>
+<span id="cb9-419"><a href="#cb9-419"></a><span class="fu"># Future Enhancements I'm Exploring</span></span>
 <span id="cb9-420"><a href="#cb9-420"></a></span>
-<span id="cb9-421"><a href="#cb9-421"></a><span class="fu"># Future Enhancements I'm Exploring</span></span>
+<span id="cb9-421"><a href="#cb9-421"></a>As I continue to develop my quadvariate visualization skills, I'm considering these potential enhancements:</span>
 <span id="cb9-422"><a href="#cb9-422"></a></span>
-<span id="cb9-423"><a href="#cb9-423"></a>As I continue to develop my quadvariate visualization skills, I'm considering these potential enhancements:</span>
-<span id="cb9-424"><a href="#cb9-424"></a></span>
-<span id="cb9-425"><a href="#cb9-425"></a><span class="ss">1. </span>**Animation**: Incorporating time as a fifth dimension by animating my visualizations</span>
-<span id="cb9-426"><a href="#cb9-426"></a><span class="ss">2. </span>**Custom glyphs**: Designing specialized symbols that encode multiple variables in their form</span>
-<span id="cb9-427"><a href="#cb9-427"></a><span class="ss">3. </span>**Coordinated multiple views**: Creating linked visualizations that highlight the same data points across different perspectives</span>
-<span id="cb9-428"><a href="#cb9-428"></a><span class="ss">4. </span>**Dimension reduction techniques**: Using methods like PCA to reduce dimensionality while preserving important relationships</span>
+<span id="cb9-423"><a href="#cb9-423"></a><span class="ss">1. </span>**Animation**: Incorporating time as a fifth dimension by animating my visualizations</span>
+<span id="cb9-424"><a href="#cb9-424"></a><span class="ss">2. </span>**Custom glyphs**: Designing specialized symbols that encode multiple variables in their form</span>
+<span id="cb9-425"><a href="#cb9-425"></a><span class="ss">3. </span>**Coordinated multiple views**: Creating linked visualizations that highlight the same data points across different perspectives</span>
+<span id="cb9-426"><a href="#cb9-426"></a><span class="ss">4. </span>**Dimension reduction techniques**: Using methods like PCA to reduce dimensionality while preserving important relationships</span>
+<span id="cb9-427"><a href="#cb9-427"></a></span>
+<span id="cb9-428"><a href="#cb9-428"></a><span class="fu"># My Conclusion</span></span>
 <span id="cb9-429"><a href="#cb9-429"></a></span>
-<span id="cb9-430"><a href="#cb9-430"></a><span class="fu"># My Conclusion</span></span>
+<span id="cb9-430"><a href="#cb9-430"></a>Through my experimentation with quadvariate visualization, I've discovered a powerful approach to understanding complex relationships in data. While I've found these challenging to execute effectively, these visualizations reveal patterns and interactions that simpler plots would miss. The approaches I've demonstrated—combining position, color, size, shape, faceting, and annotation—provide a foundation for creating rich, informative graphics.</span>
 <span id="cb9-431"><a href="#cb9-431"></a></span>
-<span id="cb9-432"><a href="#cb9-432"></a>Through my experimentation with quadvariate visualization, I've discovered a powerful approach to understanding complex relationships in data. While I've found these challenging to execute effectively, these visualizations reveal patterns and interactions that simpler plots would miss. The approaches I've demonstrated—combining position, color, size, shape, faceting, and annotation—provide a foundation for creating rich, informative graphics.</span>
+<span id="cb9-432"><a href="#cb9-432"></a>I've learned that the goal of any visualization is to communicate clearly. Even with the technical ability to show four variables, I always ask whether the added complexity serves my narrative. Sometimes, multiple simpler visualizations may communicate more effectively than a single complex one.</span>
 <span id="cb9-433"><a href="#cb9-433"></a></span>
-<span id="cb9-434"><a href="#cb9-434"></a>I've learned that the goal of any visualization is to communicate clearly. Even with the technical ability to show four variables, I always ask whether the added complexity serves my narrative. Sometimes, multiple simpler visualizations may communicate more effectively than a single complex one.</span>
+<span id="cb9-434"><a href="#cb9-434"></a>As I refine my visualization skills, I continue to experiment with these techniques, paying careful attention to user feedback and the clarity of my message. I've found that the most successful visualizations balance technical sophistication with intuitive comprehension.</span>
 <span id="cb9-435"><a href="#cb9-435"></a></span>
-<span id="cb9-436"><a href="#cb9-436"></a>As I refine my visualization skills, I continue to experiment with these techniques, paying careful attention to user feedback and the clarity of my message. I've found that the most successful visualizations balance technical sophistication with intuitive comprehension.</span>
+<span id="cb9-436"><a href="#cb9-436"></a><span class="fu"># References</span></span>
 <span id="cb9-437"><a href="#cb9-437"></a></span>
-<span id="cb9-438"><a href="#cb9-438"></a><span class="fu"># References</span></span>
+<span id="cb9-438"><a href="#cb9-438"></a>Wickham H (2016). *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York. ISBN 978-3-319-24277-4, https://ggplot2.tidyverse.org.</span>
 <span id="cb9-439"><a href="#cb9-439"></a></span>
-<span id="cb9-440"><a href="#cb9-440"></a>Wickham H (2016). *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York. ISBN 978-3-319-24277-4, https://ggplot2.tidyverse.org.</span>
+<span id="cb9-440"><a href="#cb9-440"></a>Wilke CO (2019). *Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures*. O'Reilly Media. https://clauswilke.com/dataviz/</span>
 <span id="cb9-441"><a href="#cb9-441"></a></span>
-<span id="cb9-442"><a href="#cb9-442"></a>Wilke CO (2019). *Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures*. O'Reilly Media. https://clauswilke.com/dataviz/</span>
+<span id="cb9-442"><a href="#cb9-442"></a>Few S (2009). *Now You See It: Simple Visualization Techniques for Quantitative Analysis*. Analytics Press.</span>
 <span id="cb9-443"><a href="#cb9-443"></a></span>
-<span id="cb9-444"><a href="#cb9-444"></a>Few S (2009). *Now You See It: Simple Visualization Techniques for Quantitative Analysis*. Analytics Press.</span>
-<span id="cb9-445"><a href="#cb9-445"></a></span>
-<span id="cb9-446"><a href="#cb9-446"></a>Munzner T (2014). *Visualization Analysis and Design*. CRC Press.</span>
+<span id="cb9-444"><a href="#cb9-444"></a>Munzner T (2014). *Visualization Analysis and Design*. CRC Press.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
