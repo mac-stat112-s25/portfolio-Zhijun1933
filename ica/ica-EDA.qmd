@@ -1,0 +1,348 @@
+---
+title: "Exploratory Data Analysis"
+format: html
+---
+
+## Learning Goals
+* Understand the first steps that should be taken when you encounter a new data set
+* Develop comfort in knowing how to explore data to understand it
+* Develop comfort in formulating research questions
+
+## Additional Resources
+For more information about the topics covered in this chapter, refer to the resources below:
+
+* [Exploratory Data Analysis (html)](https://r4ds.had.co.nz/exploratory-data-analysis.html) by Wickham, Çetinkaya-Rundel, & Grolemund
+* [Exploratory Data Analysis Checklist (html)](https://www.rdocumentation.org/packages/examscan/versions/0.1/topics/EDA-checklist) by Peng
+* [R Packages to do EDA (html)](https://m-clark.github.io/posts/2018-10-18-exploring-data/) blog post by Michael Clark
+
+## 15.1 Review
+
+### WHERE ARE WE?!? Starting a data project
+
+This final, short unit will help prepare us as we launch into course projects. In order to even *start* these projects, we need some sense of the following:
+
+1. data import: how to find data, store data, load data into RStudio, and do some preliminary data checks & cleaning
+2. exploratory data analysis (EDA)
+
+## 15.2 EDA
+
+### What is EDA?!
+
+EDA is a preliminary, exploratory, and iterative analysis of our data relative to our general research questions of interest.
+
+### Differece from Before
+
+How is this different than what we've been doing? We've been focusing on various tools needed for various steps *within* an EDA. Now we'll bring them all together in a more cohesive *process*.
+
+### Example
+
+In his book Exploratory Data Analysis with R, Dr. Roger D. Peng included an EDA case study about Changes in Fine Particle Air Pollution in the U.S.. Note that the link to the datasets used by Peng in the chapter is currently broken. Can you figure out the new location?^[It might have been moved to https://aqs.epa.gov/aqsweb/airdata/download_files.html]
+
+### EDA Essentials
+
+* Start small. We often start with lots of data – some of it useful, some of it not. To start:
+   * Focus on just a small set of variables of interest.
+   * Break down your research question into smaller pieces.
+   * Obtain the most simple numerical & visual summaries that are relevant to your research questions.
+* Ask questions. We typically start a data analysis with at least some general research questions in mind. In obtaining numerical and graphical summaries that provide insight into these questions, we must ask:
+   * what questions *do* these summaries answer?
+   * what questions *don't* these summaries answer?
+   * what's surprising or interesting here?
+   * what *follow-up* questions do these summaries provoke?
+* Play! Be creative. Don't lock yourself into a rigid idea of what should happen.
+* Repeat. Repeat this iterative questioning and analysis process as necessary, letting our reflections on the previous questions inspire our next steps.
+
+## 15.3 Sample EDA with the Penguins Dataset
+
+Let's perform a sample exploratory data analysis using the penguins dataset from the previous classes. This will demonstrate the typical workflow and thought process of EDA.
+
+```{r}
+# Load required packages
+library(tidyverse)
+
+# Load the penguins dataset from a URL (since we can't rely on the palmerpenguins package)
+penguins <- read_csv("https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv")
+
+# Take a first look at the data
+head(penguins)
+```
+
+### Step 1: Understanding the Data Structure
+
+A crucial first step is to understand what we're working with:
+
+```{r}
+# Check data dimensions
+dim(penguins)
+
+# Look at data structure
+str(penguins)
+
+# Summary statistics
+summary(penguins)
+```
+
+```{r}
+# Check for missing values
+colSums(is.na(penguins))
+```
+
+### Step 2: Formulating Initial Questions
+
+Now that we have a basic understanding of the data, let's formulate some initial research questions:
+
+1. How do the body measurements (bill length, bill depth, flipper length, body mass) differ across penguin species?
+2. Is there a relationship between bill dimensions and body mass?
+3. Do these relationships vary by species or sex?
+4. Are there differences in penguin characteristics across the islands?
+
+### Step 3: Univariate Exploration
+
+Let's start by exploring the distribution of individual variables:
+
+```{r}
+# Categorical variables
+ggplot(penguins, aes(x = species)) +
+  geom_bar(fill = "steelblue") +
+  labs(title = "Count of Penguins by Species",
+       x = "Species",
+       y = "Count")
+```
+
+```{r}
+ggplot(penguins, aes(x = island)) +
+  geom_bar(fill = "steelblue") +
+  labs(title = "Count of Penguins by Island",
+       x = "Island",
+       y = "Count")
+```
+
+```{r}
+# Numerical variables
+ggplot(penguins, aes(x = bill_length_mm)) +
+  geom_histogram(bins = 20, fill = "steelblue", color = "white") +
+  labs(title = "Distribution of Bill Length",
+       x = "Bill Length (mm)",
+       y = "Count")
+```
+
+```{r}
+# Create a function to make multiple histograms more efficiently
+plot_histogram <- function(data, var, title) {
+  ggplot(data, aes(x = {{var}})) +
+    geom_histogram(bins = 20, fill = "steelblue", color = "white") +
+    labs(title = title,
+         y = "Count") +
+    theme_minimal()
+}
+
+# Plot multiple histograms for numerical variables
+plot_histogram(penguins, bill_depth_mm, "Distribution of Bill Depth")
+```
+
+```{r}
+plot_histogram(penguins, flipper_length_mm, "Distribution of Flipper Length")
+```
+
+```{r}
+plot_histogram(penguins, body_mass_g, "Distribution of Body Mass")
+```
+
+### Step 4: Bivariate Exploration
+
+Now let's explore relationships between pairs of variables:
+
+```{r}
+# Relationship between bill length and bill depth
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point(alpha = 0.7) +
+  labs(title = "Bill Length vs. Bill Depth",
+       x = "Bill Length (mm)",
+       y = "Bill Depth (mm)") +
+  theme_minimal()
+```
+
+```{r}
+# Relationship between flipper length and body mass
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(alpha = 0.7) +
+  labs(title = "Flipper Length vs. Body Mass",
+       x = "Flipper Length (mm)",
+       y = "Body Mass (g)") +
+  theme_minimal()
+```
+
+```{r}
+# Bill characteristics by species
+ggplot(penguins, aes(x = species, y = bill_length_mm)) +
+  geom_boxplot(fill = "steelblue", alpha = 0.7) +
+  labs(title = "Bill Length by Species",
+       x = "Species",
+       y = "Bill Length (mm)") +
+  theme_minimal()
+```
+
+```{r}
+ggplot(penguins, aes(x = species, y = bill_depth_mm)) +
+  geom_boxplot(fill = "steelblue", alpha = 0.7) +
+  labs(title = "Bill Depth by Species",
+       x = "Species",
+       y = "Bill Depth (mm)") +
+  theme_minimal()
+```
+
+### Step 5: Multivariate Exploration
+
+Now let's explore more complex relationships by incorporating a third variable:
+
+```{r}
+# Bill dimensions by species
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point(alpha = 0.7) +
+  labs(title = "Bill Dimensions by Species",
+       x = "Bill Length (mm)",
+       y = "Bill Depth (mm)",
+       color = "Species") +
+  theme_minimal()
+```
+
+```{r}
+# Add regression lines to see trends by species
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Bill Dimensions by Species with Trend Lines",
+       x = "Bill Length (mm)",
+       y = "Bill Depth (mm)",
+       color = "Species") +
+  theme_minimal()
+```
+
+```{r}
+# Relationship between flipper length and body mass by species
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Body Mass vs. Flipper Length by Species",
+       x = "Flipper Length (mm)",
+       y = "Body Mass (g)",
+       color = "Species") +
+  theme_minimal()
+```
+
+```{r}
+# Let's add another dimension - examining by sex
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species, shape = sex)) +
+  geom_point(alpha = 0.7, size = 3) +
+  labs(title = "Body Mass vs. Flipper Length by Species and Sex",
+       x = "Flipper Length (mm)",
+       y = "Body Mass (g)",
+       color = "Species",
+       shape = "Sex") +
+  theme_minimal()
+```
+
+### Step 6: Data Transformation and Summary Statistics
+
+Let's calculate some summary statistics to complement our visualizations:
+
+```{r}
+# Summary statistics by species
+penguins |>
+  group_by(species) |>
+  summarize(
+    mean_bill_length = mean(bill_length_mm, na.rm = TRUE),
+    mean_bill_depth = mean(bill_depth_mm, na.rm = TRUE),
+    mean_flipper_length = mean(flipper_length_mm, na.rm = TRUE),
+    mean_body_mass = mean(body_mass_g, na.rm = TRUE),
+    count = n()
+  )
+```
+
+```{r}
+# Summary statistics by species and sex
+penguins |>
+  filter(!is.na(sex)) |>  # Remove NA values for sex
+  group_by(species, sex) |>
+  summarize(
+    mean_bill_length = mean(bill_length_mm, na.rm = TRUE),
+    mean_bill_depth = mean(bill_depth_mm, na.rm = TRUE),
+    mean_flipper_length = mean(flipper_length_mm, na.rm = TRUE),
+    mean_body_mass = mean(body_mass_g, na.rm = TRUE),
+    count = n(),
+    .groups = "drop"  # Drop grouping after summarization
+  )
+```
+
+```{r}
+# Summary statistics by island
+penguins |>
+  group_by(island) |>
+  summarize(
+    count = n(),
+    species_count = n_distinct(species),
+    mean_body_mass = mean(body_mass_g, na.rm = TRUE)
+  )
+```
+
+### Step 7: Insights and Further Questions
+
+After our exploration, we can identify several insights:
+
+1. **Species Differences**: The three penguin species show distinct characteristics:
+   - Adelie penguins have medium bill length but greater bill depth
+   - Chinstrap penguins have longer, narrower bills
+   - Gentoo penguins are larger overall with longer flippers and greater body mass
+
+2. **Morphological Relationships**: There's a strong positive correlation between flipper length and body mass across all species.
+
+3. **Sexual Dimorphism**: Males tend to be larger than females within each species.
+
+4. **Island Distribution**: Not all species are found on all islands. Biscoe has both Adelie and Gentoo, Dream has Adelie and Chinstrap, and Torgersen has only Adelie.
+
+Based on these findings, further questions might include:
+
+1. Are the bill morphology differences related to different feeding strategies?
+2. How do environmental factors on different islands affect penguin characteristics?
+3. What is the relationship between body measurements and other factors like age or reproductive success?
+
+### Step 8: Refined Analysis
+
+Let's create a more sophisticated visualization that captures multiple dimensions of our data:
+
+```{r}
+# Create a comprehensive visualization
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, 
+                     color = species, size = body_mass_g, shape = sex)) +
+  geom_point(alpha = 0.7) +
+  facet_wrap(~ island) +
+  labs(title = "Penguin Bill Dimensions by Species, Sex, and Island",
+       subtitle = "Point size represents body mass",
+       x = "Bill Length (mm)",
+       y = "Bill Depth (mm)",
+       color = "Species",
+       size = "Body Mass (g)",
+       shape = "Sex") +
+  theme_minimal() +
+  theme(legend.position = "right")
+```
+
+## 15.4 Conclusion
+
+This exploratory data analysis has demonstrated the iterative process of understanding a dataset:
+
+1. We started by examining the dataset structure and getting familiar with the variables
+2. We formulated some initial questions to guide our exploration
+3. We explored univariate distributions to understand individual variables
+4. We examined bivariate relationships to discover connections between variables
+5. We conducted multivariate analysis to uncover more complex patterns
+6. We calculated summary statistics to quantify the patterns we observed visually
+7. We identified insights and generated further questions for investigation
+
+The key insight from this EDA is that the three penguin species have distinct morphological characteristics, particularly in bill dimensions, which likely relate to their different ecological niches. Sexual dimorphism is evident across all species, with males generally larger than females. The island distribution suggests different habitat preferences or environmental adaptations among the species.
+
+This exploration provides a solid foundation for more sophisticated analyses, such as predictive modeling to classify penguin species based on morphological measurements or investigating the evolutionary and ecological factors driving the observed patterns.
+
+## 15.5 Exercises
+
+Work on Homework 7

@@ -4,7 +4,7 @@ project:
 
 book:
   title: "COMP/STAT112 Notebook"
-  author: "Your Name Here"
+  author: "Zhijun He"
   date: today
   reader-mode: true
   page-navigation: true
@@ -13,7 +13,7 @@ book:
   
   
   sidebar:
-    title: "Your Name Here"
+    title: "Zhijun He"
     collapse-level: 2
     style: "docked"
     pinned: true
@@ -30,13 +30,30 @@ book:
       - bw/bw-tri.qmd
       - bw/bw-quad.qmd
       - bw/bw-spatial.qmd
-
+      - bw/Zhijun He-Exam1.qmd
+      - bw/Zhijun He-Exam2.qmd
+      - bw/Solo Project.qmd
+      
+    - part: "Cheat Sheet"
+      chapters: 
+      - bw/Cheat Sheet.qmd
+      
     - part: "In-class Activities"
       chapters: 
       - ica/ica-uni.qmd
       - ica/ica-bi.qmd
       - ica/ica-multi.qmd
-      - ica/ica-spatial.qmd
+      - ica/real-ica-spacial.qmd
+      - ica/ica-effective viz.qmd
+      - ica/ica-data wrangling.qmd
+      - ica/ica-working with dates.qmd
+      - ica/ica-reshaping data.qmd
+      - ica/ica-joining data.qmd
+      - ica/ica-working with factors.qmd
+      - ica/ica-working with strings.qmd
+      - ica/ica-working with data import.qmd
+      - ica/ica-EDA.qmd
+      
 
 format:
   html:
@@ -54,7 +71,7 @@ format:
 
 execute:
   cache: false
-  freeze: auto
+  freeze: false
 
 editor: 
   markdown:

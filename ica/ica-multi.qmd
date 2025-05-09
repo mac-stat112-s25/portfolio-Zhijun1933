@@ -1,5 +1,203 @@
 ---
-title: "Mulivariate Viz"
+title: "Multivariate Viz"
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
-Use this file for practice with the **mulivariate viz** in-class activity.  Refer to the class website for details.
+## Purpose
+
+This document comprehensively explores multivariate visualization techniques using education and SAT score data from U.S. states.
+We investigate the relationships between SAT scores, educational spending, teacher salaries, and participation rates across different states through statistical analysis and visualization.
+We aim to uncover meaningful patterns and potential causal relationships in educational outcomes while highlighting the importance of considering confounding variables in educational data analysis.
+
+## Environment Setup
+
+```{r setup}
+#| label: setup
+library(tidyverse)
+
+education <- read.csv("https://mac-stat.github.io/data/sat.csv")
+```
+
+## Exercise 1: SAT Scores Distribution
+
+### Part a: Visualizing SAT Score Distribution
+
+```{r sat-distribution}
+#| label: sat-distribution
+
+ggplot(education, aes(x = sat)) +
+  geom_histogram(binwidth = 30, fill = "steelblue", color = "white") +
+  labs(title = "Distribution of State SAT Scores",
+       x = "SAT Score",
+       y = "Count")
+```
+
+### Part b: Distribution Analysis
+
+The SAT score distribution reveals several key insights about educational outcomes across states.
+The scores range from approximately 850 to 1120 points, demonstrating substantial variation in performance.
+A notable bimodal pattern emerges with distinct peaks around 900 and 1050 points, reflecting fundamental differences between states where SAT serves as the primary college entrance exam versus those favoring the ACT.
+States with higher SAT participation rates typically exhibit lower average scores due to their more diverse testing population, while states with lower participation rates often show higher averages due to a more selective testing pool.
+
+## Exercise 2: SAT Scores vs. Spending
+
+### Part a: Expenditure and Salary Relationships
+
+```{r spending-relationships}
+#| label: spending-relationships
+p1 <- ggplot(education, aes(x = expend, y = sat)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "SAT Scores vs. Per Pupil Expenditure",
+       subtitle = "Examining Direct Investment Impact",
+       x = "Per Pupil Expenditure (thousands $)", 
+       y = "SAT Score") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12))
+
+p2 <- ggplot(education, aes(x = salary, y = sat)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "SAT Scores vs. Teacher Salary",
+       subtitle = "Investigating Teacher Compensation Effects",
+       x = "Teacher Salary (thousands $)",
+       y = "SAT Score") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12))
+
+p1
+p2
+```
+
+### Part b: Analysis of Relationships
+
+The relationship between educational investment and SAT performance presents an intriguing paradox.
+Both per-pupil expenditure and teacher salary demonstrate unexpected negative correlations with SAT scores, contrary to what one might intuitively expect.
+This counterintuitive pattern strongly suggests the presence of confounding variables, particularly participation rates and regional differences in testing preferences.
+States that invest more in education often have higher SAT participation rates, which typically results in lower average scores due to a more diverse testing population.
+
+## Exercise 3: Trivariate Relationship
+
+```{r trivariate}
+#| label: trivariate
+ggplot(education, aes(x = salary, y = sat, color = expend)) +
+  geom_point(size = 3, alpha = 0.7) +
+  scale_color_gradient(low = "lightblue", high = "darkblue") +
+  labs(title = "SAT Scores vs. Teacher Salary, Colored by Expenditure",
+       subtitle = "Exploring Three-Way Relationships in Educational Metrics",
+       x = "Teacher Salary (thousands $)",
+       y = "SAT Score", 
+       color = "Per Pupil\nExpenditure") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12),
+        legend.position = "right")
+```
+
+## Exercise 4: Discretized Expenditure
+
+```{r}
+#| label: discretized-expenditure
+education %>%
+  mutate(expend_group = cut(expend, 
+                           breaks = quantile(expend, probs = c(0, 0.5, 1)),
+                           labels = c("Below Median", "Above Median"),
+                           include.lowest = TRUE)) %>%
+  ggplot(aes(x = salary, y = sat, color = expend_group)) + 
+  geom_point(alpha = 0.7) + 
+  geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +
+  scale_color_manual(values = c("steelblue", "darkred")) +
+  labs(title = "SAT Scores vs Teacher Salary by Expenditure Level",
+       x = "Teacher Salary (thousands $)",
+       y = "SAT Score",
+       color = "Expenditure") +
+  theme_minimal()
+```
+
+By discretizing states into expenditure groups, we observe distinct patterns in the relationship between teacher salaries and SAT scores.
+States with higher expenditure levels consistently show higher teacher salaries but generally lower SAT scores.
+The slope of the relationship between salary and SAT scores differs between expenditure groups, suggesting that the impact of teacher compensation on student performance varies depending on overall educational investment levels.
+This variation might reflect differences in resource allocation efficiency or underlying socioeconomic factors that influence educational outcomes.
+
+## Exercise 5: Participation Rate Impact
+
+### Part a: Participation Rate Distribution
+
+```{r participation-distribution}
+#| label: participation-distribution
+ggplot(education, aes(x = fracCat)) +
+  geom_bar(fill = "steelblue", alpha = 0.7) +
+  labs(title = "Distribution of SAT Participation Rates",
+       subtitle = "Showing Variation in Testing Population Across States",
+       x = "Participation Rate Category",
+       y = "Count") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12))
+```
+
+### Part b: Score Distribution by Participation
+
+```{r participation-scores}
+#| label: participation-scores
+p3 <- ggplot(education, aes(x = fracCat, y = sat)) +
+  geom_boxplot(fill = "steelblue", alpha = 0.5) +
+  labs(title = "SAT Scores by Participation Rate",
+       subtitle = "Examining Score Distributions Across Participation Levels",
+       x = "Participation Rate Category",
+       y = "SAT Score") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12))
+
+p4 <- ggplot(education, aes(x = fracCat, y = sat)) +
+  geom_violin(fill = "steelblue", alpha = 0.3) +
+  geom_jitter(width = 0.1, alpha = 0.5) +
+  labs(title = "SAT Score Distribution by Participation Rate",
+       subtitle = "Detailed View of Score Patterns with Individual State Data",
+       x = "Participation Rate Category",
+       y = "SAT Score") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12))
+
+p3
+p4
+```
+
+The relationship between participation rates and SAT scores shows a clear inverse pattern.
+In states with low participation rates, SAT-takers are predominantly high-achieving students specifically targeting selective colleges.
+Conversely, states with high participation rates include a broader spectrum of academic achievement levels, naturally leading to lower average scores but potentially providing a more representative measure of overall educational outcomes.
+This pattern is particularly evident in the violin plot, which reveals the changing shape and spread of score distributions across participation categories.
+
+### Part c: Expenditure and Participation Relationship
+
+```{r expenditure-participation}
+#| label: expenditure-participation
+ggplot(education, aes(x = expend, y = sat, color = fracCat)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +
+  labs(title = "SAT vs. Expenditure by Participation Rate",
+       subtitle = "Examining Simpson's Paradox in Educational Outcomes",
+       x = "Per Pupil Expenditure (thousands $)",
+       y = "SAT Score",
+       color = "Participation Rate") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12),
+        legend.position = "right")
+```
+
+### Part d: Simpson's Paradox Analysis
+
+The relationship between educational spending and SAT scores presents a classic example of Simpson's Paradox, highlighting the critical importance of considering participation rates in educational outcome analysis.
+While the aggregate data shows a negative correlation between spending and SAT scores, examining the relationship within each participation rate category reveals a positive correlation between spending and scores.
+This paradox occurs because states with higher educational spending typically have higher participation rates, which naturally correlates with lower average scores due to the broader testing population.
+
+The participation rate serves as a crucial confounding variable that explains the seemingly counterintuitive negative relationship in the aggregate data.
+This finding demonstrates how aggregate statistics can mask more nuanced relationships in educational data and emphasizes the importance of controlling for participation rates when evaluating the effectiveness of educational spending.
+Understanding this paradox is essential for policymakers and educators in making informed decisions about resource allocation and interpreting educational outcome data accurately.
